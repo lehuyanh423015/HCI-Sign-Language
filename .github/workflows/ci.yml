@@ -1,0 +1,26 @@
+name: Quality Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  web-and-data:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.22.2
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+
+  blender-note:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "SKIPPED - Blender/MPFB and manual visual QA are intentionally outside CI."

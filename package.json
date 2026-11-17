@@ -1,0 +1,35 @@
+{
+  "name": "hci-sign-language",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nền tảng học Ngôn ngữ Ký hiệu Việt Nam với avatar 3D",
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=24.0.0 <25 || >=26.0.0 <27",
+    "npm": ">=11.0.0 <12"
+  },
+  "packageManager": "npm@11.12.1",
+  "scripts": {
+    "dev": "npm run dev --workspace @hci-sign/web",
+    "build": "npm run build --workspace @hci-sign/web",
+    "lint": "npm run lint --workspace @hci-sign/web",
+    "typecheck": "npm run typecheck --workspace @hci-sign/web",
+    "test": "node --test tools/tests/*.test.mjs && npm run test --workspace @hci-sign/web",
+    "doctor": "node tools/doctor.mjs",
+    "validate:data": "node tools/validate-data.mjs",
+    "sync:data": "node tools/sync-data.mjs",
+    "sync:data:check": "node tools/sync-data.mjs --check",
+    "validate:assets": "node tools/validate-assets.mjs",
+    "check": "npm run typecheck && npm run lint && npm run validate:data && npm run sync:data:check && npm run test && npm run build && npm run validate:assets"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "ajv": "8.20.0",
+    "eslint": "10.15.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.73.0"
+  }
+}

@@ -1,0 +1,19 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary 3D/media assets: never attempt text merge
+*.blend binary
+*.blend1 binary
+*.glb binary
+*.fbx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+
+# Enable these LFS filters only after every team member has Git LFS configured.
+# *.blend filter=lfs diff=lfs merge=lfs -text
+# *.glb filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text

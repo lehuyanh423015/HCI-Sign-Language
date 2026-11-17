@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hci-sign-language.local/schemas/quiz.schema.json",
+  "title": "Quiz collection",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "signId", "prompt", "choices", "correctChoiceId", "reviewStatus"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^Q[0-9]{3}$" },
+      "signId": { "type": "string", "pattern": "^S[0-9]{3}$" },
+      "prompt": { "type": "string", "minLength": 1 },
+      "choices": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "label"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "label": { "type": "string", "minLength": 1 }
+          }
+        }
+      },
+      "correctChoiceId": { "type": "string", "minLength": 1 },
+      "reviewStatus": { "type": "string", "enum": ["draft", "in_review", "approved", "rejected"] }
+    }
+  }
+}

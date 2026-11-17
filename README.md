@@ -1,0 +1,56 @@
+# Hệ thống học Ngôn ngữ Ký hiệu Việt Nam với avatar 3D
+
+Monorepo dùng chung cho nhóm HCI bốn thành viên. TASK-0001 chỉ dựng nền tảng kỹ thuật: web shell, hợp đồng dữ liệu/3D/adaptive, kiểm tra tự động và quy trình cộng tác. Repository **chưa chứa animation ký hiệu đã xác minh**.
+
+> Mọi fixture hiển thị trong web hiện tại là **“Technical placeholder - not verified sign language.”** Chỉ nội dung có `reviewStatus: "approved"` và đủ bằng chứng mới được dùng cho học tập hoặc user testing.
+
+## Bắt đầu nhanh trên Windows CMD
+
+Yêu cầu: Node.js 24 LTS (khuyến nghị 24.22.2), npm 11, Git 2.45+.
+
+```cmd
+npm ci
+npm run sync:data
+npm run dev
+```
+
+Mở URL Vite in ra terminal. Kiểm tra toàn bộ nền tảng:
+
+```cmd
+npm run doctor
+npm run check
+```
+
+`doctor` có thể báo `FAIL` cho Blender nếu máy không đúng baseline 4.5.16; điều này không chặn web development. Xem [cài đặt Windows](docs/setup/SETUP_WINDOWS.md) và [cài đặt Blender](docs/setup/SETUP_BLENDER.md).
+
+## Lệnh chính
+
+| Lệnh | Mục đích |
+|---|---|
+| `npm run dev` | Chạy web development server |
+| `npm run build` | Type-check và tạo production build |
+| `npm run lint` | Kiểm tra TypeScript/React source |
+| `npm run typecheck` | Kiểm tra kiểu TypeScript |
+| `npm run test` | Chạy data contract tests và web smoke tests |
+| `npm run validate:data` | Kiểm tra schema, ID, asset path và approval policy |
+| `npm run sync:data` | Validate rồi sao chép nguồn dữ liệu canonical vào web |
+| `npm run validate:assets` | Kiểm tra GLB hiện có; asset chưa làm được ghi `NOT YET TESTED` |
+| `npm run doctor` | Báo môi trường và prerequisite |
+| `npm run check` | Chạy quality gate không cần Blender/MPFB |
+
+## Nguồn sự thật và ranh giới
+
+- Metadata: `data/*.json`; không sửa bản sinh trong `apps/web/public/data/`.
+- Master 3D được duyệt sau này: `blender/master/`. File có sẵn `blender/avatar_master.blend` được bảo toàn nguyên trạng và hiện là **candidate chưa kiểm tra**, không tự ý di chuyển hay ghi đè.
+- Export review: `assets/exports/signs/`; chỉ publish GLB đã qua gate vào `apps/web/public/models/signs/`.
+- Hợp đồng tích hợp: `docs/contracts/`; mọi thay đổi cần phối hợp các owner liên quan.
+
+Xem [kiến trúc](docs/architecture/OVERVIEW.md), [ownership](docs/team/OWNERSHIP.md), [handoff](docs/team/HANDOFF.md) và [Git workflow](docs/workflows/GIT_WORKFLOW.md).
+
+## Mốc dự án (chưa hoàn thành trong TASK-0001)
+
+- Ngày 3: một animation kỹ thuật chạy trong browser.
+- Ngày 5: quyết định giữ 6 signs hay giảm còn 3–4.
+- Ngày 10: tích hợp learning/quiz/review; gửi animation xác minh.
+- Ngày 12–13: user testing chỉ với animation giáo dục đã duyệt.
+- Ngày 15: demo tích hợp, evidence, tests và presentation.

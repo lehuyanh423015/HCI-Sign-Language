@@ -1,0 +1,39 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Environment and editor-local files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Logs and OS files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Blender temporary/recovery and render output
+*.blend1
+*.blend2
+*.blend@
+*.blend@*
+*.autosave
+blender/**/autosave/
+blender/**/cache/
+assets/staging/*
+!assets/staging/README.md
+assets/previews/*
+!assets/previews/README.md
+
+# Local exports are reviewed before being added intentionally
+assets/exports/signs/*
+!assets/exports/signs/README.md
+apps/web/public/models/signs/*
+!apps/web/public/models/signs/README.md

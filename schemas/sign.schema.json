@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hci-sign-language.local/schemas/sign.schema.json",
+  "title": "Vietnamese Sign Language metadata collection",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "label",
+      "description",
+      "regionalVariant",
+      "referenceSource",
+      "assignedAnimator",
+      "glbPath",
+      "animationClip",
+      "durationSeconds",
+      "reviewStatus",
+      "verificationEvidence",
+      "reviewerReference",
+      "lastUpdatedAt"
+    ],
+    "properties": {
+      "id": { "type": "string", "pattern": "^S[0-9]{3}$" },
+      "label": { "type": ["string", "null"], "minLength": 1 },
+      "description": { "type": ["string", "null"], "minLength": 1 },
+      "regionalVariant": { "type": ["string", "null"], "minLength": 1 },
+      "referenceSource": { "type": ["string", "null"], "minLength": 1 },
+      "assignedAnimator": {
+        "type": "string",
+        "enum": ["Le Huy Anh", "Le Quang Mien"]
+      },
+      "glbPath": {
+        "type": "string",
+        "pattern": "^models/signs/S[0-9]{3}\\.glb$"
+      },
+      "animationClip": {
+        "type": "string",
+        "pattern": "^S[0-9]{3}_MAIN$"
+      },
+      "durationSeconds": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+      "reviewStatus": {
+        "type": "string",
+        "enum": ["planned", "draft", "in_review", "approved", "rejected"]
+      },
+      "verificationEvidence": {
+        "oneOf": [
+          { "type": "null" },
+          { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+        ]
+      },
+      "reviewerReference": { "type": ["string", "null"], "minLength": 1 },
+      "lastUpdatedAt": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|[+-][0-9]{2}:[0-9]{2})$"
+      }
+    },
+    "allOf": [
+      {
+        "if": { "properties": { "reviewStatus": { "const": "approved" } }, "required": ["reviewStatus"] },
+        "then": {
+          "properties": {
+            "label": { "type": "string", "minLength": 1 },
+            "description": { "type": "string", "minLength": 1 },
+            "referenceSource": { "type": "string", "minLength": 1 },
+            "durationSeconds": { "type": "number", "exclusiveMinimum": 0 },
+            "verificationEvidence": { "type": "array", "minItems": 1 },
+            "reviewerReference": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    ]
+  }
+}
