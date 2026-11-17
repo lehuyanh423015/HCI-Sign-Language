@@ -16,6 +16,7 @@ def arguments():
     parser.add_argument("--output", required=True)
     parser.add_argument("--frame", type=int, default=1)
     parser.add_argument("--disable-skin", action="store_true")
+    parser.add_argument("--view", choices=("full", "face"), default="full")
     args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
     return parser.parse_args(args)
 
@@ -50,10 +51,16 @@ def main():
     camera_data = bpy.data.cameras.new("GLB_PREVIEW_CAMERA_DATA")
     camera = bpy.data.objects.new("GLB_PREVIEW_CAMERA", camera_data)
     bpy.context.scene.collection.objects.link(camera)
-    camera.location = center + Vector((0.0, -max(size.z * 1.85, 2.2), size.z * 0.02))
-    camera_data.lens = 58
+    if args.view == "face":
+        target = Vector((center.x, center.y, maximum.z - size.z * 0.10))
+        camera.location = target + Vector((0.0, -max(size.z * 0.28, 0.45), size.z * 0.01))
+        camera_data.lens = 72
+    else:
+        target = center
+        camera.location = center + Vector((0.0, -max(size.z * 1.85, 2.2), size.z * 0.02))
+        camera_data.lens = 58
     camera_data.clip_start = 0.01
-    look_at(camera, center)
+    look_at(camera, target)
     bpy.context.scene.camera = camera
 
     for name, energy, location in (

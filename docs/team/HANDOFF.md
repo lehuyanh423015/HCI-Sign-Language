@@ -26,7 +26,7 @@ npm run dev
 
 Mở `http://localhost:5173/technical-viewer`. Banner phải ghi `TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE`. Thử pause/resume, replay, loop, 0.5×/1×, rotate/zoom, reset camera và hand preset.
 
-Viewer mặc định dùng `technical-hand-test-neutral.glb`. Đây là technical fixture trung tính, chưa phải production sign và chưa được promote thành official master.
+Viewer mặc định dùng `technical-hand-test-neutral.glb`. Đây là technical fixture trung tính, chưa phải production sign. Official shared source là `blender/master/avatar_master.blend`; viewer fixture vẫn tách biệt vì chứa `TECH_HAND_CONTROL_TEST`.
 
 ## Giao gì và phụ thuộc ai
 
@@ -43,14 +43,16 @@ Viewer mặc định dùng `technical-hand-test-neutral.glb`. Đây là technica
 - Thao sửa canonical `data/`, source/evidence; không tự đánh `approved` thiếu reviewer.
 - Shared contracts, master, production export cần review của owner/consumer liên quan.
 
-## Neutral master candidate
+## Canonical neutral master
 
-- Candidate chờ owner duyệt: `blender/master/avatar_master_neutral_candidate.blend`.
+- Official release candidate: `blender/master/avatar_master.blend`, `Master Avatar v1.0.0-rc.1`; exact hash trong manifest.
+- Promotion source được giữ: `blender/master/avatar_master_neutral_candidate.blend`; không dùng tiếp làm canonical.
 - Working source có test action: `blender/working/huy-anh/technical-hand-test-neutral.blend`.
 - Canonical web evidence: `assets/exports/technical/technical-hand-test-neutral.glb`.
-- Candidate giữ nguyên 137-bone hierarchy và `TECH_HAND_CONTROL_TEST`; thêm `EDU_NeutralTop`, `EDU_NeutralShorts` cùng ba material không texture.
-- Huy Anh review preview/weights/fit trước khi promote. Mien không bắt đầu production animation từ candidate cho tới khi owner phê duyệt commit/hash cụ thể.
+- Master giữ 137-bone hierarchy, `EDU_NeutralTop`, `EDU_NeutralShorts` và ba material không texture; không chứa Action/sign animation.
+- Mien tạo working copy từ canonical exact commit/hash; không copy từ candidate hoặc technical source.
 - Khi export MPFB body phải bake current shape-key mix trên export copy, apply non-Armature modifiers để `Hide helpers` có hiệu lực, giới hạn 4 skin influences và không save các thay đổi export-only vào source.
+- Facial audit: facial/head deformation bones tồn tại nhưng không có production facial Shape Keys; visible eye asset và NMM authoring vẫn pending. Diagnostic Morph POC không phải deliverable animation.
 
 ## Integration
 

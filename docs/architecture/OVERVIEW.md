@@ -21,3 +21,5 @@ Kiến trúc tối thiểu cho demo 15 ngày: một repository, một React web 
 - Asset binary không merge. Git LFS chỉ bật sau khi cả nhóm xác nhận đã cài.
 
 Chi tiết quyết định tại [ADR-0001](../decisions/ADR-0001-project-architecture.md).
+
+Canonical 3D character, rig policy, facial audit và export profiles được định nghĩa tại [MASTER_AVATAR.md](MASTER_AVATAR.md).

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "canonical_master_promotion",
+  "status": "PASS",
+  "master_version": "1.0.0-rc.1",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\hci-task0005-702f089a6d6842c7b049bc7c16c1b80c\\blender\\master\\avatar_master_neutral_candidate.blend",
+    "sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F",
+    "actions": [
+      "TECH_HAND_CONTROL_TEST"
+    ],
+    "armature_hierarchy_sha256": "6A8C8B4B2C2E71446A79E478E15F3FFE1A646F24EFF86C3C9C158315AAFE72C2",
+    "armature_rotation_euler": [
+      -0.055045463144779205,
+      0.002965844003483653,
+      -0.244863823056221
+    ]
+  },
+  "output": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\master\\avatar_master.blend",
+    "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232",
+    "objects": [
+      [
+        "EDU_NeutralShorts",
+        "MESH"
+      ],
+      [
+        "EDU_NeutralTop",
+        "MESH"
+      ],
+      [
+        "Human",
+        "MESH"
+      ],
+      [
+        "Human.rig",
+        "ARMATURE"
+      ]
+    ],
+    "actions": [],
+    "fps": 30,
+    "frame_range": [
+      1,
+      1
+    ],
+    "bone_count": 137,
+    "armature_hierarchy_sha256": "6A8C8B4B2C2E71446A79E478E15F3FFE1A646F24EFF86C3C9C158315AAFE72C2",
+    "armature_rotation_euler": [
+      -0.055045463144779205,
+      0.002965844003483653,
+      -0.244863823056221
+    ],
+    "neutral_pose_basis_identity": true
+  },
+  "preservation": {
+    "source_was_not_output": true,
+    "hierarchy_unchanged": true,
+    "armature_object_rotation_retained": true,
+    "technical_action_removed_from_output_only": true
+  }
+}

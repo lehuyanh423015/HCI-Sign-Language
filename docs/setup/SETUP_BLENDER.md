@@ -38,9 +38,11 @@ npm run doctor
 
 ## Asset hiện có
 
-`blender/avatar_master.blend` tồn tại trước scaffold và được giữ nguyên; TASK-0002/0003 đã kiểm tra rig/pipeline nhưng không promote file này bằng thao tác ghi đè. Không Save bằng Blender version khác. Luôn tạo working copy theo asset workflow.
+Canonical master: `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0-rc.1`. Kiểm tra hash/version trong `blender/master/avatar_master.manifest.json` trước khi tạo working copy.
 
-Neutral candidate chờ owner duyệt: `blender/master/avatar_master_neutral_candidate.blend`. Không dùng làm production master chỉ vì file tồn tại; handoff phải nêu commit/hash được phê duyệt.
+`blender/avatar_master.blend` là pre-neutral legacy source; `blender/master/avatar_master_neutral_candidate.blend` là approved promotion source được giữ để audit. Không ghi đè hoặc dùng hai file này thay canonical. Canonical không chứa technical/sign Action; `TECH_HAND_CONTROL_TEST` nằm trong technical working source.
+
+Animator copy canonical vào working folder của mình, ghi master commit/hash vào handoff và chỉ save bằng Blender 5.2.4 LTS. Không apply non-identity armature rotation, rename bone hoặc đổi rest pose.
 
 ## Read-only preflight
 
@@ -48,7 +50,7 @@ Không chạy inspection trên source gốc. Tạo bản sao tạm rồi chạy 
 
 ```cmd
 mkdir "%TEMP%\hci-vsl-preflight"
-copy /Y "blender\avatar_master.blend" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend"
+copy /Y "blender\master\avatar_master.blend" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend"
 
 "%BLENDER_EXECUTABLE%" --background --python-exit-code 2 --python "blender\scripts\inspect_environment.py" -- --expected-version 5.2.4 --require-mpfb --output "%TEMP%\hci-vsl-preflight\environment.json"
 
@@ -71,6 +73,15 @@ Trên máy Mien: checkout branch/commit, `npm ci`, tạo `.env.local`, chạy `n
 6. Chỉ sau technical + content approval mới copy/publish vào `apps/web/public/models/signs/` và cập nhật metadata.
 
 Blender 5.2 Action Slots/export mode có thể làm tên clip khác dự kiến; luôn dùng validator kiểm tra clip thực tế. `ACTIONS` mode đã giữ đúng `TECH_HAND_CONTROL_TEST`; `ACTIVE_ACTIONS` từng xuất tên generic `Animation`. Không sửa metadata để hợp thức hóa export sai.
+
+Master reference và facial transport profiles được định nghĩa tại `docs/architecture/MASTER_AVATAR.md`. Chạy:
+
+```cmd
+npm run validate:master-static
+npm run validate:morph-poc
+```
+
+Morph POC chỉ là diagnostic GLB. Chưa có production facial Shape Keys, eyeball/pupil asset hoặc Three.js facial controller.
 
 ## Technical prototype TASK-0003
 

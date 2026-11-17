@@ -11,6 +11,8 @@ Ownership là người review/chịu trách nhiệm, không phải quyền làm 
 
 Technical fixture `TECH_HAND_CONTROL_TEST` là shared pipeline evidence, không phải sign assignment. Huy Anh owns Blender source/export, Nhat owns viewer runtime, Thao xác nhận nhãn unverified/QA evidence.
 
+Canonical master hiện là `blender/master/avatar_master.blend` (`Master Avatar v1.0.0-rc.1`). Huy Anh là sole master integrator; Mien và các animator chỉ dùng working copy từ exact commit/hash. Không ai được tự rename/reparent bone, apply armature transform, đổi rest pose hoặc thêm facial target vào canonical. Rig/facial/export contract change cần Huy Anh + affected consumer review; content/NMM use cần Thao/appropriate expert gate.
+
 ## Shared/review-required
 
 - `schemas/`, `docs/contracts/`: owner tạo thay đổi + consumer liên quan review.
@@ -25,4 +27,5 @@ Technical fixture `TECH_HAND_CONTROL_TEST` là shared pipeline evidence, không 
 - Không đổi ID/clip/path contract để che lỗi export.
 - Không đánh `approved`, điền reviewer/evidence/source giả.
 - Không merge hai version cùng `.blend`; dùng ownership lock.
+- Không đưa diagnostic Morph Target/Action từ TASK-0005 POC vào canonical hoặc production asset.
 - Không sửa generated `apps/web/public/models/technical/*.glb`; chạy sync từ canonical export.

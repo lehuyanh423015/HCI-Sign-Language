@@ -1,0 +1,7261 @@
+{
+  "schema_version": 1,
+  "inspection": "rig_inventory",
+  "read_only": true,
+  "overall_status": "FAIL",
+  "source": {
+    "file": "C:\\Users\\admin\\AppData\\Local\\Temp\\hci-task0005-audit-7f2f7a6c5ca548c281423d1ed2e3d140\\avatar_master_audit.blend",
+    "basename": "avatar_master_audit.blend",
+    "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232",
+    "blender_version": "5.2.4 LTS"
+  },
+  "scene": {
+    "active_scene": "Scene",
+    "scenes": [
+      "Scene"
+    ],
+    "collections": [
+      {
+        "name": "Collection",
+        "objects": [
+          "EDU_NeutralShorts",
+          "EDU_NeutralTop",
+          "Human",
+          "Human.rig"
+        ],
+        "children": []
+      }
+    ],
+    "frame_start": 1,
+    "frame_end": 1,
+    "fps": 30,
+    "unit_system": "METRIC",
+    "selection": {
+      "mode": "OBJECT",
+      "active_object": "EDU_NeutralShorts",
+      "selected_objects": [
+        "EDU_NeutralShorts",
+        "EDU_NeutralTop",
+        "Human.rig"
+      ],
+      "armatures": [
+        {
+          "name": "Human.rig",
+          "object_selected": true,
+          "active_bone": null,
+          "selected_bones": []
+        }
+      ]
+    }
+  },
+  "objects": [
+    {
+      "name": "EDU_NeutralShorts",
+      "type": "MESH",
+      "data_name": "EDU_NeutralShorts_Mesh",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "parent_bone": null,
+      "collections": [
+        "Collection"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "XYZ",
+      "rotation_euler": [
+        1.862645149230957e-09,
+        6.938893903907228e-18,
+        -7.450580596923828e-09
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "EDU_NeutralTop",
+      "type": "MESH",
+      "data_name": "EDU_NeutralTop_Mesh",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "parent_bone": null,
+      "collections": [
+        "Collection"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "XYZ",
+      "rotation_euler": [
+        1.862645149230957e-09,
+        6.938893903907228e-18,
+        -7.450580596923828e-09
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Human",
+      "type": "MESH",
+      "data_name": "base",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "parent_bone": null,
+      "collections": [
+        "Collection"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "XYZ",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Human.rig",
+      "type": "ARMATURE",
+      "data_name": "Human.rig",
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": null,
+      "collections": [
+        "Collection"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "XYZ",
+      "rotation_euler": [
+        -0.055045463144779205,
+        0.002965844003483653,
+        -0.244863823056221
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "EDU_NeutralShorts",
+      "data_name": "EDU_NeutralShorts_Mesh",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "vertex_count": 232,
+      "edge_count": 360,
+      "polygon_count": 130,
+      "shape_key_count": 0,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "show_viewport": true,
+          "target": "Human.rig",
+          "use_vertex_groups": true,
+          "use_bone_envelopes": false
+        }
+      ],
+      "armature_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": {
+        "Delete.female_casualsuit01": 232,
+        "Delete.female_elegantsuit01": 164,
+        "Delete.female_sportsuit01": 195,
+        "Delete.male_casualsuit01": 232,
+        "HelperGeometry": 0,
+        "JointCubes": 0,
+        "Left": 110,
+        "Mid": 18,
+        "Right": 114,
+        "body": 232,
+        "breast.L": 0,
+        "breast.R": 0,
+        "clavicle.L": 0,
+        "clavicle.R": 0,
+        "ears": 0,
+        "eye.L": 0,
+        "eye.R": 0,
+        "finger1-1.L": 0,
+        "finger1-1.R": 0,
+        "finger1-2.L": 0,
+        "finger1-2.R": 0,
+        "finger1-3.L": 0,
+        "finger1-3.R": 0,
+        "finger2-1.L": 0,
+        "finger2-1.R": 0,
+        "finger2-2.L": 0,
+        "finger2-2.R": 0,
+        "finger2-3.L": 0,
+        "finger2-3.R": 0,
+        "finger3-1.L": 0,
+        "finger3-1.R": 0,
+        "finger3-2.L": 0,
+        "finger3-2.R": 0,
+        "finger3-3.L": 0,
+        "finger3-3.R": 0,
+        "finger4-1.L": 0,
+        "finger4-1.R": 0,
+        "finger4-2.L": 0,
+        "finger4-2.R": 0,
+        "finger4-3.L": 0,
+        "finger4-3.R": 0,
+        "finger5-1.L": 0,
+        "finger5-1.R": 0,
+        "finger5-2.L": 0,
+        "finger5-2.R": 0,
+        "finger5-3.L": 0,
+        "finger5-3.R": 0,
+        "fingernails": 0,
+        "foot.L": 0,
+        "foot.R": 0,
+        "genitals": 0,
+        "head": 0,
+        "helper-genital": 0,
+        "helper-hair": 0,
+        "helper-l-eye": 0,
+        "helper-l-eyelashes-1": 0,
+        "helper-l-eyelashes-2": 0,
+        "helper-lower-teeth": 0,
+        "helper-r-eye": 0,
+        "helper-r-eyelashes-1": 0,
+        "helper-r-eyelashes-2": 0,
+        "helper-skirt": 0,
+        "helper-tights": 0,
+        "helper-tongue": 0,
+        "helper-upper-teeth": 0,
+        "jaw": 0,
+        "joint-ground": 0,
+        "joint-head": 0,
+        "joint-head-2": 0,
+        "joint-jaw": 0,
+        "joint-l-ankle": 0,
+        "joint-l-clavicle": 0,
+        "joint-l-elbow": 0,
+        "joint-l-eye": 0,
+        "joint-l-eye-target": 0,
+        "joint-l-finger-1-1": 0,
+        "joint-l-finger-1-2": 0,
+        "joint-l-finger-1-3": 0,
+        "joint-l-finger-1-4": 0,
+        "joint-l-finger-2-1": 0,
+        "joint-l-finger-2-2": 0,
+        "joint-l-finger-2-3": 0,
+        "joint-l-finger-2-4": 0,
+        "joint-l-finger-3-1": 0,
+        "joint-l-finger-3-2": 0,
+        "joint-l-finger-3-3": 0,
+        "joint-l-finger-3-4": 0,
+        "joint-l-finger-4-1": 0,
+        "joint-l-finger-4-2": 0,
+        "joint-l-finger-4-3": 0,
+        "joint-l-finger-4-4": 0,
+        "joint-l-finger-5-1": 0,
+        "joint-l-finger-5-2": 0,
+        "joint-l-finger-5-3": 0,
+        "joint-l-finger-5-4": 0,
+        "joint-l-foot-1": 0,
+        "joint-l-foot-2": 0,
+        "joint-l-hand": 0,
+        "joint-l-hand-2": 0,
+        "joint-l-hand-3": 0,
+        "joint-l-knee": 0,
+        "joint-l-lowerlid": 0,
+        "joint-l-scapula": 0,
+        "joint-l-shoulder": 0,
+        "joint-l-toe-1-1": 0,
+        "joint-l-toe-1-2": 0,
+        "joint-l-toe-1-3": 0,
+        "joint-l-toe-2-1": 0,
+        "joint-l-toe-2-2": 0,
+        "joint-l-toe-2-3": 0,
+        "joint-l-toe-2-4": 0,
+        "joint-l-toe-3-1": 0,
+        "joint-l-toe-3-2": 0,
+        "joint-l-toe-3-3": 0,
+        "joint-l-toe-3-4": 0,
+        "joint-l-toe-4-1": 0,
+        "joint-l-toe-4-2": 0,
+        "joint-l-toe-4-3": 0,
+        "joint-l-toe-4-4": 0,
+        "joint-l-toe-5-1": 0,
+        "joint-l-toe-5-2": 0,
+        "joint-l-toe-5-3": 0,
+        "joint-l-toe-5-4": 0,
+        "joint-l-upper-leg": 0,
+        "joint-l-upperlid": 0,
+        "joint-mouth": 0,
+        "joint-neck": 0,
+        "joint-pelvis": 0,
+        "joint-r-ankle": 0,
+        "joint-r-clavicle": 0,
+        "joint-r-elbow": 0,
+        "joint-r-eye": 0,
+        "joint-r-eye-target": 0,
+        "joint-r-finger-1-1": 0,
+        "joint-r-finger-1-2": 0,
+        "joint-r-finger-1-3": 0,
+        "joint-r-finger-1-4": 0,
+        "joint-r-finger-2-1": 0,
+        "joint-r-finger-2-2": 0,
+        "joint-r-finger-2-3": 0,
+        "joint-r-finger-2-4": 0,
+        "joint-r-finger-3-1": 0,
+        "joint-r-finger-3-2": 0,
+        "joint-r-finger-3-3": 0,
+        "joint-r-finger-3-4": 0,
+        "joint-r-finger-4-1": 0,
+        "joint-r-finger-4-2": 0,
+        "joint-r-finger-4-3": 0,
+        "joint-r-finger-4-4": 0,
+        "joint-r-finger-5-1": 0,
+        "joint-r-finger-5-2": 0,
+        "joint-r-finger-5-3": 0,
+        "joint-r-finger-5-4": 0,
+        "joint-r-foot-1": 0,
+        "joint-r-foot-2": 0,
+        "joint-r-hand": 0,
+        "joint-r-hand-2": 0,
+        "joint-r-hand-3": 0,
+        "joint-r-knee": 0,
+        "joint-r-lowerlid": 0,
+        "joint-r-scapula": 0,
+        "joint-r-shoulder": 0,
+        "joint-r-toe-1-1": 0,
+        "joint-r-toe-1-2": 0,
+        "joint-r-toe-1-3": 0,
+        "joint-r-toe-2-1": 0,
+        "joint-r-toe-2-2": 0,
+        "joint-r-toe-2-3": 0,
+        "joint-r-toe-2-4": 0,
+        "joint-r-toe-3-1": 0,
+        "joint-r-toe-3-2": 0,
+        "joint-r-toe-3-3": 0,
+        "joint-r-toe-3-4": 0,
+        "joint-r-toe-4-1": 0,
+        "joint-r-toe-4-2": 0,
+        "joint-r-toe-4-3": 0,
+        "joint-r-toe-4-4": 0,
+        "joint-r-toe-5-1": 0,
+        "joint-r-toe-5-2": 0,
+        "joint-r-toe-5-3": 0,
+        "joint-r-toe-5-4": 0,
+        "joint-r-upper-leg": 0,
+        "joint-r-upperlid": 0,
+        "joint-spine-1": 0,
+        "joint-spine-2": 0,
+        "joint-spine-3": 0,
+        "joint-spine-4": 0,
+        "joint-tongue-1": 0,
+        "joint-tongue-2": 0,
+        "joint-tongue-3": 0,
+        "joint-tongue-4": 0,
+        "levator05.L": 0,
+        "levator05.R": 0,
+        "levator06.L": 0,
+        "levator06.R": 0,
+        "lips": 0,
+        "lowerarm01.L": 0,
+        "lowerarm01.R": 0,
+        "lowerarm02.L": 0,
+        "lowerarm02.R": 0,
+        "lowerleg01.L": 12,
+        "lowerleg01.R": 12,
+        "lowerleg02.L": 0,
+        "lowerleg02.R": 0,
+        "metacarpal1.L": 0,
+        "metacarpal1.R": 0,
+        "metacarpal2.L": 0,
+        "metacarpal2.R": 0,
+        "metacarpal3.L": 0,
+        "metacarpal3.R": 0,
+        "metacarpal4.L": 0,
+        "metacarpal4.R": 0,
+        "neck01": 0,
+        "neck02": 0,
+        "neck03": 0,
+        "nipple": 0,
+        "nippleTip": 0,
+        "oculi01.L": 0,
+        "oculi01.R": 0,
+        "orbicularis03.L": 0,
+        "orbicularis03.R": 0,
+        "orbicularis04.L": 0,
+        "orbicularis04.R": 0,
+        "oris01": 0,
+        "oris03.L": 0,
+        "oris03.R": 0,
+        "oris05": 0,
+        "oris07.L": 0,
+        "oris07.R": 0,
+        "pelvis.L": 91,
+        "pelvis.R": 91,
+        "risorius03.L": 0,
+        "risorius03.R": 0,
+        "root": 0,
+        "scalp": 0,
+        "shoulder01.L": 0,
+        "shoulder01.R": 0,
+        "special04": 0,
+        "special05.L": 0,
+        "special05.R": 0,
+        "spine01": 0,
+        "spine02": 39,
+        "spine03": 63,
+        "spine04": 142,
+        "spine05": 156,
+        "toe1-1.L": 0,
+        "toe1-1.R": 0,
+        "toenails": 0,
+        "tongue00": 0,
+        "tongue01": 0,
+        "tongue02": 0,
+        "tongue03": 0,
+        "tongue04": 0,
+        "tongue05.L": 0,
+        "tongue05.R": 0,
+        "tongue06.L": 0,
+        "tongue06.R": 0,
+        "tongue07.L": 0,
+        "tongue07.R": 0,
+        "upperarm01.L": 0,
+        "upperarm01.R": 0,
+        "upperarm02.L": 0,
+        "upperarm02.R": 0,
+        "upperleg01.L": 125,
+        "upperleg01.R": 125,
+        "upperleg02.L": 98,
+        "upperleg02.R": 99,
+        "wrist.L": 0,
+        "wrist.R": 0
+      },
+      "hand_vertex_groups": {
+        "finger1-1.L": 0,
+        "finger1-1.R": 0,
+        "finger1-2.L": 0,
+        "finger1-2.R": 0,
+        "finger1-3.L": 0,
+        "finger1-3.R": 0,
+        "finger2-1.L": 0,
+        "finger2-1.R": 0,
+        "finger2-2.L": 0,
+        "finger2-2.R": 0,
+        "finger2-3.L": 0,
+        "finger2-3.R": 0,
+        "finger3-1.L": 0,
+        "finger3-1.R": 0,
+        "finger3-2.L": 0,
+        "finger3-2.R": 0,
+        "finger3-3.L": 0,
+        "finger3-3.R": 0,
+        "finger4-1.L": 0,
+        "finger4-1.R": 0,
+        "finger4-2.L": 0,
+        "finger4-2.R": 0,
+        "finger4-3.L": 0,
+        "finger4-3.R": 0,
+        "finger5-1.L": 0,
+        "finger5-1.R": 0,
+        "finger5-2.L": 0,
+        "finger5-2.R": 0,
+        "finger5-3.L": 0,
+        "finger5-3.R": 0,
+        "fingernails": 0,
+        "joint-l-finger-1-1": 0,
+        "joint-l-finger-1-2": 0,
+        "joint-l-finger-1-3": 0,
+        "joint-l-finger-1-4": 0,
+        "joint-l-finger-2-1": 0,
+        "joint-l-finger-2-2": 0,
+        "joint-l-finger-2-3": 0,
+        "joint-l-finger-2-4": 0,
+        "joint-l-finger-3-1": 0,
+        "joint-l-finger-3-2": 0,
+        "joint-l-finger-3-3": 0,
+        "joint-l-finger-3-4": 0,
+        "joint-l-finger-4-1": 0,
+        "joint-l-finger-4-2": 0,
+        "joint-l-finger-4-3": 0,
+        "joint-l-finger-4-4": 0,
+        "joint-l-finger-5-1": 0,
+        "joint-l-finger-5-2": 0,
+        "joint-l-finger-5-3": 0,
+        "joint-l-finger-5-4": 0,
+        "joint-l-hand": 0,
+        "joint-l-hand-2": 0,
+        "joint-l-hand-3": 0,
+        "joint-r-finger-1-1": 0,
+        "joint-r-finger-1-2": 0,
+        "joint-r-finger-1-3": 0,
+        "joint-r-finger-1-4": 0,
+        "joint-r-finger-2-1": 0,
+        "joint-r-finger-2-2": 0,
+        "joint-r-finger-2-3": 0,
+        "joint-r-finger-2-4": 0,
+        "joint-r-finger-3-1": 0,
+        "joint-r-finger-3-2": 0,
+        "joint-r-finger-3-3": 0,
+        "joint-r-finger-3-4": 0,
+        "joint-r-finger-4-1": 0,
+        "joint-r-finger-4-2": 0,
+        "joint-r-finger-4-3": 0,
+        "joint-r-finger-4-4": 0,
+        "joint-r-finger-5-1": 0,
+        "joint-r-finger-5-2": 0,
+        "joint-r-finger-5-3": 0,
+        "joint-r-finger-5-4": 0,
+        "joint-r-hand": 0,
+        "joint-r-hand-2": 0,
+        "joint-r-hand-3": 0,
+        "wrist.L": 0,
+        "wrist.R": 0
+      }
+    },
+    {
+      "name": "EDU_NeutralTop",
+      "data_name": "EDU_NeutralTop_Mesh",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "vertex_count": 224,
+      "edge_count": 368,
+      "polygon_count": 144,
+      "shape_key_count": 0,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "show_viewport": true,
+          "target": "Human.rig",
+          "use_vertex_groups": true,
+          "use_bone_envelopes": false
+        }
+      ],
+      "armature_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": {
+        "Delete.female_casualsuit01": 138,
+        "Delete.female_elegantsuit01": 208,
+        "Delete.female_sportsuit01": 85,
+        "Delete.male_casualsuit01": 187,
+        "HelperGeometry": 0,
+        "JointCubes": 0,
+        "Left": 110,
+        "Mid": 7,
+        "Right": 113,
+        "body": 224,
+        "breast.L": 18,
+        "breast.R": 18,
+        "clavicle.L": 47,
+        "clavicle.R": 48,
+        "ears": 0,
+        "eye.L": 0,
+        "eye.R": 0,
+        "finger1-1.L": 0,
+        "finger1-1.R": 0,
+        "finger1-2.L": 0,
+        "finger1-2.R": 0,
+        "finger1-3.L": 0,
+        "finger1-3.R": 0,
+        "finger2-1.L": 0,
+        "finger2-1.R": 0,
+        "finger2-2.L": 0,
+        "finger2-2.R": 0,
+        "finger2-3.L": 0,
+        "finger2-3.R": 0,
+        "finger3-1.L": 0,
+        "finger3-1.R": 0,
+        "finger3-2.L": 0,
+        "finger3-2.R": 0,
+        "finger3-3.L": 0,
+        "finger3-3.R": 0,
+        "finger4-1.L": 0,
+        "finger4-1.R": 0,
+        "finger4-2.L": 0,
+        "finger4-2.R": 0,
+        "finger4-3.L": 0,
+        "finger4-3.R": 0,
+        "finger5-1.L": 0,
+        "finger5-1.R": 0,
+        "finger5-2.L": 0,
+        "finger5-2.R": 0,
+        "finger5-3.L": 0,
+        "finger5-3.R": 0,
+        "fingernails": 0,
+        "foot.L": 0,
+        "foot.R": 0,
+        "genitals": 0,
+        "head": 32,
+        "helper-genital": 0,
+        "helper-hair": 0,
+        "helper-l-eye": 0,
+        "helper-l-eyelashes-1": 0,
+        "helper-l-eyelashes-2": 0,
+        "helper-lower-teeth": 0,
+        "helper-r-eye": 0,
+        "helper-r-eyelashes-1": 0,
+        "helper-r-eyelashes-2": 0,
+        "helper-skirt": 0,
+        "helper-tights": 0,
+        "helper-tongue": 0,
+        "helper-upper-teeth": 0,
+        "jaw": 17,
+        "joint-ground": 0,
+        "joint-head": 0,
+        "joint-head-2": 0,
+        "joint-jaw": 0,
+        "joint-l-ankle": 0,
+        "joint-l-clavicle": 0,
+        "joint-l-elbow": 0,
+        "joint-l-eye": 0,
+        "joint-l-eye-target": 0,
+        "joint-l-finger-1-1": 0,
+        "joint-l-finger-1-2": 0,
+        "joint-l-finger-1-3": 0,
+        "joint-l-finger-1-4": 0,
+        "joint-l-finger-2-1": 0,
+        "joint-l-finger-2-2": 0,
+        "joint-l-finger-2-3": 0,
+        "joint-l-finger-2-4": 0,
+        "joint-l-finger-3-1": 0,
+        "joint-l-finger-3-2": 0,
+        "joint-l-finger-3-3": 0,
+        "joint-l-finger-3-4": 0,
+        "joint-l-finger-4-1": 0,
+        "joint-l-finger-4-2": 0,
+        "joint-l-finger-4-3": 0,
+        "joint-l-finger-4-4": 0,
+        "joint-l-finger-5-1": 0,
+        "joint-l-finger-5-2": 0,
+        "joint-l-finger-5-3": 0,
+        "joint-l-finger-5-4": 0,
+        "joint-l-foot-1": 0,
+        "joint-l-foot-2": 0,
+        "joint-l-hand": 0,
+        "joint-l-hand-2": 0,
+        "joint-l-hand-3": 0,
+        "joint-l-knee": 0,
+        "joint-l-lowerlid": 0,
+        "joint-l-scapula": 0,
+        "joint-l-shoulder": 0,
+        "joint-l-toe-1-1": 0,
+        "joint-l-toe-1-2": 0,
+        "joint-l-toe-1-3": 0,
+        "joint-l-toe-2-1": 0,
+        "joint-l-toe-2-2": 0,
+        "joint-l-toe-2-3": 0,
+        "joint-l-toe-2-4": 0,
+        "joint-l-toe-3-1": 0,
+        "joint-l-toe-3-2": 0,
+        "joint-l-toe-3-3": 0,
+        "joint-l-toe-3-4": 0,
+        "joint-l-toe-4-1": 0,
+        "joint-l-toe-4-2": 0,
+        "joint-l-toe-4-3": 0,
+        "joint-l-toe-4-4": 0,
+        "joint-l-toe-5-1": 0,
+        "joint-l-toe-5-2": 0,
+        "joint-l-toe-5-3": 0,
+        "joint-l-toe-5-4": 0,
+        "joint-l-upper-leg": 0,
+        "joint-l-upperlid": 0,
+        "joint-mouth": 0,
+        "joint-neck": 0,
+        "joint-pelvis": 0,
+        "joint-r-ankle": 0,
+        "joint-r-clavicle": 0,
+        "joint-r-elbow": 0,
+        "joint-r-eye": 0,
+        "joint-r-eye-target": 0,
+        "joint-r-finger-1-1": 0,
+        "joint-r-finger-1-2": 0,
+        "joint-r-finger-1-3": 0,
+        "joint-r-finger-1-4": 0,
+        "joint-r-finger-2-1": 0,
+        "joint-r-finger-2-2": 0,
+        "joint-r-finger-2-3": 0,
+        "joint-r-finger-2-4": 0,
+        "joint-r-finger-3-1": 0,
+        "joint-r-finger-3-2": 0,
+        "joint-r-finger-3-3": 0,
+        "joint-r-finger-3-4": 0,
+        "joint-r-finger-4-1": 0,
+        "joint-r-finger-4-2": 0,
+        "joint-r-finger-4-3": 0,
+        "joint-r-finger-4-4": 0,
+        "joint-r-finger-5-1": 0,
+        "joint-r-finger-5-2": 0,
+        "joint-r-finger-5-3": 0,
+        "joint-r-finger-5-4": 0,
+        "joint-r-foot-1": 0,
+        "joint-r-foot-2": 0,
+        "joint-r-hand": 0,
+        "joint-r-hand-2": 0,
+        "joint-r-hand-3": 0,
+        "joint-r-knee": 0,
+        "joint-r-lowerlid": 0,
+        "joint-r-scapula": 0,
+        "joint-r-shoulder": 0,
+        "joint-r-toe-1-1": 0,
+        "joint-r-toe-1-2": 0,
+        "joint-r-toe-1-3": 0,
+        "joint-r-toe-2-1": 0,
+        "joint-r-toe-2-2": 0,
+        "joint-r-toe-2-3": 0,
+        "joint-r-toe-2-4": 0,
+        "joint-r-toe-3-1": 0,
+        "joint-r-toe-3-2": 0,
+        "joint-r-toe-3-3": 0,
+        "joint-r-toe-3-4": 0,
+        "joint-r-toe-4-1": 0,
+        "joint-r-toe-4-2": 0,
+        "joint-r-toe-4-3": 0,
+        "joint-r-toe-4-4": 0,
+        "joint-r-toe-5-1": 0,
+        "joint-r-toe-5-2": 0,
+        "joint-r-toe-5-3": 0,
+        "joint-r-toe-5-4": 0,
+        "joint-r-upper-leg": 0,
+        "joint-r-upperlid": 0,
+        "joint-spine-1": 0,
+        "joint-spine-2": 0,
+        "joint-spine-3": 0,
+        "joint-spine-4": 0,
+        "joint-tongue-1": 0,
+        "joint-tongue-2": 0,
+        "joint-tongue-3": 0,
+        "joint-tongue-4": 0,
+        "levator05.L": 2,
+        "levator05.R": 3,
+        "levator06.L": 0,
+        "levator06.R": 0,
+        "lips": 0,
+        "lowerarm01.L": 16,
+        "lowerarm01.R": 16,
+        "lowerarm02.L": 0,
+        "lowerarm02.R": 0,
+        "lowerleg01.L": 0,
+        "lowerleg01.R": 0,
+        "lowerleg02.L": 0,
+        "lowerleg02.R": 0,
+        "metacarpal1.L": 0,
+        "metacarpal1.R": 0,
+        "metacarpal2.L": 0,
+        "metacarpal2.R": 0,
+        "metacarpal3.L": 0,
+        "metacarpal3.R": 0,
+        "metacarpal4.L": 0,
+        "metacarpal4.R": 0,
+        "neck01": 27,
+        "neck02": 32,
+        "neck03": 13,
+        "nipple": 1,
+        "nippleTip": 0,
+        "oculi01.L": 0,
+        "oculi01.R": 0,
+        "orbicularis03.L": 0,
+        "orbicularis03.R": 0,
+        "orbicularis04.L": 0,
+        "orbicularis04.R": 0,
+        "oris01": 0,
+        "oris03.L": 0,
+        "oris03.R": 0,
+        "oris05": 0,
+        "oris07.L": 1,
+        "oris07.R": 1,
+        "pelvis.L": 17,
+        "pelvis.R": 16,
+        "risorius03.L": 0,
+        "risorius03.R": 0,
+        "root": 0,
+        "scalp": 0,
+        "shoulder01.L": 50,
+        "shoulder01.R": 51,
+        "special04": 0,
+        "special05.L": 0,
+        "special05.R": 0,
+        "spine01": 123,
+        "spine02": 74,
+        "spine03": 72,
+        "spine04": 57,
+        "spine05": 48,
+        "toe1-1.L": 0,
+        "toe1-1.R": 0,
+        "toenails": 0,
+        "tongue00": 0,
+        "tongue01": 0,
+        "tongue02": 0,
+        "tongue03": 0,
+        "tongue04": 0,
+        "tongue05.L": 0,
+        "tongue05.R": 0,
+        "tongue06.L": 0,
+        "tongue06.R": 0,
+        "tongue07.L": 0,
+        "tongue07.R": 0,
+        "upperarm01.L": 88,
+        "upperarm01.R": 89,
+        "upperarm02.L": 77,
+        "upperarm02.R": 77,
+        "upperleg01.L": 17,
+        "upperleg01.R": 16,
+        "upperleg02.L": 12,
+        "upperleg02.R": 13,
+        "wrist.L": 0,
+        "wrist.R": 0
+      },
+      "hand_vertex_groups": {
+        "finger1-1.L": 0,
+        "finger1-1.R": 0,
+        "finger1-2.L": 0,
+        "finger1-2.R": 0,
+        "finger1-3.L": 0,
+        "finger1-3.R": 0,
+        "finger2-1.L": 0,
+        "finger2-1.R": 0,
+        "finger2-2.L": 0,
+        "finger2-2.R": 0,
+        "finger2-3.L": 0,
+        "finger2-3.R": 0,
+        "finger3-1.L": 0,
+        "finger3-1.R": 0,
+        "finger3-2.L": 0,
+        "finger3-2.R": 0,
+        "finger3-3.L": 0,
+        "finger3-3.R": 0,
+        "finger4-1.L": 0,
+        "finger4-1.R": 0,
+        "finger4-2.L": 0,
+        "finger4-2.R": 0,
+        "finger4-3.L": 0,
+        "finger4-3.R": 0,
+        "finger5-1.L": 0,
+        "finger5-1.R": 0,
+        "finger5-2.L": 0,
+        "finger5-2.R": 0,
+        "finger5-3.L": 0,
+        "finger5-3.R": 0,
+        "fingernails": 0,
+        "joint-l-finger-1-1": 0,
+        "joint-l-finger-1-2": 0,
+        "joint-l-finger-1-3": 0,
+        "joint-l-finger-1-4": 0,
+        "joint-l-finger-2-1": 0,
+        "joint-l-finger-2-2": 0,
+        "joint-l-finger-2-3": 0,
+        "joint-l-finger-2-4": 0,
+        "joint-l-finger-3-1": 0,
+        "joint-l-finger-3-2": 0,
+        "joint-l-finger-3-3": 0,
+        "joint-l-finger-3-4": 0,
+        "joint-l-finger-4-1": 0,
+        "joint-l-finger-4-2": 0,
+        "joint-l-finger-4-3": 0,
+        "joint-l-finger-4-4": 0,
+        "joint-l-finger-5-1": 0,
+        "joint-l-finger-5-2": 0,
+        "joint-l-finger-5-3": 0,
+        "joint-l-finger-5-4": 0,
+        "joint-l-hand": 0,
+        "joint-l-hand-2": 0,
+        "joint-l-hand-3": 0,
+        "joint-r-finger-1-1": 0,
+        "joint-r-finger-1-2": 0,
+        "joint-r-finger-1-3": 0,
+        "joint-r-finger-1-4": 0,
+        "joint-r-finger-2-1": 0,
+        "joint-r-finger-2-2": 0,
+        "joint-r-finger-2-3": 0,
+        "joint-r-finger-2-4": 0,
+        "joint-r-finger-3-1": 0,
+        "joint-r-finger-3-2": 0,
+        "joint-r-finger-3-3": 0,
+        "joint-r-finger-3-4": 0,
+        "joint-r-finger-4-1": 0,
+        "joint-r-finger-4-2": 0,
+        "joint-r-finger-4-3": 0,
+        "joint-r-finger-4-4": 0,
+        "joint-r-finger-5-1": 0,
+        "joint-r-finger-5-2": 0,
+        "joint-r-finger-5-3": 0,
+        "joint-r-finger-5-4": 0,
+        "joint-r-hand": 0,
+        "joint-r-hand-2": 0,
+        "joint-r-hand-3": 0,
+        "wrist.L": 0,
+        "wrist.R": 0
+      }
+    },
+    {
+      "name": "Human",
+      "data_name": "base",
+      "parent": "Human.rig",
+      "parent_type": "OBJECT",
+      "vertex_count": 19158,
+      "edge_count": 37364,
+      "polygon_count": 18486,
+      "shape_key_count": 11,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "show_viewport": true,
+          "target": "Human.rig",
+          "use_vertex_groups": true,
+          "use_bone_envelopes": false
+        },
+        {
+          "name": "Hide helpers",
+          "type": "MASK",
+          "show_viewport": true
+        }
+      ],
+      "armature_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": {
+        "Delete.female_casualsuit01": 5156,
+        "Delete.female_elegantsuit01": 3898,
+        "Delete.female_sportsuit01": 4338,
+        "Delete.male_casualsuit01": 8260,
+        "HelperGeometry": 4778,
+        "JointCubes": 1000,
+        "Left": 8946,
+        "Mid": 1266,
+        "Right": 8946,
+        "body": 13380,
+        "breast.L": 444,
+        "breast.R": 431,
+        "clavicle.L": 664,
+        "clavicle.R": 634,
+        "ears": 626,
+        "eye.L": 142,
+        "eye.R": 142,
+        "finger1-1.L": 115,
+        "finger1-1.R": 115,
+        "finger1-2.L": 193,
+        "finger1-2.R": 193,
+        "finger1-3.L": 144,
+        "finger1-3.R": 144,
+        "finger2-1.L": 210,
+        "finger2-1.R": 210,
+        "finger2-2.L": 218,
+        "finger2-2.R": 218,
+        "finger2-3.L": 165,
+        "finger2-3.R": 165,
+        "finger3-1.L": 246,
+        "finger3-1.R": 240,
+        "finger3-2.L": 213,
+        "finger3-2.R": 213,
+        "finger3-3.L": 166,
+        "finger3-3.R": 166,
+        "finger4-1.L": 245,
+        "finger4-1.R": 245,
+        "finger4-2.L": 194,
+        "finger4-2.R": 194,
+        "finger4-3.L": 161,
+        "finger4-3.R": 161,
+        "finger5-1.L": 252,
+        "finger5-1.R": 252,
+        "finger5-2.L": 209,
+        "finger5-2.R": 209,
+        "finger5-3.L": 214,
+        "finger5-3.R": 214,
+        "fingernails": 168,
+        "foot.L": 840,
+        "foot.R": 714,
+        "genitals": 0,
+        "head": 4899,
+        "helper-genital": 200,
+        "helper-hair": 428,
+        "helper-l-eye": 72,
+        "helper-l-eyelashes-1": 60,
+        "helper-l-eyelashes-2": 65,
+        "helper-lower-teeth": 68,
+        "helper-r-eye": 72,
+        "helper-r-eyelashes-1": 60,
+        "helper-r-eyelashes-2": 65,
+        "helper-skirt": 720,
+        "helper-tights": 2674,
+        "helper-tongue": 226,
+        "helper-upper-teeth": 68,
+        "jaw": 911,
+        "joint-ground": 8,
+        "joint-head": 8,
+        "joint-head-2": 8,
+        "joint-jaw": 8,
+        "joint-l-ankle": 8,
+        "joint-l-clavicle": 8,
+        "joint-l-elbow": 8,
+        "joint-l-eye": 8,
+        "joint-l-eye-target": 8,
+        "joint-l-finger-1-1": 8,
+        "joint-l-finger-1-2": 8,
+        "joint-l-finger-1-3": 8,
+        "joint-l-finger-1-4": 8,
+        "joint-l-finger-2-1": 8,
+        "joint-l-finger-2-2": 8,
+        "joint-l-finger-2-3": 8,
+        "joint-l-finger-2-4": 8,
+        "joint-l-finger-3-1": 8,
+        "joint-l-finger-3-2": 8,
+        "joint-l-finger-3-3": 8,
+        "joint-l-finger-3-4": 8,
+        "joint-l-finger-4-1": 8,
+        "joint-l-finger-4-2": 8,
+        "joint-l-finger-4-3": 8,
+        "joint-l-finger-4-4": 8,
+        "joint-l-finger-5-1": 8,
+        "joint-l-finger-5-2": 8,
+        "joint-l-finger-5-3": 8,
+        "joint-l-finger-5-4": 8,
+        "joint-l-foot-1": 8,
+        "joint-l-foot-2": 8,
+        "joint-l-hand": 8,
+        "joint-l-hand-2": 8,
+        "joint-l-hand-3": 8,
+        "joint-l-knee": 8,
+        "joint-l-lowerlid": 8,
+        "joint-l-scapula": 8,
+        "joint-l-shoulder": 8,
+        "joint-l-toe-1-1": 8,
+        "joint-l-toe-1-2": 8,
+        "joint-l-toe-1-3": 8,
+        "joint-l-toe-2-1": 8,
+        "joint-l-toe-2-2": 8,
+        "joint-l-toe-2-3": 8,
+        "joint-l-toe-2-4": 8,
+        "joint-l-toe-3-1": 8,
+        "joint-l-toe-3-2": 8,
+        "joint-l-toe-3-3": 8,
+        "joint-l-toe-3-4": 8,
+        "joint-l-toe-4-1": 8,
+        "joint-l-toe-4-2": 8,
+        "joint-l-toe-4-3": 8,
+        "joint-l-toe-4-4": 8,
+        "joint-l-toe-5-1": 8,
+        "joint-l-toe-5-2": 8,
+        "joint-l-toe-5-3": 8,
+        "joint-l-toe-5-4": 8,
+        "joint-l-upper-leg": 8,
+        "joint-l-upperlid": 8,
+        "joint-mouth": 8,
+        "joint-neck": 8,
+        "joint-pelvis": 8,
+        "joint-r-ankle": 8,
+        "joint-r-clavicle": 8,
+        "joint-r-elbow": 8,
+        "joint-r-eye": 8,
+        "joint-r-eye-target": 8,
+        "joint-r-finger-1-1": 8,
+        "joint-r-finger-1-2": 8,
+        "joint-r-finger-1-3": 8,
+        "joint-r-finger-1-4": 8,
+        "joint-r-finger-2-1": 8,
+        "joint-r-finger-2-2": 8,
+        "joint-r-finger-2-3": 8,
+        "joint-r-finger-2-4": 8,
+        "joint-r-finger-3-1": 8,
+        "joint-r-finger-3-2": 8,
+        "joint-r-finger-3-3": 8,
+        "joint-r-finger-3-4": 8,
+        "joint-r-finger-4-1": 8,
+        "joint-r-finger-4-2": 8,
+        "joint-r-finger-4-3": 8,
+        "joint-r-finger-4-4": 8,
+        "joint-r-finger-5-1": 8,
+        "joint-r-finger-5-2": 8,
+        "joint-r-finger-5-3": 8,
+        "joint-r-finger-5-4": 8,
+        "joint-r-foot-1": 8,
+        "joint-r-foot-2": 8,
+        "joint-r-hand": 8,
+        "joint-r-hand-2": 8,
+        "joint-r-hand-3": 8,
+        "joint-r-knee": 8,
+        "joint-r-lowerlid": 8,
+        "joint-r-scapula": 8,
+        "joint-r-shoulder": 8,
+        "joint-r-toe-1-1": 8,
+        "joint-r-toe-1-2": 8,
+        "joint-r-toe-1-3": 8,
+        "joint-r-toe-2-1": 8,
+        "joint-r-toe-2-2": 8,
+        "joint-r-toe-2-3": 8,
+        "joint-r-toe-2-4": 8,
+        "joint-r-toe-3-1": 8,
+        "joint-r-toe-3-2": 8,
+        "joint-r-toe-3-3": 8,
+        "joint-r-toe-3-4": 8,
+        "joint-r-toe-4-1": 8,
+        "joint-r-toe-4-2": 8,
+        "joint-r-toe-4-3": 8,
+        "joint-r-toe-4-4": 8,
+        "joint-r-toe-5-1": 8,
+        "joint-r-toe-5-2": 8,
+        "joint-r-toe-5-3": 8,
+        "joint-r-toe-5-4": 8,
+        "joint-r-upper-leg": 8,
+        "joint-r-upperlid": 8,
+        "joint-spine-1": 8,
+        "joint-spine-2": 8,
+        "joint-spine-3": 8,
+        "joint-spine-4": 8,
+        "joint-tongue-1": 8,
+        "joint-tongue-2": 8,
+        "joint-tongue-3": 8,
+        "joint-tongue-4": 8,
+        "levator05.L": 434,
+        "levator05.R": 434,
+        "levator06.L": 318,
+        "levator06.R": 270,
+        "lips": 418,
+        "lowerarm01.L": 543,
+        "lowerarm01.R": 547,
+        "lowerarm02.L": 311,
+        "lowerarm02.R": 311,
+        "lowerleg01.L": 955,
+        "lowerleg01.R": 958,
+        "lowerleg02.L": 673,
+        "lowerleg02.R": 599,
+        "metacarpal1.L": 248,
+        "metacarpal1.R": 248,
+        "metacarpal2.L": 204,
+        "metacarpal2.R": 197,
+        "metacarpal3.L": 208,
+        "metacarpal3.R": 208,
+        "metacarpal4.L": 192,
+        "metacarpal4.R": 192,
+        "neck01": 1102,
+        "neck02": 919,
+        "neck03": 371,
+        "nipple": 96,
+        "nippleTip": 32,
+        "oculi01.L": 289,
+        "oculi01.R": 271,
+        "orbicularis03.L": 263,
+        "orbicularis03.R": 257,
+        "orbicularis04.L": 285,
+        "orbicularis04.R": 284,
+        "oris01": 303,
+        "oris03.L": 373,
+        "oris03.R": 373,
+        "oris05": 563,
+        "oris07.L": 339,
+        "oris07.R": 338,
+        "pelvis.L": 954,
+        "pelvis.R": 959,
+        "risorius03.L": 466,
+        "risorius03.R": 465,
+        "root": 16,
+        "scalp": 376,
+        "shoulder01.L": 611,
+        "shoulder01.R": 584,
+        "special04": 8,
+        "special05.L": 8,
+        "special05.R": 8,
+        "spine01": 2349,
+        "spine02": 1888,
+        "spine03": 1716,
+        "spine04": 1755,
+        "spine05": 2058,
+        "toe1-1.L": 1064,
+        "toe1-1.R": 1064,
+        "toenails": 270,
+        "tongue00": 8,
+        "tongue01": 164,
+        "tongue02": 134,
+        "tongue03": 117,
+        "tongue04": 154,
+        "tongue05.L": 98,
+        "tongue05.R": 85,
+        "tongue06.L": 101,
+        "tongue06.R": 101,
+        "tongue07.L": 108,
+        "tongue07.R": 99,
+        "upperarm01.L": 933,
+        "upperarm01.R": 908,
+        "upperarm02.L": 701,
+        "upperarm02.R": 694,
+        "upperleg01.L": 1186,
+        "upperleg01.R": 1214,
+        "upperleg02.L": 1076,
+        "upperleg02.R": 1070,
+        "wrist.L": 250,
+        "wrist.R": 253
+      },
+      "hand_vertex_groups": {
+        "finger1-1.L": 115,
+        "finger1-1.R": 115,
+        "finger1-2.L": 193,
+        "finger1-2.R": 193,
+        "finger1-3.L": 144,
+        "finger1-3.R": 144,
+        "finger2-1.L": 210,
+        "finger2-1.R": 210,
+        "finger2-2.L": 218,
+        "finger2-2.R": 218,
+        "finger2-3.L": 165,
+        "finger2-3.R": 165,
+        "finger3-1.L": 246,
+        "finger3-1.R": 240,
+        "finger3-2.L": 213,
+        "finger3-2.R": 213,
+        "finger3-3.L": 166,
+        "finger3-3.R": 166,
+        "finger4-1.L": 245,
+        "finger4-1.R": 245,
+        "finger4-2.L": 194,
+        "finger4-2.R": 194,
+        "finger4-3.L": 161,
+        "finger4-3.R": 161,
+        "finger5-1.L": 252,
+        "finger5-1.R": 252,
+        "finger5-2.L": 209,
+        "finger5-2.R": 209,
+        "finger5-3.L": 214,
+        "finger5-3.R": 214,
+        "fingernails": 168,
+        "joint-l-finger-1-1": 8,
+        "joint-l-finger-1-2": 8,
+        "joint-l-finger-1-3": 8,
+        "joint-l-finger-1-4": 8,
+        "joint-l-finger-2-1": 8,
+        "joint-l-finger-2-2": 8,
+        "joint-l-finger-2-3": 8,
+        "joint-l-finger-2-4": 8,
+        "joint-l-finger-3-1": 8,
+        "joint-l-finger-3-2": 8,
+        "joint-l-finger-3-3": 8,
+        "joint-l-finger-3-4": 8,
+        "joint-l-finger-4-1": 8,
+        "joint-l-finger-4-2": 8,
+        "joint-l-finger-4-3": 8,
+        "joint-l-finger-4-4": 8,
+        "joint-l-finger-5-1": 8,
+        "joint-l-finger-5-2": 8,
+        "joint-l-finger-5-3": 8,
+        "joint-l-finger-5-4": 8,
+        "joint-l-hand": 8,
+        "joint-l-hand-2": 8,
+        "joint-l-hand-3": 8,
+        "joint-r-finger-1-1": 8,
+        "joint-r-finger-1-2": 8,
+        "joint-r-finger-1-3": 8,
+        "joint-r-finger-1-4": 8,
+        "joint-r-finger-2-1": 8,
+        "joint-r-finger-2-2": 8,
+        "joint-r-finger-2-3": 8,
+        "joint-r-finger-2-4": 8,
+        "joint-r-finger-3-1": 8,
+        "joint-r-finger-3-2": 8,
+        "joint-r-finger-3-3": 8,
+        "joint-r-finger-3-4": 8,
+        "joint-r-finger-4-1": 8,
+        "joint-r-finger-4-2": 8,
+        "joint-r-finger-4-3": 8,
+        "joint-r-finger-4-4": 8,
+        "joint-r-finger-5-1": 8,
+        "joint-r-finger-5-2": 8,
+        "joint-r-finger-5-3": 8,
+        "joint-r-finger-5-4": 8,
+        "joint-r-hand": 8,
+        "joint-r-hand-2": 8,
+        "joint-r-hand-3": 8,
+        "wrist.L": 250,
+        "wrist.R": 253
+      }
+    }
+  ],
+  "armatures": [
+    {
+      "name": "Human.rig",
+      "data_name": "Human.rig",
+      "parent": null,
+      "bone_count": 137,
+      "deform_bones": [
+        "breast.L",
+        "breast.R",
+        "clavicle.L",
+        "clavicle.R",
+        "eye.L",
+        "eye.R",
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger1-2.L",
+        "finger1-2.R",
+        "finger1-3.L",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger2-2.L",
+        "finger2-2.R",
+        "finger2-3.L",
+        "finger2-3.R",
+        "finger3-1.L",
+        "finger3-1.R",
+        "finger3-2.L",
+        "finger3-2.R",
+        "finger3-3.L",
+        "finger3-3.R",
+        "finger4-1.L",
+        "finger4-1.R",
+        "finger4-2.L",
+        "finger4-2.R",
+        "finger4-3.L",
+        "finger4-3.R",
+        "finger5-1.L",
+        "finger5-1.R",
+        "finger5-2.L",
+        "finger5-2.R",
+        "finger5-3.L",
+        "finger5-3.R",
+        "foot.L",
+        "foot.R",
+        "head",
+        "jaw",
+        "levator02.L",
+        "levator02.R",
+        "levator03.L",
+        "levator03.R",
+        "levator04.L",
+        "levator04.R",
+        "levator05.L",
+        "levator05.R",
+        "levator06.L",
+        "levator06.R",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "lowerarm02.L",
+        "lowerarm02.R",
+        "lowerleg01.L",
+        "lowerleg01.R",
+        "lowerleg02.L",
+        "lowerleg02.R",
+        "metacarpal1.L",
+        "metacarpal1.R",
+        "metacarpal2.L",
+        "metacarpal2.R",
+        "metacarpal3.L",
+        "metacarpal3.R",
+        "metacarpal4.L",
+        "metacarpal4.R",
+        "neck01",
+        "neck02",
+        "neck03",
+        "oculi01.L",
+        "oculi01.R",
+        "oculi02.L",
+        "oculi02.R",
+        "orbicularis03.L",
+        "orbicularis03.R",
+        "orbicularis04.L",
+        "orbicularis04.R",
+        "oris01",
+        "oris02",
+        "oris03.L",
+        "oris03.R",
+        "oris04.L",
+        "oris04.R",
+        "oris05",
+        "oris06",
+        "oris06.L",
+        "oris06.R",
+        "oris07.L",
+        "oris07.R",
+        "pelvis.L",
+        "pelvis.R",
+        "risorius02.L",
+        "risorius02.R",
+        "risorius03.L",
+        "risorius03.R",
+        "root",
+        "shoulder01.L",
+        "shoulder01.R",
+        "special01",
+        "special03",
+        "special04",
+        "special05.L",
+        "special05.R",
+        "special06.L",
+        "special06.R",
+        "spine01",
+        "spine02",
+        "spine03",
+        "spine04",
+        "spine05",
+        "temporalis01.L",
+        "temporalis01.R",
+        "temporalis02.L",
+        "temporalis02.R",
+        "toe1-1.L",
+        "toe1-1.R",
+        "tongue00",
+        "tongue01",
+        "tongue02",
+        "tongue03",
+        "tongue04",
+        "tongue05.L",
+        "tongue05.R",
+        "tongue06.L",
+        "tongue06.R",
+        "tongue07.L",
+        "tongue07.R",
+        "upperarm01.L",
+        "upperarm01.R",
+        "upperarm02.L",
+        "upperarm02.R",
+        "upperleg01.L",
+        "upperleg01.R",
+        "upperleg02.L",
+        "upperleg02.R",
+        "wrist.L",
+        "wrist.R"
+      ],
+      "control_bones": [],
+      "bones": [
+        {
+          "name": "root",
+          "parent": null,
+          "children": [
+            "pelvis.L",
+            "pelvis.R",
+            "spine05"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.06488651037216187,
+            0.8695456981658936
+          ],
+          "tail_local": [
+            0.0,
+            -0.013216623105108738,
+            0.8738864064216614
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "pelvis.L",
+          "parent": "root",
+          "children": [
+            "upperleg01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.013216623105108738,
+            0.8738864064216614
+          ],
+          "tail_local": [
+            0.10147152841091156,
+            -0.005004061385989189,
+            0.8656399846076965
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperleg01.L",
+          "parent": "pelvis.L",
+          "children": [
+            "upperleg02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.10147152841091156,
+            -0.005004061385989189,
+            0.8656399846076965
+          ],
+          "tail_local": [
+            0.10405628383159637,
+            -0.030490009114146233,
+            0.7875062227249146
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperleg02.L",
+          "parent": "upperleg01.L",
+          "children": [
+            "lowerleg01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.10405628383159637,
+            -0.030490009114146233,
+            0.7875062227249146
+          ],
+          "tail_local": [
+            0.1426400989294052,
+            -0.0373256579041481,
+            0.4744187891483307
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerleg01.L",
+          "parent": "upperleg02.L",
+          "children": [
+            "lowerleg02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.1426400989294052,
+            -0.0373256579041481,
+            0.4744187891483307
+          ],
+          "tail_local": [
+            0.1624833047389984,
+            -0.028961043804883957,
+            0.2732198238372803
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerleg02.L",
+          "parent": "lowerleg01.L",
+          "children": [
+            "foot.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.1624833047389984,
+            -0.028961043804883957,
+            0.2732198238372803
+          ],
+          "tail_local": [
+            0.18097291886806488,
+            -0.0224437452852726,
+            0.06916871666908264
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "foot.L",
+          "parent": "lowerleg02.L",
+          "children": [
+            "toe1-1.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.18097291886806488,
+            -0.0224437452852726,
+            0.06916871666908264
+          ],
+          "tail_local": [
+            0.18638567626476288,
+            -0.13929209113121033,
+            0.008939326740801334
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "toe1-1.L",
+          "parent": "foot.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.18638567626476288,
+            -0.13929209113121033,
+            0.008939326740801334
+          ],
+          "tail_local": [
+            0.1886046826839447,
+            -0.21621263027191162,
+            0.016452500596642494
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "pelvis.R",
+          "parent": "root",
+          "children": [
+            "upperleg01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.013216623105108738,
+            0.8738864064216614
+          ],
+          "tail_local": [
+            -0.10147152841091156,
+            -0.005004061385989189,
+            0.8656399846076965
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperleg01.R",
+          "parent": "pelvis.R",
+          "children": [
+            "upperleg02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.10147152841091156,
+            -0.005004061385989189,
+            0.8656399846076965
+          ],
+          "tail_local": [
+            -0.10405628383159637,
+            -0.030490009114146233,
+            0.7875062227249146
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperleg02.R",
+          "parent": "upperleg01.R",
+          "children": [
+            "lowerleg01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.10405628383159637,
+            -0.030490009114146233,
+            0.7875062227249146
+          ],
+          "tail_local": [
+            -0.1426400989294052,
+            -0.0373256579041481,
+            0.4744187891483307
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerleg01.R",
+          "parent": "upperleg02.R",
+          "children": [
+            "lowerleg02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.1426400989294052,
+            -0.0373256579041481,
+            0.4744187891483307
+          ],
+          "tail_local": [
+            -0.1624833047389984,
+            -0.028961043804883957,
+            0.2732198238372803
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerleg02.R",
+          "parent": "lowerleg01.R",
+          "children": [
+            "foot.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.1624833047389984,
+            -0.028961043804883957,
+            0.2732198238372803
+          ],
+          "tail_local": [
+            -0.18097291886806488,
+            -0.0224437452852726,
+            0.06916871666908264
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "foot.R",
+          "parent": "lowerleg02.R",
+          "children": [
+            "toe1-1.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.18097291886806488,
+            -0.0224437452852726,
+            0.06916871666908264
+          ],
+          "tail_local": [
+            -0.18638567626476288,
+            -0.13929209113121033,
+            0.008939326740801334
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "toe1-1.R",
+          "parent": "foot.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.18638567626476288,
+            -0.13929209113121033,
+            0.008939326740801334
+          ],
+          "tail_local": [
+            -0.1886046826839447,
+            -0.21621263027191162,
+            0.016452500596642494
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "spine05",
+          "parent": "root",
+          "children": [
+            "spine04"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.013216623105108738,
+            0.8738864064216614
+          ],
+          "tail_local": [
+            0.0,
+            0.02537013776600361,
+            0.9533196091651917
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "spine04",
+          "parent": "spine05",
+          "children": [
+            "spine03"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.02537013776600361,
+            0.9533196091651917
+          ],
+          "tail_local": [
+            0.0,
+            0.009862011298537254,
+            1.019595980644226
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "spine03",
+          "parent": "spine04",
+          "children": [
+            "spine02"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.009862011298537254,
+            1.019595980644226
+          ],
+          "tail_local": [
+            0.0,
+            0.008036765269935131,
+            1.0948296785354614
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "spine02",
+          "parent": "spine03",
+          "children": [
+            "breast.L",
+            "breast.R",
+            "spine01"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.008036765269935131,
+            1.0948296785354614
+          ],
+          "tail_local": [
+            0.0,
+            0.01858428493142128,
+            1.2388414144515991
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "breast.L",
+          "parent": "spine02",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.01858428493142128,
+            1.2388414144515991
+          ],
+          "tail_local": [
+            0.10296700149774551,
+            -0.15248766541481018,
+            1.2110451459884644
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "breast.R",
+          "parent": "spine02",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.01858428493142128,
+            1.2388414144515991
+          ],
+          "tail_local": [
+            -0.10296700149774551,
+            -0.15248766541481018,
+            1.2110451459884644
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "spine01",
+          "parent": "spine02",
+          "children": [
+            "clavicle.L",
+            "clavicle.R",
+            "neck01"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.01858428493142128,
+            1.2388414144515991
+          ],
+          "tail_local": [
+            0.0,
+            -0.0051302071660757065,
+            1.413631796836853
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "clavicle.L",
+          "parent": "spine01",
+          "children": [
+            "shoulder01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.02277444303035736,
+            -0.0220988467335701,
+            1.3424878120422363
+          ],
+          "tail_local": [
+            0.09924247115850449,
+            -0.02195659466087818,
+            1.358741044998169
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "shoulder01.L",
+          "parent": "clavicle.L",
+          "children": [
+            "upperarm01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.09924247115850449,
+            -0.02195659466087818,
+            1.358741044998169
+          ],
+          "tail_local": [
+            0.1700163632631302,
+            -0.01926415227353573,
+            1.3201014995574951
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperarm01.L",
+          "parent": "shoulder01.L",
+          "children": [
+            "upperarm02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.1700163632631302,
+            -0.01926415227353573,
+            1.3201014995574951
+          ],
+          "tail_local": [
+            0.21670383214950562,
+            -0.018781466409564018,
+            1.2659754753112793
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperarm02.L",
+          "parent": "upperarm01.L",
+          "children": [
+            "lowerarm01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.21670383214950562,
+            -0.018781466409564018,
+            1.2659754753112793
+          ],
+          "tail_local": [
+            0.3311667740345001,
+            -0.02005697600543499,
+            1.1395602226257324
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerarm01.L",
+          "parent": "upperarm02.L",
+          "children": [
+            "lowerarm02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.3311667740345001,
+            -0.02005697600543499,
+            1.1395602226257324
+          ],
+          "tail_local": [
+            0.391848623752594,
+            -0.0998082384467125,
+            1.0768330097198486
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerarm02.L",
+          "parent": "lowerarm01.L",
+          "children": [
+            "wrist.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.391848623752594,
+            -0.0998082384467125,
+            1.0768330097198486
+          ],
+          "tail_local": [
+            0.453095018863678,
+            -0.1832285225391388,
+            1.0155318975448608
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "wrist.L",
+          "parent": "lowerarm02.L",
+          "children": [
+            "finger1-1.L",
+            "metacarpal1.L",
+            "metacarpal2.L",
+            "metacarpal3.L",
+            "metacarpal4.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.453095018863678,
+            -0.1832285225391388,
+            1.0155318975448608
+          ],
+          "tail_local": [
+            0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-1.L",
+          "parent": "wrist.L",
+          "children": [
+            "finger1-2.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4540647864341736,
+            -0.22703272104263306,
+            1.0079275369644165
+          ],
+          "tail_local": [
+            0.43327146768569946,
+            -0.24803690612316132,
+            0.9992833733558655
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-2.L",
+          "parent": "finger1-1.L",
+          "children": [
+            "finger1-3.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.43327146768569946,
+            -0.24803690612316132,
+            0.9992833733558655
+          ],
+          "tail_local": [
+            0.42089810967445374,
+            -0.279072105884552,
+            0.9853271842002869
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-3.L",
+          "parent": "finger1-2.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.42089810967445374,
+            -0.279072105884552,
+            0.9853271842002869
+          ],
+          "tail_local": [
+            0.41538602113723755,
+            -0.30035048723220825,
+            0.9679941534996033
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal1.L",
+          "parent": "wrist.L",
+          "children": [
+            "finger2-1.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "tail_local": [
+            0.48077186942100525,
+            -0.2775399684906006,
+            0.9749304056167603
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-1.L",
+          "parent": "metacarpal1.L",
+          "children": [
+            "finger2-2.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.48077186942100525,
+            -0.2775399684906006,
+            0.9749304056167603
+          ],
+          "tail_local": [
+            0.48412102460861206,
+            -0.29825085401535034,
+            0.9598726630210876
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-2.L",
+          "parent": "finger2-1.L",
+          "children": [
+            "finger2-3.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.48412102460861206,
+            -0.29825085401535034,
+            0.9598726630210876
+          ],
+          "tail_local": [
+            0.48356521129608154,
+            -0.3145968019962311,
+            0.9435933232307434
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-3.L",
+          "parent": "finger2-2.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.48356521129608154,
+            -0.3145968019962311,
+            0.9435933232307434
+          ],
+          "tail_local": [
+            0.47993025183677673,
+            -0.3321652114391327,
+            0.9234802722930908
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal2.L",
+          "parent": "wrist.L",
+          "children": [
+            "finger3-1.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "tail_local": [
+            0.4969857633113861,
+            -0.25972598791122437,
+            0.9640043377876282
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-1.L",
+          "parent": "metacarpal2.L",
+          "children": [
+            "finger3-2.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4969857633113861,
+            -0.25972598791122437,
+            0.9640043377876282
+          ],
+          "tail_local": [
+            0.5042244791984558,
+            -0.280185341835022,
+            0.9380877017974854
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-2.L",
+          "parent": "finger3-1.L",
+          "children": [
+            "finger3-3.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5042244791984558,
+            -0.280185341835022,
+            0.9380877017974854
+          ],
+          "tail_local": [
+            0.506892204284668,
+            -0.2972935140132904,
+            0.9166065454483032
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-3.L",
+          "parent": "finger3-2.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.506892204284668,
+            -0.2972935140132904,
+            0.9166065454483032
+          ],
+          "tail_local": [
+            0.5067319869995117,
+            -0.3121422529220581,
+            0.8941106200218201
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal3.L",
+          "parent": "wrist.L",
+          "children": [
+            "finger4-1.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4753429591655731,
+            -0.1988280862569809,
+            0.9845902919769287
+          ],
+          "tail_local": [
+            0.5045318007469177,
+            -0.2426365166902542,
+            0.9563679695129395
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-1.L",
+          "parent": "metacarpal3.L",
+          "children": [
+            "finger4-2.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5045318007469177,
+            -0.2426365166902542,
+            0.9563679695129395
+          ],
+          "tail_local": [
+            0.5138360261917114,
+            -0.25671467185020447,
+            0.9319338798522949
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-2.L",
+          "parent": "finger4-1.L",
+          "children": [
+            "finger4-3.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5138360261917114,
+            -0.25671467185020447,
+            0.9319338798522949
+          ],
+          "tail_local": [
+            0.5180871486663818,
+            -0.26924267411231995,
+            0.9109723567962646
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-3.L",
+          "parent": "finger4-2.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5180871486663818,
+            -0.26924267411231995,
+            0.9109723567962646
+          ],
+          "tail_local": [
+            0.520561933517456,
+            -0.2804645597934723,
+            0.8868927359580994
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal4.L",
+          "parent": "wrist.L",
+          "children": [
+            "finger5-1.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.4753429591655731,
+            -0.1988280862569809,
+            0.9845902919769287
+          ],
+          "tail_local": [
+            0.5060592293739319,
+            -0.22328533232212067,
+            0.9477357864379883
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-1.L",
+          "parent": "metacarpal4.L",
+          "children": [
+            "finger5-2.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5060592293739319,
+            -0.22328533232212067,
+            0.9477357864379883
+          ],
+          "tail_local": [
+            0.5119569301605225,
+            -0.23075079917907715,
+            0.928679347038269
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-2.L",
+          "parent": "finger5-1.L",
+          "children": [
+            "finger5-3.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5119569301605225,
+            -0.23075079917907715,
+            0.928679347038269
+          ],
+          "tail_local": [
+            0.5136875510215759,
+            -0.23644237220287323,
+            0.9142624735832214
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-3.L",
+          "parent": "finger5-2.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.5136875510215759,
+            -0.23644237220287323,
+            0.9142624735832214
+          ],
+          "tail_local": [
+            0.5163437128067017,
+            -0.2433518022298813,
+            0.8958465456962585
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "clavicle.R",
+          "parent": "spine01",
+          "children": [
+            "shoulder01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.02277444303035736,
+            -0.0220988467335701,
+            1.3424878120422363
+          ],
+          "tail_local": [
+            -0.09924247115850449,
+            -0.02195659466087818,
+            1.358741044998169
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "shoulder01.R",
+          "parent": "clavicle.R",
+          "children": [
+            "upperarm01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.09924247115850449,
+            -0.02195659466087818,
+            1.358741044998169
+          ],
+          "tail_local": [
+            -0.1700163632631302,
+            -0.01926415227353573,
+            1.3201014995574951
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperarm01.R",
+          "parent": "shoulder01.R",
+          "children": [
+            "upperarm02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.1700163632631302,
+            -0.01926415227353573,
+            1.3201014995574951
+          ],
+          "tail_local": [
+            -0.21670383214950562,
+            -0.018781466409564018,
+            1.2659754753112793
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "upperarm02.R",
+          "parent": "upperarm01.R",
+          "children": [
+            "lowerarm01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.21670383214950562,
+            -0.018781466409564018,
+            1.2659754753112793
+          ],
+          "tail_local": [
+            -0.3311667740345001,
+            -0.02005697600543499,
+            1.1395602226257324
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerarm01.R",
+          "parent": "upperarm02.R",
+          "children": [
+            "lowerarm02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.3311667740345001,
+            -0.02005697600543499,
+            1.1395602226257324
+          ],
+          "tail_local": [
+            -0.391848623752594,
+            -0.0998082384467125,
+            1.0768330097198486
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "lowerarm02.R",
+          "parent": "lowerarm01.R",
+          "children": [
+            "wrist.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.391848623752594,
+            -0.0998082384467125,
+            1.0768330097198486
+          ],
+          "tail_local": [
+            -0.453095018863678,
+            -0.1832285225391388,
+            1.0155318975448608
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "wrist.R",
+          "parent": "lowerarm02.R",
+          "children": [
+            "finger1-1.R",
+            "metacarpal1.R",
+            "metacarpal2.R",
+            "metacarpal3.R",
+            "metacarpal4.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.453095018863678,
+            -0.1832285225391388,
+            1.0155318975448608
+          ],
+          "tail_local": [
+            -0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-1.R",
+          "parent": "wrist.R",
+          "children": [
+            "finger1-2.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4540647864341736,
+            -0.22703272104263306,
+            1.0079275369644165
+          ],
+          "tail_local": [
+            -0.43327146768569946,
+            -0.24803690612316132,
+            0.9992833733558655
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-2.R",
+          "parent": "finger1-1.R",
+          "children": [
+            "finger1-3.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.43327146768569946,
+            -0.24803690612316132,
+            0.9992833733558655
+          ],
+          "tail_local": [
+            -0.42089810967445374,
+            -0.279072105884552,
+            0.9853271842002869
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger1-3.R",
+          "parent": "finger1-2.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.42089810967445374,
+            -0.279072105884552,
+            0.9853271842002869
+          ],
+          "tail_local": [
+            -0.41538602113723755,
+            -0.30035048723220825,
+            0.9679941534996033
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal1.R",
+          "parent": "wrist.R",
+          "children": [
+            "finger2-1.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "tail_local": [
+            -0.48077186942100525,
+            -0.2775399684906006,
+            0.9749304056167603
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-1.R",
+          "parent": "metacarpal1.R",
+          "children": [
+            "finger2-2.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.48077186942100525,
+            -0.2775399684906006,
+            0.9749304056167603
+          ],
+          "tail_local": [
+            -0.48412102460861206,
+            -0.29825085401535034,
+            0.9598726630210876
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-2.R",
+          "parent": "finger2-1.R",
+          "children": [
+            "finger2-3.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.48412102460861206,
+            -0.29825085401535034,
+            0.9598726630210876
+          ],
+          "tail_local": [
+            -0.48356521129608154,
+            -0.3145968019962311,
+            0.9435933232307434
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger2-3.R",
+          "parent": "finger2-2.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.48356521129608154,
+            -0.3145968019962311,
+            0.9435933232307434
+          ],
+          "tail_local": [
+            -0.47993025183677673,
+            -0.3321652114391327,
+            0.9234802722930908
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal2.R",
+          "parent": "wrist.R",
+          "children": [
+            "finger3-1.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4636784791946411,
+            -0.20924535393714905,
+            0.999792218208313
+          ],
+          "tail_local": [
+            -0.4969857633113861,
+            -0.25972598791122437,
+            0.9640043377876282
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-1.R",
+          "parent": "metacarpal2.R",
+          "children": [
+            "finger3-2.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4969857633113861,
+            -0.25972598791122437,
+            0.9640043377876282
+          ],
+          "tail_local": [
+            -0.5042244791984558,
+            -0.280185341835022,
+            0.9380877017974854
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-2.R",
+          "parent": "finger3-1.R",
+          "children": [
+            "finger3-3.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5042244791984558,
+            -0.280185341835022,
+            0.9380877017974854
+          ],
+          "tail_local": [
+            -0.506892204284668,
+            -0.2972935140132904,
+            0.9166065454483032
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger3-3.R",
+          "parent": "finger3-2.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.506892204284668,
+            -0.2972935140132904,
+            0.9166065454483032
+          ],
+          "tail_local": [
+            -0.5067319869995117,
+            -0.3121422529220581,
+            0.8941106200218201
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal3.R",
+          "parent": "wrist.R",
+          "children": [
+            "finger4-1.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4753429591655731,
+            -0.1988280862569809,
+            0.9845902919769287
+          ],
+          "tail_local": [
+            -0.5045318007469177,
+            -0.2426365166902542,
+            0.9563679695129395
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-1.R",
+          "parent": "metacarpal3.R",
+          "children": [
+            "finger4-2.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5045318007469177,
+            -0.2426365166902542,
+            0.9563679695129395
+          ],
+          "tail_local": [
+            -0.5138360261917114,
+            -0.25671467185020447,
+            0.9319338798522949
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-2.R",
+          "parent": "finger4-1.R",
+          "children": [
+            "finger4-3.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5138360261917114,
+            -0.25671467185020447,
+            0.9319338798522949
+          ],
+          "tail_local": [
+            -0.5180871486663818,
+            -0.26924267411231995,
+            0.9109723567962646
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger4-3.R",
+          "parent": "finger4-2.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5180871486663818,
+            -0.26924267411231995,
+            0.9109723567962646
+          ],
+          "tail_local": [
+            -0.520561933517456,
+            -0.2804645597934723,
+            0.8868927359580994
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "metacarpal4.R",
+          "parent": "wrist.R",
+          "children": [
+            "finger5-1.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.4753429591655731,
+            -0.1988280862569809,
+            0.9845902919769287
+          ],
+          "tail_local": [
+            -0.5060592293739319,
+            -0.22328533232212067,
+            0.9477357864379883
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-1.R",
+          "parent": "metacarpal4.R",
+          "children": [
+            "finger5-2.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5060592293739319,
+            -0.22328533232212067,
+            0.9477357864379883
+          ],
+          "tail_local": [
+            -0.5119569301605225,
+            -0.23075079917907715,
+            0.928679347038269
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-2.R",
+          "parent": "finger5-1.R",
+          "children": [
+            "finger5-3.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5119569301605225,
+            -0.23075079917907715,
+            0.928679347038269
+          ],
+          "tail_local": [
+            -0.5136875510215759,
+            -0.23644237220287323,
+            0.9142624735832214
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "finger5-3.R",
+          "parent": "finger5-2.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.5136875510215759,
+            -0.23644237220287323,
+            0.9142624735832214
+          ],
+          "tail_local": [
+            -0.5163437128067017,
+            -0.2433518022298813,
+            0.8958465456962585
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "neck01",
+          "parent": "spine01",
+          "children": [
+            "neck02"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.0051302071660757065,
+            1.413631796836853
+          ],
+          "tail_local": [
+            -0.0005182502791285515,
+            -0.008958457037806511,
+            1.4488593339920044
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "neck02",
+          "parent": "neck01",
+          "children": [
+            "neck03"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.0005182502791285515,
+            -0.008958457037806511,
+            1.4488593339920044
+          ],
+          "tail_local": [
+            -0.0008702492341399193,
+            -0.007160959765315056,
+            1.4940202236175537
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "neck03",
+          "parent": "neck02",
+          "children": [
+            "head"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.0008702492341399193,
+            -0.007160959765315056,
+            1.4940202236175537
+          ],
+          "tail_local": [
+            0.0,
+            -0.04400532692670822,
+            1.514577865600586
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "head",
+          "parent": "neck03",
+          "children": [
+            "jaw",
+            "levator02.L",
+            "levator02.R",
+            "special01",
+            "special03",
+            "special06.L",
+            "special06.R",
+            "temporalis01.L",
+            "temporalis01.R",
+            "temporalis02.L",
+            "temporalis02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.04400532692670822,
+            1.514577865600586
+          ],
+          "tail_local": [
+            0.0,
+            -0.03706219047307968,
+            1.6625131368637085
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "jaw",
+          "parent": "head",
+          "children": [
+            "special04",
+            "tongue00"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.056505460292100906,
+            1.5208491086959839
+          ],
+          "tail_local": [
+            0.0,
+            -0.10708798468112946,
+            1.4431928396224976
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special04",
+          "parent": "jaw",
+          "children": [
+            "oris02",
+            "oris06.L",
+            "oris06.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.10708798468112946,
+            1.4431928396224976
+          ],
+          "tail_local": [
+            0.0,
+            -0.13241584599018097,
+            1.4609242677688599
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris02",
+          "parent": "special04",
+          "children": [
+            "oris01"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.13241584599018097,
+            1.4609242677688599
+          ],
+          "tail_local": [
+            0.0,
+            -0.14282898604869843,
+            1.470733880996704
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris01",
+          "parent": "oris02",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.14282898604869843,
+            1.470733880996704
+          ],
+          "tail_local": [
+            0.0,
+            -0.14780549705028534,
+            1.4854068756103516
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris06.L",
+          "parent": "special04",
+          "children": [
+            "oris07.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.13241584599018097,
+            1.4609242677688599
+          ],
+          "tail_local": [
+            0.01239700149744749,
+            -0.13964149355888367,
+            1.4655917882919312
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris07.L",
+          "parent": "oris06.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.01239700149744749,
+            -0.13964149355888367,
+            1.4655917882919312
+          ],
+          "tail_local": [
+            0.017181506380438805,
+            -0.14272597432136536,
+            1.4781708717346191
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris06.R",
+          "parent": "special04",
+          "children": [
+            "oris07.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.13241584599018097,
+            1.4609242677688599
+          ],
+          "tail_local": [
+            -0.01239700149744749,
+            -0.13964149355888367,
+            1.4655917882919312
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris07.R",
+          "parent": "oris06.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.01239700149744749,
+            -0.13964149355888367,
+            1.4655917882919312
+          ],
+          "tail_local": [
+            -0.017181506380438805,
+            -0.14272597432136536,
+            1.4781708717346191
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue00",
+          "parent": "jaw",
+          "children": [
+            "tongue01"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.10708798468112946,
+            1.4431928396224976
+          ],
+          "tail_local": [
+            0.0,
+            -0.06894797086715698,
+            1.486832618713379
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue01",
+          "parent": "tongue00",
+          "children": [
+            "tongue02",
+            "tongue05.L",
+            "tongue05.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.06894797086715698,
+            1.486832618713379
+          ],
+          "tail_local": [
+            0.0,
+            -0.09781473129987717,
+            1.4905234575271606
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue02",
+          "parent": "tongue01",
+          "children": [
+            "tongue03",
+            "tongue06.L",
+            "tongue06.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.09781473129987717,
+            1.4905234575271606
+          ],
+          "tail_local": [
+            0.0,
+            -0.11805735528469086,
+            1.4903417825698853
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue03",
+          "parent": "tongue02",
+          "children": [
+            "tongue04",
+            "tongue07.L",
+            "tongue07.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.11805735528469086,
+            1.4903417825698853
+          ],
+          "tail_local": [
+            -0.0004992499016225338,
+            -0.12580925226211548,
+            1.4842853546142578
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue04",
+          "parent": "tongue03",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.0004992499016225338,
+            -0.12580925226211548,
+            1.4842853546142578
+          ],
+          "tail_local": [
+            0.0,
+            -0.134396493434906,
+            1.481359601020813
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue07.L",
+          "parent": "tongue03",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.0004992499016225338,
+            -0.12580925226211548,
+            1.4842853546142578
+          ],
+          "tail_local": [
+            0.011457002721726894,
+            -0.12651999294757843,
+            1.4824144840240479
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue07.R",
+          "parent": "tongue03",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.0004992499016225338,
+            -0.12580925226211548,
+            1.4842853546142578
+          ],
+          "tail_local": [
+            -0.011457002721726894,
+            -0.12651999294757843,
+            1.4824144840240479
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue06.L",
+          "parent": "tongue02",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.11805735528469086,
+            1.4903417825698853
+          ],
+          "tail_local": [
+            0.016211504116654396,
+            -0.11597447097301483,
+            1.485184907913208
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue06.R",
+          "parent": "tongue02",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.11805735528469086,
+            1.4903417825698853
+          ],
+          "tail_local": [
+            -0.016211504116654396,
+            -0.11597447097301483,
+            1.485184907913208
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue05.L",
+          "parent": "tongue01",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.09781473129987717,
+            1.4905234575271606
+          ],
+          "tail_local": [
+            0.019445005804300308,
+            -0.10007347911596298,
+            1.4865888357162476
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "tongue05.R",
+          "parent": "tongue01",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.09781473129987717,
+            1.4905234575271606
+          ],
+          "tail_local": [
+            -0.019445005804300308,
+            -0.10007347911596298,
+            1.4865888357162476
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator02.L",
+          "parent": "head",
+          "children": [
+            "levator03.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.003107000607997179,
+            -0.14858348667621613,
+            1.5354562997817993
+          ],
+          "tail_local": [
+            0.01982850395143032,
+            -0.13669349253177643,
+            1.523557424545288
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator03.L",
+          "parent": "levator02.L",
+          "children": [
+            "levator04.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.01982850395143032,
+            -0.13669349253177643,
+            1.523557424545288
+          ],
+          "tail_local": [
+            0.025918006896972656,
+            -0.13704797625541687,
+            1.5051357746124268
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator04.L",
+          "parent": "levator03.L",
+          "children": [
+            "levator05.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.025918006896972656,
+            -0.13704797625541687,
+            1.5051357746124268
+          ],
+          "tail_local": [
+            0.02769300527870655,
+            -0.1371530145406723,
+            1.4877357482910156
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator05.L",
+          "parent": "levator04.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.02769300527870655,
+            -0.1371530145406723,
+            1.4877357482910156
+          ],
+          "tail_local": [
+            0.024862006306648254,
+            -0.1374644786119461,
+            1.4793800115585327
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator02.R",
+          "parent": "head",
+          "children": [
+            "levator03.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.003107000607997179,
+            -0.14858348667621613,
+            1.5354562997817993
+          ],
+          "tail_local": [
+            -0.01982850395143032,
+            -0.13669349253177643,
+            1.523557424545288
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator03.R",
+          "parent": "levator02.R",
+          "children": [
+            "levator04.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.01982850395143032,
+            -0.13669349253177643,
+            1.523557424545288
+          ],
+          "tail_local": [
+            -0.025918006896972656,
+            -0.13704797625541687,
+            1.5051357746124268
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator04.R",
+          "parent": "levator03.R",
+          "children": [
+            "levator05.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.025918006896972656,
+            -0.13704797625541687,
+            1.5051357746124268
+          ],
+          "tail_local": [
+            -0.02769300527870655,
+            -0.1371530145406723,
+            1.4877357482910156
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator05.R",
+          "parent": "levator04.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.02769300527870655,
+            -0.1371530145406723,
+            1.4877357482910156
+          ],
+          "tail_local": [
+            -0.024862006306648254,
+            -0.1374644786119461,
+            1.4793800115585327
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special01",
+          "parent": "head",
+          "children": [
+            "oris04.L",
+            "oris04.R",
+            "oris06"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            0.02557455748319626,
+            1.5137649774551392
+          ],
+          "tail_local": [
+            0.0,
+            -0.14937299489974976,
+            1.5050153732299805
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris04.L",
+          "parent": "special01",
+          "children": [
+            "oris03.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.14937299489974976,
+            1.5050153732299805
+          ],
+          "tail_local": [
+            0.013421503826975822,
+            -0.1470479816198349,
+            1.498653769493103
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris03.L",
+          "parent": "oris04.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.013421503826975822,
+            -0.1470479816198349,
+            1.498653769493103
+          ],
+          "tail_local": [
+            0.016434507444500923,
+            -0.1466904878616333,
+            1.4926964044570923
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris04.R",
+          "parent": "special01",
+          "children": [
+            "oris03.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.14937299489974976,
+            1.5050153732299805
+          ],
+          "tail_local": [
+            -0.013421503826975822,
+            -0.1470479816198349,
+            1.498653769493103
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris03.R",
+          "parent": "oris04.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.013421503826975822,
+            -0.1470479816198349,
+            1.498653769493103
+          ],
+          "tail_local": [
+            -0.016434507444500923,
+            -0.1466904878616333,
+            1.4926964044570923
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris06",
+          "parent": "special01",
+          "children": [
+            "oris05"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.14937299489974976,
+            1.5050153732299805
+          ],
+          "tail_local": [
+            0.0,
+            -0.15006349980831146,
+            1.4998908042907715
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oris05",
+          "parent": "oris06",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.15006349980831146,
+            1.4998908042907715
+          ],
+          "tail_local": [
+            0.0,
+            -0.1533919870853424,
+            1.4934443235397339
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special03",
+          "parent": "head",
+          "children": [
+            "levator06.L",
+            "levator06.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.056505460292100906,
+            1.5208491086959839
+          ],
+          "tail_local": [
+            0.0,
+            -0.15858697891235352,
+            1.5217454433441162
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator06.L",
+          "parent": "special03",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.005659001413732767,
+            -0.15784050524234772,
+            1.5155344009399414
+          ],
+          "tail_local": [
+            0.016918504610657692,
+            -0.13923998177051544,
+            1.519397258758545
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "levator06.R",
+          "parent": "special03",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.005659001413732767,
+            -0.15784050524234772,
+            1.5155344009399414
+          ],
+          "tail_local": [
+            -0.016918504610657692,
+            -0.13923998177051544,
+            1.519397258758545
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special06.L",
+          "parent": "head",
+          "children": [
+            "special05.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.03706219047307968,
+            1.6625131368637085
+          ],
+          "tail_local": [
+            0.01870550401508808,
+            -0.09359646588563919,
+            1.647555947303772
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special05.L",
+          "parent": "special06.L",
+          "children": [
+            "eye.L",
+            "orbicularis03.L",
+            "orbicularis04.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.01870550401508808,
+            -0.09359646588563919,
+            1.647555947303772
+          ],
+          "tail_local": [
+            0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "eye.L",
+          "parent": "special05.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            0.030681071802973747,
+            -0.15611423552036285,
+            1.55027174949646
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "orbicularis03.L",
+          "parent": "special05.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            0.030608197674155235,
+            -0.15408097207546234,
+            1.5620555877685547
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "orbicularis04.L",
+          "parent": "special05.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            0.030705194920301437,
+            -0.15356311202049255,
+            1.538992166519165
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special06.R",
+          "parent": "head",
+          "children": [
+            "special05.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.0,
+            -0.03706219047307968,
+            1.6625131368637085
+          ],
+          "tail_local": [
+            -0.01870550401508808,
+            -0.09359646588563919,
+            1.647555947303772
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "special05.R",
+          "parent": "special06.R",
+          "children": [
+            "eye.R",
+            "orbicularis03.R",
+            "orbicularis04.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.01870550401508808,
+            -0.09359646588563919,
+            1.647555947303772
+          ],
+          "tail_local": [
+            -0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "eye.R",
+          "parent": "special05.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            -0.030681071802973747,
+            -0.15611423552036285,
+            1.55027174949646
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "orbicularis03.R",
+          "parent": "special05.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            -0.030608197674155235,
+            -0.15408097207546234,
+            1.5620555877685547
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "orbicularis04.R",
+          "parent": "special05.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.02891257032752037,
+            -0.11814328283071518,
+            1.5531847476959229
+          ],
+          "tail_local": [
+            -0.030705194920301437,
+            -0.15356311202049255,
+            1.538992166519165
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "temporalis01.L",
+          "parent": "head",
+          "children": [
+            "oculi02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.060479018837213516,
+            -0.10372346639633179,
+            1.5601818561553955
+          ],
+          "tail_local": [
+            0.052287522703409195,
+            -0.12133847177028656,
+            1.5598334074020386
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oculi02.L",
+          "parent": "temporalis01.L",
+          "children": [
+            "oculi01.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.052287522703409195,
+            -0.12133847177028656,
+            1.5598334074020386
+          ],
+          "tail_local": [
+            0.032030507922172546,
+            -0.13931699097156525,
+            1.5745192766189575
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oculi01.L",
+          "parent": "oculi02.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.032030507922172546,
+            -0.13931699097156525,
+            1.5745192766189575
+          ],
+          "tail_local": [
+            0.015254502184689045,
+            -0.14348846673965454,
+            1.575759768486023
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "temporalis01.R",
+          "parent": "head",
+          "children": [
+            "oculi02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.060479018837213516,
+            -0.10372346639633179,
+            1.5601818561553955
+          ],
+          "tail_local": [
+            -0.052287522703409195,
+            -0.12133847177028656,
+            1.5598334074020386
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oculi02.R",
+          "parent": "temporalis01.R",
+          "children": [
+            "oculi01.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.052287522703409195,
+            -0.12133847177028656,
+            1.5598334074020386
+          ],
+          "tail_local": [
+            -0.032030507922172546,
+            -0.13931699097156525,
+            1.5745192766189575
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "oculi01.R",
+          "parent": "oculi02.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.032030507922172546,
+            -0.13931699097156525,
+            1.5745192766189575
+          ],
+          "tail_local": [
+            -0.015254502184689045,
+            -0.14348846673965454,
+            1.575759768486023
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "temporalis02.L",
+          "parent": "head",
+          "children": [
+            "risorius02.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.06233752518892288,
+            -0.10148347169160843,
+            1.537819743156433
+          ],
+          "tail_local": [
+            0.05263051763176918,
+            -0.11921646445989609,
+            1.5427923202514648
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "risorius02.L",
+          "parent": "temporalis02.L",
+          "children": [
+            "risorius03.L"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.05263051763176918,
+            -0.11921646445989609,
+            1.5427923202514648
+          ],
+          "tail_local": [
+            0.04758202284574509,
+            -0.12525898218154907,
+            1.5151188373565674
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "risorius03.L",
+          "parent": "risorius02.L",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            0.04758202284574509,
+            -0.12525898218154907,
+            1.5151188373565674
+          ],
+          "tail_local": [
+            0.05221401900053024,
+            -0.10948698967695236,
+            1.4953999519348145
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "temporalis02.R",
+          "parent": "head",
+          "children": [
+            "risorius02.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.06233752518892288,
+            -0.10148347169160843,
+            1.537819743156433
+          ],
+          "tail_local": [
+            -0.05263051763176918,
+            -0.11921646445989609,
+            1.5427923202514648
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "risorius02.R",
+          "parent": "temporalis02.R",
+          "children": [
+            "risorius03.R"
+          ],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.05263051763176918,
+            -0.11921646445989609,
+            1.5427923202514648
+          ],
+          "tail_local": [
+            -0.04758202284574509,
+            -0.12525898218154907,
+            1.5151188373565674
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        },
+        {
+          "name": "risorius03.R",
+          "parent": "risorius02.R",
+          "children": [],
+          "use_deform": true,
+          "use_connect": false,
+          "inherit_scale": "FULL",
+          "head_local": [
+            -0.04758202284574509,
+            -0.12525898218154907,
+            1.5151188373565674
+          ],
+          "tail_local": [
+            -0.05221401900053024,
+            -0.10948698967695236,
+            1.4953999519348145
+          ],
+          "pose": {
+            "rotation_mode": "XYZ",
+            "lock_location": [
+              false,
+              false,
+              false
+            ],
+            "lock_rotation": [
+              false,
+              false,
+              false
+            ],
+            "lock_scale": [
+              false,
+              false,
+              false
+            ],
+            "custom_shape": null,
+            "constraints": []
+          }
+        }
+      ],
+      "constraints": [],
+      "ik_constraints": [],
+      "semantic_candidates": {
+        "shoulder": {
+          "left": [
+            "clavicle.L",
+            "shoulder01.L"
+          ],
+          "right": [
+            "clavicle.R",
+            "shoulder01.R"
+          ],
+          "unresolved_side": []
+        },
+        "elbow": {
+          "left": [
+            "lowerarm01.L",
+            "lowerarm02.L"
+          ],
+          "right": [
+            "lowerarm01.R",
+            "lowerarm02.R"
+          ],
+          "unresolved_side": []
+        },
+        "wrist": {
+          "left": [
+            "wrist.L"
+          ],
+          "right": [
+            "wrist.R"
+          ],
+          "unresolved_side": []
+        },
+        "thumb": {
+          "left": [],
+          "right": [],
+          "unresolved_side": []
+        },
+        "index": {
+          "left": [],
+          "right": [],
+          "unresolved_side": []
+        },
+        "middle": {
+          "left": [],
+          "right": [],
+          "unresolved_side": []
+        },
+        "ring": {
+          "left": [],
+          "right": [],
+          "unresolved_side": []
+        },
+        "little": {
+          "left": [],
+          "right": [],
+          "unresolved_side": []
+        }
+      },
+      "finger_named_bones": [
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger1-2.L",
+        "finger1-2.R",
+        "finger1-3.L",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger2-2.L",
+        "finger2-2.R",
+        "finger2-3.L",
+        "finger2-3.R",
+        "finger3-1.L",
+        "finger3-1.R",
+        "finger3-2.L",
+        "finger3-2.R",
+        "finger3-3.L",
+        "finger3-3.R",
+        "finger4-1.L",
+        "finger4-1.R",
+        "finger4-2.L",
+        "finger4-2.R",
+        "finger4-3.L",
+        "finger4-3.R",
+        "finger5-1.L",
+        "finger5-1.R",
+        "finger5-2.L",
+        "finger5-2.R",
+        "finger5-3.L",
+        "finger5-3.R"
+      ],
+      "finger_chain_roots": [
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger3-1.L",
+        "finger3-1.R",
+        "finger4-1.L",
+        "finger4-1.R",
+        "finger5-1.L",
+        "finger5-1.R"
+      ]
+    }
+  ],
+  "actions": [],
+  "checks": [
+    {
+      "id": "blend_loaded",
+      "status": "PASS",
+      "summary": "A .blend working copy is loaded.",
+      "critical": true,
+      "details": null
+    },
+    {
+      "id": "armature_present",
+      "status": "PASS",
+      "summary": "1 armature object(s) found.",
+      "critical": true,
+      "details": null
+    },
+    {
+      "id": "mesh_present",
+      "status": "PASS",
+      "summary": "3 mesh object(s) found.",
+      "critical": true,
+      "details": null
+    },
+    {
+      "id": "mesh_armature_association",
+      "status": "PASS",
+      "summary": "3 mesh object(s) are parented to or modified by an armature.",
+      "critical": true,
+      "details": [
+        "EDU_NeutralShorts",
+        "EDU_NeutralTop",
+        "Human"
+      ]
+    },
+    {
+      "id": "blender_baseline",
+      "status": "PASS",
+      "summary": "Loaded with expected Blender 5.2.4.",
+      "critical": false,
+      "details": null
+    },
+    {
+      "id": "semantic_finger_mapping",
+      "status": "NOT YET TESTED",
+      "summary": "Bone inventory exists, but names alone do not prove every digit mapping; visual pose selection is still required.",
+      "critical": false,
+      "details": {
+        "Human.rig": {
+          "shoulder": {
+            "left": [
+              "clavicle.L",
+              "shoulder01.L"
+            ],
+            "right": [
+              "clavicle.R",
+              "shoulder01.R"
+            ],
+            "unresolved_side": []
+          },
+          "elbow": {
+            "left": [
+              "lowerarm01.L",
+              "lowerarm02.L"
+            ],
+            "right": [
+              "lowerarm01.R",
+              "lowerarm02.R"
+            ],
+            "unresolved_side": []
+          },
+          "wrist": {
+            "left": [
+              "wrist.L"
+            ],
+            "right": [
+              "wrist.R"
+            ],
+            "unresolved_side": []
+          },
+          "thumb": {
+            "left": [],
+            "right": [],
+            "unresolved_side": []
+          },
+          "index": {
+            "left": [],
+            "right": [],
+            "unresolved_side": []
+          },
+          "middle": {
+            "left": [],
+            "right": [],
+            "unresolved_side": []
+          },
+          "ring": {
+            "left": [],
+            "right": [],
+            "unresolved_side": []
+          },
+          "little": {
+            "left": [],
+            "right": [],
+            "unresolved_side": []
+          }
+        }
+      }
+    },
+    {
+      "id": "numbered_finger_chain_structure",
+      "status": "PASS",
+      "summary": "Five distinct, linked, rotation-available three-bone finger chains exist on each hand.",
+      "critical": true,
+      "details": {
+        "Human.rig": {
+          "L": {
+            "1": {
+              "bones": [
+                "finger1-1.L",
+                "finger1-2.L",
+                "finger1-3.L"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "2": {
+              "bones": [
+                "finger2-1.L",
+                "finger2-2.L",
+                "finger2-3.L"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "3": {
+              "bones": [
+                "finger3-1.L",
+                "finger3-2.L",
+                "finger3-3.L"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "4": {
+              "bones": [
+                "finger4-1.L",
+                "finger4-2.L",
+                "finger4-3.L"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "5": {
+              "bones": [
+                "finger5-1.L",
+                "finger5-2.L",
+                "finger5-3.L"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            }
+          },
+          "R": {
+            "1": {
+              "bones": [
+                "finger1-1.R",
+                "finger1-2.R",
+                "finger1-3.R"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "2": {
+              "bones": [
+                "finger2-1.R",
+                "finger2-2.R",
+                "finger2-3.R"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "3": {
+              "bones": [
+                "finger3-1.R",
+                "finger3-2.R",
+                "finger3-3.R"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "4": {
+              "bones": [
+                "finger4-1.R",
+                "finger4-2.R",
+                "finger4-3.R"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            },
+            "5": {
+              "bones": [
+                "finger5-1.R",
+                "finger5-2.R",
+                "finger5-3.R"
+              ],
+              "present": true,
+              "linked": true,
+              "rotation_available": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "wrist_control_structure",
+      "status": "PASS",
+      "summary": "Wrist/hand pose-bone candidates exist; manipulation remains for TASK-0003.",
+      "critical": false,
+      "details": null
+    },
+    {
+      "id": "constraint_inventory",
+      "status": "PASS",
+      "summary": "0 pose-bone constraints found; none were added or changed.",
+      "critical": false,
+      "details": null
+    },
+    {
+      "id": "fps_contract",
+      "status": "PASS",
+      "summary": "Scene FPS matches 30.",
+      "critical": false,
+      "details": null
+    },
+    {
+      "id": "armature_object_transforms",
+      "status": "FAIL",
+      "summary": "1 armature object(s) have non-identity transforms; do not apply/fix them in this diagnostic task.",
+      "critical": false,
+      "details": [
+        {
+          "name": "Human.rig",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_euler": [
+            -0.055045463144779205,
+            0.002965844003483653,
+            -0.244863823056221
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "read_only_state",
+      "status": "PASS",
+      "summary": "Object/action/bone inventory is unchanged by inspection.",
+      "critical": true,
+      "details": null
+    }
+  ]
+}

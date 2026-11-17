@@ -4,11 +4,12 @@ Owner phối hợp: Le Huy Anh (master/rig/export) và Doan Khanh Nhat (viewer).
 
 ## A. Master rig
 
-- Chỉ một master character đã phê duyệt trong `blender/master/`; `blender/avatar_master.blend` hiện là candidate có sẵn, **chưa preflight và không tự động được coi là master đã duyệt**.
+- Canonical master duy nhất là `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0-rc.1`; hash/version nằm trong `blender/master/avatar_master.manifest.json`.
+- `blender/avatar_master.blend` là pre-neutral legacy source; `blender/master/avatar_master_neutral_candidate.blend` là nguồn promotion được giữ để truy vết. Cả hai không còn là canonical.
 - Một canonical armature hierarchy. Không đổi bone name, parent, rest pose, scale hoặc thay rig độc lập.
 - Master change dùng branch/PR riêng, ghi lý do, backup và skeleton signature trước/sau. Huy Anh điều phối; Mien không ghi đè master từ working file.
 - Animator tạo file riêng từ approved revision và ghi master commit/hash trong handoff.
-- TASK-0004 tạo `blender/master/avatar_master_neutral_candidate.blend`; đây là candidate để owner review, chưa tự động thay official master.
+- TASK-0005 formalize owner approval: canonical copy không chứa `TECH_HAND_CONTROL_TEST`, pose basis neutral, 30 FPS và giữ nguyên 137-bone hierarchy. Technical action tiếp tục nằm trong technical working source.
 
 ## B–C. ID, clip và file naming
 
@@ -35,6 +36,13 @@ ID chỉ là khóa kỹ thuật, không gán ý nghĩa ký hiệu khi chưa có 
 Release đầu dùng **một self-contained GLB mỗi sign**, chứa model, armature/skin, material/texture cần thiết và đúng một clip chính. Lợi ích là tích hợp độc lập; chi phí là file lặp/lớn hơn. Shared-skeleton runtime hoặc retargeting chỉ được xem xét sau milestone Day 5 với ADR riêng.
 
 Luồng file: working `.blend` → `assets/exports/signs/Snnn.glb` để kiểm tra → `apps/web/public/models/signs/Snnn.glb` khi approved technical/content gate.
+
+Hai profile master/facial foundation:
+
+- `MASTER_STATIC`: canonical neutral character, skin/material, không animation, không Morph Target; export reference ở `assets/exports/master/avatar-master-v1-rc1.glb`.
+- `ANIMATION_WITH_MORPHS`: future sign source có canonical skeleton, bone Action và approved facial Morph Targets/weight animation. TASK-0005 chỉ chứng minh transport bằng diagnostic probe; không phải production facial readiness.
+
+Profile exact options và limitations nằm trong `docs/architecture/MASTER_AVATAR.md`. Diagnostic Morph Target không được đưa vào master/production GLB.
 
 ## F. Blender 5.2 Actions/Slots và Three.js
 

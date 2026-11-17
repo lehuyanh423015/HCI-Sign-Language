@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0-rc.1",
+  "status": "release-candidate",
+  "blender_version": "5.2.4 LTS",
+  "mpfb_version": "2.0.18",
+  "canonical_file": "blender/master/avatar_master.blend",
+  "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232",
+  "approved_source": {
+    "commit": "5996ee48637d3d6daa3b7c43c4fc5319a0153e8a",
+    "path": "blender/master/avatar_master_neutral_candidate.blend",
+    "sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F"
+  },
+  "mesh_count": 3,
+  "mesh_objects": [
+    "Human",
+    "EDU_NeutralTop",
+    "EDU_NeutralShorts"
+  ],
+  "armature_object": "Human.rig",
+  "bone_count": 137,
+  "deform_bone_count": 137,
+  "hierarchy_sha256": "5D6A61F33BE4EDBF08D06F0E9D85F5C118924254A2C0F1E5F7776F110F033BCE",
+  "shape_keys": [
+    "Basis",
+    "$md-$as-$fe-$yn",
+    "$md-$as-$ma-$yn",
+    "$md-$ca-$fe-$yn",
+    "$md-$ca-$ma-$yn",
+    "$md-$af-$fe-$yn",
+    "$md-$af-$ma-$yn",
+    "$md-universal-$fe-$yn-$av$mu-$av$wg",
+    "$md-universal-$ma-$yn-$av$mu-$av$wg",
+    "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi",
+    "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi"
+  ],
+  "facial_shape_keys": [],
+  "facial_and_head_bones": [
+    "head", "neck01", "neck02", "neck03", "jaw", "eye.L", "eye.R",
+    "levator02.L", "levator02.R", "levator03.L", "levator03.R",
+    "levator04.L", "levator04.R", "levator05.L", "levator05.R",
+    "levator06.L", "levator06.R", "oculi01.L", "oculi01.R", "oculi02.L", "oculi02.R",
+    "orbicularis03.L", "orbicularis03.R", "orbicularis04.L", "orbicularis04.R",
+    "oris01", "oris02", "oris03.L", "oris03.R", "oris04.L", "oris04.R",
+    "oris05", "oris06", "oris06.L", "oris06.R", "oris07.L", "oris07.R",
+    "risorius02.L", "risorius02.R", "risorius03.L", "risorius03.R",
+    "special01", "special03", "special04", "special05.L", "special05.R",
+    "temporalis01.L", "temporalis01.R", "temporalis02.L", "temporalis02.R"
+  ],
+  "scene": {
+    "fps": 30,
+    "frame_start": 1,
+    "frame_end": 1,
+    "actions": []
+  },
+  "armature_object_rotation_policy": "Retain existing non-identity Euler rotation; verified compatible with TASK-0003/0004 export pipeline. Do not apply blindly.",
+  "last_validation_date": "2026-11-17",
+  "validation_report": "docs/reports/artifacts/TASK-0005-master-facial-audit.json"
+}

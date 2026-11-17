@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "inspection": "blender_environment",
+  "read_only": true,
+  "overall_status": "PASS",
+  "blender": {
+    "version": "5.2.4 LTS",
+    "version_tuple": [
+      5,
+      2,
+      4
+    ],
+    "binary_path": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+    "background": true,
+    "build_hash": "cd5dc428cce1",
+    "python": "3.13.13 (main, May  8 2026, 12:37:03) [MSC v.1944 64 bit (AMD64)]",
+    "user_config": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\config",
+    "user_scripts": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts",
+    "script_paths": [
+      "C:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\scripts"
+    ]
+  },
+  "extension_repositories": [
+    {
+      "name": "extensions.blender.org",
+      "module": "blender_org",
+      "directory": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions\\blender_org",
+      "enabled": true,
+      "use_remote_url": true
+    },
+    {
+      "name": "User Default",
+      "module": "user_default",
+      "directory": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions\\user_default",
+      "enabled": true,
+      "use_remote_url": false
+    },
+    {
+      "name": "System",
+      "module": "system",
+      "directory": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\extensions\\system",
+      "enabled": true,
+      "use_remote_url": false
+    }
+  ],
+  "mpfb": {
+    "activated_modules": [
+      "bl_ext.user_default.mpfb"
+    ],
+    "runtime_loaded": [
+      "bl_ext.user_default.mpfb"
+    ],
+    "module_files": [
+      "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions\\user_default\\mpfb\\__init__.py"
+    ],
+    "manifests": [
+      {
+        "path": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions\\user_default\\mpfb\\blender_manifest.toml",
+        "metadata": {
+          "schema_version": "1.0.0",
+          "id": "mpfb",
+          "version": "2.0.18",
+          "name": "MPFB",
+          "type": "add-on",
+          "maintainer": "Joel Palmius",
+          "website": "http://static.makehumancommunity.org/mpfb.html",
+          "blender_version_min": "4.2.0",
+          "permissions": {
+            "files": "Load and save data",
+            "network": "(optional) Interact with local instance of MakeHuman"
+          }
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "background_mode",
+      "status": "PASS",
+      "summary": "Blender is running in background mode.",
+      "critical": true,
+      "details": null
+    },
+    {
+      "id": "python_api",
+      "status": "PASS",
+      "summary": "bpy imported and the embedded Python API is accessible.",
+      "critical": true,
+      "details": {
+        "python": "3.13.13 (main, May  8 2026, 12:37:03) [MSC v.1944 64 bit (AMD64)]"
+      }
+    },
+    {
+      "id": "blender_baseline",
+      "status": "PASS",
+      "summary": "Blender version matches project baseline 5.2.4.",
+      "critical": true,
+      "details": null
+    },
+    {
+      "id": "mpfb_installed",
+      "status": "PASS",
+      "summary": "MPFB extension files and manifest were found.",
+      "critical": true,
+      "details": [
+        {
+          "path": "C:\\Users\\admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions\\user_default\\mpfb\\blender_manifest.toml",
+          "metadata": {
+            "schema_version": "1.0.0",
+            "id": "mpfb",
+            "version": "2.0.18",
+            "name": "MPFB",
+            "type": "add-on",
+            "maintainer": "Joel Palmius",
+            "website": "http://static.makehumancommunity.org/mpfb.html",
+            "blender_version_min": "4.2.0",
+            "permissions": {
+              "files": "Load and save data",
+              "network": "(optional) Interact with local instance of MakeHuman"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "mpfb_activated",
+      "status": "PASS",
+      "summary": "MPFB is enabled in this Blender profile.",
+      "critical": true,
+      "details": [
+        "bl_ext.user_default.mpfb"
+      ]
+    },
+    {
+      "id": "mpfb_runtime",
+      "status": "PASS",
+      "summary": "MPFB initialized in the background process.",
+      "critical": true,
+      "details": [
+        "bl_ext.user_default.mpfb"
+      ]
+    }
+  ]
+}

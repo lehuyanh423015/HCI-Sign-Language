@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "profile": "MORPH_POC",
+  "artifact": "docs/reports/artifacts/TASK-0005-morph-poc.glb",
+  "sha256": "B95096ED5BA8E3426FDF38B37B0F9220EE2F22B3112A8760253CD35E211203D8",
+  "size_bytes": 995276,
+  "status": "PASS",
+  "structural": {
+    "generator": "Khronos glTF Blender I/O v5.2.41",
+    "nodes": 141,
+    "meshes": 4,
+    "primitives": 4,
+    "skins": 1,
+    "materials": 3,
+    "animations": [
+      "TECH_HAND_CONTROL_TEST",
+      "TASK0005_DIAGNOSTIC_MORPH"
+    ],
+    "morph_target_count": 1,
+    "morph_target_names": [
+      "TASK0005_DIAGNOSTIC_MORPH"
+    ],
+    "weight_animation_channels": [
+      {
+        "animation": "TASK0005_DIAGNOSTIC_MORPH",
+        "path": "weights",
+        "node": "TASK0005_MorphProbe"
+      }
+    ],
+    "rotation_animation_channel_count": 15
+  },
+  "checks": [
+    {
+      "id": "gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "meshes",
+      "status": "PASS",
+      "actual": 4
+    },
+    {
+      "id": "skin",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "static_morph_target",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "diagnostic_target_name",
+      "status": "PASS",
+      "actual": [
+        "TASK0005_DIAGNOSTIC_MORPH"
+      ]
+    },
+    {
+      "id": "animated_morph_weights",
+      "status": "PASS",
+      "actual": [
+        {
+          "animation": "TASK0005_DIAGNOSTIC_MORPH",
+          "path": "weights",
+          "node": "TASK0005_MorphProbe"
+        }
+      ]
+    },
+    {
+      "id": "bone_rotation_animation",
+      "status": "PASS",
+      "actual": 15
+    },
+    {
+      "id": "technical_action_present",
+      "status": "PASS",
+      "actual": [
+        "TECH_HAND_CONTROL_TEST",
+        "TASK0005_DIAGNOSTIC_MORPH"
+      ]
+    },
+    {
+      "id": "khronos_validator",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "hints": 0
+      }
+    }
+  ],
+  "khronos_validator": {
+    "num_errors": 0,
+    "num_warnings": 0,
+    "num_infos": 1,
+    "num_hints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+      }
+    ]
+  }
+}

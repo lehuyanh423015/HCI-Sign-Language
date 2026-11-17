@@ -1,0 +1,1026 @@
+{
+  "schema_version": 1,
+  "inspection": "canonical_master_and_facial_capability",
+  "read_only": true,
+  "overall_status": "PASS",
+  "source": {
+    "path": "C:\\Users\\admin\\AppData\\Local\\Temp\\hci-task0005-audit-7f2f7a6c5ca548c281423d1ed2e3d140\\avatar_master_audit.blend",
+    "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232",
+    "blender_version": "5.2.4 LTS",
+    "master_version": "1.0.0-rc.1"
+  },
+  "scene": {
+    "fps": 30,
+    "frame_range": [
+      1,
+      1
+    ],
+    "actions": []
+  },
+  "rig": {
+    "armature": "Human.rig",
+    "bone_count": 137,
+    "deform_bone_count": 137,
+    "hierarchy_sha256": "5D6A61F33BE4EDBF08D06F0E9D85F5C118924254A2C0F1E5F7776F110F033BCE",
+    "matches_task0002_baseline": true,
+    "object_rotation_euler": [
+      -0.055045463144779205,
+      0.002965844003483653,
+      -0.244863823056221
+    ],
+    "non_identity_rotation_policy": "Retained; TASK-0003/0004 GLB pipeline is compatible. Do not apply blindly.",
+    "facial_bones": [
+      {
+        "name": "eye.L",
+        "parent": "special05.L",
+        "use_deform": true,
+        "weighted_vertices": 142,
+        "weight_sum": 82.023392
+      },
+      {
+        "name": "eye.R",
+        "parent": "special05.R",
+        "use_deform": true,
+        "weighted_vertices": 142,
+        "weight_sum": 82.098995
+      },
+      {
+        "name": "head",
+        "parent": "neck03",
+        "use_deform": true,
+        "weighted_vertices": 4899,
+        "weight_sum": 3074.002671
+      },
+      {
+        "name": "jaw",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 911,
+        "weight_sum": 263.906688
+      },
+      {
+        "name": "levator02.L",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator02.R",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator03.L",
+        "parent": "levator02.L",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator03.R",
+        "parent": "levator02.R",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator04.L",
+        "parent": "levator03.L",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator04.R",
+        "parent": "levator03.R",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "levator05.L",
+        "parent": "levator04.L",
+        "use_deform": true,
+        "weighted_vertices": 434,
+        "weight_sum": 73.389613
+      },
+      {
+        "name": "levator05.R",
+        "parent": "levator04.R",
+        "use_deform": true,
+        "weighted_vertices": 434,
+        "weight_sum": 73.330446
+      },
+      {
+        "name": "levator06.L",
+        "parent": "special03",
+        "use_deform": true,
+        "weighted_vertices": 318,
+        "weight_sum": 106.281819
+      },
+      {
+        "name": "levator06.R",
+        "parent": "special03",
+        "use_deform": true,
+        "weighted_vertices": 270,
+        "weight_sum": 105.381376
+      },
+      {
+        "name": "neck01",
+        "parent": "spine01",
+        "use_deform": true,
+        "weighted_vertices": 1102,
+        "weight_sum": 165.051682
+      },
+      {
+        "name": "neck02",
+        "parent": "neck01",
+        "use_deform": true,
+        "weighted_vertices": 919,
+        "weight_sum": 132.882714
+      },
+      {
+        "name": "neck03",
+        "parent": "neck02",
+        "use_deform": true,
+        "weighted_vertices": 371,
+        "weight_sum": 18.498798
+      },
+      {
+        "name": "oculi01.L",
+        "parent": "oculi02.L",
+        "use_deform": true,
+        "weighted_vertices": 289,
+        "weight_sum": 36.109851
+      },
+      {
+        "name": "oculi01.R",
+        "parent": "oculi02.R",
+        "use_deform": true,
+        "weighted_vertices": 271,
+        "weight_sum": 36.029091
+      },
+      {
+        "name": "oculi02.L",
+        "parent": "temporalis01.L",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oculi02.R",
+        "parent": "temporalis01.R",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "orbicularis03.L",
+        "parent": "special05.L",
+        "use_deform": true,
+        "weighted_vertices": 263,
+        "weight_sum": 113.658261
+      },
+      {
+        "name": "orbicularis03.R",
+        "parent": "special05.R",
+        "use_deform": true,
+        "weighted_vertices": 257,
+        "weight_sum": 113.410962
+      },
+      {
+        "name": "orbicularis04.L",
+        "parent": "special05.L",
+        "use_deform": true,
+        "weighted_vertices": 285,
+        "weight_sum": 122.652731
+      },
+      {
+        "name": "orbicularis04.R",
+        "parent": "special05.R",
+        "use_deform": true,
+        "weighted_vertices": 284,
+        "weight_sum": 122.478069
+      },
+      {
+        "name": "oris01",
+        "parent": "oris02",
+        "use_deform": true,
+        "weighted_vertices": 303,
+        "weight_sum": 60.750512
+      },
+      {
+        "name": "oris02",
+        "parent": "special04",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris03.L",
+        "parent": "oris04.L",
+        "use_deform": true,
+        "weighted_vertices": 373,
+        "weight_sum": 94.364406
+      },
+      {
+        "name": "oris03.R",
+        "parent": "oris04.R",
+        "use_deform": true,
+        "weighted_vertices": 373,
+        "weight_sum": 94.242674
+      },
+      {
+        "name": "oris04.L",
+        "parent": "special01",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris04.R",
+        "parent": "special01",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris05",
+        "parent": "oris06",
+        "use_deform": true,
+        "weighted_vertices": 563,
+        "weight_sum": 87.310285
+      },
+      {
+        "name": "oris06",
+        "parent": "special01",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris06.L",
+        "parent": "special04",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris06.R",
+        "parent": "special04",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "oris07.L",
+        "parent": "oris06.L",
+        "use_deform": true,
+        "weighted_vertices": 339,
+        "weight_sum": 43.994336
+      },
+      {
+        "name": "oris07.R",
+        "parent": "oris06.R",
+        "use_deform": true,
+        "weighted_vertices": 338,
+        "weight_sum": 44.000781
+      },
+      {
+        "name": "risorius02.L",
+        "parent": "temporalis02.L",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "risorius02.R",
+        "parent": "temporalis02.R",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "risorius03.L",
+        "parent": "risorius02.L",
+        "use_deform": true,
+        "weighted_vertices": 466,
+        "weight_sum": 45.928958
+      },
+      {
+        "name": "risorius03.R",
+        "parent": "risorius02.R",
+        "use_deform": true,
+        "weighted_vertices": 465,
+        "weight_sum": 45.80117
+      },
+      {
+        "name": "special01",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "special03",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "special04",
+        "parent": "jaw",
+        "use_deform": true,
+        "weighted_vertices": 8,
+        "weight_sum": 8.0
+      },
+      {
+        "name": "special05.L",
+        "parent": "special06.L",
+        "use_deform": true,
+        "weighted_vertices": 8,
+        "weight_sum": 8.0
+      },
+      {
+        "name": "special05.R",
+        "parent": "special06.R",
+        "use_deform": true,
+        "weighted_vertices": 8,
+        "weight_sum": 8.0
+      },
+      {
+        "name": "temporalis01.L",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "temporalis01.R",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "temporalis02.L",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      },
+      {
+        "name": "temporalis02.R",
+        "parent": "head",
+        "use_deform": true,
+        "weighted_vertices": 0,
+        "weight_sum": 0.0
+      }
+    ]
+  },
+  "mesh_armature_associations": [
+    {
+      "mesh": "EDU_NeutralShorts",
+      "parent": "Human.rig",
+      "armature_modifier_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": 269,
+      "all_vertices_weighted": true
+    },
+    {
+      "mesh": "EDU_NeutralTop",
+      "parent": "Human.rig",
+      "armature_modifier_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": 269,
+      "all_vertices_weighted": true
+    },
+    {
+      "mesh": "Human",
+      "parent": "Human.rig",
+      "armature_modifier_targets": [
+        "Human.rig"
+      ],
+      "vertex_groups": 269,
+      "all_vertices_weighted": true
+    }
+  ],
+  "shape_keys": [
+    {
+      "object": "Human",
+      "name": "Basis",
+      "value": 1.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 0,
+      "max_delta_m": 0.0,
+      "mean_moved_delta_m": 0.0,
+      "visible_geometry_delta": false,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "Basis key."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$as-$fe-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19150,
+      "max_delta_m": 0.17456994164801554,
+      "mean_moved_delta_m": 0.1220046839139844,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$as-$ma-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19150,
+      "max_delta_m": 0.11406783836581949,
+      "mean_moved_delta_m": 0.04725318630696858,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$ca-$fe-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19150,
+      "max_delta_m": 0.09555104558456692,
+      "mean_moved_delta_m": 0.05664255307314092,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$ca-$ma-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19150,
+      "max_delta_m": 0.1328135736154223,
+      "mean_moved_delta_m": 0.0720908202122065,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$af-$fe-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19158,
+      "max_delta_m": 0.0926483154422528,
+      "mean_moved_delta_m": 0.03338588052062365,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$af-$ma-$yn",
+      "value": 0.16500000655651093,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 19150,
+      "max_delta_m": 0.19001650584189078,
+      "mean_moved_delta_m": 0.11264742119272042,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-universal-$fe-$yn-$av$mu-$av$wg",
+      "value": 0.5,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 0,
+      "max_delta_m": 0.0,
+      "mean_moved_delta_m": 0.0,
+      "visible_geometry_delta": false,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-universal-$ma-$yn-$av$mu-$av$wg",
+      "value": 0.5,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 0,
+      "max_delta_m": 0.0,
+      "mean_moved_delta_m": 0.0,
+      "visible_geometry_delta": false,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi",
+      "value": 0.08856657892465591,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 280,
+      "max_delta_m": 0.008181737238520401,
+      "mean_moved_delta_m": 0.004927520204467077,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    },
+    {
+      "object": "Human",
+      "name": "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi",
+      "value": 0.088466577231884,
+      "slider_min": 0.0,
+      "slider_max": 1.0,
+      "relative_key": "Basis",
+      "moved_vertices": 700,
+      "max_delta_m": 0.09243078662550974,
+      "mean_moved_delta_m": 0.029495323228275003,
+      "visible_geometry_delta": true,
+      "facial_name_evidence": false,
+      "facial_animation_suitability": "NO",
+      "reason": "No facial semantic in the actual key name; do not treat it as an expression."
+    }
+  ],
+  "facial_topology": {
+    "body_object": "Human",
+    "body_vertex_count_raw": 19158,
+    "body_edge_count_raw": 37364,
+    "body_polygon_count_raw": 18486,
+    "connected_component_count_raw": 154,
+    "largest_connected_components": [
+      13380,
+      2674,
+      720,
+      226,
+      200,
+      72,
+      72,
+      68,
+      68,
+      65,
+      65,
+      60
+    ],
+    "head_region_threshold_world_z": 1.5146981477737427,
+    "head_region_vertex_count_raw": 3334,
+    "mesh_objects": [
+      "EDU_NeutralShorts",
+      "EDU_NeutralTop",
+      "Human"
+    ],
+    "separate_eye_mesh_objects": [],
+    "separate_eyebrow_mesh_objects": [],
+    "body_materials": [
+      "EDU_Skin_Neutral"
+    ],
+    "facial_weight_groups": {
+      "eye.L": {
+        "vertices": 142,
+        "weight_sum": 82.023392
+      },
+      "eye.R": {
+        "vertices": 142,
+        "weight_sum": 82.098995
+      },
+      "head": {
+        "vertices": 4899,
+        "weight_sum": 3074.002671
+      },
+      "helper-l-eye": {
+        "vertices": 72,
+        "weight_sum": 72.0
+      },
+      "helper-l-eyelashes-1": {
+        "vertices": 60,
+        "weight_sum": 60.0
+      },
+      "helper-l-eyelashes-2": {
+        "vertices": 65,
+        "weight_sum": 65.0
+      },
+      "helper-r-eye": {
+        "vertices": 72,
+        "weight_sum": 72.0
+      },
+      "helper-r-eyelashes-1": {
+        "vertices": 60,
+        "weight_sum": 60.0
+      },
+      "helper-r-eyelashes-2": {
+        "vertices": 65,
+        "weight_sum": 65.0
+      },
+      "jaw": {
+        "vertices": 911,
+        "weight_sum": 263.906688
+      },
+      "joint-head": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-head-2": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-jaw": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-l-eye": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-l-eye-target": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-neck": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-r-eye": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "joint-r-eye-target": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "levator05.L": {
+        "vertices": 434,
+        "weight_sum": 73.389613
+      },
+      "levator05.R": {
+        "vertices": 434,
+        "weight_sum": 73.330446
+      },
+      "levator06.L": {
+        "vertices": 318,
+        "weight_sum": 106.281819
+      },
+      "levator06.R": {
+        "vertices": 270,
+        "weight_sum": 105.381376
+      },
+      "neck01": {
+        "vertices": 1102,
+        "weight_sum": 165.051682
+      },
+      "neck02": {
+        "vertices": 919,
+        "weight_sum": 132.882714
+      },
+      "neck03": {
+        "vertices": 371,
+        "weight_sum": 18.498798
+      },
+      "oculi01.L": {
+        "vertices": 289,
+        "weight_sum": 36.109851
+      },
+      "oculi01.R": {
+        "vertices": 271,
+        "weight_sum": 36.029091
+      },
+      "orbicularis03.L": {
+        "vertices": 263,
+        "weight_sum": 113.658261
+      },
+      "orbicularis03.R": {
+        "vertices": 257,
+        "weight_sum": 113.410962
+      },
+      "orbicularis04.L": {
+        "vertices": 285,
+        "weight_sum": 122.652731
+      },
+      "orbicularis04.R": {
+        "vertices": 284,
+        "weight_sum": 122.478069
+      },
+      "oris01": {
+        "vertices": 303,
+        "weight_sum": 60.750512
+      },
+      "oris03.L": {
+        "vertices": 373,
+        "weight_sum": 94.364406
+      },
+      "oris03.R": {
+        "vertices": 373,
+        "weight_sum": 94.242674
+      },
+      "oris05": {
+        "vertices": 563,
+        "weight_sum": 87.310285
+      },
+      "oris07.L": {
+        "vertices": 339,
+        "weight_sum": 43.994336
+      },
+      "oris07.R": {
+        "vertices": 338,
+        "weight_sum": 44.000781
+      },
+      "risorius03.L": {
+        "vertices": 466,
+        "weight_sum": 45.928958
+      },
+      "risorius03.R": {
+        "vertices": 465,
+        "weight_sum": 45.80117
+      },
+      "special04": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "special05.L": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      },
+      "special05.R": {
+        "vertices": 8,
+        "weight_sum": 8.0
+      }
+    },
+    "evidence_interpretation": "Eyes/eyebrows are not separate Blender objects. Facial deformation must use weighted integrated geometry; raw connected components and bone weights do not by themselves prove production-quality eyelid/lip loops."
+  },
+  "controlled_articulation": [
+    {
+      "bone": "head",
+      "parent": "neck03",
+      "axis": "Z",
+      "degrees": 6.0,
+      "status": "PASS",
+      "authored_pose_changes": [
+        "head"
+      ],
+      "mesh_delta": {
+        "moved_vertices": 4451,
+        "max_distance": 0.01511511806291133,
+        "mean_moved_distance": 0.005051201049784605
+      },
+      "moved_vertices_below_head_threshold": 1073,
+      "max_delta_below_head_threshold_m": 0.007696354018157828,
+      "object_transform_stable": true,
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      }
+    },
+    {
+      "bone": "neck02",
+      "parent": "neck01",
+      "axis": "Z",
+      "degrees": 6.0,
+      "status": "PASS",
+      "authored_pose_changes": [
+        "neck02"
+      ],
+      "mesh_delta": {
+        "moved_vertices": 4494,
+        "max_distance": 0.02185160308457075,
+        "mean_moved_distance": 0.008551889066861261
+      },
+      "moved_vertices_below_head_threshold": 1116,
+      "max_delta_below_head_threshold_m": 0.00738340007996136,
+      "object_transform_stable": true,
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      }
+    },
+    {
+      "bone": "jaw",
+      "parent": "head",
+      "axis": "X",
+      "degrees": 6.0,
+      "status": "PASS",
+      "authored_pose_changes": [
+        "jaw"
+      ],
+      "mesh_delta": {
+        "moved_vertices": 1029,
+        "max_distance": 0.009706034317137745,
+        "mean_moved_distance": 0.003038989483368758
+      },
+      "moved_vertices_below_head_threshold": 800,
+      "max_delta_below_head_threshold_m": 0.009706034317137745,
+      "object_transform_stable": true,
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      }
+    },
+    {
+      "bone": "eye.L",
+      "parent": "special05.L",
+      "axis": "Z",
+      "degrees": 6.0,
+      "status": "PASS",
+      "authored_pose_changes": [
+        "eye.L"
+      ],
+      "mesh_delta": {
+        "moved_vertices": 40,
+        "max_distance": 0.00015731415514855262,
+        "mean_moved_distance": 4.964486527197103e-05
+      },
+      "moved_vertices_below_head_threshold": 0,
+      "max_delta_below_head_threshold_m": 0.0,
+      "object_transform_stable": true,
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      }
+    },
+    {
+      "bone": "eye.R",
+      "parent": "special05.R",
+      "axis": "Z",
+      "degrees": 6.0,
+      "status": "PASS",
+      "authored_pose_changes": [
+        "eye.R"
+      ],
+      "mesh_delta": {
+        "moved_vertices": 40,
+        "max_distance": 0.00015731837962904387,
+        "mean_moved_distance": 4.860425824961116e-05
+      },
+      "moved_vertices_below_head_threshold": 0,
+      "max_delta_below_head_threshold_m": 0.0,
+      "object_transform_stable": true,
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      }
+    }
+  ],
+  "facial_capability_matrix": [
+    {
+      "feature": "Eyebrow raise",
+      "existing_support": "No explicit brow Shape Key/control; nearby facial deform bones exist but expression quality is NOT YET TESTED.",
+      "recommended_method": "Shape Keys",
+      "priority": "High"
+    },
+    {
+      "feature": "Eye blink",
+      "existing_support": "No blink Shape Key; oculi/orbicularis weighted bones exist, but a blink has not been authored or visually approved.",
+      "recommended_method": "Shape Keys",
+      "priority": "High"
+    },
+    {
+      "feature": "Eye direction",
+      "existing_support": "eye.L/eye.R exist with weights and controlled deformation test: PASS.",
+      "recommended_method": "Eye bones",
+      "priority": "High"
+    },
+    {
+      "feature": "Mouth open",
+      "existing_support": "jaw exists with weights and controlled deformation test: PASS; articulation quality is NOT YET TESTED.",
+      "recommended_method": "Jaw bone + corrective Shape Keys",
+      "priority": "High"
+    },
+    {
+      "feature": "Lip shape",
+      "existing_support": "Multiple oris deform bones have weights; no phoneme/viseme Shape Keys and no production lip poses.",
+      "recommended_method": "Shape Keys",
+      "priority": "High"
+    },
+    {
+      "feature": "Cheek movement",
+      "existing_support": "risorius/levator/temporalis groups exist; no approved cheek expressions.",
+      "recommended_method": "Shape Keys + existing deform bones",
+      "priority": "Medium"
+    },
+    {
+      "feature": "Head rotation",
+      "existing_support": "head controlled deformation test: PASS.",
+      "recommended_method": "Existing head bone",
+      "priority": "High"
+    },
+    {
+      "feature": "Neck movement",
+      "existing_support": "neck01/02/03 hierarchy exists; neck02 controlled deformation test: PASS.",
+      "recommended_method": "Existing neck bones",
+      "priority": "High"
+    },
+    {
+      "feature": "Upper-body posture",
+      "existing_support": "Existing spine/clavicle/arm deformation rig and prior controlled hand/arm tests are available.",
+      "recommended_method": "Existing rig",
+      "priority": "Medium"
+    }
+  ],
+  "checks": [
+    {
+      "id": "blender_version",
+      "status": "PASS"
+    },
+    {
+      "id": "canonical_hash",
+      "status": "PASS"
+    },
+    {
+      "id": "bone_count",
+      "status": "PASS",
+      "actual": 137
+    },
+    {
+      "id": "baseline_hierarchy",
+      "status": "PASS"
+    },
+    {
+      "id": "expected_meshes",
+      "status": "PASS"
+    },
+    {
+      "id": "mesh_armature_association",
+      "status": "PASS"
+    },
+    {
+      "id": "finger_chains",
+      "status": "PASS"
+    },
+    {
+      "id": "canonical_no_actions",
+      "status": "PASS",
+      "actions": []
+    },
+    {
+      "id": "neutral_pose",
+      "status": "PASS"
+    },
+    {
+      "id": "fps",
+      "status": "PASS",
+      "actual": 30
+    },
+    {
+      "id": "armature_rotation_retained",
+      "status": "PASS",
+      "actual": [
+        -0.055045463144779205,
+        0.002965844003483653,
+        -0.244863823056221
+      ]
+    },
+    {
+      "id": "head_neck_deformation",
+      "status": "PASS"
+    },
+    {
+      "id": "shape_key_inventory",
+      "status": "PASS",
+      "count": 11
+    },
+    {
+      "id": "facial_shape_keys",
+      "status": "NOT YET TESTED",
+      "count": 0
+    }
+  ]
+}
