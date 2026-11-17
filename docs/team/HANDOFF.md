@@ -67,6 +67,16 @@ Trong group/issue ghi: `BLOCKER`, owner, sign ID/file, master commit/hash, expec
 
 Mỗi Agent task phải kèm report theo `docs/workflows/AGENT_TASK_PROTOCOL.md`. Pull request nêu exact commands và phân biệt automated PASS với manual visual acceptance.
 
+## Facial technical fixture TASK-0006
+
+```cmd
+npm run sync:technical-assets
+npm run validate:facial-asset
+npm run dev
+```
+
+Mở `http://localhost:5173/technical-facial-viewer`. Trang phải hiển thị banner `TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE`, six `NMM_` sliders, gaze controls và four technical clips. Source candidate nằm trong `blender/working/huy-anh/task-0006-facial-foundation/`; không thay canonical master bằng candidate này khi chưa có owner approval. Clip/biểu cảm là technical fixture, linguistic status `NOT YET TESTED` và không được đưa vào lesson catalog.
+
 ## Git LFS
 
 Git LFS 3.5.1 có trên máy bootstrap và remote endpoint được nhận diện, nhưng repository chưa bật tracking patterns và remote auth/upload chưa được thử. Prototype `.blend`/`.glb` hiện dưới giới hạn GitHub; trước khi thêm nhiều video/GLB lớn, cả bốn máy phải cài `git lfs`, xác nhận remote quota/auth rồi bật patterns trong PR riêng. Không migrate history tùy tiện.

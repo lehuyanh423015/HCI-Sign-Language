@@ -29,10 +29,12 @@
     "validate:neutral-asset": "node tools/validate-technical-asset.mjs --asset assets/exports/technical/technical-hand-test-neutral.glb --report docs/reports/artifacts/TASK-0004-neutral-glb-validation.json",
     "validate:master-static": "node tools/validate-master-glb.mjs --profile MASTER_STATIC --asset assets/exports/master/avatar-master-v1-rc1.glb --report docs/reports/artifacts/TASK-0005-master-static-validation.json",
     "validate:morph-poc": "node tools/validate-master-glb.mjs --profile MORPH_POC --asset docs/reports/artifacts/TASK-0005-morph-poc.glb --report docs/reports/artifacts/TASK-0005-morph-poc-validation.json",
+    "validate:facial-asset": "node tools/validate-facial-asset.mjs",
     "verify:master": "node tools/verify-master-manifest.mjs",
     "test:technical-viewer": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer --report docs/reports/artifacts/TASK-0003-browser-runtime.json --screenshot docs/reports/artifacts/TASK-0003-browser-runtime.png",
     "test:neutral-viewer": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer --report docs/reports/artifacts/TASK-0004-browser-runtime.json --full-screenshot docs/reports/artifacts/TASK-0004-browser-full.png --screenshot docs/reports/artifacts/TASK-0004-browser-runtime.png",
-    "check": "npm run typecheck && npm run lint && npm run validate:data && npm run sync:data:check && npm run sync:technical-assets && npm run sync:technical-assets:check && npm run test && npm run build && npm run validate:assets && npm run validate:technical-asset && npm run validate:neutral-asset && npm run verify:master && npm run validate:master-static && npm run validate:morph-poc"
+    "test:facial-viewer": "node tools/test-facial-viewer.mjs",
+    "check": "npm run typecheck && npm run lint && npm run validate:data && npm run sync:data:check && npm run sync:technical-assets && npm run sync:technical-assets:check && npm run test && npm run build && npm run validate:assets && npm run validate:technical-asset && npm run validate:neutral-asset && npm run validate:facial-asset && npm run verify:master && npm run validate:master-static && npm run validate:morph-poc"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

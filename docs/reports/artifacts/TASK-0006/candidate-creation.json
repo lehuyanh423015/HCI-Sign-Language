@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "artifact": "task0006_facial_candidate_creation",
+  "status": "PASS",
+  "technical_fixture_only": true,
+  "linguistic_status": "NOT YET TESTED",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\master\\avatar_master.blend",
+    "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232"
+  },
+  "output": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0006-facial-foundation\\avatar_master_facial_candidate.blend",
+    "sha256": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982",
+    "version": "1.0.0-rc.2"
+  },
+  "preservation": {
+    "canonical_output_separate": true,
+    "bone_count": 137,
+    "hierarchy_unchanged": true,
+    "armature_object_transform_unchanged": true,
+    "existing_shape_key_count": 11,
+    "existing_shape_keys_preserved": true
+  },
+  "eye_assets": [
+    {
+      "name": "NMM_Eyeball.L",
+      "role": "eyeball",
+      "bone": "eye.L",
+      "vertices": 366,
+      "polygons": 392,
+      "fully_weighted_vertices": 366,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Sclera"
+      ]
+    },
+    {
+      "name": "NMM_Iris.L",
+      "role": "iris",
+      "bone": "eye.L",
+      "vertices": 218,
+      "polygons": 240,
+      "fully_weighted_vertices": 218,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Iris"
+      ]
+    },
+    {
+      "name": "NMM_Pupil.L",
+      "role": "pupil",
+      "bone": "eye.L",
+      "vertices": 142,
+      "polygons": 160,
+      "fully_weighted_vertices": 142,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Pupil"
+      ]
+    },
+    {
+      "name": "NMM_Eyeball.R",
+      "role": "eyeball",
+      "bone": "eye.R",
+      "vertices": 366,
+      "polygons": 392,
+      "fully_weighted_vertices": 366,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Sclera"
+      ]
+    },
+    {
+      "name": "NMM_Iris.R",
+      "role": "iris",
+      "bone": "eye.R",
+      "vertices": 218,
+      "polygons": 240,
+      "fully_weighted_vertices": 218,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Iris"
+      ]
+    },
+    {
+      "name": "NMM_Pupil.R",
+      "role": "pupil",
+      "bone": "eye.R",
+      "vertices": 142,
+      "polygons": 160,
+      "fully_weighted_vertices": 142,
+      "armature_modifiers": [
+        "Human.rig"
+      ],
+      "materials": [
+        "NMM_Eye_Pupil"
+      ]
+    }
+  ],
+  "eye_blink_targets": [
+    {
+      "object": "NMM_Eyeball.L",
+      "target": "NMM_EYE_BLINK_L"
+    },
+    {
+      "object": "NMM_Iris.L",
+      "target": "NMM_EYE_BLINK_L"
+    },
+    {
+      "object": "NMM_Pupil.L",
+      "target": "NMM_EYE_BLINK_L"
+    },
+    {
+      "object": "NMM_Eyeball.R",
+      "target": "NMM_EYE_BLINK_R"
+    },
+    {
+      "object": "NMM_Iris.R",
+      "target": "NMM_EYE_BLINK_R"
+    },
+    {
+      "object": "NMM_Pupil.R",
+      "target": "NMM_EYE_BLINK_R"
+    }
+  ],
+  "morph_targets": [
+    {
+      "name": "NMM_BROW_RAISE_L",
+      "moved_vertices": 198,
+      "max_delta_m": 0.006280084340883103,
+      "mean_delta_m": 0.0014374053653330363,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    },
+    {
+      "name": "NMM_BROW_RAISE_R",
+      "moved_vertices": 198,
+      "max_delta_m": 0.006280084340883103,
+      "mean_delta_m": 0.0014374053653330363,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    },
+    {
+      "name": "NMM_EYE_BLINK_L",
+      "moved_vertices": 765,
+      "max_delta_m": 0.005585356260799009,
+      "mean_delta_m": 0.0015252323590488092,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    },
+    {
+      "name": "NMM_EYE_BLINK_R",
+      "moved_vertices": 765,
+      "max_delta_m": 0.005585356260799009,
+      "mean_delta_m": 0.0015252323590488092,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    },
+    {
+      "name": "NMM_LIPS_ROUND",
+      "moved_vertices": 1373,
+      "max_delta_m": 0.008437121602935516,
+      "mean_delta_m": 0.001945810200584818,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    },
+    {
+      "name": "NMM_LIPS_SPREAD",
+      "moved_vertices": 1373,
+      "max_delta_m": 0.005204780707995535,
+      "mean_delta_m": 0.002098310525507323,
+      "value": 0.0,
+      "slider_min": 0.0,
+      "slider_max": 1.0
+    }
+  ],
+  "actions": [
+    {
+      "name": "NMM_BLINK_TEST",
+      "slots": [
+        "OBHuman.rig",
+        "KEKey"
+      ],
+      "fcurve_count": 8,
+      "keyframe_points": 32,
+      "data_paths": [
+        "key_blocks[\"NMM_EYE_BLINK_L\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_R\"].value",
+        "pose.bones[\"eye.L\"].scale",
+        "pose.bones[\"eye.R\"].scale"
+      ]
+    },
+    {
+      "name": "NMM_BROW_TEST",
+      "slots": [
+        "OBHuman.rig",
+        "KEKey"
+      ],
+      "fcurve_count": 2,
+      "keyframe_points": 6,
+      "data_paths": [
+        "key_blocks[\"NMM_BROW_RAISE_L\"].value",
+        "key_blocks[\"NMM_BROW_RAISE_R\"].value"
+      ]
+    },
+    {
+      "name": "NMM_MOUTH_TEST",
+      "slots": [
+        "OBHuman.rig",
+        "KEKey"
+      ],
+      "fcurve_count": 5,
+      "keyframe_points": 20,
+      "data_paths": [
+        "key_blocks[\"NMM_LIPS_ROUND\"].value",
+        "key_blocks[\"NMM_LIPS_SPREAD\"].value",
+        "pose.bones[\"jaw\"].rotation_euler"
+      ]
+    },
+    {
+      "name": "TECH_HAND_FACE_TEST",
+      "slots": [
+        "OBHuman.rig",
+        "KEKey"
+      ],
+      "fcurve_count": 75,
+      "keyframe_points": 225,
+      "data_paths": [
+        "key_blocks[\"NMM_BROW_RAISE_L\"].value",
+        "key_blocks[\"NMM_BROW_RAISE_R\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_L\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_R\"].value",
+        "key_blocks[\"NMM_LIPS_ROUND\"].value",
+        "key_blocks[\"NMM_LIPS_SPREAD\"].value",
+        "pose.bones[\"eye.L\"].rotation_euler",
+        "pose.bones[\"eye.L\"].scale",
+        "pose.bones[\"eye.R\"].rotation_euler",
+        "pose.bones[\"eye.R\"].scale",
+        "pose.bones[\"finger1-1.R\"].rotation_euler",
+        "pose.bones[\"finger1-2.R\"].rotation_euler",
+        "pose.bones[\"finger1-3.R\"].rotation_euler",
+        "pose.bones[\"finger2-1.R\"].rotation_euler",
+        "pose.bones[\"finger2-2.R\"].rotation_euler",
+        "pose.bones[\"finger2-3.R\"].rotation_euler",
+        "pose.bones[\"finger3-1.R\"].rotation_euler",
+        "pose.bones[\"finger3-2.R\"].rotation_euler",
+        "pose.bones[\"finger3-3.R\"].rotation_euler",
+        "pose.bones[\"finger4-1.R\"].rotation_euler",
+        "pose.bones[\"finger4-2.R\"].rotation_euler",
+        "pose.bones[\"finger4-3.R\"].rotation_euler",
+        "pose.bones[\"finger5-1.R\"].rotation_euler",
+        "pose.bones[\"finger5-2.R\"].rotation_euler",
+        "pose.bones[\"finger5-3.R\"].rotation_euler",
+        "pose.bones[\"head\"].rotation_euler",
+        "pose.bones[\"jaw\"].rotation_euler",
+        "pose.bones[\"neck02\"].rotation_euler",
+        "pose.bones[\"wrist.R\"].rotation_euler"
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "state": "01-neutral-face",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\01-neutral-face.png",
+      "sha256": "11F7968E11F831C34C57E2A16552AA6F4F5523E42EEEFC242245499DC0CC590D"
+    },
+    {
+      "state": "02-eyes-look-left",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\02-eyes-look-left.png",
+      "sha256": "80D7730EC5D8B096C55429946909EBB86E5B5D43795B8DF67360818C6C894A97"
+    },
+    {
+      "state": "03-eyes-look-right",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\03-eyes-look-right.png",
+      "sha256": "653021714F6203FAFA43A6C34062A8E487F235D9FD248CFD8CCEB06303992E47"
+    },
+    {
+      "state": "04-left-eye-blink",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\04-left-eye-blink.png",
+      "sha256": "56C84F3FB6849B091DF7CF21204B6BF121028F90C0BB78C642D77AECFDED6AA9"
+    },
+    {
+      "state": "05-right-eye-blink",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\05-right-eye-blink.png",
+      "sha256": "71BDCDCF507985303083B1514ADD878D6CB3FA262A35DFCFC793BEBD39CDBC2A"
+    },
+    {
+      "state": "06-both-eyes-blink",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\06-both-eyes-blink.png",
+      "sha256": "F202D30373F5270B61B6FCA6FEF13D5E93E09C547C9ED82B9116ED86857FA853"
+    },
+    {
+      "state": "07-eyebrows-raised",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\07-eyebrows-raised.png",
+      "sha256": "0262ED0DD59DD77D81DC04386E7D4D37FE32DBE2F38FB932A6159CD182D0FC8F"
+    },
+    {
+      "state": "08-mouth-open",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\08-mouth-open.png",
+      "sha256": "4D652763955E1EAEED3E2AEDC056487FD7D081BBE17418373B5423E7FE405CD0"
+    },
+    {
+      "state": "09-lips-rounded",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\09-lips-rounded.png",
+      "sha256": "B036E0751EE98527F46FDA1C71DD5F0F1166A8F982C00625B8C8B8FCE9846413"
+    },
+    {
+      "state": "10-lips-spread",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\10-lips-spread.png",
+      "sha256": "06B63D481C2630872849929C9C520259B1CD36EB23FA3C93EC98B735E9E65D36"
+    },
+    {
+      "state": "11-head-rotation",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\11-head-rotation.png",
+      "sha256": "C896D93CD17D306614CF19B24195DD6DABFD460C36C4D004F651F2324BEC56AC"
+    },
+    {
+      "state": "12-combined-hand-face",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\previews\\12-combined-hand-face.png",
+      "sha256": "37285F58BE1662B426ABF468C49A0C5D6AF25D004F6D749CDC507B2FA83A428A"
+    }
+  ]
+}

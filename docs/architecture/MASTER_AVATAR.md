@@ -55,6 +55,14 @@ Purpose: future production sign animation có bone animation và facial Morph Ta
 
 Exporter options thực tế của Blender 5.2.4 được lưu trong các export report TASK-0005. Dùng `blender/scripts/export_master_profiles.py` và `tools/validate-master-glb.mjs`; không copy option từ Blender version khác.
 
+## TASK-0006 facial working candidate
+
+- Experimental owner-review candidate: `blender/working/huy-anh/task-0006-facial-foundation/avatar_master_facial_candidate.blend`, version `1.0.0-rc.2`.
+- Candidate thêm six visible eye assets, six core `NMM_` Morph Targets và four technical clips; canonical `v1.0.0-rc.1` và official manifest không thay đổi.
+- Technical GLB: `assets/exports/technical/technical-facial-test.glb`; isolated viewer: `/technical-facial-viewer`.
+- Export profile bake MPFB macro mix và `Hide helpers` trên export-only data, rồi giữ six `NMM_` targets/weight animation bằng NLA track merge.
+- Đây không phải production facial release. Owner visual approval và linguistic/content approval vẫn là `NOT YET TESTED`; xem `docs/contracts/facial-animation-contract.md`.
+
 ## Ownership và change approval
 
 - Le Huy Anh sở hữu canonical master/rig/export profile.

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "url": "http://127.0.0.1:4173/technical-facial-viewer",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "gltf_canvas_ready",
+      "status": "PASS",
+      "evidence": {
+        "canvas": true,
+        "width": 778,
+        "height": 680,
+        "status": "Sẵn sàng · technical-facial-test.glb · 6 NMM targets",
+        "morphs": "NMM_BROW_RAISE_L, NMM_BROW_RAISE_R, NMM_EYE_BLINK_L, NMM_EYE_BLINK_R, NMM_LIPS_ROUND, NMM_LIPS_SPREAD",
+        "clips": "NMM_BLINK_TEST, NMM_BROW_TEST, NMM_MOUTH_TEST, TECH_HAND_FACE_TEST"
+      }
+    },
+    {
+      "id": "actual_morph_inventory",
+      "status": "PASS",
+      "evidence": "NMM_BROW_RAISE_L, NMM_BROW_RAISE_R, NMM_EYE_BLINK_L, NMM_EYE_BLINK_R, NMM_LIPS_ROUND, NMM_LIPS_SPREAD"
+    },
+    {
+      "id": "clip_inventory",
+      "status": "PASS",
+      "evidence": "NMM_BLINK_TEST, NMM_BROW_TEST, NMM_MOUTH_TEST, TECH_HAND_FACE_TEST"
+    },
+    {
+      "id": "pause",
+      "status": "PASS",
+      "evidence": {
+        "pausedA": 0,
+        "pausedB": 0
+      }
+    },
+    {
+      "id": "morph_slider",
+      "status": "PASS",
+      "evidence": {
+        "morphValue": "0.75"
+      }
+    },
+    {
+      "id": "gaze_control",
+      "status": "PASS",
+      "evidence": {
+        "gaze": "right"
+      }
+    },
+    {
+      "id": "camera_presets",
+      "status": "PASS",
+      "evidence": {
+        "facePreset": "face",
+        "fullPreset": "full"
+      }
+    },
+    {
+      "id": "replay_and_progress",
+      "status": "PASS",
+      "evidence": {
+        "progressed": 0.18
+      }
+    },
+    {
+      "id": "loop_speed",
+      "status": "PASS",
+      "evidence": {
+        "loop": "Loop: Tắt",
+        "speed": "Tốc độ: 0.5×"
+      }
+    },
+    {
+      "id": "reset_all",
+      "status": "PASS",
+      "evidence": {
+        "morph": "0",
+        "gaze": "center",
+        "camera": "full",
+        "playback": "paused · 0.5× · loop off"
+      }
+    }
+  ],
+  "face_screenshot": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\browser-face.png",
+  "full_screenshot": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0006\\browser-full.png",
+  "runtime_exceptions": []
+}

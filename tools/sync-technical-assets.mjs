@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const filenames = ['technical-hand-test.glb', 'technical-hand-test-neutral.glb'];
+const filenames = ['technical-hand-test.glb', 'technical-hand-test-neutral.glb', 'technical-facial-test.glb'];
 const checkOnly = process.argv.includes('--check');
 
 function sha256(filePath) {

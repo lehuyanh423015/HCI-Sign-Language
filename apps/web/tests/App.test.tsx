@@ -32,4 +32,13 @@ describe('application routes', () => {
     expect(html).toContain('Neutral educational avatar prototype');
     expect(html).toContain('Cận cảnh tay phải');
   });
+
+  it('renders the isolated facial viewer warning and actual control surface', () => {
+    const html = renderRoute('/technical-facial-viewer');
+    expect(html).toContain('TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE');
+    expect(html).toContain('Facial &amp; non-manual marker foundation');
+    expect(html).toContain('Morph Targets');
+    expect(html).toContain('Cận cảnh mặt');
+    expect(html).toContain('technical-facial-test.glb');
+  });
 });

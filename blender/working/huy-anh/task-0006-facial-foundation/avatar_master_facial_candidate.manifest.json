@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0-rc.2",
+  "status": "experimental-owner-review-candidate",
+  "canonical_source": {
+    "path": "blender/master/avatar_master.blend",
+    "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232"
+  },
+  "candidate_file": "blender/working/huy-anh/task-0006-facial-foundation/avatar_master_facial_candidate.blend",
+  "candidate_sha256": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982",
+  "blender_version": "5.2.4 LTS",
+  "mpfb_version": "2.0.18",
+  "bone_count": 137,
+  "hierarchy_sha256": "6A8C8B4B2C2E71446A79E478E15F3FFE1A646F24EFF86C3C9C158315AAFE72C2",
+  "eye_objects": [
+    "NMM_Eyeball.L",
+    "NMM_Iris.L",
+    "NMM_Pupil.L",
+    "NMM_Eyeball.R",
+    "NMM_Iris.R",
+    "NMM_Pupil.R"
+  ],
+  "morph_targets": [
+    "NMM_BROW_RAISE_L",
+    "NMM_BROW_RAISE_R",
+    "NMM_EYE_BLINK_L",
+    "NMM_EYE_BLINK_R",
+    "NMM_LIPS_ROUND",
+    "NMM_LIPS_SPREAD"
+  ],
+  "technical_clips": [
+    "NMM_BLINK_TEST",
+    "NMM_BROW_TEST",
+    "NMM_MOUTH_TEST",
+    "TECH_HAND_FACE_TEST"
+  ],
+  "fps": 30,
+  "linguistic_status": "NOT YET TESTED",
+  "last_validation_date": "2026-11-17"
+}

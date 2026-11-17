@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "artifact": "task0006_facial_candidate_validation",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0006-facial-foundation\\avatar_master_facial_candidate.blend",
+    "sha256": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982"
+  },
+  "armature_matrix": [
+    0.9701660872,
+    0.2418987304,
+    0.0162106268,
+    0.0,
+    -0.242423147,
+    0.9687404633,
+    0.05265861,
+    0.0,
+    -0.0029658396,
+    -0.0550174266,
+    0.9984809756,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "morph_targets": [
+    {
+      "name": "NMM_BROW_RAISE_L",
+      "moved_vertices": 198,
+      "max_delta_m": 0.006280084340883103,
+      "value": 0.0
+    },
+    {
+      "name": "NMM_BROW_RAISE_R",
+      "moved_vertices": 198,
+      "max_delta_m": 0.006280084340883103,
+      "value": 0.0
+    },
+    {
+      "name": "NMM_EYE_BLINK_L",
+      "moved_vertices": 765,
+      "max_delta_m": 0.005585356260799009,
+      "value": 0.0
+    },
+    {
+      "name": "NMM_EYE_BLINK_R",
+      "moved_vertices": 765,
+      "max_delta_m": 0.005585356260799009,
+      "value": 0.0
+    },
+    {
+      "name": "NMM_LIPS_ROUND",
+      "moved_vertices": 1373,
+      "max_delta_m": 0.008437121602935516,
+      "value": 0.0
+    },
+    {
+      "name": "NMM_LIPS_SPREAD",
+      "moved_vertices": 1373,
+      "max_delta_m": 0.005204780707995535,
+      "value": 0.0
+    }
+  ],
+  "eye_assets": [
+    {
+      "name": "NMM_Eyeball.L",
+      "bone": "eye.L",
+      "vertices": 366,
+      "fully_weighted": 366,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    },
+    {
+      "name": "NMM_Iris.L",
+      "bone": "eye.L",
+      "vertices": 218,
+      "fully_weighted": 218,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    },
+    {
+      "name": "NMM_Pupil.L",
+      "bone": "eye.L",
+      "vertices": 142,
+      "fully_weighted": 142,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    },
+    {
+      "name": "NMM_Eyeball.R",
+      "bone": "eye.R",
+      "vertices": 366,
+      "fully_weighted": 366,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    },
+    {
+      "name": "NMM_Iris.R",
+      "bone": "eye.R",
+      "vertices": 218,
+      "fully_weighted": 218,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    },
+    {
+      "name": "NMM_Pupil.R",
+      "bone": "eye.R",
+      "vertices": 142,
+      "fully_weighted": 142,
+      "armature_modifiers": [
+        "Human.rig"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "NMM_BLINK_TEST",
+      "slot_types": [
+        "KEY",
+        "OBJECT"
+      ],
+      "fcurves": 8,
+      "keyframe_points": 32
+    },
+    {
+      "name": "NMM_BROW_TEST",
+      "slot_types": [
+        "KEY",
+        "OBJECT"
+      ],
+      "fcurves": 2,
+      "keyframe_points": 6
+    },
+    {
+      "name": "NMM_MOUTH_TEST",
+      "slot_types": [
+        "KEY",
+        "OBJECT"
+      ],
+      "fcurves": 5,
+      "keyframe_points": 20
+    },
+    {
+      "name": "TECH_HAND_FACE_TEST",
+      "slot_types": [
+        "KEY",
+        "OBJECT"
+      ],
+      "fcurves": 75,
+      "keyframe_points": 225
+    }
+  ],
+  "checks": [
+    {
+      "id": "blender_version",
+      "status": "PASS",
+      "actual": "5.2.4 LTS"
+    },
+    {
+      "id": "candidate_is_separate",
+      "status": "PASS",
+      "actual": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0006-facial-foundation\\avatar_master_facial_candidate.blend"
+    },
+    {
+      "id": "canonical_source_metadata",
+      "status": "PASS",
+      "actual": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232"
+    },
+    {
+      "id": "candidate_version",
+      "status": "PASS",
+      "actual": "1.0.0-rc.2"
+    },
+    {
+      "id": "bone_count",
+      "status": "PASS",
+      "actual": 137
+    },
+    {
+      "id": "hierarchy",
+      "status": "PASS",
+      "actual": "6A8C8B4B2C2E71446A79E478E15F3FFE1A646F24EFF86C3C9C158315AAFE72C2"
+    },
+    {
+      "id": "nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "target_NMM_BROW_RAISE_L",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_BROW_RAISE_L",
+        "moved_vertices": 198,
+        "max_delta_m": 0.006280084340883103,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "target_NMM_BROW_RAISE_R",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_BROW_RAISE_R",
+        "moved_vertices": 198,
+        "max_delta_m": 0.006280084340883103,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "target_NMM_EYE_BLINK_L",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_EYE_BLINK_L",
+        "moved_vertices": 765,
+        "max_delta_m": 0.005585356260799009,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "target_NMM_EYE_BLINK_R",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_EYE_BLINK_R",
+        "moved_vertices": 765,
+        "max_delta_m": 0.005585356260799009,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "target_NMM_LIPS_ROUND",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_LIPS_ROUND",
+        "moved_vertices": 1373,
+        "max_delta_m": 0.008437121602935516,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "target_NMM_LIPS_SPREAD",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_LIPS_SPREAD",
+        "moved_vertices": 1373,
+        "max_delta_m": 0.005204780707995535,
+        "value": 0.0
+      }
+    },
+    {
+      "id": "eye_NMM_Eyeball.L",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Eyeball.L",
+        "bone": "eye.L",
+        "vertices": 366,
+        "fully_weighted": 366,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "eye_NMM_Iris.L",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Iris.L",
+        "bone": "eye.L",
+        "vertices": 218,
+        "fully_weighted": 218,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "eye_NMM_Pupil.L",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Pupil.L",
+        "bone": "eye.L",
+        "vertices": 142,
+        "fully_weighted": 142,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "eye_NMM_Eyeball.R",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Eyeball.R",
+        "bone": "eye.R",
+        "vertices": 366,
+        "fully_weighted": 366,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "eye_NMM_Iris.R",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Iris.R",
+        "bone": "eye.R",
+        "vertices": 218,
+        "fully_weighted": 218,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "eye_NMM_Pupil.R",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_Pupil.R",
+        "bone": "eye.R",
+        "vertices": 142,
+        "fully_weighted": 142,
+        "armature_modifiers": [
+          "Human.rig"
+        ]
+      }
+    },
+    {
+      "id": "action_NMM_BLINK_TEST",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_BLINK_TEST",
+        "slot_types": [
+          "KEY",
+          "OBJECT"
+        ],
+        "fcurves": 8,
+        "keyframe_points": 32
+      }
+    },
+    {
+      "id": "action_NMM_BROW_TEST",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_BROW_TEST",
+        "slot_types": [
+          "KEY",
+          "OBJECT"
+        ],
+        "fcurves": 2,
+        "keyframe_points": 6
+      }
+    },
+    {
+      "id": "action_NMM_MOUTH_TEST",
+      "status": "PASS",
+      "actual": {
+        "name": "NMM_MOUTH_TEST",
+        "slot_types": [
+          "KEY",
+          "OBJECT"
+        ],
+        "fcurves": 5,
+        "keyframe_points": 20
+      }
+    },
+    {
+      "id": "action_TECH_HAND_FACE_TEST",
+      "status": "PASS",
+      "actual": {
+        "name": "TECH_HAND_FACE_TEST",
+        "slot_types": [
+          "KEY",
+          "OBJECT"
+        ],
+        "fcurves": 75,
+        "keyframe_points": 225
+      }
+    },
+    {
+      "id": "combined_hand_face_channels",
+      "status": "PASS",
+      "actual": [
+        "key_blocks[\"NMM_BROW_RAISE_L\"].value",
+        "key_blocks[\"NMM_BROW_RAISE_R\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_L\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_R\"].value",
+        "key_blocks[\"NMM_LIPS_ROUND\"].value",
+        "key_blocks[\"NMM_LIPS_SPREAD\"].value",
+        "pose.bones[\"eye.L\"].rotation_euler",
+        "pose.bones[\"eye.L\"].scale",
+        "pose.bones[\"eye.R\"].rotation_euler",
+        "pose.bones[\"eye.R\"].scale",
+        "pose.bones[\"finger1-1.R\"].rotation_euler",
+        "pose.bones[\"finger1-2.R\"].rotation_euler",
+        "pose.bones[\"finger1-3.R\"].rotation_euler",
+        "pose.bones[\"finger2-1.R\"].rotation_euler",
+        "pose.bones[\"finger2-2.R\"].rotation_euler",
+        "pose.bones[\"finger2-3.R\"].rotation_euler",
+        "pose.bones[\"finger3-1.R\"].rotation_euler",
+        "pose.bones[\"finger3-2.R\"].rotation_euler",
+        "pose.bones[\"finger3-3.R\"].rotation_euler",
+        "pose.bones[\"finger4-1.R\"].rotation_euler",
+        "pose.bones[\"finger4-2.R\"].rotation_euler",
+        "pose.bones[\"finger4-3.R\"].rotation_euler",
+        "pose.bones[\"finger5-1.R\"].rotation_euler",
+        "pose.bones[\"finger5-2.R\"].rotation_euler",
+        "pose.bones[\"finger5-3.R\"].rotation_euler",
+        "pose.bones[\"head\"].rotation_euler",
+        "pose.bones[\"jaw\"].rotation_euler",
+        "pose.bones[\"neck02\"].rotation_euler",
+        "pose.bones[\"wrist.R\"].rotation_euler"
+      ]
+    }
+  ],
+  "status": "PASS"
+}
