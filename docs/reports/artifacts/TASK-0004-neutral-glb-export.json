@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "artifact": "technical_hand_test_glb_export",
+  "technical_fixture_only": true,
+  "blender_version": "5.2.4 LTS",
+  "source_blend": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test-neutral.blend",
+  "action": "TECH_HAND_CONTROL_TEST",
+  "morph_targets_exported": false,
+  "all_skin_influences_exported": false,
+  "detached_skinned_meshes_for_export": [],
+  "export_only_transform_normalization": null,
+  "armature_object_removed_by_exporter": true,
+  "export_only_shape_key_bake": {
+    "source_values": {
+      "Basis": 1.0,
+      "$md-$as-$fe-$yn": 0.16500000655651093,
+      "$md-$as-$ma-$yn": 0.16500000655651093,
+      "$md-$ca-$fe-$yn": 0.16500000655651093,
+      "$md-$ca-$ma-$yn": 0.16500000655651093,
+      "$md-$af-$fe-$yn": 0.16500000655651093,
+      "$md-$af-$ma-$yn": 0.16500000655651093,
+      "$md-universal-$fe-$yn-$av$mu-$av$wg": 0.5,
+      "$md-universal-$ma-$yn-$av$mu-$av$wg": 0.5,
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi": 0.08856657892465591,
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi": 0.088466577231884
+    },
+    "body_world_mesh_delta": {
+      "moved_vertices": 0,
+      "max_distance": 0.0,
+      "mean_moved_distance": 0.0
+    },
+    "remaining_shape_keys": 0
+  },
+  "current_pose_used_as_export_rest": false,
+  "non_armature_modifiers_applied": true,
+  "selected_objects": [
+    "EDU_NeutralShorts",
+    "EDU_NeutralTop",
+    "Human",
+    "Human.rig"
+  ],
+  "operator_result": [
+    "FINISHED"
+  ],
+  "output": "E:\\University\\Semester_7\\HCI\\BTL\\assets\\exports\\technical\\technical-hand-test-neutral.glb",
+  "size_bytes": 992780,
+  "sha256": "E54DEB2F58B84FEB0C957562E48DA4DD772E71D3950451A52B1B22CBFB245FF0",
+  "status": "PASS"
+}

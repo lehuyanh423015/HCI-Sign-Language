@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "artifact": "neutral_avatar_reload_validation",
+  "source_blend": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test-neutral.blend",
+  "source_sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F",
+  "blender_version": "5.2.4 LTS",
+  "objects": {
+    "body": "Human",
+    "armature": "Human.rig",
+    "garments": [
+      "EDU_NeutralTop",
+      "EDU_NeutralShorts"
+    ]
+  },
+  "garment_bounds_local": {
+    "EDU_NeutralTop": {
+      "min": [
+        -0.32364314794540405,
+        -0.19500000774860382,
+        0.9750000238418579
+      ],
+      "max": [
+        0.32364314794540405,
+        0.14499999582767487,
+        1.4049999713897705
+      ]
+    },
+    "EDU_NeutralShorts": {
+      "min": [
+        -0.22999998927116394,
+        -0.20200000703334808,
+        0.6200000047683716
+      ],
+      "max": [
+        0.22999998927116394,
+        0.1599999964237213,
+        1.0299999713897705
+      ]
+    }
+  },
+  "animation": {
+    "name": "TECH_HAND_CONTROL_TEST",
+    "fcurve_count": 45,
+    "keyframe_point_count": 135,
+    "frames": [
+      1.0,
+      15.0,
+      30.0
+    ],
+    "animated_bones": [
+      "finger1-1.R",
+      "finger1-2.R",
+      "finger1-3.R",
+      "finger2-1.R",
+      "finger2-2.R",
+      "finger2-3.R",
+      "finger3-1.R",
+      "finger3-2.R",
+      "finger3-3.R",
+      "finger4-1.R",
+      "finger4-2.R",
+      "finger4-3.R",
+      "finger5-1.R",
+      "finger5-2.R",
+      "finger5-3.R"
+    ],
+    "body_mesh_delta_frame_1_to_30": {
+      "moved_vertices": 1506,
+      "max_distance": 0.1229950174925529,
+      "mean_moved_distance": 0.04812897464826633
+    }
+  },
+  "checks": {
+    "rig_hierarchy_expected": true,
+    "body_armature_binding": true,
+    "garments_present": true,
+    "garments_armature_binding": true,
+    "garments_weighted": true,
+    "neutral_materials": true,
+    "upper_coverage_bounds": true,
+    "lower_coverage_bounds": true,
+    "technical_action_assigned": true,
+    "technical_action_shape": true,
+    "finger_deformation_present": true,
+    "armature_object_transform_stable": true,
+    "scene_timing": true
+  },
+  "automated_status": "PASS",
+  "human_visual_status": "NOT YET TESTED"
+}

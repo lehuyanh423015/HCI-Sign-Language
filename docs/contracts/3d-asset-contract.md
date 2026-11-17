@@ -8,6 +8,7 @@ Owner phối hợp: Le Huy Anh (master/rig/export) và Doan Khanh Nhat (viewer).
 - Một canonical armature hierarchy. Không đổi bone name, parent, rest pose, scale hoặc thay rig độc lập.
 - Master change dùng branch/PR riêng, ghi lý do, backup và skeleton signature trước/sau. Huy Anh điều phối; Mien không ghi đè master từ working file.
 - Animator tạo file riêng từ approved revision và ghi master commit/hash trong handoff.
+- TASK-0004 tạo `blender/master/avatar_master_neutral_candidate.blend`; đây là candidate để owner review, chưa tự động thay official master.
 
 ## B–C. ID, clip và file naming
 
@@ -40,6 +41,8 @@ Luồng file: working `.blend` → `assets/exports/signs/Snnn.glb` để kiểm 
 - Blender 5.2 dùng slotted Actions và exporter có nhiều animation mode. Tạo Action Slot đúng `OBJECT` target. Với một clip technical/production đã cô lập, dùng `ACTIONS` mode; TASK-0003 chứng minh `ACTIVE_ACTIONS` tạo tên generic `Animation`, còn `ACTIONS` giữ đúng Action name.
 - Trong bản export copy, chỉ giữ/bật action intended, đặt tên `Snnn_MAIN`; nếu dùng NLA thì một track/strip intended, không mute, không strip thừa. Chọn export mode Action/NLA nhất quán trong preset được duyệt.
 - Sau mỗi export phải kiểm tra JSON/Three `gltf.animations`: có đúng clip expected và duration > 0. Nếu exporter tạo tên khác, sửa pipeline/source rồi export lại; không đổi metadata để che lỗi tùy tiện.
+- MPFB body có nonzero shape-key mix và `Hide helpers` MASK modifier. Trên export-only copy phải bake current shape mix, dùng `export_apply=True` để loại helper geometry nhưng giữ Armature modifier, giới hạn 4 skin influences cho Three.js và không save ngược vào working/master source.
+- Có thể dùng `export_armature_object_remove=True` khi validator/runtime xác nhận; TASK-0004 neutral GLB đạt 0 Khronos errors/warnings với cấu hình này.
 - Viewer dùng `GLTFLoader`, chọn clip bằng exact name, tạo `AnimationMixer`, `clipAction`. Play/pause giữ time; replay đặt time về 0; loop dùng `LoopRepeat` khi bật và `LoopOnce` khi tắt; speed dùng `mixer.timeScale = 0.5` hoặc `1`. Reset dừng action, đặt time 0, phục hồi model transform và camera/controls defaults.
 - Rotate/zoom do OrbitControls; tắt pan nếu UI không cần. Ánh sáng tối thiểu: ambient/hemisphere + key directional, không phụ thuộc Blender scene lights. Camera phải fit toàn thân và ưu tiên thấy tay/mặt.
 

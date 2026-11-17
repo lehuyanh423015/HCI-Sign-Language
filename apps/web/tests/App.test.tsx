@@ -26,7 +26,7 @@ describe('application routes', () => {
   it('renders the isolated technical viewer warning and controls', () => {
     const html = renderRoute('/technical-viewer');
     expect(html).toContain('TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE');
-    expect(html).toContain('Technical hand-control prototype');
+    expect(html).toContain('Neutral educational avatar prototype');
     expect(html).toContain('Cận cảnh tay phải');
   });
 });

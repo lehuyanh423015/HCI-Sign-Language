@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "artifact": "neutral_educational_avatar_creation",
+  "technical_fixture_only": true,
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test.blend",
+    "sha256": "1FD50D320ECD212DDC17E26CC680CAD92210FBEC537E8A39CD8D10C70D801B25"
+  },
+  "strategy": "procedural low-detail garment shells with transferred body weights and no textures",
+  "materials": {
+    "body": "EDU_Skin_Neutral",
+    "top": "EDU_Top_Teal",
+    "shorts": "EDU_Shorts_Slate",
+    "textures": []
+  },
+  "garments": [
+    {
+      "name": "EDU_NeutralTop",
+      "vertices": 224,
+      "polygons": 144,
+      "weighted_vertices": 224,
+      "bounds_local": {
+        "min": [
+          -0.32364314794540405,
+          -0.19500000774860382,
+          0.9750000238418579
+        ],
+        "max": [
+          0.32364314794540405,
+          0.14499999582767487,
+          1.4049999713897705
+        ]
+      },
+      "materials": [
+        "EDU_Top_Teal"
+      ],
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE"
+        }
+      ]
+    },
+    {
+      "name": "EDU_NeutralShorts",
+      "vertices": 232,
+      "polygons": 130,
+      "weighted_vertices": 232,
+      "bounds_local": {
+        "min": [
+          -0.22999998927116394,
+          -0.20200000703334808,
+          0.6200000047683716
+        ],
+        "max": [
+          0.22999998927116394,
+          0.1599999964237213,
+          1.0299999713897705
+        ]
+      },
+      "materials": [
+        "EDU_Shorts_Slate"
+      ],
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE"
+        }
+      ]
+    }
+  ],
+  "action": {
+    "name": "TECH_HAND_CONTROL_TEST",
+    "fcurve_count": 45,
+    "animated_bones": [
+      "finger1-1.R",
+      "finger1-2.R",
+      "finger1-3.R",
+      "finger2-1.R",
+      "finger2-2.R",
+      "finger2-3.R",
+      "finger3-1.R",
+      "finger3-2.R",
+      "finger3-3.R",
+      "finger4-1.R",
+      "finger4-2.R",
+      "finger4-3.R",
+      "finger5-1.R",
+      "finger5-2.R",
+      "finger5-3.R"
+    ]
+  },
+  "outputs": {
+    "working": {
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test-neutral.blend",
+      "sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F"
+    },
+    "candidate": {
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\master\\avatar_master_neutral_candidate.blend",
+      "sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F"
+    }
+  },
+  "previews": {
+    "before": [
+      {
+        "frame": 1,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\before-neutralization-full-frame-001.png",
+        "sha256": "666D13D1D4F63134E3BBFB73C8D7E7D2E907602FE12B557FDC1FF5B13F9B520F"
+      }
+    ],
+    "after_full": [
+      {
+        "frame": 1,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-full-frame-001.png",
+        "sha256": "CD110C8D2D4BF604679B52FE440C65F1E1A52FD07BD54F545EA3A3C046BF7240"
+      },
+      {
+        "frame": 15,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-full-frame-015.png",
+        "sha256": "E1CD18B3A3426B2E998B14EE6C191319A3738A4F852EF50D0C495F316AC1AC0F"
+      },
+      {
+        "frame": 30,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-full-frame-030.png",
+        "sha256": "7C8C6242965BB5CAB2AE850726A8745574007C8B7F5EF1188B4F9C8FA3F2BD1F"
+      }
+    ],
+    "after_hand": [
+      {
+        "frame": 1,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-hand-frame-001.png",
+        "sha256": "9AC8A4AF58D5D7D20C8C11886A2921FB278FCAF9742E8315F3877B62CBFEDC1C"
+      },
+      {
+        "frame": 15,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-hand-frame-015.png",
+        "sha256": "C1D6139EF5E9CCD442D709F3DBCE5F4F82D2A96DE85B241554A377A6C8E5173E"
+      },
+      {
+        "frame": 30,
+        "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0004-previews\\neutral-avatar-hand-frame-030.png",
+        "sha256": "EF2A0519BBD3434A2BEDECDB4AB6EBC7B5D9FAE19628E6716E3007238551E772"
+      }
+    ]
+  },
+  "checks": {
+    "source_not_overwritten": true,
+    "rig_hierarchy_preserved": true,
+    "armature_object_transform_preserved": true,
+    "technical_action_preserved": true,
+    "body_material_neutralized": true,
+    "garments_created": true,
+    "garments_weighted": true
+  },
+  "status": "PASS"
+}

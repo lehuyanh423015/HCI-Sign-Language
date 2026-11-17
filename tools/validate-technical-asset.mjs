@@ -5,7 +5,10 @@ import path from 'node:path';
 import validator from 'gltf-validator';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const assetPath = path.join(root, 'assets', 'exports', 'technical', 'technical-hand-test.glb');
+const assetIndex = process.argv.indexOf('--asset');
+const assetPath = assetIndex >= 0 && process.argv[assetIndex + 1]
+  ? path.resolve(root, process.argv[assetIndex + 1])
+  : path.join(root, 'assets', 'exports', 'technical', 'technical-hand-test.glb');
 const expectedClip = 'TECH_HAND_CONTROL_TEST';
 const expectedBones = new Set(Array.from({ length: 5 }, (_, digit) =>
   Array.from({ length: 3 }, (_, joint) => `finger${digit + 1}-${joint + 1}.R`),
@@ -52,7 +55,7 @@ const duration = Math.max(...inputAccessors.map((accessor) => accessor.max?.[0] 
 if (!(duration >= 0.9 && duration <= 1.1)) throw new Error(`animation duration ${duration} is outside 0.9–1.1 seconds`);
 
 const validation = await validator.validateBytes(new Uint8Array(bytes), {
-  uri: 'technical-hand-test.glb',
+  uri: path.basename(assetPath),
   maxIssues: 1000,
 });
 const severityCounts = validation.issues?.numErrors ?? 0;

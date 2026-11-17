@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "artifact": "assets/exports/technical/technical-hand-test-neutral.glb",
+  "sha256": "E54DEB2F58B84FEB0C957562E48DA4DD772E71D3950451A52B1B22CBFB245FF0",
+  "size_bytes": 992780,
+  "status": "PASS",
+  "structural": {
+    "gltf_version": "2.0",
+    "generator": "Khronos glTF Blender I/O v5.2.41",
+    "scenes": 1,
+    "nodes": 140,
+    "meshes": 3,
+    "skins": 1,
+    "materials": 3,
+    "textures": 0,
+    "animations": [
+      "TECH_HAND_CONTROL_TEST"
+    ]
+  },
+  "animation": {
+    "name": "TECH_HAND_CONTROL_TEST",
+    "duration_seconds": 1,
+    "channel_count": 15,
+    "sampler_count": 15,
+    "target_bones": [
+      "finger1-1.R",
+      "finger1-2.R",
+      "finger1-3.R",
+      "finger2-1.R",
+      "finger2-2.R",
+      "finger2-3.R",
+      "finger3-1.R",
+      "finger3-2.R",
+      "finger3-3.R",
+      "finger4-1.R",
+      "finger4-2.R",
+      "finger4-3.R",
+      "finger5-1.R",
+      "finger5-2.R",
+      "finger5-3.R"
+    ],
+    "unexpected_targets": [],
+    "missing_expected_bones": []
+  },
+  "khronos_validator": {
+    "num_errors": 0,
+    "num_warnings": 0,
+    "num_infos": 1,
+    "num_hints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+      }
+    ]
+  }
+}

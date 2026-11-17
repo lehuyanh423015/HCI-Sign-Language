@@ -19,10 +19,39 @@ import {
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-export const TECHNICAL_MODEL_URL = '/models/technical/technical-hand-test.glb';
+export const TECHNICAL_MODEL_URL = '/models/technical/technical-hand-test-neutral.glb';
 export const TECHNICAL_CLIP_NAME = 'TECH_HAND_CONTROL_TEST';
 
 type ViewerStatus = 'loading' | 'ready' | 'error';
+
+function normalizedNodeName(object: Object3D) {
+  return object.name.replace(/[^a-z0-9]/gi, '').toLowerCase();
+}
+
+function findSemanticNodes(model: Object3D, names: Set<string>) {
+  const found = new Map<string, Object3D>();
+  model.traverse((object) => {
+    const normalized = normalizedNodeName(object);
+    if (names.has(normalized)) found.set(normalized, object);
+  });
+  return found;
+}
+
+function skeletonBasis(model: Object3D) {
+  const wanted = new Set(['shoulder01l', 'shoulder01r', 'head', 'pelvis']);
+  const nodes = findSemanticNodes(model, wanted);
+  if (nodes.size !== wanted.size) {
+    return { up: new Vector3(0, 1, 0), forward: new Vector3(0, 0, 1) };
+  }
+  const left = nodes.get('shoulder01l')!.getWorldPosition(new Vector3());
+  const right = nodes.get('shoulder01r')!.getWorldPosition(new Vector3());
+  const head = nodes.get('head')!.getWorldPosition(new Vector3());
+  const pelvis = nodes.get('pelvis')!.getWorldPosition(new Vector3());
+  const lateral = left.sub(right).normalize();
+  const up = head.sub(pelvis).normalize();
+  const forward = lateral.cross(up).normalize();
+  return { up, forward };
+}
 
 export function TechnicalViewer() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -47,19 +76,16 @@ export function TechnicalViewer() {
 
     if (handPreset) {
       // GLTFLoader sanitizes Blender node names; match semantic names defensively.
-      const handNodes = new Map<string, Object3D>();
       const wanted = new Set(['wristr', 'finger21r', 'finger51r']);
-      model.traverse((object) => {
-        const normalized = object.name.replace(/[^a-z0-9]/gi, '').toLowerCase();
-        if (wanted.has(normalized)) handNodes.set(normalized, object);
-      });
+      const handNodes = findSemanticNodes(model, wanted);
       if (handNodes.size === wanted.size) {
         const target = [...handNodes.values()]
           .map((object) => object.getWorldPosition(new Vector3()))
           .reduce((sum, point) => sum.add(point), new Vector3())
           .multiplyScalar(1 / handNodes.size);
+        const { up, forward } = skeletonBasis(model);
         controls.target.copy(target);
-        camera.position.copy(target).add(new Vector3(0, 0.02, 0.42));
+        camera.position.copy(target).addScaledVector(forward, 0.42).addScaledVector(up, 0.02);
         camera.lookAt(target);
         controls.update();
         return true;
@@ -71,8 +97,9 @@ export function TechnicalViewer() {
     const center = bounds.getCenter(new Vector3());
     const size = bounds.getSize(new Vector3());
     const distance = Math.max(size.x, size.y, size.z) * 1.25;
+    const { up, forward } = skeletonBasis(model);
     controls.target.copy(center);
-    camera.position.set(center.x, center.y + size.y * 0.08, center.z + distance);
+    camera.position.copy(center).addScaledVector(forward, distance).addScaledVector(up, size.y * 0.08);
     camera.near = Math.max(distance / 100, 0.01);
     camera.far = distance * 20;
     camera.updateProjectionMatrix();

@@ -26,6 +26,8 @@ npm run dev
 
 Mở `http://localhost:5173/technical-viewer`. Banner phải ghi `TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE`. Thử pause/resume, replay, loop, 0.5×/1×, rotate/zoom, reset camera và hand preset.
 
+Viewer mặc định dùng `technical-hand-test-neutral.glb`. Đây là technical fixture trung tính, chưa phải production sign và chưa được promote thành official master.
+
 ## Giao gì và phụ thuộc ai
 
 - **Huy Anh:** master revision + skeleton/preflight record + S001–S003 `.blend`/preview/GLB. Mien phụ thuộc master; Nhat phụ thuộc GLB contract; Thao phụ thuộc preview/evidence.
@@ -36,10 +38,19 @@ Mở `http://localhost:5173/technical-viewer`. Banner phải ghi `TECHNICAL TEST
 ## Asset nào được sửa
 
 - Huy Anh/Mien chỉ sửa file trong working folder của mình. Không save trực tiếp `blender/avatar_master.blend` hoặc file animator khác.
-- `assets/exports/technical/technical-hand-test.glb` là fixture pipeline; không đổi thành S001–S006.
+- `assets/exports/technical/technical-hand-test.glb` là baseline TASK-0003; `technical-hand-test-neutral.glb` là neutral fixture TASK-0004. Không đổi hai file này thành S001–S006.
 - Nhat consume canonical GLB qua `npm run sync:technical-assets`; không commit public generated copy.
 - Thao sửa canonical `data/`, source/evidence; không tự đánh `approved` thiếu reviewer.
 - Shared contracts, master, production export cần review của owner/consumer liên quan.
+
+## Neutral master candidate
+
+- Candidate chờ owner duyệt: `blender/master/avatar_master_neutral_candidate.blend`.
+- Working source có test action: `blender/working/huy-anh/technical-hand-test-neutral.blend`.
+- Canonical web evidence: `assets/exports/technical/technical-hand-test-neutral.glb`.
+- Candidate giữ nguyên 137-bone hierarchy và `TECH_HAND_CONTROL_TEST`; thêm `EDU_NeutralTop`, `EDU_NeutralShorts` cùng ba material không texture.
+- Huy Anh review preview/weights/fit trước khi promote. Mien không bắt đầu production animation từ candidate cho tới khi owner phê duyệt commit/hash cụ thể.
+- Khi export MPFB body phải bake current shape-key mix trên export copy, apply non-Armature modifiers để `Hide helpers` có hiệu lực, giới hạn 4 skin influences và không save các thay đổi export-only vào source.
 
 ## Integration
 

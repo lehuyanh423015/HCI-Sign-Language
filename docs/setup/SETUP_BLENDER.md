@@ -38,7 +38,9 @@ npm run doctor
 
 ## Asset hiện có
 
-`blender/avatar_master.blend` tồn tại trước scaffold và được giữ nguyên. Đây là master **candidate**, chưa xác minh MPFB, armature, bone hierarchy hoặc action compatibility. Không Save bằng Blender version khác. Tạo working copy theo asset workflow trước khi kiểm tra ở TASK-0002.
+`blender/avatar_master.blend` tồn tại trước scaffold và được giữ nguyên; TASK-0002/0003 đã kiểm tra rig/pipeline nhưng không promote file này bằng thao tác ghi đè. Không Save bằng Blender version khác. Luôn tạo working copy theo asset workflow.
+
+Neutral candidate chờ owner duyệt: `blender/master/avatar_master_neutral_candidate.blend`. Không dùng làm production master chỉ vì file tồn tại; handoff phải nêu commit/hash được phê duyệt.
 
 ## Read-only preflight
 
@@ -72,7 +74,7 @@ Blender 5.2 Action Slots/export mode có thể làm tên clip khác dự kiến;
 
 ## Technical prototype TASK-0003
 
-Working source: `blender\working\huy-anh\technical-hand-test.blend`. Canonical GLB: `assets\exports\technical\technical-hand-test.glb`.
+Baseline working source: `blender\working\huy-anh\technical-hand-test.blend`. Neutral working source: `blender\working\huy-anh\technical-hand-test-neutral.blend`. Viewer dùng canonical `assets\exports\technical\technical-hand-test-neutral.glb`; TASK-0003 GLB vẫn giữ làm baseline so sánh.
 
 ```cmd
 npm run sync:technical-assets

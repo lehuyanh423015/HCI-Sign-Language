@@ -11,6 +11,8 @@ function argument(name, fallback) {
 const url = argument('--url', 'http://127.0.0.1:4173/technical-viewer');
 const reportPath = path.resolve(argument('--report', 'docs/reports/artifacts/TASK-0003-browser-runtime.json'));
 const screenshotPath = path.resolve(argument('--screenshot', 'docs/reports/artifacts/TASK-0003-browser-runtime.png'));
+const fullScreenshotArgument = argument('--full-screenshot', '');
+const fullScreenshotPath = fullScreenshotArgument ? path.resolve(fullScreenshotArgument) : null;
 const chromeCandidates = [
   'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
   'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
@@ -129,6 +131,22 @@ try {
     return { status, canvas: Boolean(canvas), width: canvas?.width ?? 0, height: canvas?.height ?? 0 };
   })()`);
   report.checks.push({ id: 'gltf_and_canvas_ready', status: readiness.canvas && readiness.width > 0 ? 'PASS' : 'FAIL', evidence: readiness });
+  if (fullScreenshotPath) {
+    await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent === 'Phát lại').click()");
+    await delay(20);
+    await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent === 'Tạm dừng').click()");
+    await delay(80);
+    await evaluate(client, "window.scrollTo(0, document.querySelector('[data-testid=technical-canvas]').getBoundingClientRect().top + window.scrollY - 20)");
+    await delay(120);
+    const fullScreenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+    mkdirSync(path.dirname(fullScreenshotPath), { recursive: true });
+    writeFileSync(fullScreenshotPath, Buffer.from(fullScreenshot.data, 'base64'));
+    report.full_screenshot = fullScreenshotPath;
+    await evaluate(client, 'window.scrollTo(0, 0)');
+    await delay(80);
+    await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent === 'Tiếp tục').click()");
+    await delay(80);
+  }
 
   const timeBefore = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]')?.textContent?.replace('s','')"));
   await delay(300);

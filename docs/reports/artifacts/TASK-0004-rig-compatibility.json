@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "inspection": "controlled_rig_movement",
+  "source_file": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test-neutral.blend",
+  "source_sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F",
+  "blender_version": "5.2.4 LTS",
+  "technical_fixture_only": true,
+  "armature_object_matrix_preserved": true,
+  "tests": [
+    {
+      "control": "finger1-1.R",
+      "observed_chain": [
+        "finger1-1.R",
+        "finger1-2.R",
+        "finger1-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": 1,
+        "score": 0.0039385760866175595,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.0031669638301590614
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": 0.0039385760866175595
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": -0.0010984253232852043
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": 0.001092178857306919
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": 0.0011583928584339431
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": -0.00027888109060286714
+          }
+        ]
+      },
+      "test_degrees": 15.0,
+      "authored_pose_changes": [
+        "finger1-1.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 260,
+        "max_distance": 0.023933372871459104,
+        "mean_moved_distance": 0.012328176388274997
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "thumb"
+    },
+    {
+      "control": "finger2-1.R",
+      "observed_chain": [
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": 1,
+        "score": 0.004739480287325265,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.0030988950467187304
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": 0.004739480287325265
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 0.000296399191003216
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -0.0003858290014529253
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": -0.0005370348293103899
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": 0.002192543131431385
+          }
+        ]
+      },
+      "test_degrees": 15.0,
+      "authored_pose_changes": [
+        "finger2-1.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 350,
+        "max_distance": 0.019666394833037754,
+        "mean_moved_distance": 0.008777066260183135
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "index"
+    },
+    {
+      "control": "finger3-1.R",
+      "observed_chain": [
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": 1,
+        "score": 0.005002581646819271,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.003309275522883931
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": 0.005002581646819271
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 0.0002463172906355393
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -0.0003041340265994841
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": -0.00020515629267087165
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": 0.0018776203034381045
+          }
+        ]
+      },
+      "test_degrees": 15.0,
+      "authored_pose_changes": [
+        "finger3-1.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 387,
+        "max_distance": 0.022738371869980716,
+        "mean_moved_distance": 0.009976394150995885
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "middle"
+    },
+    {
+      "control": "finger4-1.R",
+      "observed_chain": [
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": 1,
+        "score": 0.00446597850760333,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.0028726302398509596
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": 0.00446597850760333
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 0.00014607370532673802
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -0.00020865481046311585
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": 0.0004662412596726506
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": 0.001108559776083845
+          }
+        ]
+      },
+      "test_degrees": 15.0,
+      "authored_pose_changes": [
+        "finger4-1.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 386,
+        "max_distance": 0.02128599751807045,
+        "mean_moved_distance": 0.008854215061235607
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "ring"
+    },
+    {
+      "control": "finger5-1.R",
+      "observed_chain": [
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": 1,
+        "score": 0.003524586908208338,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.0022118061103442027
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": 0.003524586908208338
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 3.752996292502586e-06
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -5.0471101140495134e-05
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": 0.0010445314717965476
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": 0.0002456065624519138
+          }
+        ]
+      },
+      "test_degrees": 15.0,
+      "authored_pose_changes": [
+        "finger5-1.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 346,
+        "max_distance": 0.014952750991857807,
+        "mean_moved_distance": 0.007016876681676164
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "little"
+    },
+    {
+      "control": "wrist.R",
+      "observed_chain": [
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 0,
+        "axis": "X",
+        "sign": -1,
+        "score": 0.00038122593050010645,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": 0.00038122593050010645
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": -0.0017889752708474538
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 0.0002498947931651452
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -0.0003174283698695879
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": 0.00017128697242380087
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": -0.0015180516262256472
+          }
+        ]
+      },
+      "test_degrees": 8.0,
+      "authored_pose_changes": [
+        "wrist.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 1685,
+        "max_distance": 0.025626056048746904,
+        "mean_moved_distance": 0.01610730910253764
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "wrist"
+    },
+    {
+      "control": "lowerarm01.R",
+      "observed_chain": [
+        "wrist.R"
+      ],
+      "status": "PASS",
+      "axis": {
+        "axis_index": 1,
+        "axis": "Y",
+        "sign": -1,
+        "score": 0.00041552419453306545,
+        "probe_degrees": 12.0,
+        "candidates": [
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": -1,
+            "score": -0.03663602023805196
+          },
+          {
+            "axis_index": 0,
+            "axis": "X",
+            "sign": 1,
+            "score": -0.05541763495693407
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": -1,
+            "score": 0.00041552419453306545
+          },
+          {
+            "axis_index": 1,
+            "axis": "Y",
+            "sign": 1,
+            "score": -0.00042489151646039544
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": -1,
+            "score": -0.04640472420173258
+          },
+          {
+            "axis_index": 2,
+            "axis": "Z",
+            "sign": 1,
+            "score": -0.04720919228564277
+          }
+        ]
+      },
+      "test_degrees": 8.0,
+      "authored_pose_changes": [
+        "lowerarm01.R"
+      ],
+      "unintended_pose_changes": [],
+      "mesh_delta": {
+        "moved_vertices": 1940,
+        "max_distance": 0.014825366101686166,
+        "mean_moved_distance": 0.005472488876897465
+      },
+      "reset_mesh_delta": {
+        "moved_vertices": 0,
+        "max_distance": 0.0,
+        "mean_moved_distance": 0.0
+      },
+      "object_and_root_transform_stable": true,
+      "reset_pose_exact": true,
+      "semantic": "elbow_or_forearm"
+    }
+  ],
+  "automated_deformation_status": "PASS",
+  "human_visual_status": "NOT YET TESTED",
+  "notes": "Mesh vertex deltas prove localized deformation and exact reset; visual clipping/anatomical quality still requires preview review."
+}
