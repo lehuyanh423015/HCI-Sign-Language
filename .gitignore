@@ -32,8 +32,5 @@ assets/staging/*
 assets/previews/*
 !assets/previews/README.md
 
-# Local exports are reviewed before being added intentionally
-assets/exports/signs/*
-!assets/exports/signs/README.md
-apps/web/public/models/signs/*
-!apps/web/public/models/signs/README.md
+# Reviewed GLB exports and published models are intentionally trackable.
+# Their binary merge/LFS policy is defined in .gitattributes and docs/workflows/.
