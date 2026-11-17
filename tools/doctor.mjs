@@ -8,6 +8,25 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 let requiredFailures = 0;
 let environmentFailures = 0;
 
+function readLocalBlenderConfig() {
+  const envFile = path.join(root, '.env.local');
+  if (!existsSync(envFile)) return {};
+  const values = {};
+  for (const rawLine of readFileSync(envFile, 'utf8').split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) continue;
+    const separator = line.indexOf('=');
+    if (separator < 1) continue;
+    const key = line.slice(0, separator).trim();
+    let value = line.slice(separator + 1).trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    if (key === 'BLENDER_EXECUTABLE' || key === 'BLENDER_PATH') values[key] = value;
+  }
+  return values;
+}
+
 function report(status, label, detail) {
   console.log(`${status.padEnd(14)} ${label}: ${detail}`);
 }
@@ -22,16 +41,20 @@ function commandVersion(command, args = ['--version']) {
 
 function discoverBlender() {
   const cliIndex = process.argv.indexOf('--blender');
-  if (cliIndex >= 0 && process.argv[cliIndex + 1]) return path.resolve(process.argv[cliIndex + 1]);
-  if (process.env.BLENDER_PATH) return process.env.BLENDER_PATH;
+  if (cliIndex >= 0 && process.argv[cliIndex + 1]) return { executable: path.resolve(process.argv[cliIndex + 1]), source: '--blender' };
+  if (process.env.BLENDER_EXECUTABLE) return { executable: process.env.BLENDER_EXECUTABLE, source: 'BLENDER_EXECUTABLE' };
+  const localConfig = readLocalBlenderConfig();
+  if (localConfig.BLENDER_EXECUTABLE) return { executable: localConfig.BLENDER_EXECUTABLE, source: '.env.local:BLENDER_EXECUTABLE' };
+  if (process.env.BLENDER_PATH) return { executable: process.env.BLENDER_PATH, source: 'BLENDER_PATH (legacy)' };
+  if (localConfig.BLENDER_PATH) return { executable: localConfig.BLENDER_PATH, source: '.env.local:BLENDER_PATH (legacy)' };
   const fromPath = spawnSync(process.platform === 'win32' ? 'where.exe' : 'which', ['blender'], { encoding: 'utf8' });
-  if (fromPath.status === 0) return fromPath.stdout.trim().split(/\r?\n/)[0];
+  if (fromPath.status === 0) return { executable: fromPath.stdout.trim().split(/\r?\n/)[0], source: 'PATH' };
   if (process.platform === 'win32') {
     const base = path.join(process.env.ProgramFiles ?? 'C:\\Program Files', 'Blender Foundation');
     if (existsSync(base)) {
       for (const folder of readdirSync(base).sort().reverse()) {
         const candidate = path.join(base, folder, 'blender.exe');
-        if (existsSync(candidate)) return candidate;
+        if (existsSync(candidate)) return { executable: candidate, source: 'standard installation directory' };
       }
     }
   }
@@ -75,13 +98,14 @@ const installed = existsSync(path.join(root, 'node_modules'));
 report(installed ? 'PASS' : 'FAIL', 'Dependencies', installed ? 'node_modules is present; use npm ci after pulling lockfile changes' : 'run npm ci');
 if (!installed) requiredFailures += 1;
 
-const blenderPath = discoverBlender();
+const blenderDiscovery = discoverBlender();
+const blenderPath = blenderDiscovery?.executable;
 if (!blenderPath || !existsSync(blenderPath)) {
-  report('SKIPPED', 'Blender', 'not found; web development can continue. Set BLENDER_PATH for 3D checks.');
+  report('SKIPPED', 'Blender', 'not found; web development can continue. Set BLENDER_EXECUTABLE or use .env.local.');
 } else {
   const version = commandVersion(blenderPath);
   const compatible = version?.includes('4.5.16');
-  report(compatible ? 'PASS' : 'FAIL', 'Blender', `${version ?? 'version unavailable'} at ${blenderPath}; project baseline is 4.5.16`);
+  report(compatible ? 'PASS' : 'FAIL', 'Blender', `${version ?? 'version unavailable'} at ${blenderPath} (${blenderDiscovery.source}); project baseline is 4.5.16`);
   if (!compatible) environmentFailures += 1;
   report('NOT YET TESTED', 'MPFB', 'run the documented Blender preflight; doctor does not modify or open a .blend file');
 }

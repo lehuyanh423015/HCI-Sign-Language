@@ -19,6 +19,10 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Python/Blender script caches
+__pycache__/
+*.py[cod]
+
 # Blender temporary/recovery and render output
 *.blend1
 *.blend2
