@@ -1,14 +1,18 @@
-import { ViewerPlaceholder } from '../../components/viewer/ViewerPlaceholder';
+import { TechnicalViewer } from '../../components/viewer/TechnicalViewer';
 
 export function LessonPage() {
   return (
     <article>
-      <div className="page-heading">
-        <p className="eyebrow">Bài học mẫu</p>
-        <h2>Kiểm tra ranh giới tích hợp 3D</h2>
-        <p>Không có chuyển động ký hiệu hoặc nội dung giáo dục nào được tạo trong TASK-0001.</p>
+      <div className="page-heading technical-heading">
+        <p className="eyebrow">Bản xem trước kỹ thuật 3D</p>
+        <h2>Avatar giáo dục trung tính</h2>
+        <p className="technical-warning">TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE</p>
+        <p>
+          Fixture kiểm tra rig, skinning và điều khiển runtime; không thuộc S001–S006 và
+          không phải nội dung bài học đã được xác minh.
+        </p>
       </div>
-      <ViewerPlaceholder signId="S001" />
+      <TechnicalViewer />
     </article>
   );
 }

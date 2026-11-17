@@ -114,6 +114,9 @@ Một CLI attempt dùng `test_rig_controls.py --report` thất bại vì script 
 - `docs/reports/artifacts/TASK-0004-browser-runtime.json`
 - `docs/reports/artifacts/TASK-0004-browser-full.png`
 - `docs/reports/artifacts/TASK-0004-browser-runtime.png`
+- `docs/reports/artifacts/TASK-0004-landing-browser-runtime.json`
+- `docs/reports/artifacts/TASK-0004-landing-browser-full.png`
+- `docs/reports/artifacts/TASK-0004-landing-browser-hand.png`
 - `docs/reports/artifacts/task-0004-previews/before-neutralization-full-frame-001.png`
 - `docs/reports/artifacts/task-0004-previews/neutral-avatar-full-frame-{001,015,030}.png`
 - `docs/reports/artifacts/task-0004-previews/neutral-avatar-hand-frame-{001,015,030}.png`
@@ -153,7 +156,8 @@ Invoke-WebRequest http://127.0.0.1:4173/models/technical/technical-hand-test-neu
 
 - Branch: `feat/task-0004-neutral-avatar`.
 - Base: `8da36ac`.
-- Final commit hash không thể tự ghi vào chính report trong cùng commit; actual hash sẽ được nêu trong final Agent response.
+- Initial TASK-0004 commit: `5996ee48637d3d6daa3b7c43c4fc5319a0153e8a`.
+- Follow-up integration commit hash không thể tự ghi vào chính report trong cùng commit; actual hash sẽ được nêu trong final Agent response.
 - Không push/merge.
 
 **Recommendation:** source đủ điều kiện làm recommended shared-base candidate về mặt kỹ thuật. Chưa gọi là approved official master cho tới khi owner hoàn tất checklist dưới đây. Sau approval, Huy Anh ghi candidate commit/hash vào handoff; Mien tạo working copies riêng; Nhat chỉ consume canonical GLB/sync command; Thao tiếp tục giữ fixture ngoài approved learning catalog.
@@ -178,3 +182,57 @@ Owner checklist:
 - [ ] Chấp thuận `avatar_master_neutral_candidate.blend` và commit/hash cụ thể trước handoff production.
 
 Không tự động bắt đầu task tiếp theo.
+
+## 14. Follow-up — thay placeholder trên landing route
+
+### 14.1. Tình trạng ban đầu và nguyên nhân
+
+Ảnh người dùng cung cấp cho thấy route `/` vẫn render `ViewerPlaceholder` của TASK-0001 với nhãn `Chưa có GLB`, tiêu đề `S001` và controls disabled. Neutral GLB không bị thiếu: nó đã được publish qua sync command và hoạt động ở `/technical-viewer`; landing route chưa được nối vào `TechnicalViewer`.
+
+Follow-up bắt đầu tại commit `5996ee48637d3d6daa3b7c43c4fc5319a0153e8a` trên `feat/task-0004-neutral-avatar`. User-owned change trong `README.md` tiếp tục được giữ ngoài task. Runtime dùng Node `v24.14.1`, npm `11.12.1`; binary source và canonical neutral GLB không bị sửa.
+
+### 14.2. Phạm vi và thay đổi
+
+- `apps/web/src/features/lessons/LessonPage.tsx`: thay `ViewerPlaceholder` bằng `TechnicalViewer`; đổi copy thành bản xem trước kỹ thuật và hiển thị nguyên văn banner `TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE`.
+- Landing route không gắn fixture vào `S001`: copy nói rõ fixture không thuộc `S001–S006` và không phải nội dung bài học đã xác minh.
+- `apps/web/tests/App.test.tsx`: xác nhận route `/` có viewer controls/cảnh báo và không còn nhãn `Chưa có GLB` hoặc heading placeholder `<h2>S001</h2>`.
+- Không sửa canonical metadata, `glbPath`, Blender source, GLB hoặc production publication gate.
+
+### 14.3. Commands thực sự chạy
+
+```text
+npm run test:web -- --run
+npm run typecheck
+npm run lint
+npm run test --workspace @hci-sign/web -- --run
+npm run test --workspace @hci-sign/web
+npm run dev --workspace @hci-sign/web -- --host 127.0.0.1 --port 4173 --strictPort
+node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/ --report docs/reports/artifacts/TASK-0004-landing-browser-runtime.json --full-screenshot docs/reports/artifacts/TASK-0004-landing-browser-full.png --screenshot docs/reports/artifacts/TASK-0004-landing-browser-hand.png
+npm run check
+```
+
+### 14.4. Test matrix follow-up
+
+| Check | Evidence | Status |
+|---|---|---|
+| Lệnh `npm run test:web -- --run` | Script không tồn tại | FAIL — thao tác sai, đã thay bằng workspace test |
+| Workspace test lần đầu | Assertion `not.toContain('S001')` quá rộng vì copy hợp lệ có `S001–S006` | FAIL — test được sửa đúng phạm vi |
+| Workspace test cuối | 3/3 tests | PASS |
+| Typecheck và lint | Hoàn tất không lỗi | PASS |
+| Landing browser runtime | GLB/canvas, progress, pause, resume, replay, loop, speed, camera: 8/8; 0 exceptions | PASS |
+| Agent visual — landing full/hand screenshots | Avatar và trang phục hiển thị; full/hand preset đọc được | PASS |
+| `npm run check` | Typecheck, lint, data, sync, 7 tests, build, asset validators | PASS |
+| Production `S001–S006` GLBs | Vẫn chưa tồn tại theo publication gate | NOT YET TESTED |
+| Owner browser/educational acceptance | Chưa có owner sign-off | NOT YET TESTED |
+
+Evidence hashes:
+
+- `TASK-0004-landing-browser-runtime.json`: SHA-256 `A3DC671F725F26FE3F790DC0F0923AEE22BD0BE27D4201F9FC868E5A1188A00D`.
+- `TASK-0004-landing-browser-full.png`: SHA-256 `101A53FD9FAA9224ED0542E174AE793E80AE74960E0496663E0F1046602FA5D2`.
+- `TASK-0004-landing-browser-hand.png`: SHA-256 `B51A327FFEDD87CEEF36D8C331609D5C0FEF38F6DA4EF1460633AABAC4053A9D`.
+
+### 14.5. Giới hạn và manual acceptance
+
+- Landing route hiện là technical preview, chưa phải bài học production; navigation label `Bài học` được giữ để không mở rộng scope sang information architecture.
+- Vite vẫn cảnh báo main bundle lớn hơn 500 kB; không ảnh hưởng validation hiện tại.
+- Owner cần mở `/`, xác nhận model tải thay cho placeholder, thử mọi controls và chấp nhận wording/banner. Việc tạo hoặc publish `S001–S006` vẫn là task riêng sau technical/content approval.

@@ -12,10 +12,13 @@ function renderRoute(path: string) {
 }
 
 describe('application routes', () => {
-  it('renders the lesson and explicit technical placeholder', () => {
+  it('renders the neutral technical viewer on the landing route', () => {
     const html = renderRoute('/');
-    expect(html).toContain('Kiểm tra ranh giới tích hợp 3D');
-    expect(html).toContain('Technical placeholder - not verified sign language.');
+    expect(html).toContain('Avatar giáo dục trung tính');
+    expect(html).toContain('TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE');
+    expect(html).toContain('Cận cảnh tay phải');
+    expect(html).not.toContain('Chưa có GLB');
+    expect(html).not.toContain('<h2>S001</h2>');
   });
 
   it('renders quiz and review routes', () => {
