@@ -5,6 +5,7 @@ const navItems = [
   { to: '/', label: 'Bài học' },
   { to: '/quiz', label: 'Câu hỏi' },
   { to: '/review', label: 'Ôn tập' },
+  { to: '/technical-viewer', label: '3D kỹ thuật' },
 ];
 
 export function App() {

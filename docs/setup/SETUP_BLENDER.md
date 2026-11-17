@@ -2,27 +2,27 @@
 
 ## Baseline
 
-- REQUIRED trên máy Huy Anh/Mien: Blender **4.5.16**, MPFB tương thích với bản này.
+- REQUIRED trên máy Huy Anh/Mien: Blender **5.2.4 LTS**, MPFB **2.0.18**.
 - OPTIONAL trên máy web/QA nếu không thao tác 3D.
-- Không tự upgrade/downgrade. Audit TASK-0002 ngày 2026-11-17 chỉ phát hiện Blender 5.2.4 LTS tại `C:\Program Files\Blender Foundation\Blender 5.2\blender.exe`; vì khác baseline nên trạng thái project vẫn là `FAIL`, không phải PASS. Bản 5.2 chỉ được dùng để kiểm tra read-only trên working copy.
+- TASK-0003 chính thức thay baseline cũ bằng 5.2.4 LTS theo yêu cầu owner. Không tìm/cài/khôi phục Blender 4.5.16 và không tự upgrade 5.2.4/MPFB.
 
 Blender và app độc lập. MPFB là Blender extension, không phải npm package hoặc system pip package.
 
 ## MPFB manual check
 
-1. Mở đúng Blender 4.5.16.
+1. Mở đúng Blender 5.2.4 LTS.
 2. Vào `Edit > Preferences > Get Extensions/Add-ons` (tùy cách MPFB được cài).
 3. Tìm MPFB, xác nhận enabled và không có error trong UI/System Console.
 4. Ghi version/screenshot vào QA evidence. Không cài lại hoặc upgrade khi chưa backup và thống nhất.
 
-TASK-0002 xác minh MPFB 2.0.18 đã cài, enabled và load được trong **profile Blender 5.2** (`bl_ext.user_default.mpfb`). Manifest yêu cầu Blender tối thiểu 4.2. Không tồn tại profile cấu hình 4.5 trên máy audit, vì vậy trạng thái MPFB trong Blender 4.5 vẫn là `NOT YET TESTED`; extension giữa hai Blender version không tự động dùng chung cấu hình.
+TASK-0002/0003 xác minh MPFB 2.0.18 đã cài, enabled và load được trong profile Blender 5.2 (`bl_ext.user_default.mpfb`). Manifest yêu cầu Blender tối thiểu 4.2.
 
 ## Cấu hình executable theo máy
 
 Ưu tiên biến `BLENDER_EXECUTABLE`. Trong Windows CMD:
 
 ```cmd
-set "BLENDER_EXECUTABLE=C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"
+set "BLENDER_EXECUTABLE=C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
 npm run doctor
 ```
 
@@ -48,16 +48,16 @@ Không chạy inspection trên source gốc. Tạo bản sao tạm rồi chạy 
 mkdir "%TEMP%\hci-vsl-preflight"
 copy /Y "blender\avatar_master.blend" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend"
 
-"%BLENDER_EXECUTABLE%" --background --python-exit-code 2 --python "blender\scripts\inspect_environment.py" -- --expected-version 4.5.16 --require-mpfb --output "%TEMP%\hci-vsl-preflight\environment.json"
+"%BLENDER_EXECUTABLE%" --background --python-exit-code 2 --python "blender\scripts\inspect_environment.py" -- --expected-version 5.2.4 --require-mpfb --output "%TEMP%\hci-vsl-preflight\environment.json"
 
-"%BLENDER_EXECUTABLE%" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend" --background --python-exit-code 3 --python "blender\scripts\inspect_rig.py" -- --expected-version 4.5.16 --expected-fps 30 --output "%TEMP%\hci-vsl-preflight\rig-inventory.json"
+"%BLENDER_EXECUTABLE%" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend" --background --python-exit-code 3 --python "blender\scripts\inspect_rig.py" -- --expected-version 5.2.4 --expected-fps 30 --output "%TEMP%\hci-vsl-preflight\rig-inventory.json"
 
 "%BLENDER_EXECUTABLE%" "%TEMP%\hci-vsl-preflight\avatar_master_preflight.blend" --background --python-exit-code 4 --python "blender\tests\test_preflight.py" -- --inspect-rig "blender\scripts\inspect_rig.py"
 ```
 
 Scripts chỉ inventory Blender/MPFB, scene, object, mesh, modifier, vertex group, armature, full bone hierarchy, constraint và saved selection state. Chúng không gọi save, mode change, transform hay keyframe. Dùng `--python-exit-code` để critical Python failure trả nonzero. `preflight.py` chỉ còn là compatibility entry point; dùng hai script rõ trách nhiệm ở trên.
 
-Trên máy Mien: checkout branch/commit, `npm ci`, tạo `.env.local`, chạy `npm run doctor`, sau đó chạy ba lệnh trên bằng đúng Blender 4.5.16. Gửi JSON + output và SHA-256 working copy cho Huy Anh; không save file preflight.
+Trên máy Mien: checkout branch/commit, `npm ci`, tạo `.env.local`, chạy `npm run doctor`, sau đó chạy ba lệnh trên bằng đúng Blender 5.2.4 LTS. Gửi JSON + output và SHA-256 working copy cho Huy Anh; không save file preflight.
 
 ## Export GLB ở task sau
 
@@ -68,4 +68,16 @@ Trên máy Mien: checkout branch/commit, `npm ci`, tạo `.env.local`, chạy `n
 5. Manual review trong browser và preview front/side; ghi evidence.
 6. Chỉ sau technical + content approval mới copy/publish vào `apps/web/public/models/signs/` và cập nhật metadata.
 
-Blender 4.5 Action Slots/NLA có thể làm tên/selection export khác dự kiến; luôn kiểm tra clip thực tế trong GLB. Không sửa metadata để hợp thức hóa export sai.
+Blender 5.2 Action Slots/export mode có thể làm tên clip khác dự kiến; luôn dùng validator kiểm tra clip thực tế. `ACTIONS` mode đã giữ đúng `TECH_HAND_CONTROL_TEST`; `ACTIVE_ACTIONS` từng xuất tên generic `Animation`. Không sửa metadata để hợp thức hóa export sai.
+
+## Technical prototype TASK-0003
+
+Working source: `blender\working\huy-anh\technical-hand-test.blend`. Canonical GLB: `assets\exports\technical\technical-hand-test.glb`.
+
+```cmd
+npm run sync:technical-assets
+npm run validate:technical-asset
+npm run dev
+```
+
+Mở `http://localhost:5173/technical-viewer`. Fixture `TECH_HAND_CONTROL_TEST` không thuộc S001–S006 và không phải ký hiệu đã xác minh.

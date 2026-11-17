@@ -23,7 +23,7 @@ ID chỉ là khóa kỹ thuật, không gán ý nghĩa ký hiệu khi chưa có 
 
 ## D. Animation conventions
 
-- Blender 4.5.16, 30 FPS, frame start `1`; frame end đặt đúng cuối clip và ghi vào metadata sau export. Exported `AnimationClip.duration` là duration kỹ thuật thực tế.
+- Blender 5.2.4 LTS, 30 FPS, frame start `1`; frame end đặt đúng cuối clip và ghi vào metadata sau export. Exported `AnimationClip.duration` là duration kỹ thuật thực tế.
 - Frame 1 là neutral starting pose được Huy Anh phê duyệt. Không đổi rest pose để tạo animation. Giữ neutral ngắn ở đầu/cuối nếu content/reference yêu cầu, nhưng cả nhóm dùng cùng convention.
 - 1 Blender unit = 1 metre. Armature/root ở location `(0,0,0)`, rotation `(0,0,0)`, scale `(1,1,1)` trước animation/export; apply transforms trong master, không tùy tiện apply ở sign file.
 - Blender: Z-up, character nhìn về `-Y`. glTF exporter chuyển sang right-handed Y-up; front sau export kỳ vọng nhìn về `+Z`. Three.js camera mặc định đề xuất `(0, 1.45, 3.0)`, nhìn `(0, 1.25, 0)`; tinh chỉnh theo bounding box nhưng không xoay model để “sửa” export.
@@ -35,9 +35,9 @@ Release đầu dùng **một self-contained GLB mỗi sign**, chứa model, arma
 
 Luồng file: working `.blend` → `assets/exports/signs/Snnn.glb` để kiểm tra → `apps/web/public/models/signs/Snnn.glb` khi approved technical/content gate.
 
-## F. Blender 4.5 Actions/NLA và Three.js
+## F. Blender 5.2 Actions/Slots và Three.js
 
-- Blender 4.5 có Action Slots và exporter có nhiều animation mode. Không giả định tên Action trong UI chắc chắn là tên glTF clip.
+- Blender 5.2 dùng slotted Actions và exporter có nhiều animation mode. Tạo Action Slot đúng `OBJECT` target. Với một clip technical/production đã cô lập, dùng `ACTIONS` mode; TASK-0003 chứng minh `ACTIVE_ACTIONS` tạo tên generic `Animation`, còn `ACTIONS` giữ đúng Action name.
 - Trong bản export copy, chỉ giữ/bật action intended, đặt tên `Snnn_MAIN`; nếu dùng NLA thì một track/strip intended, không mute, không strip thừa. Chọn export mode Action/NLA nhất quán trong preset được duyệt.
 - Sau mỗi export phải kiểm tra JSON/Three `gltf.animations`: có đúng clip expected và duration > 0. Nếu exporter tạo tên khác, sửa pipeline/source rồi export lại; không đổi metadata để che lỗi tùy tiện.
 - Viewer dùng `GLTFLoader`, chọn clip bằng exact name, tạo `AnimationMixer`, `clipAction`. Play/pause giữ time; replay đặt time về 0; loop dùng `LoopRepeat` khi bật và `LoopOnce` khi tắt; speed dùng `mixer.timeScale = 0.5` hoặc `1`. Reset dừng action, đặt time 0, phục hồi model transform và camera/controls defaults.

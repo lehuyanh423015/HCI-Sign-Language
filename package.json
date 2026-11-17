@@ -22,13 +22,18 @@
     "validate:data": "node tools/validate-data.mjs",
     "sync:data": "node tools/sync-data.mjs",
     "sync:data:check": "node tools/sync-data.mjs --check",
+    "sync:technical-assets": "node tools/sync-technical-assets.mjs",
+    "sync:technical-assets:check": "node tools/sync-technical-assets.mjs --check",
     "validate:assets": "node tools/validate-assets.mjs",
-    "check": "npm run typecheck && npm run lint && npm run validate:data && npm run sync:data:check && npm run test && npm run build && npm run validate:assets"
+    "validate:technical-asset": "node tools/validate-technical-asset.mjs --report docs/reports/artifacts/TASK-0003-glb-validation.json",
+    "test:technical-viewer": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer --report docs/reports/artifacts/TASK-0003-browser-runtime.json --screenshot docs/reports/artifacts/TASK-0003-browser-runtime.png",
+    "check": "npm run typecheck && npm run lint && npm run validate:data && npm run sync:data:check && npm run sync:technical-assets && npm run sync:technical-assets:check && npm run test && npm run build && npm run validate:assets && npm run validate:technical-asset"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "ajv": "8.20.0",
     "eslint": "10.15.0",
+    "gltf-validator": "2.0.0-dev.3.10",
     "typescript": "5.9.3",
     "typescript-eslint": "8.73.0"
   }

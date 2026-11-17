@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "artifact": "technical_hand_test_glb_export",
+  "technical_fixture_only": true,
+  "blender_version": "5.2.4 LTS",
+  "source_blend": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test.blend",
+  "action": "TECH_HAND_CONTROL_TEST",
+  "selected_objects": [
+    "Human",
+    "Human.rig"
+  ],
+  "operator_result": [
+    "FINISHED"
+  ],
+  "output": "E:\\University\\Semester_7\\HCI\\BTL\\assets\\exports\\technical\\technical-hand-test.glb",
+  "size_bytes": 6056496,
+  "sha256": "3396D475B3A88D5930E6D5D6093CA5665818C8109C0BEB04C2D067D6125DFBE5",
+  "status": "PASS"
+}

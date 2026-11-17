@@ -21,7 +21,7 @@ Nếu PowerShell chặn `npm.ps1`, mở CMD như tài liệu này hoặc gọi `
 
 ## OPTIONAL theo vai trò
 
-- Blender 4.5.16 + MPFB: bắt buộc trên máy 3D, không bắt buộc cho Nhat chạy web.
+- Blender 5.2.4 LTS + MPFB 2.0.18: bắt buộc trên máy 3D, không bắt buộc cho Nhat chạy web.
 - Git LFS 3.x: chỉ bật tracking sau khi cả bốn máy xác nhận có `git lfs version`.
 - System Python: không cần cho web và không thay thế Blender embedded Python.
 
@@ -64,17 +64,17 @@ npm run check
 Trong CMD hiện tại:
 
 ```cmd
-set "BLENDER_PATH=C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"
+set "BLENDER_EXECUTABLE=C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
 npm run doctor
 ```
 
 Hoặc:
 
 ```cmd
-npm run doctor -- --blender "C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"
+npm run doctor -- --blender "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
 ```
 
-Không commit đường dẫn cá nhân. `.env.example` chỉ là mẫu; doctor đọc environment/CLI, không tự load `.env`.
+Không commit đường dẫn cá nhân. Doctor đọc `BLENDER_EXECUTABLE`, CLI hoặc `.env.local` bị Git-ignore.
 
 ## Phân biệt runtime
 
@@ -88,5 +88,5 @@ Không commit đường dẫn cá nhân. `.env.example` chỉ là mẫu; doctor 
 - `npm ci` báo engine: cài Node 24 LTS đúng major/patch khuyến nghị; đóng/mở terminal rồi kiểm tra PATH.
 - `sync:data:check` fail: chạy `npm run sync:data`, review cả canonical và generated diff.
 - `validate:assets` in `NOT YET TESTED`: bình thường khi chưa có GLB; không gọi là PASS 3D.
-- Blender version fail: không upgrade/downgrade âm thầm; báo Huy Anh và cài side-by-side đúng 4.5.16 nếu nhóm xác nhận.
+- Blender version fail: không upgrade/downgrade âm thầm; báo Huy Anh và dùng đúng 5.2.4 LTS.
 - Port Vite bận: chạy `npm run dev -- --port 5174`.

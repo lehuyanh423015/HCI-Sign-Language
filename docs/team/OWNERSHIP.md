@@ -9,6 +9,8 @@ Ownership là người review/chịu trách nhiệm, không phải quyền làm 
 | **Doan Khanh Nhat — Frontend/UI-UX** | `apps/web/`, viewer integration, routing/UI | lesson/viewer controls, quiz/review UI, GLTFLoader playback, build/browser evidence |
 | **Do Phuong Thao — Adaptive/Content/QA** | `data/`, adaptive logic, references/evidence, `docs/qa/` | metadata có nguồn, adaptive tests, expert verification record, usability/QA evidence |
 
+Technical fixture `TECH_HAND_CONTROL_TEST` là shared pipeline evidence, không phải sign assignment. Huy Anh owns Blender source/export, Nhat owns viewer runtime, Thao xác nhận nhãn unverified/QA evidence.
+
 ## Shared/review-required
 
 - `schemas/`, `docs/contracts/`: owner tạo thay đổi + consumer liên quan review.
@@ -23,3 +25,4 @@ Ownership là người review/chịu trách nhiệm, không phải quyền làm 
 - Không đổi ID/clip/path contract để che lỗi export.
 - Không đánh `approved`, điền reviewer/evidence/source giả.
 - Không merge hai version cùng `.blend`; dùng ownership lock.
+- Không sửa generated `apps/web/public/models/technical/*.glb`; chạy sync từ canonical export.

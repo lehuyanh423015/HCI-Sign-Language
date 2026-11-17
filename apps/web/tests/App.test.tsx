@@ -22,4 +22,11 @@ describe('application routes', () => {
     expect(renderRoute('/quiz')).toContain('Khu vực câu hỏi');
     expect(renderRoute('/review')).toContain('Danh sách ôn tập');
   });
+
+  it('renders the isolated technical viewer warning and controls', () => {
+    const html = renderRoute('/technical-viewer');
+    expect(html).toContain('TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE');
+    expect(html).toContain('Technical hand-control prototype');
+    expect(html).toContain('Cận cảnh tay phải');
+  });
 });

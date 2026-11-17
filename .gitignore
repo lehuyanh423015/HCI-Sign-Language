@@ -38,3 +38,6 @@ assets/previews/*
 
 # Reviewed GLB exports and published models are intentionally trackable.
 # Their binary merge/LFS policy is defined in .gitattributes and docs/workflows/.
+
+# Generated web copy; canonical technical GLB lives in assets/exports/technical/.
+apps/web/public/models/technical/*.glb

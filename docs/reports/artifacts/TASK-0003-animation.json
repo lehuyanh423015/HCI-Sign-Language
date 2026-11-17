@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "artifact": "technical_hand_control_animation",
+  "technical_fixture_only": true,
+  "blender_version": "5.2.4 LTS",
+  "output_blend": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\technical-hand-test.blend",
+  "output_sha256": "1FD50D320ECD212DDC17E26CC680CAD92210FBEC537E8A39CD8D10C70D801B25",
+  "action": {
+    "name": "TECH_HAND_CONTROL_TEST",
+    "slot_identifier": "OBHuman.rig",
+    "slot_target_id_type": "OBJECT",
+    "frame_start": 1,
+    "frame_end": 30,
+    "fps": 30,
+    "fcurve_count": 45,
+    "keyframe_point_count": 135,
+    "animated_bones": [
+      "finger1-1.R",
+      "finger1-2.R",
+      "finger1-3.R",
+      "finger2-1.R",
+      "finger2-2.R",
+      "finger2-3.R",
+      "finger3-1.R",
+      "finger3-2.R",
+      "finger3-3.R",
+      "finger4-1.R",
+      "finger4-2.R",
+      "finger4-3.R",
+      "finger5-1.R",
+      "finger5-2.R",
+      "finger5-3.R"
+    ],
+    "expected_bones": [
+      "finger1-1.R",
+      "finger1-2.R",
+      "finger1-3.R",
+      "finger2-1.R",
+      "finger2-2.R",
+      "finger2-3.R",
+      "finger3-1.R",
+      "finger3-2.R",
+      "finger3-3.R",
+      "finger4-1.R",
+      "finger4-2.R",
+      "finger4-3.R",
+      "finger5-1.R",
+      "finger5-2.R",
+      "finger5-3.R"
+    ]
+  },
+  "axis_discovery": {
+    "finger1-1.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0039385760866175595,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0031669638301590614
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0039385760866175595
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": -0.0010984253232852043
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.001092178857306919
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0011583928584339431
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": -0.00027888109060286714
+        }
+      ]
+    },
+    "finger1-2.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.004266922564783435,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.003003176607537822
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.004266922564783435
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 1.2907123838418189e-05
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -9.512164485489527e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": -0.0006306086295277541
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0018634592248754217
+        }
+      ]
+    },
+    "finger1-3.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0028910020611835757,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.002034624728028789
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0028910020611835757
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": -0.0003754845026678888
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0011847944777747255
+        }
+      ]
+    },
+    "finger2-1.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.004739480287325265,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0030988950467187304
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.004739480287325265
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.000296399191003216
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -0.0003858290014529253
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": -0.0005370348293103899
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.002192543131431385
+        }
+      ]
+    },
+    "finger2-2.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.004276643037060823,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0028676143627819894
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.004276643037060823
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.00010555540154161269
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -0.00014588499755793793
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": -0.00011466962797199165
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0014920944720240858
+        }
+      ]
+    },
+    "finger2-3.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.002679994413287118,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.001775917536043059
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.002679994413287118
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 9.311271662643117e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0007789208956755778
+        }
+      ]
+    },
+    "finger3-1.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.005002581646819271,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.003309275522883931
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.005002581646819271
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0002463172906355393
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -0.0003041340265994841
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": -0.00020515629267087165
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0018776203034381045
+        }
+      ]
+    },
+    "finger3-2.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0040155578405979,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.002488382585019433
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0040155578405979
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": -1.4696302941430428e-05
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -2.4550233181097614e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0003916136753426558
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0011075599419421989
+        }
+      ]
+    },
+    "finger3-3.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0024361233192410903,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0015094786116067183
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0024361233192410903
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.00024581235995421724
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.000656333538588294
+        }
+      ]
+    },
+    "finger4-1.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.00446597850760333,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0028726302398509596
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.00446597850760333
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.00014607370532673802
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -0.00020865481046311585
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0004662412596726506
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.001108559776083845
+        }
+      ]
+    },
+    "finger4-2.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.003739368437483903,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0023065045162917186
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.003739368437483903
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": -9.509171421007157e-05
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 6.235212825900227e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0007339757313089557
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0006712923298419771
+        }
+      ]
+    },
+    "finger4-3.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0023278008085090562,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.001416654796069533
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0023278008085090562
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.00033846231314174635
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.00054878483330012
+        }
+      ]
+    },
+    "finger5-1.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.003524586908208338,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0022118061103442027
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.003524586908208338
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 3.752996292502586e-06
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": -5.0471101140495134e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0010445314717965476
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.0002456065624519138
+        }
+      ]
+    },
+    "finger5-2.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0027326633346141244,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0016684957824498192
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0027326633346141244
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": -2.1508123575472715e-05
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 2.7174287851497447e-05
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0008636119139634052
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.00015775815153865058
+        }
+      ]
+    },
+    "finger5-3.R": {
+      "axis_index": 0,
+      "axis": "X",
+      "sign": 1,
+      "score": 0.0015503797465808988,
+      "probe_degrees": 12.0,
+      "candidates": [
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": -1,
+          "score": -0.0008503796452452445
+        },
+        {
+          "axis_index": 0,
+          "axis": "X",
+          "sign": 1,
+          "score": 0.0015503797465808988
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": -1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 1,
+          "axis": "Y",
+          "sign": 1,
+          "score": 0.0
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": -1,
+          "score": 0.0005015425765653864
+        },
+        {
+          "axis_index": 2,
+          "axis": "Z",
+          "sign": 1,
+          "score": 0.00018674023674233875
+        }
+      ]
+    }
+  },
+  "armature_object_transform_preserved": true,
+  "rig_hierarchy_preserved": true,
+  "body_stationary": true,
+  "previews": [
+    {
+      "frame": 1,
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0003-previews\\technical-hand-test-frame-001.png",
+      "sha256": "C6776564A6F2CA92CC95B1C601758C1EB7A43E88425CB67AA61FC6D8726543C1"
+    },
+    {
+      "frame": 15,
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0003-previews\\technical-hand-test-frame-015.png",
+      "sha256": "220E6CEA0D2C9629DBC220F083CC64D12007412476C026B17679FD3140B06232"
+    },
+    {
+      "frame": 30,
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\task-0003-previews\\technical-hand-test-frame-030.png",
+      "sha256": "2E3A41B5E24EAF8A68CF68FA80415CCB9D0B46F5F03645E6FEC8E95C39EF8C8A"
+    }
+  ],
+  "status": "PASS"
+}

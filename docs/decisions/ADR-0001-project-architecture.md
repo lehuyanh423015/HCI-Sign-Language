@@ -1,6 +1,6 @@
 # ADR-0001: Kiến trúc nền tảng dự án
 
-- Trạng thái: Accepted
+- Trạng thái: Accepted; Blender baseline clause superseded by ADR-0002
 - Ngày: 2026-11-17
 
 ## Bối cảnh

@@ -1,6 +1,6 @@
-"""Read-only Blender and MPFB environment inspection.
+"""Read-only Blender 5.2 and MPFB environment inspection.
 
-Compatible with Blender 4.5's Python API. Invoke with --python-exit-code so a
+Targeted at Blender 5.2.4 LTS. Invoke with --python-exit-code so a
 critical RuntimeError becomes a nonzero process result. The script never
 installs/enables an extension and never saves a .blend file.
 """
@@ -16,7 +16,7 @@ import bpy
 
 try:
     import tomllib
-except ImportError:  # pragma: no cover - Blender 4.5 includes tomllib
+except ImportError:  # pragma: no cover - Blender 5.2 includes tomllib
     tomllib = None
 
 
@@ -26,7 +26,7 @@ VALID_STATUSES = {"PASS", "FAIL", "SKIPPED", "NOT YET TESTED"}
 def script_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Inspect Blender and MPFB without changing preferences.")
     parser.add_argument("--output", help="Optional JSON output path.")
-    parser.add_argument("--expected-version", default="4.5.16", help="Exact project Blender baseline.")
+    parser.add_argument("--expected-version", default="5.2.4", help="Exact project Blender baseline.")
     parser.add_argument("--require-mpfb", action="store_true", help="Treat missing/inactive MPFB as critical.")
     args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
     return parser.parse_args(args)

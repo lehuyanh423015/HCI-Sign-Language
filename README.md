@@ -21,7 +21,7 @@ npm run doctor
 npm run check
 ```
 
-`doctor` có thể báo `FAIL` cho Blender nếu máy không đúng baseline 4.5.16; điều này không chặn web development. Xem [cài đặt Windows](docs/setup/SETUP_WINDOWS.md) và [cài đặt Blender](docs/setup/SETUP_BLENDER.md).
+Baseline 3D chính thức là Blender 5.2.4 LTS + MPFB 2.0.18. `doctor` có thể báo `SKIPPED` trên máy frontend không cài Blender; điều này không chặn web development. Xem [cài đặt Windows](docs/setup/SETUP_WINDOWS.md) và [cài đặt Blender](docs/setup/SETUP_BLENDER.md).
 
 ## Lệnh chính
 
@@ -35,6 +35,8 @@ npm run check
 | `npm run validate:data` | Kiểm tra schema, ID, asset path và approval policy |
 | `npm run sync:data` | Validate rồi sao chép nguồn dữ liệu canonical vào web |
 | `npm run validate:assets` | Kiểm tra GLB hiện có; asset chưa làm được ghi `NOT YET TESTED` |
+| `npm run sync:technical-assets` | Đồng bộ canonical technical GLB vào web public directory |
+| `npm run validate:technical-asset` | Kiểm tra clip, skin, channels, duration và Khronos validation |
 | `npm run doctor` | Báo môi trường và prerequisite |
 | `npm run check` | Chạy quality gate không cần Blender/MPFB |
 
@@ -46,6 +48,8 @@ npm run check
 - Hợp đồng tích hợp: `docs/contracts/`; mọi thay đổi cần phối hợp các owner liên quan.
 
 Xem [kiến trúc](docs/architecture/OVERVIEW.md), [ownership](docs/team/OWNERSHIP.md), [handoff](docs/team/HANDOFF.md) và [Git workflow](docs/workflows/GIT_WORKFLOW.md).
+
+Prototype kỹ thuật: chạy `npm run sync:technical-assets`, `npm run dev`, rồi mở `/technical-viewer`. Đây không phải nội dung Ngôn ngữ Ký hiệu Việt Nam đã xác minh.
 
 ## Mốc dự án (chưa hoàn thành trong TASK-0001)
 

@@ -104,8 +104,8 @@ if (!blenderPath || !existsSync(blenderPath)) {
   report('SKIPPED', 'Blender', 'not found; web development can continue. Set BLENDER_EXECUTABLE or use .env.local.');
 } else {
   const version = commandVersion(blenderPath);
-  const compatible = version?.includes('4.5.16');
-  report(compatible ? 'PASS' : 'FAIL', 'Blender', `${version ?? 'version unavailable'} at ${blenderPath} (${blenderDiscovery.source}); project baseline is 4.5.16`);
+  const compatible = version?.includes('5.2.4 LTS');
+  report(compatible ? 'PASS' : 'FAIL', 'Blender', `${version ?? 'version unavailable'} at ${blenderPath} (${blenderDiscovery.source}); project baseline is 5.2.4 LTS`);
   if (!compatible) environmentFailures += 1;
   report('NOT YET TESTED', 'MPFB', 'run the documented Blender preflight; doctor does not modify or open a .blend file');
 }
