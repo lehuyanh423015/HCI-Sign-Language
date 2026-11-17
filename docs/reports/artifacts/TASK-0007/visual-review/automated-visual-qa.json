@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "artifact": "task0007_automated_facial_visual_review",
+  "technical_fixture_only": true,
+  "owner_acceptance": "NOT YET TESTED",
+  "linguistic_validity": "NOT YET TESTED",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "candidate": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0006-facial-foundation\\avatar_master_facial_candidate.blend",
+    "candidate_sha256": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982",
+    "canonical_sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232"
+  },
+  "review_scene": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\facial-review-scene.blend",
+    "sha256": "BE48A6516DAB931C297BF93874A1BA0B8BA40EDF42B1A5692B2603DB67E2AFE9",
+    "size_bytes": 2392953
+  },
+  "previews": [
+    {
+      "file": "01-neutral-front.png",
+      "state": "neutral",
+      "label": "NEUTRAL - FRONT",
+      "camera": "front",
+      "sha256": "0A0F334206E78B2288A3ABA55139594F70A2E2318730F0094AD423D33EFAAC3D",
+      "size_bytes": 591105
+    },
+    {
+      "file": "02-neutral-three-quarter.png",
+      "state": "neutral",
+      "label": "NEUTRAL - THREE-QUARTER",
+      "camera": "three-quarter",
+      "sha256": "D5144B27017C443AEB3D74CF15574A19869807FDE4295C6182ABFE9794E030E1",
+      "size_bytes": 626537
+    },
+    {
+      "file": "03-neutral-side.png",
+      "state": "neutral",
+      "label": "NEUTRAL - SIDE",
+      "camera": "side",
+      "sha256": "A9C845281B448D63C6E788B9B036E9E2593D0DEFC5EB192012D176C2661BCC2F",
+      "size_bytes": 630846
+    },
+    {
+      "file": "04-brow-left.png",
+      "state": "brow-left",
+      "label": "BROW RAISE - LEFT",
+      "camera": "front",
+      "sha256": "F81E5464E8C8CBC6C51C6B0D896435A27DE04AD23ADD7325C28009BC956DACFE",
+      "size_bytes": 591152
+    },
+    {
+      "file": "05-brow-right.png",
+      "state": "brow-right",
+      "label": "BROW RAISE - RIGHT",
+      "camera": "front",
+      "sha256": "5ED504F504A9CA2E8072F944813243CD1469801FF6F453F27E923614D4E240AE",
+      "size_bytes": 591760
+    },
+    {
+      "file": "06-brow-both.png",
+      "state": "brow-both",
+      "label": "BROW RAISE - BOTH",
+      "camera": "front",
+      "sha256": "F4F8E92BEE84B609FF9036B5E3D870BC90369FAA2BCD094C5D297A7A159BF93B",
+      "size_bytes": 591689
+    },
+    {
+      "file": "07-blink-left.png",
+      "state": "blink-left",
+      "label": "EYE BLINK - LEFT",
+      "camera": "front",
+      "sha256": "B25B9E74696B76CD6484C8179D2C42DDF325AFECF0E9E27D32A464032831A7EA",
+      "size_bytes": 586595
+    },
+    {
+      "file": "08-blink-right.png",
+      "state": "blink-right",
+      "label": "EYE BLINK - RIGHT",
+      "camera": "front",
+      "sha256": "E904587C8C6664958F4A7082587E5949C97962AE6FA8FA57838217525E6D2796",
+      "size_bytes": 584996
+    },
+    {
+      "file": "09-blink-both.png",
+      "state": "blink-both",
+      "label": "EYE BLINK - BOTH",
+      "camera": "front",
+      "sha256": "7E1031829331B34091CFDF3B4DBBAA23ADDFBE2C68D8FE2BCAC8086AEC05BFC4",
+      "size_bytes": 579096
+    },
+    {
+      "file": "10-lips-round.png",
+      "state": "lips-round",
+      "label": "LIPS - ROUND",
+      "camera": "front",
+      "sha256": "ED0DCB2091314BC433A1E2EAD10E688BB447D4AF66025132DF46FD60A432242F",
+      "size_bytes": 590526
+    },
+    {
+      "file": "11-lips-spread.png",
+      "state": "lips-spread",
+      "label": "LIPS - SPREAD",
+      "camera": "front",
+      "sha256": "5AFE6F7A4CB28829ED486E7A3119928D1B80A51F74CFB431CF6166ED86361D9B",
+      "size_bytes": 595628
+    },
+    {
+      "file": "12-gaze-center.png",
+      "state": "gaze-center",
+      "label": "GAZE - CENTER",
+      "camera": "front",
+      "sha256": "6D6CD15E6452E134979484BEA8A98E73FD3ABECA43D0DFFA1D47E4D2C370929C",
+      "size_bytes": 590980
+    },
+    {
+      "file": "13-gaze-left.png",
+      "state": "gaze-left",
+      "label": "GAZE - LEFT",
+      "camera": "front",
+      "sha256": "8581797D84BCA5C7450AA0A286E9753AC853367062ED907CB3DB618F777FB2C4",
+      "size_bytes": 589835
+    },
+    {
+      "file": "14-gaze-right.png",
+      "state": "gaze-right",
+      "label": "GAZE - RIGHT",
+      "camera": "front",
+      "sha256": "E0654AC7490B6E7C14990FF6385C5CEBBE66F7F1698861AFAEABC7FA5114F3FB",
+      "size_bytes": 591381
+    },
+    {
+      "file": "15-gaze-up.png",
+      "state": "gaze-up",
+      "label": "GAZE - UP",
+      "camera": "front",
+      "sha256": "EBD4EC37F398D9501D678AD758533BFDBFAB9EA195F87D33FB2402172F179C87",
+      "size_bytes": 590591
+    },
+    {
+      "file": "16-gaze-down.png",
+      "state": "gaze-down",
+      "label": "GAZE - DOWN",
+      "camera": "front",
+      "sha256": "10B6C718F74F9103FA5105F5AB26193119FFB45F8DD1DBF68BFD6D9BAB1390F8",
+      "size_bytes": 590787
+    },
+    {
+      "file": "17-jaw-open.png",
+      "state": "jaw-open",
+      "label": "JAW - OPEN",
+      "camera": "front",
+      "sha256": "EC61CA85BA26560AB39EADC53C01EB8DB83A1AD0EA3E42A1CB8EECB1C1F398CD",
+      "size_bytes": 597139
+    },
+    {
+      "file": "18-head-rotation.png",
+      "state": "head-rotation",
+      "label": "HEAD - ROTATION",
+      "camera": "front",
+      "sha256": "C57A0C65559BB224E6D05484DA9294EF0E307DFDAEE71FE72878D4293FA57A9D",
+      "size_bytes": 604439
+    },
+    {
+      "file": "19-neck-movement.png",
+      "state": "neck-movement",
+      "label": "NECK - MOVEMENT",
+      "camera": "front",
+      "sha256": "BF277BC5FA1B53256FB9CCFCF26B1B9CC58807CD8B5548215DD656C045E4F519",
+      "size_bytes": 592825
+    },
+    {
+      "file": "20-combined-facial-expression.png",
+      "state": "combined",
+      "label": "COMBINED FACIAL EXPRESSION",
+      "camera": "front",
+      "sha256": "EA8C8F67B548604C12E178DE0223CAAA3D528E766DBF2F8F85026D5A9A61CC2A",
+      "size_bytes": 592543
+    }
+  ],
+  "contact_sheets": [
+    {
+      "file": "facial-contact-sheet.png",
+      "columns": 4,
+      "rows": 5,
+      "width": 1440,
+      "height": 1800,
+      "sha256": "10A1E149DF74B3EDC1970B1A1540015E16149822BED616248329D37A2DF6DFA9"
+    },
+    {
+      "file": "eye-gaze-contact-sheet.png",
+      "columns": 5,
+      "rows": 1,
+      "width": 1600,
+      "height": 320,
+      "sha256": "6FDE809CBFF8752B81A70530FA368E6C5EDD5FDF4A3D51635FD123EFCCFD7FE4"
+    }
+  ],
+  "videos": [
+    {
+      "file": "facial-expressions-demo.mp4",
+      "sha256": "B53CE17DFE11B92DA472F8F48F87469AC24BA35C007395BD4668041DEB8E6820",
+      "size_bytes": 1007848,
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration_seconds": 22.8
+    },
+    {
+      "file": "hand-face-integration-demo.mp4",
+      "sha256": "2DBDA3C4AB7C73693E1360C39A27BF683B438698322987CD25836DF8A3F94C93",
+      "size_bytes": 505282,
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration_seconds": 12.033333
+    }
+  ],
+  "gallery": {
+    "file": "index.html",
+    "sha256": "DBAD4BC9CEFF4D0175EBC0F680F982F3C8741E161BDE8353887297001CECBC6C",
+    "size_bytes": 6133
+  },
+  "owner_checklist": {
+    "file": "owner-acceptance-checklist.md",
+    "sha256": "902F9AC21A2AFBE5155EC68BDCCE71C091A3376A0AEAA5910B3AB4062B89C317",
+    "size_bytes": 1252
+  },
+  "ffmpeg": {
+    "path": "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+    "facial_demo": {
+      "command": [
+        "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+        "-y",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\01-neutral-front.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\04-brow-left.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\05-brow-right.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\06-brow-both.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\07-blink-left.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\08-blink-right.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\09-blink-both.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\10-lips-round.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\11-lips-spread.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\17-jaw-open.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\13-gaze-left.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\14-gaze-right.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\18-head-rotation.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\19-neck-movement.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.8",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\previews\\01-neutral-front.png",
+        "-filter_complex",
+        "[0:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v0];[1:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v1];[2:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v2];[3:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v3];[4:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v4];[5:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v5];[6:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v6];[7:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v7];[8:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v8];[9:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v9];[10:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v10];[11:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v11];[12:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v12];[13:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v13];[14:v]scale=1080:1080:flags=lanczos,pad=1920:1080:420:0:color=0x16231f,setsar=1,format=yuv420p[v14];[v0][v1]xfade=transition=fade:duration=0.30:offset=1.50[x1];[x1][v2]xfade=transition=fade:duration=0.30:offset=3.00[x2];[x2][v3]xfade=transition=fade:duration=0.30:offset=4.50[x3];[x3][v4]xfade=transition=fade:duration=0.30:offset=6.00[x4];[x4][v5]xfade=transition=fade:duration=0.30:offset=7.50[x5];[x5][v6]xfade=transition=fade:duration=0.30:offset=9.00[x6];[x6][v7]xfade=transition=fade:duration=0.30:offset=10.50[x7];[x7][v8]xfade=transition=fade:duration=0.30:offset=12.00[x8];[x8][v9]xfade=transition=fade:duration=0.30:offset=13.50[x9];[x9][v10]xfade=transition=fade:duration=0.30:offset=15.00[x10];[x10][v11]xfade=transition=fade:duration=0.30:offset=16.50[x11];[x11][v12]xfade=transition=fade:duration=0.30:offset=18.00[x12];[x12][v13]xfade=transition=fade:duration=0.30:offset=19.50[x13];[x13][v14]xfade=transition=fade:duration=0.30:offset=21.00[x14]",
+        "-map",
+        "[x14]",
+        "-r",
+        "30",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "19",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-an",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\facial-expressions-demo.mp4"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "4 @ 0000014638e4b480] frame B:505   Avg QP:11.26  size:   196\n[libx264 @ 0000014638e4b480] consecutive B-frames:  0.6%  2.3%  1.8% 95.3%\n[libx264 @ 0000014638e4b480] mb I  I16..4: 57.0% 36.7%  6.3%\n[libx264 @ 0000014638e4b480] mb P  I16..4:  0.1%  0.5%  0.2%  P16..4:  2.2%  0.5%  0.4%  0.0%  0.0%    skip:96.1%\n[libx264 @ 0000014638e4b480] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  1.3%  0.0%  0.0%  direct: 0.0%  skip:98.6%  L0:49.3% L1:49.1% BI: 1.6%\n[libx264 @ 0000014638e4b480] 8x8 transform intra:44.2% inter:69.0%\n[libx264 @ 0000014638e4b480] coded y,uvDC,uvAC intra: 52.7% 17.4% 12.6% inter: 0.4% 0.1% 0.0%\n[libx264 @ 0000014638e4b480] i16 v,h,dc,p: 79%  7% 10%  4%\n[libx264 @ 0000014638e4b480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 15% 50%  3%  3%  3%  3%  2%  4%\n[libx264 @ 0000014638e4b480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 21% 18%  5%  5%  6%  5%  5%  4%\n[libx264 @ 0000014638e4b480] i8c dc,h,v,p: 80% 13%  6%  1%\n[libx264 @ 0000014638e4b480] Weighted P-Frames: Y:0.0% UV:0.0%\n[libx264 @ 0000014638e4b480] ref P L0: 81.4%  6.7%  8.7%  3.2%\n[libx264 @ 0000014638e4b480] ref B L0: 34.6% 64.1%  1.3%\n[libx264 @ 0000014638e4b480] ref B L1: 98.8%  1.2%\n[libx264 @ 0000014638e4b480] kb/s:350.21\n"
+    },
+    "combined_demo": {
+      "command": [
+        "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+        "-y",
+        "-loop",
+        "1",
+        "-t",
+        "1.5",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\_hand_face_frames\\frame_0001.png",
+        "-framerate",
+        "30",
+        "-start_number",
+        "1",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\_hand_face_frames\\frame_%04d.png",
+        "-loop",
+        "1",
+        "-t",
+        "1.5",
+        "-i",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\_hand_face_frames\\frame_0045.png",
+        "-filter_complex",
+        "[0:v]scale=1920:1080:flags=lanczos,setsar=1,format=yuv420p[intro];[1:v]scale=1920:1080:flags=lanczos,setpts=6*PTS,setsar=1,format=yuv420p[anim];[2:v]scale=1920:1080:flags=lanczos,setsar=1,format=yuv420p[outro];[intro][anim][outro]concat=n=3:v=1:a=0[joined];[joined]drawbox=x=48:y=ih-96:w=iw-96:h=64:color=0x10201c@0.82:t=fill,drawtext=text='TECH_HAND_FACE_TEST - TECHNICAL INTEGRATION':fontcolor=white:fontsize=30:x=(W-text_w)/2:y=H-80[v]",
+        "-map",
+        "[v]",
+        "-r",
+        "30",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "19",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-an",
+        "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\hand-face-integration-demo.mp4"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "4 @ 0000024c38cf2140] frame B:268   Avg QP:15.77  size:   242\n[libx264 @ 0000024c38cf2140] consecutive B-frames:  0.8%  0.6%  0.0% 98.6%\n[libx264 @ 0000024c38cf2140] mb I  I16..4: 22.2% 67.6% 10.2%\n[libx264 @ 0000024c38cf2140] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  2.0%  0.5%  0.5%  0.0%  0.0%    skip:97.0%\n[libx264 @ 0000024c38cf2140] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  2.5%  0.0%  0.0%  direct: 0.0%  skip:97.5%  L0:58.5% L1:41.4% BI: 0.0%\n[libx264 @ 0000024c38cf2140] 8x8 transform intra:67.7% inter:63.0%\n[libx264 @ 0000024c38cf2140] coded y,uvDC,uvAC intra: 78.2% 21.8% 18.4% inter: 0.3% 0.1% 0.0%\n[libx264 @ 0000024c38cf2140] i16 v,h,dc,p: 29% 23% 36% 12%\n[libx264 @ 0000024c38cf2140] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 14% 53%  3%  3%  1%  1%  1%  4%\n[libx264 @ 0000024c38cf2140] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 15% 28%  7%  9%  5%  4%  3%  3%\n[libx264 @ 0000024c38cf2140] i8c dc,h,v,p: 83% 10%  4%  2%\n[libx264 @ 0000024c38cf2140] Weighted P-Frames: Y:0.0% UV:0.0%\n[libx264 @ 0000024c38cf2140] ref P L0: 87.6%  4.4%  6.0%  2.0%\n[libx264 @ 0000024c38cf2140] ref B L0: 22.9% 77.0%  0.1%\n[libx264 @ 0000024c38cf2140] ref B L1: 97.8%  2.2%\n[libx264 @ 0000024c38cf2140] kb/s:332.01\n"
+    }
+  },
+  "combined_frames_rendered": 45,
+  "temporary_frame_sequence_removed": true,
+  "checks": [
+    {
+      "id": "canonical_hash",
+      "status": "PASS",
+      "actual": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232"
+    },
+    {
+      "id": "candidate_hash",
+      "status": "PASS",
+      "actual": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982"
+    },
+    {
+      "id": "required_objects",
+      "status": "PASS",
+      "actual": {
+        "body": "Human",
+        "armature": "Human.rig",
+        "eyes": [
+          "NMM_Eyeball.L",
+          "NMM_Iris.L",
+          "NMM_Pupil.L",
+          "NMM_Eyeball.R",
+          "NMM_Iris.R",
+          "NMM_Pupil.R"
+        ]
+      }
+    },
+    {
+      "id": "required_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "required_clips",
+      "status": "PASS",
+      "actual": [
+        "NMM_BLINK_TEST",
+        "NMM_BROW_TEST",
+        "NMM_MOUTH_TEST",
+        "TECH_HAND_FACE_TEST"
+      ]
+    },
+    {
+      "id": "preview_count",
+      "status": "PASS",
+      "actual": 20
+    },
+    {
+      "id": "contact_sheets",
+      "status": "PASS",
+      "actual": [
+        {
+          "file": "facial-contact-sheet.png",
+          "columns": 4,
+          "rows": 5,
+          "width": 1440,
+          "height": 1800,
+          "sha256": "10A1E149DF74B3EDC1970B1A1540015E16149822BED616248329D37A2DF6DFA9"
+        },
+        {
+          "file": "eye-gaze-contact-sheet.png",
+          "columns": 5,
+          "rows": 1,
+          "width": 1600,
+          "height": 320,
+          "sha256": "6FDE809CBFF8752B81A70530FA368E6C5EDD5FDF4A3D51635FD123EFCCFD7FE4"
+        }
+      ]
+    },
+    {
+      "id": "videos",
+      "status": "PASS",
+      "actual": [
+        {
+          "file": "facial-expressions-demo.mp4",
+          "sha256": "B53CE17DFE11B92DA472F8F48F87469AC24BA35C007395BD4668041DEB8E6820",
+          "size_bytes": 1007848,
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1",
+          "duration_seconds": 22.8
+        },
+        {
+          "file": "hand-face-integration-demo.mp4",
+          "sha256": "2DBDA3C4AB7C73693E1360C39A27BF683B438698322987CD25836DF8A3F94C93",
+          "size_bytes": 505282,
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1",
+          "duration_seconds": 12.033333
+        }
+      ]
+    },
+    {
+      "id": "review_scene_separate",
+      "status": "PASS",
+      "actual": "E:\\University\\Semester_7\\HCI\\BTL\\docs\\reports\\artifacts\\TASK-0007\\visual-review\\facial-review-scene.blend"
+    },
+    {
+      "id": "html_gallery",
+      "status": "PASS",
+      "actual": {
+        "file": "index.html",
+        "sha256": "DBAD4BC9CEFF4D0175EBC0F680F982F3C8741E161BDE8353887297001CECBC6C",
+        "size_bytes": 6133
+      }
+    }
+  ],
+  "status": "PASS"
+}
