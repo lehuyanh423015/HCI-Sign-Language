@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "variant": "before",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0006-facial-foundation\\avatar_master_facial_candidate.blend",
+    "sha256": "4F4BA651A8E15B356FBA18625826E5A0EBF29CBF631746A6B295DA667B27A982"
+  },
+  "renders": [
+    {
+      "file": "neutral-front.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "321E08CE92F7BC2127D18FEB44D6B8C7457FC7DE7E3BFAB02DAD0EC190ACAA0C"
+    },
+    {
+      "file": "neutral-three-quarter.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "three-quarter",
+      "sha256": "3B950C5C393529D793964CA0E439DF4B494F18150D43C6CBA36BA34CD91F197C"
+    },
+    {
+      "file": "neutral-side.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "side",
+      "sha256": "E3C59E662B8BA34D654BE4EC759C50DC2C4B1A8B0C2A2B583200DF95BED92C12"
+    },
+    {
+      "file": "neutral-face-wide.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "face-wide",
+      "sha256": "F1074A5BA896E4574BFC738588A76A5AC47362AD0B1771CDE9D70F584B6B079A"
+    },
+    {
+      "file": "brow-left-050.png",
+      "state": "brow-left",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "15835E542E11DAFB4FD9C7ACB735766DA4B2584E3F59921C081D3B17D2463EBF"
+    },
+    {
+      "file": "brow-left-100.png",
+      "state": "brow-left",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "FA7BBF841C6B65106BE93B2C1978607FB2958C2239B8610D4845F616E36DC96F"
+    },
+    {
+      "file": "brow-right-050.png",
+      "state": "brow-right",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "9C09D650A4C4F4A5540F5E607EBD0234964775258BE334C23F5A3A4122B9DFE9"
+    },
+    {
+      "file": "brow-right-100.png",
+      "state": "brow-right",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "034E1B1B18369EDE3E60C50D09D0EC66EC2F52F33973E18E733DC7803F607AE8"
+    },
+    {
+      "file": "brow-both-050.png",
+      "state": "brow-both",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "2BECE0F5A0F46FAA20954286A465D8BB57CB2694B33959C6F7C1FD826083B504"
+    },
+    {
+      "file": "brow-both-100.png",
+      "state": "brow-both",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "0B2B856F5E048E59FA2074D33C91BD7CC8E072EE4EBCDCD783796214E9C19A27"
+    }
+  ],
+  "combined_frames": 0,
+  "status": "PASS"
+}

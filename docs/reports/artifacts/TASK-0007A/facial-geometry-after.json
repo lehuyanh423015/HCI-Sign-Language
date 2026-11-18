@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "artifact": "facial_geometry_inspection",
+  "status": "PASS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0007a-facial-refinement\\avatar_master_facial_refined_candidate.blend",
+    "sha256": "0D9D2ECE642540B792A79F36003FEE1FBB47C6966FFB8A953B7B7F5F043CCAB7"
+  },
+  "blender_version": "5.2.4 LTS",
+  "bone_count": 137,
+  "eyes": {
+    "L": {
+      "bone": "eye.L",
+      "bone_head_local_m": [
+        0.02891257,
+        -0.118143283,
+        1.553184748
+      ],
+      "bone_tail_local_m": [
+        0.030681072,
+        -0.156114236,
+        1.550271749
+      ],
+      "eyeball": {
+        "center_local_m": [
+          0.029325103,
+          -0.127000779,
+          1.552504539
+        ],
+        "dimensions_m": {
+          "lateral": 0.019187994,
+          "forward": 0.019187998,
+          "up": 0.019187995
+        },
+        "extents_m": {
+          "lateral": [
+            -0.009593992,
+            0.009594002
+          ],
+          "forward": [
+            -0.00959401,
+            0.009593988
+          ],
+          "up": [
+            -0.00959346,
+            0.009594535
+          ]
+        },
+        "vertices": 366
+      },
+      "iris": {
+        "center_local_m": [
+          0.029730117,
+          -0.135696352,
+          1.551837444
+        ],
+        "dimensions_m": {
+          "lateral": 0.009423996,
+          "forward": 0.001724988,
+          "up": 0.009424044
+        },
+        "extents_m": {
+          "lateral": [
+            -0.004711997,
+            0.004711998
+          ],
+          "forward": [
+            -0.000862504,
+            0.000862484
+          ],
+          "up": [
+            -0.004711605,
+            0.004712439
+          ]
+        },
+        "vertices": 218
+      },
+      "pupil": {
+        "center_local_m": [
+          0.029776817,
+          -0.136699751,
+          1.551760435
+        ],
+        "dimensions_m": {
+          "lateral": 0.0042,
+          "forward": 0.001125014,
+          "up": 0.004200009
+        },
+        "extents_m": {
+          "lateral": [
+            -0.002099998,
+            0.002100001
+          ],
+          "forward": [
+            -0.000562561,
+            0.000562453
+          ],
+          "up": [
+            -0.002099589,
+            0.002100419
+          ]
+        },
+        "vertices": 142
+      },
+      "socket_proxy": {
+        "method": "body Basis vertices in deterministic elliptical annulus around eye bone centre",
+        "sample_count": 302,
+        "width_m": 0.075779886,
+        "height_m": 0.049806364,
+        "forward_surface_m": {
+          "min": -0.021223961,
+          "median": 0.004746807,
+          "max": 0.038636518
+        }
+      },
+      "protrusion_vs_socket_median_m": 0.004847181
+    },
+    "R": {
+      "bone": "eye.R",
+      "bone_head_local_m": [
+        -0.02891257,
+        -0.118143283,
+        1.553184748
+      ],
+      "bone_tail_local_m": [
+        -0.030681072,
+        -0.156114236,
+        1.550271749
+      ],
+      "eyeball": {
+        "center_local_m": [
+          -0.02932509,
+          -0.127000809,
+          1.552504659
+        ],
+        "dimensions_m": {
+          "lateral": 0.019187993,
+          "forward": 0.019187984,
+          "up": 0.019187996
+        },
+        "extents_m": {
+          "lateral": [
+            -0.009594013,
+            0.00959398
+          ],
+          "forward": [
+            -0.00959403,
+            0.009593954
+          ],
+          "up": [
+            -0.009593583,
+            0.009594413
+          ]
+        },
+        "vertices": 366
+      },
+      "iris": {
+        "center_local_m": [
+          -0.029730098,
+          -0.135696366,
+          1.551837444
+        ],
+        "dimensions_m": {
+          "lateral": 0.009423993,
+          "forward": 0.001725012,
+          "up": 0.009424045
+        },
+        "extents_m": {
+          "lateral": [
+            -0.004711998,
+            0.004711995
+          ],
+          "forward": [
+            -0.000862515,
+            0.000862497
+          ],
+          "up": [
+            -0.004711844,
+            0.004712201
+          ]
+        },
+        "vertices": 218
+      },
+      "pupil": {
+        "center_local_m": [
+          -0.029776828,
+          -0.136699721,
+          1.551760674
+        ],
+        "dimensions_m": {
+          "lateral": 0.004199998,
+          "forward": 0.00112499,
+          "up": 0.004199889
+        },
+        "extents_m": {
+          "lateral": [
+            -0.002099992,
+            0.002100005
+          ],
+          "forward": [
+            -0.000562504,
+            0.000562486
+          ],
+          "up": [
+            -0.002099825,
+            0.002100064
+          ]
+        },
+        "vertices": 142
+      },
+      "socket_proxy": {
+        "method": "body Basis vertices in deterministic elliptical annulus around eye bone centre",
+        "sample_count": 302,
+        "width_m": 0.075779886,
+        "height_m": 0.049806364,
+        "forward_surface_m": {
+          "min": -0.021223981,
+          "median": 0.004746787,
+          "max": 0.038636497
+        }
+      },
+      "protrusion_vs_socket_median_m": 0.004847167
+    }
+  },
+  "eye_symmetry": {
+    "center_x_sum_abs_m": 1.3e-08,
+    "center_y_difference_abs_m": 3e-08,
+    "center_z_difference_abs_m": 1.19e-07,
+    "diameter_difference_abs_m": 1e-09
+  },
+  "brows": [
+    {
+      "name": "NMM_BROW_RAISE_L",
+      "moved_vertices": 198,
+      "max_delta_m": 0.014463029,
+      "mean_delta_m": 0.003658833,
+      "max_up_m": 0.014399886,
+      "mean_up_m": 0.003645639,
+      "forward_delta_range_m": [
+        -0.001350001,
+        -2.2e-08
+      ],
+      "interpolation": {
+        "0.0_max_delta_m": 0.0,
+        "0.5_max_delta_m": 0.007231515,
+        "1.0_max_delta_m": 0.014463029
+      }
+    },
+    {
+      "name": "NMM_BROW_RAISE_R",
+      "moved_vertices": 198,
+      "max_delta_m": 0.014463029,
+      "mean_delta_m": 0.003658833,
+      "max_up_m": 0.014399886,
+      "mean_up_m": 0.003645639,
+      "forward_delta_range_m": [
+        -0.001350001,
+        -2.2e-08
+      ],
+      "interpolation": {
+        "0.0_max_delta_m": 0.0,
+        "0.5_max_delta_m": 0.007231515,
+        "1.0_max_delta_m": 0.014463029
+      }
+    }
+  ]
+}

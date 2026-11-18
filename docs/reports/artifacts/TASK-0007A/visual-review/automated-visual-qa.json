@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "artifact": "task0007a_visual_review",
+  "technical_fixture_only": true,
+  "owner_acceptance": "NOT YET TESTED",
+  "linguistic_validity": "NOT YET TESTED",
+  "comparisons": [
+    {
+      "file": "01-eye-front-before-after.png",
+      "sha256": "128671A5ACE16CB99A9A2D74207E8E7D0EB5F6B7B3FBAB39C35E4C5A4B918C31"
+    },
+    {
+      "file": "02-eye-three-quarter-before-after.png",
+      "sha256": "06D11F15A276D29EF5191F2458C8B849ED916E1B98F33D716A3DEB999CA13D73"
+    },
+    {
+      "file": "03-eye-side-before-after.png",
+      "sha256": "D1EA82FEB30BE566E0E991E6A1DA6941944DA823C036636C6556E33F8AC352D6"
+    },
+    {
+      "file": "09-full-face-neutral-before-after.png",
+      "sha256": "6ADF5877D62654A94AB80015D91F7669464926645783774A6C1FD578C7352D06"
+    },
+    {
+      "file": "04-brow-left-before-after.png",
+      "sha256": "96885A2A885326DECA3D7F4473D46213711448E1F596481CACB2A829E92AC882"
+    },
+    {
+      "file": "05-brow-right-before-after.png",
+      "sha256": "A93BCFEE8641D27CACFA7CDA0B2B7FD9B629CD2EF0E37342D2110FE6EAEC3944"
+    },
+    {
+      "file": "06-brow-both-before-after.png",
+      "sha256": "5F933483B51392562426FE80C85088FC86C79CF069A38CB0A9C200B64F91348F"
+    },
+    {
+      "file": "07-eye-gaze-regression.png",
+      "sha256": "874AC0632CF842D96D8A4C4EE1A5651F3802889D696CD0FF22B67A212B9AE457"
+    },
+    {
+      "file": "08-eye-blink-regression.png",
+      "sha256": "0295DD33C3DABB953E3E311557E1B29C8819FD8708F81493A7150A7BA9D48BDD"
+    }
+  ],
+  "contact_sheet": {
+    "file": "facial-refinement-contact-sheet.png",
+    "sha256": "0850E00E9F6FDE6904CED7CAF5A0AAC6AE7B2BE31439EEC4E1FFDBFA74DC23B1"
+  },
+  "videos": [
+    {
+      "file": "eye-refinement-demo.mp4",
+      "sha256": "5F4BF8D256A732E61CBB2D1D43ADBE6929E2A3077299075D05677CD055DD03DA",
+      "size_bytes": 608189,
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration_seconds": 12.866667
+    },
+    {
+      "file": "eyebrow-refinement-demo.mp4",
+      "sha256": "1EFF8407D4259D01668F97DB24DE8DDE7DCCD0ED22F42BCAA8361C9497F97E66",
+      "size_bytes": 364799,
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration_seconds": 12.366667
+    },
+    {
+      "file": "facial-regression-demo.mp4",
+      "sha256": "330803201605839C7A17C08EC6DF9E43F4F10BE509B44ADA1D914500CAB1FC0B",
+      "size_bytes": 658570,
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "duration_seconds": 15.133333
+    }
+  ],
+  "gallery": {
+    "file": "index.html",
+    "sha256": "87AF677B201A218CE6EE162139F24EC222E285A2BE9637A969602F9886B41524"
+  },
+  "temporary_combined_frames_removed": true,
+  "checks": [
+    {
+      "id": "required_comparisons",
+      "status": "PASS",
+      "actual": [
+        "01-eye-front-before-after.png",
+        "02-eye-three-quarter-before-after.png",
+        "03-eye-side-before-after.png",
+        "09-full-face-neutral-before-after.png",
+        "04-brow-left-before-after.png",
+        "05-brow-right-before-after.png",
+        "06-brow-both-before-after.png",
+        "07-eye-gaze-regression.png",
+        "08-eye-blink-regression.png"
+      ]
+    },
+    {
+      "id": "contact_sheet",
+      "status": "PASS",
+      "actual": "facial-refinement-contact-sheet.png"
+    },
+    {
+      "id": "videos",
+      "status": "PASS",
+      "actual": [
+        {
+          "file": "eye-refinement-demo.mp4",
+          "sha256": "5F4BF8D256A732E61CBB2D1D43ADBE6929E2A3077299075D05677CD055DD03DA",
+          "size_bytes": 608189,
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1",
+          "duration_seconds": 12.866667
+        },
+        {
+          "file": "eyebrow-refinement-demo.mp4",
+          "sha256": "1EFF8407D4259D01668F97DB24DE8DDE7DCCD0ED22F42BCAA8361C9497F97E66",
+          "size_bytes": 364799,
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1",
+          "duration_seconds": 12.366667
+        },
+        {
+          "file": "facial-regression-demo.mp4",
+          "sha256": "330803201605839C7A17C08EC6DF9E43F4F10BE509B44ADA1D914500CAB1FC0B",
+          "size_bytes": 658570,
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": "30/1",
+          "duration_seconds": 15.133333
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "status": "PASS",
+      "actual": {
+        "file": "index.html",
+        "sha256": "87AF677B201A218CE6EE162139F24EC222E285A2BE9637A969602F9886B41524"
+      }
+    },
+    {
+      "id": "actual_combined_frames",
+      "status": "PASS",
+      "actual": 45
+    },
+    {
+      "id": "temporary_combined_frames_removed",
+      "status": "PASS",
+      "actual": true
+    }
+  ],
+  "status": "PASS"
+}

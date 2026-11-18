@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "artifact": "task0007a_refined_facial_glb_export",
+  "technical_fixture_only": true,
+  "linguistic_status": "NOT YET TESTED",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0007a-facial-refinement\\avatar_master_facial_refined_candidate.blend",
+    "sha256": "0D9D2ECE642540B792A79F36003FEE1FBB47C6966FFB8A953B7B7F5F043CCAB7"
+  },
+  "selected_objects": [
+    "Human.rig",
+    "EDU_NeutralShorts",
+    "EDU_NeutralTop",
+    "Human",
+    "NMM_Eyeball.L",
+    "NMM_Eyeball.R",
+    "NMM_Iris.L",
+    "NMM_Iris.R",
+    "NMM_Pupil.L",
+    "NMM_Pupil.R"
+  ],
+  "actions": [
+    "NMM_BLINK_TEST",
+    "NMM_BROW_TEST",
+    "NMM_MOUTH_TEST",
+    "TECH_HAND_FACE_TEST"
+  ],
+  "nla_tracks": [
+    {
+      "name": "NMM_BLINK_TEST",
+      "object_slot": "OBHuman.rig",
+      "key_slot": "KEKey"
+    },
+    {
+      "name": "NMM_BROW_TEST",
+      "object_slot": "OBHuman.rig",
+      "key_slot": "KEKey"
+    },
+    {
+      "name": "NMM_MOUTH_TEST",
+      "object_slot": "OBHuman.rig",
+      "key_slot": "KEKey"
+    },
+    {
+      "name": "TECH_HAND_FACE_TEST",
+      "object_slot": "OBHuman.rig",
+      "key_slot": "KEKey"
+    }
+  ],
+  "shape_key_preparation": {
+    "source_values": {
+      "Basis": 1.0,
+      "$md-$as-$fe-$yn": 0.16500000655651093,
+      "$md-$as-$ma-$yn": 0.16500000655651093,
+      "$md-$ca-$fe-$yn": 0.16500000655651093,
+      "$md-$ca-$ma-$yn": 0.16500000655651093,
+      "$md-$af-$fe-$yn": 0.16500000655651093,
+      "$md-$af-$ma-$yn": 0.16500000655651093,
+      "$md-universal-$fe-$yn-$av$mu-$av$wg": 0.5,
+      "$md-universal-$ma-$yn-$av$mu-$av$wg": 0.5,
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi": 0.08856657892465591,
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi": 0.088466577231884,
+      "NMM_BROW_RAISE_L": 0.0,
+      "NMM_BROW_RAISE_R": 0.0,
+      "NMM_EYE_BLINK_L": 0.0,
+      "NMM_EYE_BLINK_R": 0.0,
+      "NMM_LIPS_ROUND": 0.0,
+      "NMM_LIPS_SPREAD": 0.0
+    },
+    "export_targets": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "vertex_count": 19158,
+    "mode": "refined_macro_mix_baked_in_memory_then_nmm_targets_recreated"
+  },
+  "non_armature_modifier_bake": {
+    "status": "PASS",
+    "modifiers": [
+      "Hide helpers"
+    ],
+    "vertices_before": 19158,
+    "vertices_after": 13380,
+    "fully_weighted_vertices": 13380
+  },
+  "settings": {
+    "filepath": "E:\\University\\Semester_7\\HCI\\BTL\\assets\\exports\\technical\\task-0007a\\technical-facial-refined-test.glb",
+    "export_format": "GLB",
+    "use_selection": true,
+    "export_animations": true,
+    "export_animation_mode": "NLA_TRACKS",
+    "export_merge_animation": "NLA_TRACK",
+    "export_frame_range": true,
+    "export_force_sampling": false,
+    "export_skins": true,
+    "export_armature_object_remove": true,
+    "export_rest_position_armature": true,
+    "export_apply": false,
+    "export_all_influences": false,
+    "export_morph": true,
+    "export_morph_normal": true,
+    "export_morph_tangent": false,
+    "export_cameras": false,
+    "export_lights": false,
+    "export_yup": true
+  },
+  "operator_result": [
+    "FINISHED"
+  ],
+  "output": "E:\\University\\Semester_7\\HCI\\BTL\\assets\\exports\\technical\\task-0007a\\technical-facial-refined-test.glb",
+  "size_bytes": 2455392,
+  "sha256": "D59AE5422E9B759006FE9D666B6CA56AD1183D157DF666B33813FAE923A492AB",
+  "status": "PASS"
+}

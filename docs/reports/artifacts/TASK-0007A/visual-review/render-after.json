@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "variant": "after",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\blender\\working\\huy-anh\\task-0007a-facial-refinement\\avatar_master_facial_refined_candidate.blend",
+    "sha256": "0D9D2ECE642540B792A79F36003FEE1FBB47C6966FFB8A953B7B7F5F043CCAB7"
+  },
+  "renders": [
+    {
+      "file": "neutral-front.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "2C81C26102ED2DB8484EC85B348FCAA824F0AA00A82CF323F7D68B705B1CF094"
+    },
+    {
+      "file": "neutral-three-quarter.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "three-quarter",
+      "sha256": "2AFF679CF1DAAB77502253A08179948AED167854688F4B7660A36F81C088C1FE"
+    },
+    {
+      "file": "neutral-side.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "side",
+      "sha256": "E9F555A507D1A30BD18F1EB805E66A0D65E8BD220C473A42665D5C88EF1873E3"
+    },
+    {
+      "file": "neutral-face-wide.png",
+      "state": "neutral",
+      "value": 1.0,
+      "camera": "face-wide",
+      "sha256": "3544201099ACBA850FDC2A57E80B146F7BF5C2CD1E897A75F464DBDE517ACC28"
+    },
+    {
+      "file": "brow-left-050.png",
+      "state": "brow-left",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "0C3D44459EE4A97A7112835AD62DAB716CE92D076ADA35FF70C76356BA503F0B"
+    },
+    {
+      "file": "brow-left-100.png",
+      "state": "brow-left",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "DF10C0330298BE11CBDD21F7C252ABFD2E1C0CAE804D2A872D16B36D616D14BA"
+    },
+    {
+      "file": "brow-right-050.png",
+      "state": "brow-right",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "C47485196E246831F8EFE946BAAEF9E495CBABE519D2FA6E5514C3145AEF854E"
+    },
+    {
+      "file": "brow-right-100.png",
+      "state": "brow-right",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "B745A80F2A0EAF4DD0E6E2441A95A4A747C7BB6B2DA42BFDDC7FFC9FFC226FB6"
+    },
+    {
+      "file": "brow-both-050.png",
+      "state": "brow-both",
+      "value": 0.5,
+      "camera": "front",
+      "sha256": "40063B35DD358FCCCD4E83F2700CBED1752165390BF404E7BE8F23A9DBF780FE"
+    },
+    {
+      "file": "brow-both-100.png",
+      "state": "brow-both",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "0D2FD36223A80B6411DF24A3F12D6D44CB4BD8D788FF509FCBB3C419EE7B9AB7"
+    },
+    {
+      "file": "gaze-center.png",
+      "state": "gaze-center",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "207F3AE187B1C3870D26B9F72043F24F3C53DC55E125A58560DC4A34CDCA0D5A"
+    },
+    {
+      "file": "gaze-left.png",
+      "state": "gaze-left",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "AE26EEC533C8063661EFB7B871A92A1BBC052F16E9890CA4AE7FC8BD8A6FA36E"
+    },
+    {
+      "file": "gaze-right.png",
+      "state": "gaze-right",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "260C5ED63D1BD9E1C68E53520E1C67719D79D1E55A869EBFF2D1FD6A20F4DFBF"
+    },
+    {
+      "file": "gaze-up.png",
+      "state": "gaze-up",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "EFC40CEC069BA4A0CD9ACED9BC93DC608A40B195959332D340C642A855B452C5"
+    },
+    {
+      "file": "gaze-down.png",
+      "state": "gaze-down",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "62B3DAAB3AFED819C6AAD5031F2607EA4DE0B3D4D8689A3D4B3BE8ADB4E38ED6"
+    },
+    {
+      "file": "blink-left.png",
+      "state": "blink-left",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "015DDC639C82033CE999B147B69C28C3634966D5A94702E8DBF62F645BA2FE8E"
+    },
+    {
+      "file": "blink-right.png",
+      "state": "blink-right",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "9838921F6180D286E87944DA49123D3E7F81AB54F201247146EC98904A35442C"
+    },
+    {
+      "file": "blink-both.png",
+      "state": "blink-both",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "1FFB14CA8B5FC5766E662DB700277A9D1FF6941A7A9D1B9F74B2A0FE9CDB441E"
+    },
+    {
+      "file": "lips-round.png",
+      "state": "lips-round",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "852DCC53755D42FA479ACA564688181619B1B700EF47E433B0A14144FB032E2E"
+    },
+    {
+      "file": "lips-spread.png",
+      "state": "lips-spread",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "7B25084EB80CD9EF97235025A30CDB1A24579CBD65305A6597DB749E1C26EA30"
+    },
+    {
+      "file": "jaw-open.png",
+      "state": "jaw-open",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "252FD51D1E68607724F9D8A220BFA617508A89FBC911650CEE73701FF3598C52"
+    },
+    {
+      "file": "head-rotation.png",
+      "state": "head-rotation",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "92673E3806A102BD4CF7E0CB08045FD2FB568B2FFC102B51CCF8B5A6EA0C3210"
+    },
+    {
+      "file": "neck-movement.png",
+      "state": "neck-movement",
+      "value": 1.0,
+      "camera": "front",
+      "sha256": "94A61F4968E239FA7EED84DB98C04F1C67FCDBA5055173B0591F56FB9FE4AD7C"
+    }
+  ],
+  "combined_frames": 45,
+  "status": "PASS"
+}
