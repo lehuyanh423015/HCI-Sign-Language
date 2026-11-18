@@ -22,5 +22,18 @@
     { "id": "morph_eye_animation_playback_controls", "status": "PASS", "check_count": 10 }
   ],
   "linguistic_approval": "NOT YET TESTED",
-  "team_member_machine_onboarding": "NOT YET TESTED"
+  "team_member_machine_onboarding": "NOT YET TESTED",
+  "release_tag_clone": {
+    "status": "PASS",
+    "tag": "master-avatar-v1.0.0",
+    "commit": "3c382332509d0e7e3ff6493f6241707d870e2e0f",
+    "required_documents_missing": 0,
+    "binary_hashes_match": true
+  },
+  "github_release": {
+    "status": "PASS",
+    "url": "https://github.com/lehuyanh423015/HCI-Sign-Language/releases/tag/master-avatar-v1.0.0",
+    "prerelease": true,
+    "draft": false
+  }
 }

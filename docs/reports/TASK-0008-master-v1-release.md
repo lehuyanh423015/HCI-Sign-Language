@@ -3,7 +3,7 @@
 - Ngày/Timezone: 2026-11-18, Asia/Saigon
 - Branch/base commit: `release/master-avatar-v1` / `db9e13383816ad8f9b7882ad0a05b26d809968d7`
 - Scope: promote rc.3 đã owner duyệt, đóng gói/validate Master Avatar v1, ổn định Three.js reference, tích hợp Git/GitHub và handoff bốn thành viên
-- Overall status: **PASS local/remote fresh-clone release gates; release branch published; main/tag/GitHub Release pending final documentation commit**
+- Overall status: **PASS — Master Avatar v1 published, remote main/tag/release verified, actual fresh clone PASS**
 
 ## 1. Executive summary
 
@@ -39,7 +39,7 @@ TASK-0008 ghi nhận owner đã duyệt appearance và technical suitability c�
 | Node.js | v24.14.1 | PASS |
 | npm | 11.12.1 | PASS |
 | Git LFS | 3.5.1 installed; no tracked LFS files | PASS audit |
-| GitHub CLI | not installed | SKIPPED — release API/browser alternative to be evaluated after push |
+| GitHub CLI | not installed | SKIPPED — authenticated GitHub REST API succeeded instead |
 | `npm ci` | completed from lockfile | PASS |
 | `npm audit --omit=dev` | 0 production vulnerabilities | PASS |
 | full dependency audit notice | `npm ci` reported 12 high issues in development dependency graph | FAIL advisory; no automatic fix/upgrade in release task |
@@ -158,15 +158,16 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 - Release branch: `release/master-avatar-v1`.
 - Published validation commit: `31a597dd8eebaa235c72593a9796bc25a1f6eb55`.
 - Remote release branch: `PASS`, verified by non-interactive push and actual clone.
-- Remote main: `NOT YET TESTED`.
-- PR requirement: `NOT YET TESTED`, phụ thuộc branch protection khi push.
+- Final tagged release commit: `3c382332509d0e7e3ff6493f6241707d870e2e0f`.
+- Remote main: `PASS`, normal non-force fast-forward `dc22261..3c38233`.
+- PR requirement: **không cần cho release này**; remote cho phép authorized fast-forward push và không có divergence/conflict.
 
 ## 18. GitHub tag and release
 
-- Planned annotated tag: `master-avatar-v1.0.0`.
-- Planned title: `Master Avatar v1.0.0 — Technical Foundation`.
-- Planned prerelease/technical preview: yes.
-- GitHub Release URL: `NOT YET TESTED`.
+- Annotated tag: `master-avatar-v1.0.0` — `PASS`, pushed trên tagged release commit.
+- Title: `Master Avatar v1.0.0 — Technical Foundation`.
+- Prerelease/technical preview: `true`; draft: `false`.
+- GitHub Release URL: `https://github.com/lehuyanh423015/HCI-Sign-Language/releases/tag/master-avatar-v1.0.0` — `PASS`, verified through GitHub API.
 - GitHub Pages/public website deployment: out of scope, not performed.
 
 ## 19. Fresh-clone results
@@ -175,6 +176,7 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 - Actual remote fresh clone from `origin/release/master-avatar-v1` at `31a597d`: `PASS`.
 - Fresh clone binary hashes: master `DCA77E…`, static `F48967…`, technical `D59AE5…` — exact matches.
 - Fresh clone `npm ci`, `npm run check`, explicit `npm run build`, Vite start và 10 facial browser runtime checks: `PASS`.
+- Independent shallow clone của annotated tag `master-avatar-v1.0.0`: exact commit `3c38233`, three binary hashes match và required release/handoff/report/manifest documents đầy đủ — `PASS`.
 - Mien/Nhat/Thao machine onboarding: `PENDING`; không được suy ra từ agent test.
 
 ## 20. Test matrix
@@ -198,7 +200,9 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 | S001–S006 lesson GLBs | none present | NOT YET TESTED |
 | Linguistic approval | no qualified evidence | NOT YET TESTED |
 | Remote release branch push | `31a597d` verified by clone | PASS |
-| Remote main/tag/GitHub Release | pending final documentation commit | NOT YET TESTED |
+| Remote main fast-forward | `origin/main=3c38233` | PASS |
+| Annotated tag | remote `master-avatar-v1.0.0` | PASS |
+| GitHub prerelease | API + public release URL | PASS |
 | Actual remote fresh clone | hashes + npm + browser evidence | PASS |
 | Other members onboarding | not executed on their machines | NOT YET TESTED |
 
@@ -239,6 +243,13 @@ npm run dev --workspace @hci-sign/web -- --host 127.0.0.1 --port 4173
 node tools/test-facial-viewer.mjs --url http://127.0.0.1:4173/technical-facial-viewer ...
 node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer ...
 Get-FileHash ... -Algorithm SHA256
+git push -u origin release/master-avatar-v1
+git clone --branch release/master-avatar-v1 --single-branch <repo> <temp>
+git push origin HEAD:main
+git tag -a master-avatar-v1.0.0 -m "Master Avatar v1.0.0 - Technical Foundation" HEAD
+git push origin refs/tags/master-avatar-v1.0.0
+Invoke-RestMethod ... /repos/lehuyanh423015/HCI-Sign-Language/releases
+git clone --depth 1 --branch master-avatar-v1.0.0 <repo> <temp>
 ```
 
 Honest failures/resolutions:
@@ -248,6 +259,7 @@ Honest failures/resolutions:
 3. Validator finger-chain run đầu dùng semantic `thumb/index/...` không khớp rig `finger1-1...finger5-3`; sửa theo inventory, rerun PASS.
 4. Vite start đầu truyền sai npm workspace separator; process dừng, chạy lại đúng cú pháp.
 5. Technical viewer runtime lần đầu timing sample trả 0 trong khi pause/resume đã hoạt động; independent rerun toàn bộ checks PASS. First FAIL được ghi nhận tại đây; evidence file cuối phản ánh rerun PASS.
+6. GitHub Release API lần đầu trả 422 vì payload dùng `target_commitish` chưa đọc lại exact full hash; không tạo release. Retry với `3c382332509d0e7e3ff6493f6241707d870e2e0f` thành công.
 
 ## 23. Team handoff deliverables
 
@@ -257,8 +269,8 @@ Honest failures/resolutions:
 
 ## 24. Unresolved issues
 
-- Remote main, annotated tag và GitHub Release chờ final documentation commit; release branch đã publish và fresh-clone PASS.
-- GitHub CLI không cài; GitHub Release cần authenticated REST/browser workflow hoặc owner action nếu auth không khả dụng.
+- Không còn blocker publication. Post-release report commit nằm sau immutable release tag và chỉ cập nhật evidence/trạng thái publication; release source/binaries vẫn ở tagged commit `3c38233`.
+- GitHub CLI không cài; authenticated REST API qua Git Credential Manager đã tạo release thành công, không có blocker.
 - Dev dependency audit notice: 12 high; production audit 0.
 - No repository-level license cho team code.
 - Eyebrow geometry simplified; eyelid topology chưa production-quality; materials có thể refine.
@@ -270,7 +282,7 @@ Honest failures/resolutions:
 - [x] canonical v1 được tạo từ exact rc.3 hash.
 - [x] previous master recoverable.
 - [x] structural/GLB/Three.js gates PASS.
-- [ ] Xác nhận remote main/tag/GitHub Release sau publication.
+- [x] Remote main/tag/GitHub Release đã được xác minh.
 - [ ] Chọn repository-level license cho code/docs của nhóm.
 - [ ] Mien, Nhat và Thao hoàn tất onboarding trên máy riêng.
 - [ ] Qualified linguistic reviewer duyệt từng sign/NMM use trước educational publication.
