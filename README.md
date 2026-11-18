@@ -47,6 +47,7 @@ Baseline 3D chính thức là Blender 5.2.4 LTS + MPFB 2.0.18. `doctor` có th�
 | `npm run sync:technical-assets` | Đồng bộ canonical technical GLB vào web public directory |
 | `npm run validate:technical-asset` | Kiểm tra clip, skin, channels, duration và Khronos validation |
 | `npm run validate:master-v1` | Kiểm tra static/technical GLB, manifests, hashes và Khronos validation của Master v1 |
+| `npm run validate:sign-packages` | Validate production metadata S001–S006 và technical pilot GLB; không cấp linguistic approval |
 | `npm run doctor` | Báo môi trường và prerequisite |
 | `npm run check` | Chạy quality gate không cần Blender/MPFB |
 
@@ -60,6 +61,16 @@ Baseline 3D chính thức là Blender 5.2.4 LTS + MPFB 2.0.18. `doctor` có th�
 Xem [kiến trúc](docs/architecture/OVERVIEW.md), [ownership](docs/team/OWNERSHIP.md), [handoff](docs/team/HANDOFF.md) và [Git workflow](docs/workflows/GIT_WORKFLOW.md).
 
 Prototype kỹ thuật: chạy `npm run sync:technical-assets`, `npm run dev`, rồi mở `/technical-viewer`. Đây không phải nội dung Ngôn ngữ Ký hiệu Việt Nam đã xác minh.
+
+## Pipeline sản xuất sign
+
+- Onboarding theo vai trò: `docs/team/ONBOARDING.md` và `docs/setup/SETUP_*.md`.
+- Hợp đồng: `docs/contracts/sign-animation-production-contract.md`.
+- Blender template: `blender/templates/sign-animation-template.blend` (sinh từ canonical bằng script, không sửa master).
+- Workspaces/metadata: `blender/working/signs/S001`–`S006`; hiện chỉ là placeholder `REFERENCE_PENDING`.
+- Technical staging: chạy `npm run sync:technical-assets`, `npm run dev`, mở `/technical-sign-preview`.
+
+Pilot TASK-0009 dùng `TECHNICAL_FIXTURE_NOT_A_SIGN`, linguistic status `NOT YET TESTED`. Repository chưa có reference VSL hợp lệ cho pilot ký hiệu thật.
 
 ## Mốc dự án (chưa hoàn thành trong TASK-0001)
 

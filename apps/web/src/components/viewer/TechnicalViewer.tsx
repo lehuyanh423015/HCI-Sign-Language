@@ -22,6 +22,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 export const TECHNICAL_MODEL_URL = '/models/technical/technical-hand-test-neutral.glb';
 export const TECHNICAL_CLIP_NAME = 'TECH_HAND_CONTROL_TEST';
 
+type TechnicalViewerProps = {
+  modelUrl?: string;
+  clipName?: string;
+  classification?: string;
+};
+
 type ViewerStatus = 'loading' | 'ready' | 'error';
 
 function normalizedNodeName(object: Object3D) {
@@ -53,7 +59,11 @@ function skeletonBasis(model: Object3D) {
   return { up, forward };
 }
 
-export function TechnicalViewer() {
+export function TechnicalViewer({
+  modelUrl = TECHNICAL_MODEL_URL,
+  clipName = TECHNICAL_CLIP_NAME,
+  classification = 'TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE',
+}: TechnicalViewerProps = {}) {
   const mountRef = useRef<HTMLDivElement>(null);
   const actionRef = useRef<AnimationAction | null>(null);
   const mixerRef = useRef<AnimationMixer | null>(null);
@@ -67,6 +77,7 @@ export function TechnicalViewer() {
   const [speed, setSpeed] = useState<0.5 | 1>(1);
   const [animationTime, setAnimationTime] = useState(0);
   const [cameraPreset, setCameraPreset] = useState<'full' | 'hand'>('full');
+  const [clipNames, setClipNames] = useState<string[]>([]);
 
   const frameModel = (handPreset = false) => {
     const camera = cameraRef.current;
@@ -153,13 +164,14 @@ export function TechnicalViewer() {
 
     const loader = new GLTFLoader();
     loader.load(
-      TECHNICAL_MODEL_URL,
+      modelUrl,
       (gltf) => {
         if (disposed) return;
-        const clip = gltf.animations.find((item) => item.name === TECHNICAL_CLIP_NAME);
+        setClipNames(gltf.animations.map((item) => item.name));
+        const clip = gltf.animations.find((item) => item.name === clipName);
         if (!clip) {
           setStatus('error');
-          setStatusMessage(`Không tìm thấy clip ${TECHNICAL_CLIP_NAME}.`);
+          setStatusMessage(`Không tìm thấy clip ${clipName}.`);
           return;
         }
         modelRef.current = gltf.scene;
@@ -225,7 +237,7 @@ export function TechnicalViewer() {
       cameraRef.current = null;
       modelRef.current = null;
     };
-  }, []);
+  }, [clipName, modelUrl]);
 
   const togglePlayback = () => {
     const action = actionRef.current;
@@ -266,6 +278,10 @@ export function TechnicalViewer() {
       </div>
       <div className="runtime-metrics" aria-label="Animation runtime metrics">
         Runtime: <output data-testid="animation-time">{animationTime.toFixed(2)}s</output> · View: {cameraPreset}
+      </div>
+      <div className="technical-asset-metadata" data-testid="technical-asset-metadata">
+        <strong>{classification}</strong>
+        <span>Clips: <output data-testid="technical-clip-list">{clipNames.join(', ') || 'Đang tải…'}</output></span>
       </div>
       <div className="technical-controls" aria-label="Điều khiển technical animation">
         <button type="button" onClick={togglePlayback} disabled={disabled}>{playing ? 'Tạm dừng' : 'Tiếp tục'}</button>

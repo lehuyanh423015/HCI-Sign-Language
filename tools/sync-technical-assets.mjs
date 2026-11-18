@@ -12,6 +12,10 @@ const assets = [
     source: 'assets/exports/technical/task-0007a/technical-facial-refined-test.glb',
     destination: 'master-avatar-v1-technical-demo.glb',
   },
+  {
+    source: 'assets/exports/technical/task-0009/technical-sign-pipeline-pilot.glb',
+    destination: 'technical-sign-pipeline-pilot.glb',
+  },
 ];
 const checkOnly = process.argv.includes('--check');
 

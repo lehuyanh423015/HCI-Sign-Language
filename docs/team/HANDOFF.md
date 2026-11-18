@@ -79,6 +79,18 @@ npm run dev
 
 Mở `http://localhost:5173/technical-facial-viewer`. Trang phải hiển thị banner `TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE`, six `NMM_` sliders, gaze controls và four technical clips. Viewer dùng stable generated asset `master-avatar-v1-technical-demo.glb`; nguồn canonical ghi trong release manifest. Clip/biểu cảm là technical fixture, linguistic status `NOT YET TESTED` và không được đưa vào lesson catalog.
 
+## Sign production pipeline TASK-0009
+
+Đọc `docs/team/ONBOARDING.md`, role guide, `docs/team/GIT_WORKFLOW.md` và `docs/contracts/sign-animation-production-contract.md`. Template dùng chung ở `blender/templates/sign-animation-template.blend`; mỗi sign phải được sinh thành isolated working copy, không copy/save đè master. Metadata canonical của production package ở `blender/working/signs/S001`–`S006`.
+
+```cmd
+npm run validate:sign-packages
+npm run sync:technical-assets
+npm run dev
+```
+
+Mở `/technical-sign-preview`. Pilot hiện là `TECHNICAL_FIXTURE_NOT_A_SIGN`, không thuộc lesson catalog; linguistic status `NOT YET TESTED`. Actual sign pilot `BLOCKED` cho tới khi Thao/content owner cung cấp reference hợp lệ và qualified review path.
+
 ## Git LFS
 
 Git LFS 3.5.1 có trên máy bootstrap và remote endpoint được nhận diện, nhưng repository chưa bật tracking patterns và remote auth/upload chưa được thử. Prototype `.blend`/`.glb` hiện dưới giới hạn GitHub; trước khi thêm nhiều video/GLB lớn, cả bốn máy phải cài `git lfs`, xác nhận remote quota/auth rồi bật patterns trong PR riêng. Không migrate history tùy tiện.

@@ -7,6 +7,7 @@ const navItems = [
   { to: '/review', label: 'Ôn tập' },
   { to: '/technical-viewer', label: '3D kỹ thuật' },
   { to: '/technical-facial-viewer', label: 'Mặt kỹ thuật' },
+  { to: '/technical-sign-preview', label: 'Sign staging' },
 ];
 
 export function App() {

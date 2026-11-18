@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "identity": { "sign_id": "S003", "display_name": null, "gloss": null, "language_variant": null, "status": "REFERENCE_PENDING" },
+  "reference": { "reference_source": null, "reference_url": null, "reference_author": null, "reference_date": null, "reference_media": [], "reference_notes": null, "source_verification_status": "NOT YET TESTED" },
+  "production": { "master_avatar_version": "1.0.0", "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC", "animation_version": "0.0.0-placeholder", "animation_file": null, "export_file": null, "animation_clips": ["S003_MAIN"], "preview_file": null },
+  "review": { "technical_review_status": "NOT YET TESTED", "linguistic_review_status": "NOT YET TESTED", "reviewer": null, "review_notes": null, "approval_date": null },
+  "non_manual_markers": { "nmm_targets": [], "eye_gaze": null, "head_movement": null, "jaw_movement": null, "notes": null }
+}
