@@ -160,6 +160,7 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 - Remote release branch: `PASS`, verified by non-interactive push and actual clone.
 - Final tagged release commit: `3c382332509d0e7e3ff6493f6241707d870e2e0f`.
 - Remote main: `PASS`, normal non-force fast-forward `dc22261..3c38233`.
+- Post-release documentation commit: được báo bằng exact hash trong final response để tránh report tự tham chiếu commit chứa chính nó.
 - PR requirement: **không cần cho release này**; remote cho phép authorized fast-forward push và không có divergence/conflict.
 
 ## 18. GitHub tag and release
@@ -200,7 +201,7 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 | S001–S006 lesson GLBs | none present | NOT YET TESTED |
 | Linguistic approval | no qualified evidence | NOT YET TESTED |
 | Remote release branch push | `31a597d` verified by clone | PASS |
-| Remote main fast-forward | `origin/main=3c38233` | PASS |
+| Remote main fast-forward | chứa tagged release `3c38233` và documentation-only follow-up | PASS |
 | Annotated tag | remote `master-avatar-v1.0.0` | PASS |
 | GitHub prerelease | API + public release URL | PASS |
 | Actual remote fresh clone | hashes + npm + browser evidence | PASS |
