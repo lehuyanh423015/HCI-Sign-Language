@@ -41,4 +41,13 @@ describe('application routes', () => {
     expect(html).toContain('Cận cảnh mặt');
     expect(html).toContain('master-avatar-v1-technical-demo.glb');
   });
+
+  it('renders the isolated sign production preview without publishing a sign', () => {
+    const html = renderRoute('/technical-sign-preview');
+    expect(html).toContain('Sign animation production preview');
+    expect(html).toContain('TECHNICAL_FIXTURE_NOT_A_SIGN');
+    expect(html).toContain('NOT YET TESTED');
+    expect(html).toContain('TECH_HAND_FACE_TEST');
+    expect(html).not.toContain('<h2>S001</h2>');
+  });
 });

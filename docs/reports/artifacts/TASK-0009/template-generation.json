@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_animation_working_copy",
+  "status": "PASS",
+  "sign_id": "TEMPLATE",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0009\\blender\\master\\avatar_master.blend",
+    "sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC",
+    "version": "1.0.0"
+  },
+  "output": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0009\\blender\\templates\\sign-animation-template.blend",
+    "sha256": "780D924DA9FEA33698927ADD90A469C9BEFEEC9D312AA4C207E879CC7031EC94"
+  },
+  "inventory": {
+    "armature_object": "Human.rig",
+    "bone_count": 137,
+    "deform_bone_count": 137,
+    "hierarchy_sha256": "0A14E14E5899D4697732D0B0E3F6AC1D6531979B87A7CD23E2652865D9DC2F89",
+    "mesh_count": 9,
+    "mesh_objects": [
+      "EDU_NeutralShorts",
+      "EDU_NeutralTop",
+      "Human",
+      "NMM_Eyeball.L",
+      "NMM_Eyeball.R",
+      "NMM_Iris.L",
+      "NMM_Iris.R",
+      "NMM_Pupil.L",
+      "NMM_Pupil.R"
+    ],
+    "bound_mesh_objects": [
+      "EDU_NeutralShorts",
+      "EDU_NeutralTop",
+      "Human",
+      "NMM_Eyeball.L",
+      "NMM_Eyeball.R",
+      "NMM_Iris.L",
+      "NMM_Iris.R",
+      "NMM_Pupil.L",
+      "NMM_Pupil.R"
+    ],
+    "geometry_sha256": "796D545433501E39216EDF1FF951303C7D21678E49B9250227A6503184081999",
+    "binding_sha256": "2AB953B2DE41A87BDB8C8AFFC408647236A18DAFDA3CA140011679A495D2F2C5",
+    "object_transform_sha256": "2FF1F56AC998DB52EB6B9E275F642C7FF279CAE486E40597189662048AD2A5A5",
+    "shape_keys": [
+      "Basis",
+      "$md-$as-$fe-$yn",
+      "$md-$as-$ma-$yn",
+      "$md-$ca-$fe-$yn",
+      "$md-$ca-$ma-$yn",
+      "$md-$af-$fe-$yn",
+      "$md-$af-$ma-$yn",
+      "$md-universal-$fe-$yn-$av$mu-$av$wg",
+      "$md-universal-$ma-$yn-$av$mu-$av$wg",
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi",
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi",
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "core_nmm_targets": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "eye_objects": [
+      "NMM_Eyeball.L",
+      "NMM_Iris.L",
+      "NMM_Pupil.L",
+      "NMM_Eyeball.R",
+      "NMM_Iris.R",
+      "NMM_Pupil.R"
+    ],
+    "actions": [
+      "NMM_BLINK_TEST",
+      "NMM_BROW_TEST",
+      "NMM_MOUTH_TEST",
+      "TECH_HAND_FACE_TEST"
+    ],
+    "technical_action_sha256": "E8AB1DCCD5C9388F05FFC1FC6D2B41EE9C64C7BB30AE2E81CF985790C0947148"
+  },
+  "neutral_state": {
+    "frame_current": 1,
+    "fps": 30,
+    "frame_start": 1,
+    "frame_end": 120,
+    "nmm_values": {
+      "NMM_BROW_RAISE_L": 0.0,
+      "NMM_BROW_RAISE_R": 0.0,
+      "NMM_EYE_BLINK_L": 0.0,
+      "NMM_EYE_BLINK_R": 0.0,
+      "NMM_LIPS_ROUND": 0.0,
+      "NMM_LIPS_SPREAD": 0.0
+    },
+    "pose_non_identity": [],
+    "animation_assignments": []
+  },
+  "canonical_overwrite_prevented": true,
+  "linguistic_status": "NOT YET TESTED"
+}

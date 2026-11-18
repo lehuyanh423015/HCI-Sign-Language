@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hci-sign-language.local/contracts/sign-metadata.schema.json",
+  "title": "Sign animation production metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "identity", "reference", "production", "review", "non_manual_markers"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sign_id", "display_name", "gloss", "language_variant", "status"],
+      "properties": {
+        "sign_id": { "type": "string", "pattern": "^S00[1-6]$" },
+        "display_name": { "type": ["string", "null"], "minLength": 1 },
+        "gloss": { "type": ["string", "null"], "minLength": 1 },
+        "language_variant": { "type": ["string", "null"], "minLength": 1 },
+        "status": {
+          "enum": ["NOT_STARTED", "REFERENCE_PENDING", "REFERENCE_READY", "IN_PRODUCTION", "TECHNICAL_REVIEW", "LINGUISTIC_REVIEW", "APPROVED", "REJECTED"]
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference_source", "reference_url", "reference_author", "reference_date", "reference_media", "reference_notes", "source_verification_status"],
+      "properties": {
+        "reference_source": { "type": ["string", "null"], "minLength": 1 },
+        "reference_url": { "type": ["string", "null"], "format": "uri" },
+        "reference_author": { "type": ["string", "null"], "minLength": 1 },
+        "reference_date": { "type": ["string", "null"], "format": "date" },
+        "reference_media": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "reference_notes": { "type": ["string", "null"], "minLength": 1 },
+        "source_verification_status": { "enum": ["NOT YET TESTED", "PASS", "FAIL"] }
+      }
+    },
+    "production": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["master_avatar_version", "master_avatar_sha256", "animation_version", "animation_file", "export_file", "animation_clips", "preview_file"],
+      "properties": {
+        "master_avatar_version": { "const": "1.0.0" },
+        "master_avatar_sha256": { "const": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC" },
+        "animation_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+([+-][A-Za-z0-9.-]+)?$" },
+        "animation_file": { "type": ["string", "null"], "pattern": "^blender/working/signs/S00[1-6]/S00[1-6]\\.blend$" },
+        "export_file": { "type": ["string", "null"], "pattern": "^assets/exports/signs/S00[1-6]\\.glb$" },
+        "animation_clips": { "type": "array", "items": { "type": "string", "pattern": "^S00[1-6]_MAIN$" }, "minItems": 1, "uniqueItems": true },
+        "preview_file": { "type": ["string", "null"], "minLength": 1 }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["technical_review_status", "linguistic_review_status", "reviewer", "review_notes", "approval_date"],
+      "properties": {
+        "technical_review_status": { "enum": ["NOT YET TESTED", "PASS", "FAIL"] },
+        "linguistic_review_status": { "enum": ["NOT YET TESTED", "PASS", "FAIL"] },
+        "reviewer": { "type": ["string", "null"], "minLength": 1 },
+        "review_notes": { "type": ["string", "null"], "minLength": 1 },
+        "approval_date": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "non_manual_markers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nmm_targets", "eye_gaze", "head_movement", "jaw_movement", "notes"],
+      "properties": {
+        "nmm_targets": {
+          "type": "array",
+          "items": { "enum": ["NMM_BROW_RAISE_L", "NMM_BROW_RAISE_R", "NMM_EYE_BLINK_L", "NMM_EYE_BLINK_R", "NMM_LIPS_ROUND", "NMM_LIPS_SPREAD"] },
+          "uniqueItems": true
+        },
+        "eye_gaze": { "type": ["string", "null"], "minLength": 1 },
+        "head_movement": { "type": ["string", "null"], "minLength": 1 },
+        "jaw_movement": { "type": ["string", "null"], "minLength": 1 },
+        "notes": { "type": ["string", "null"], "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "identity": { "type": "object", "properties": { "status": { "const": "APPROVED" } } } } },
+      "then": {
+        "properties": {
+          "reference": {
+            "type": "object",
+            "properties": {
+              "reference_source": { "type": "string", "minLength": 1 },
+              "reference_media": { "type": "array", "minItems": 1 },
+              "source_verification_status": { "const": "PASS" }
+            }
+          },
+          "production": {
+            "type": "object",
+            "properties": {
+              "animation_file": { "type": "string" },
+              "export_file": { "type": "string" },
+              "preview_file": { "type": "string" }
+            }
+          },
+          "review": {
+            "type": "object",
+            "properties": {
+              "technical_review_status": { "const": "PASS" },
+              "linguistic_review_status": { "const": "PASS" },
+              "reviewer": { "type": "string", "minLength": 1 },
+              "approval_date": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
