@@ -3,7 +3,7 @@
 - Ngày/Timezone: 2026-11-18, Asia/Saigon
 - Branch/base commit: `release/master-avatar-v1` / `db9e13383816ad8f9b7882ad0a05b26d809968d7`
 - Scope: promote rc.3 đã owner duyệt, đóng gói/validate Master Avatar v1, ổn định Three.js reference, tích hợp Git/GitHub và handoff bốn thành viên
-- Overall status: **PASS local release gates; remote publication và remote fresh clone PENDING trước release commit**
+- Overall status: **PASS local/remote fresh-clone release gates; release branch published; main/tag/GitHub Release pending final documentation commit**
 
 ## 1. Executive summary
 
@@ -156,8 +156,8 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 ## 17. Actual pushed branch and commit
 
 - Release branch: `release/master-avatar-v1`.
-- Local release commit: `PENDING` trước commit bắt buộc của protocol.
-- Remote release branch: `NOT YET TESTED`.
+- Published validation commit: `31a597dd8eebaa235c72593a9796bc25a1f6eb55`.
+- Remote release branch: `PASS`, verified by non-interactive push and actual clone.
 - Remote main: `NOT YET TESTED`.
 - PR requirement: `NOT YET TESTED`, phụ thuộc branch protection khi push.
 
@@ -172,7 +172,9 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 ## 19. Fresh-clone results
 
 - Local clean worktree from TASK-0007A: `npm ci`, checks/build/runtime PASS.
-- Actual remote fresh clone: `NOT YET TESTED` until release branch is pushed.
+- Actual remote fresh clone from `origin/release/master-avatar-v1` at `31a597d`: `PASS`.
+- Fresh clone binary hashes: master `DCA77E…`, static `F48967…`, technical `D59AE5…` — exact matches.
+- Fresh clone `npm ci`, `npm run check`, explicit `npm run build`, Vite start và 10 facial browser runtime checks: `PASS`.
 - Mien/Nhat/Thao machine onboarding: `PENDING`; không được suy ra từ agent test.
 
 ## 20. Test matrix
@@ -195,8 +197,9 @@ Quyết định: dùng normal Git cho v1, không đổi `.gitattributes`, không
 | old technical viewer regression | independent rerun | PASS |
 | S001–S006 lesson GLBs | none present | NOT YET TESTED |
 | Linguistic approval | no qualified evidence | NOT YET TESTED |
-| Remote push/main/tag/release | pending commit | NOT YET TESTED |
-| Remote fresh clone | pending publication | NOT YET TESTED |
+| Remote release branch push | `31a597d` verified by clone | PASS |
+| Remote main/tag/GitHub Release | pending final documentation commit | NOT YET TESTED |
+| Actual remote fresh clone | hashes + npm + browser evidence | PASS |
 | Other members onboarding | not executed on their machines | NOT YET TESTED |
 
 ## 21. Created and modified files
@@ -254,7 +257,7 @@ Honest failures/resolutions:
 
 ## 24. Unresolved issues
 
-- Remote publication và actual remote fresh-clone chờ release commit.
+- Remote main, annotated tag và GitHub Release chờ final documentation commit; release branch đã publish và fresh-clone PASS.
 - GitHub CLI không cài; GitHub Release cần authenticated REST/browser workflow hoặc owner action nếu auth không khả dụng.
 - Dev dependency audit notice: 12 high; production audit 0.
 - No repository-level license cho team code.
