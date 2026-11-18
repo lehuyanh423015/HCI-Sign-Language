@@ -39,6 +39,6 @@ describe('application routes', () => {
     expect(html).toContain('Facial &amp; non-manual marker foundation');
     expect(html).toContain('Morph Targets');
     expect(html).toContain('Cận cảnh mặt');
-    expect(html).toContain('technical-facial-test.glb');
+    expect(html).toContain('master-avatar-v1-technical-demo.glb');
   });
 });

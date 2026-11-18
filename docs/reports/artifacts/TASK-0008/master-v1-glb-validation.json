@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "artifact": "master_avatar_v1_release_validation",
+  "status": "PASS",
+  "technical_validation": "PASS",
+  "owner_visual_approval": "APPROVED",
+  "linguistic_approval": "NOT YET TESTED",
+  "static_asset": {
+    "path": "assets/releases/master-avatar-v1/master-avatar-v1-static.glb",
+    "sha256": "F489677DCBD009A5A6370F09FC7613F851F14FF7A825FC1528A27B217F195CA2",
+    "size_bytes": 2214024,
+    "nodes": 146,
+    "meshes": 9,
+    "skins": 1,
+    "morph_target_names": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "animation_clip_names": [],
+    "checks": [
+      {
+        "id": "static_gltf_version",
+        "status": "PASS",
+        "actual": "2.0"
+      },
+      {
+        "id": "static_mesh_count",
+        "status": "PASS",
+        "actual": 9
+      },
+      {
+        "id": "static_skin",
+        "status": "PASS",
+        "actual": 1
+      },
+      {
+        "id": "static_eye_nodes",
+        "status": "PASS",
+        "actual": [
+          "NMM_Eyeball.L",
+          "NMM_Iris.L",
+          "NMM_Pupil.L",
+          "NMM_Eyeball.R",
+          "NMM_Iris.R",
+          "NMM_Pupil.R"
+        ]
+      },
+      {
+        "id": "static_nmm_targets",
+        "status": "PASS",
+        "actual": [
+          "NMM_BROW_RAISE_L",
+          "NMM_BROW_RAISE_R",
+          "NMM_EYE_BLINK_L",
+          "NMM_EYE_BLINK_R",
+          "NMM_LIPS_ROUND",
+          "NMM_LIPS_SPREAD"
+        ]
+      },
+      {
+        "id": "static_no_diagnostic_target",
+        "status": "PASS",
+        "actual": [
+          "NMM_BROW_RAISE_L",
+          "NMM_BROW_RAISE_R",
+          "NMM_EYE_BLINK_L",
+          "NMM_EYE_BLINK_R",
+          "NMM_LIPS_ROUND",
+          "NMM_LIPS_SPREAD"
+        ]
+      },
+      {
+        "id": "static_no_animations",
+        "status": "PASS",
+        "actual": []
+      },
+      {
+        "id": "static_khronos",
+        "status": "PASS",
+        "actual": {
+          "errors": 0,
+          "warnings": 0,
+          "infos": 1,
+          "hints": 0
+        }
+      }
+    ],
+    "khronos": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 1,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "technical_asset": {
+    "path": "assets/exports/technical/task-0007a/technical-facial-refined-test.glb",
+    "sha256": "D59AE5422E9B759006FE9D666B6CA56AD1183D157DF666B33813FAE923A492AB",
+    "size_bytes": 2455392,
+    "nodes": 146,
+    "meshes": 9,
+    "skins": 1,
+    "morph_target_names": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "animation_clip_names": [
+      "NMM_BLINK_TEST",
+      "NMM_BROW_TEST",
+      "NMM_MOUTH_TEST",
+      "TECH_HAND_FACE_TEST"
+    ],
+    "checks": [
+      {
+        "id": "technical_gltf_version",
+        "status": "PASS",
+        "actual": "2.0"
+      },
+      {
+        "id": "technical_mesh_count",
+        "status": "PASS",
+        "actual": 9
+      },
+      {
+        "id": "technical_skin",
+        "status": "PASS",
+        "actual": 1
+      },
+      {
+        "id": "technical_eye_nodes",
+        "status": "PASS",
+        "actual": [
+          "NMM_Eyeball.L",
+          "NMM_Iris.L",
+          "NMM_Pupil.L",
+          "NMM_Eyeball.R",
+          "NMM_Iris.R",
+          "NMM_Pupil.R"
+        ]
+      },
+      {
+        "id": "technical_nmm_targets",
+        "status": "PASS",
+        "actual": [
+          "NMM_BROW_RAISE_L",
+          "NMM_BROW_RAISE_R",
+          "NMM_EYE_BLINK_L",
+          "NMM_EYE_BLINK_R",
+          "NMM_LIPS_ROUND",
+          "NMM_LIPS_SPREAD"
+        ]
+      },
+      {
+        "id": "technical_no_diagnostic_target",
+        "status": "PASS",
+        "actual": [
+          "NMM_BROW_RAISE_L",
+          "NMM_BROW_RAISE_R",
+          "NMM_EYE_BLINK_L",
+          "NMM_EYE_BLINK_R",
+          "NMM_LIPS_ROUND",
+          "NMM_LIPS_SPREAD"
+        ]
+      },
+      {
+        "id": "technical_clip_names",
+        "status": "PASS",
+        "actual": [
+          "NMM_BLINK_TEST",
+          "NMM_BROW_TEST",
+          "NMM_MOUTH_TEST",
+          "TECH_HAND_FACE_TEST"
+        ]
+      },
+      {
+        "id": "technical_khronos",
+        "status": "PASS",
+        "actual": {
+          "errors": 0,
+          "warnings": 0,
+          "infos": 1,
+          "hints": 0
+        }
+      }
+    ],
+    "khronos": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 1,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  "checks": [
+    {
+      "id": "static_gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "static_mesh_count",
+      "status": "PASS",
+      "actual": 9
+    },
+    {
+      "id": "static_skin",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "static_eye_nodes",
+      "status": "PASS",
+      "actual": [
+        "NMM_Eyeball.L",
+        "NMM_Iris.L",
+        "NMM_Pupil.L",
+        "NMM_Eyeball.R",
+        "NMM_Iris.R",
+        "NMM_Pupil.R"
+      ]
+    },
+    {
+      "id": "static_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "static_no_diagnostic_target",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "static_no_animations",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "id": "static_khronos",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "hints": 0
+      }
+    },
+    {
+      "id": "technical_gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "technical_mesh_count",
+      "status": "PASS",
+      "actual": 9
+    },
+    {
+      "id": "technical_skin",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "technical_eye_nodes",
+      "status": "PASS",
+      "actual": [
+        "NMM_Eyeball.L",
+        "NMM_Iris.L",
+        "NMM_Pupil.L",
+        "NMM_Eyeball.R",
+        "NMM_Iris.R",
+        "NMM_Pupil.R"
+      ]
+    },
+    {
+      "id": "technical_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "technical_no_diagnostic_target",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "technical_clip_names",
+      "status": "PASS",
+      "actual": [
+        "NMM_BLINK_TEST",
+        "NMM_BROW_TEST",
+        "NMM_MOUTH_TEST",
+        "TECH_HAND_FACE_TEST"
+      ]
+    },
+    {
+      "id": "technical_khronos",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "hints": 0
+      }
+    },
+    {
+      "id": "release_version",
+      "status": "PASS",
+      "actual": {
+        "release": "1.0.0",
+        "master": "1.0.0"
+      }
+    },
+    {
+      "id": "release_status",
+      "status": "PASS",
+      "actual": "Temporary Technical Release"
+    },
+    {
+      "id": "owner_approval",
+      "status": "PASS",
+      "actual": {
+        "technical_validation": "PASS",
+        "owner_visual": "APPROVED",
+        "vietnamese_sign_language": "NOT YET TESTED"
+      }
+    },
+    {
+      "id": "linguistic_status",
+      "status": "PASS",
+      "actual": {
+        "technical_validation": "PASS",
+        "owner_visual": "APPROVED",
+        "vietnamese_sign_language": "NOT YET TESTED"
+      }
+    },
+    {
+      "id": "static_manifest_hash",
+      "status": "PASS",
+      "actual": {
+        "path": "assets/releases/master-avatar-v1/master-avatar-v1-static.glb",
+        "sha256": "F489677DCBD009A5A6370F09FC7613F851F14FF7A825FC1528A27B217F195CA2",
+        "size_bytes": 2214024
+      }
+    },
+    {
+      "id": "technical_manifest_hash",
+      "status": "PASS",
+      "actual": {
+        "path": "assets/exports/technical/task-0007a/technical-facial-refined-test.glb",
+        "sha256": "D59AE5422E9B759006FE9D666B6CA56AD1183D157DF666B33813FAE923A492AB",
+        "size_bytes": 2455392,
+        "technical_fixture_only": true,
+        "linguistic_status": "NOT YET TESTED"
+      }
+    },
+    {
+      "id": "master_manifest_consistency",
+      "status": "PASS",
+      "actual": {
+        "static_preview_glb": {
+          "path": "assets/releases/master-avatar-v1/master-avatar-v1-static.glb",
+          "sha256": "F489677DCBD009A5A6370F09FC7613F851F14FF7A825FC1528A27B217F195CA2",
+          "size_bytes": 2214024
+        },
+        "technical_demo_glb": {
+          "path": "assets/exports/technical/task-0007a/technical-facial-refined-test.glb",
+          "sha256": "D59AE5422E9B759006FE9D666B6CA56AD1183D157DF666B33813FAE923A492AB",
+          "size_bytes": 2455392,
+          "single_source_of_truth": true
+        }
+      }
+    }
+  ]
+}

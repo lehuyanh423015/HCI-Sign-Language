@@ -21,7 +21,7 @@ import {
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-export const FACIAL_MODEL_URL = '/models/technical/technical-facial-test.glb';
+export const FACIAL_MODEL_URL = '/models/technical/master-avatar-v1-technical-demo.glb';
 export const FACIAL_DEFAULT_CLIP = 'TECH_HAND_FACE_TEST';
 
 type ViewerStatus = 'loading' | 'ready' | 'error';
@@ -332,7 +332,7 @@ export function TechnicalFacialViewer() {
           </div>
         </section>
         <dl className="facial-status-list">
-          <div><dt>File</dt><dd>technical-facial-test.glb</dd></div>
+          <div><dt>File</dt><dd>master-avatar-v1-technical-demo.glb</dd></div>
           <div><dt>Playback</dt><dd data-testid="facial-playback-status">{playing ? 'playing' : 'paused'} · {speed}× · loop {looping ? 'on' : 'off'}</dd></div>
           <div><dt>Gaze</dt><dd>{gazePreset}</dd></div>
         </dl>

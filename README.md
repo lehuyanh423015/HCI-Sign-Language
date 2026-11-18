@@ -2,6 +2,15 @@
 
 Monorepo dùng chung cho nhóm HCI bốn thành viên. TASK-0001 chỉ dựng nền tảng kỹ thuật: web shell, hợp đồng dữ liệu/3D/adaptive, kiểm tra tự động và quy trình cộng tác. Repository **chưa chứa animation ký hiệu đã xác minh**.
 
+## Master Avatar v1.0.0
+
+`blender/master/avatar_master.blend` là **Temporary Technical Release** đã được owner duyệt về hình ảnh và suitability cho development. Release giữ 137 bones, sáu core `NMM_` Morph Targets, eye/finger controls và technical Actions. Các Action/GLB demo chỉ là technical fixtures; trạng thái phê duyệt nội dung Ngôn ngữ Ký hiệu Việt Nam vẫn là `NOT YET TESTED`.
+
+- Manifest: `blender/master/master-avatar.manifest.json`.
+- Release package: `assets/releases/master-avatar-v1/`.
+- Handoff: `docs/team/MASTER_V1_HANDOFF.md`.
+- Release notes: `docs/releases/MASTER_AVATAR_V1.md`.
+
 > Mọi fixture hiển thị trong web hiện tại là **“Technical placeholder - not verified sign language.”** Chỉ nội dung có `reviewStatus: "approved"` và đủ bằng chứng mới được dùng cho học tập hoặc user testing.
 
 ## Bắt đầu nhanh trên Windows CMD
@@ -37,13 +46,14 @@ Baseline 3D chính thức là Blender 5.2.4 LTS + MPFB 2.0.18. `doctor` có th�
 | `npm run validate:assets` | Kiểm tra GLB hiện có; asset chưa làm được ghi `NOT YET TESTED` |
 | `npm run sync:technical-assets` | Đồng bộ canonical technical GLB vào web public directory |
 | `npm run validate:technical-asset` | Kiểm tra clip, skin, channels, duration và Khronos validation |
+| `npm run validate:master-v1` | Kiểm tra static/technical GLB, manifests, hashes và Khronos validation của Master v1 |
 | `npm run doctor` | Báo môi trường và prerequisite |
 | `npm run check` | Chạy quality gate không cần Blender/MPFB |
 
 ## Nguồn sự thật và ranh giới
 
 - Metadata: `data/*.json`; không sửa bản sinh trong `apps/web/public/data/`.
-- Master 3D được duyệt sau này: `blender/master/`. File có sẵn `blender/avatar_master.blend` được bảo toàn nguyên trạng và hiện là **candidate chưa kiểm tra**, không tự ý di chuyển hay ghi đè.
+- Canonical Master Avatar v1.0.0: `blender/master/avatar_master.blend`. `blender/avatar_master.blend` là legacy source; không di chuyển hay ghi đè.
 - Export review: `assets/exports/signs/`; chỉ publish GLB đã qua gate vào `apps/web/public/models/signs/`.
 - Hợp đồng tích hợp: `docs/contracts/`; mọi thay đổi cần phối hợp các owner liên quan.
 

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact": "master_avatar_v1_static_glb_export",
+  "status": "PASS",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0008\\blender\\master\\avatar_master.blend",
+    "sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC"
+  },
+  "selected_objects": [
+    "Human.rig",
+    "EDU_NeutralShorts",
+    "EDU_NeutralTop",
+    "Human",
+    "NMM_Eyeball.L",
+    "NMM_Eyeball.R",
+    "NMM_Iris.L",
+    "NMM_Iris.R",
+    "NMM_Pupil.L",
+    "NMM_Pupil.R"
+  ],
+  "shape_key_preparation": {
+    "source_values": {
+      "Basis": 1.0,
+      "$md-$as-$fe-$yn": 0.16500000655651093,
+      "$md-$as-$ma-$yn": 0.16500000655651093,
+      "$md-$ca-$fe-$yn": 0.16500000655651093,
+      "$md-$ca-$ma-$yn": 0.16500000655651093,
+      "$md-$af-$fe-$yn": 0.16500000655651093,
+      "$md-$af-$ma-$yn": 0.16500000655651093,
+      "$md-universal-$fe-$yn-$av$mu-$av$wg": 0.5,
+      "$md-universal-$ma-$yn-$av$mu-$av$wg": 0.5,
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi": 0.08856657892465591,
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi": 0.088466577231884,
+      "NMM_BROW_RAISE_L": 0.0,
+      "NMM_BROW_RAISE_R": 0.0,
+      "NMM_EYE_BLINK_L": 0.0,
+      "NMM_EYE_BLINK_R": 0.0,
+      "NMM_LIPS_ROUND": 0.0,
+      "NMM_LIPS_SPREAD": 0.0
+    },
+    "export_targets": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "vertex_count": 19158
+  },
+  "non_armature_modifier_bake": {
+    "status": "PASS",
+    "modifiers": [
+      "Hide helpers"
+    ],
+    "vertices_before": 19158,
+    "vertices_after": 13380,
+    "fully_weighted_vertices": 13380
+  },
+  "settings": {
+    "filepath": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0008\\assets\\releases\\master-avatar-v1\\master-avatar-v1-static.glb",
+    "export_format": "GLB",
+    "use_selection": true,
+    "export_animations": false,
+    "export_skins": true,
+    "export_armature_object_remove": true,
+    "export_rest_position_armature": true,
+    "export_apply": false,
+    "export_all_influences": false,
+    "export_morph": true,
+    "export_morph_normal": true,
+    "export_morph_tangent": false,
+    "export_cameras": false,
+    "export_lights": false,
+    "export_yup": true
+  },
+  "operator_result": [
+    "FINISHED"
+  ],
+  "output": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0008\\assets\\releases\\master-avatar-v1\\master-avatar-v1-static.glb",
+  "size_bytes": 2214024,
+  "sha256": "F489677DCBD009A5A6370F09FC7613F851F14FF7A825FC1528A27B217F195CA2",
+  "animation_count_expected": 0,
+  "technical_validation": "PENDING GLB VALIDATION",
+  "owner_visual_approval": "APPROVED SOURCE",
+  "linguistic_approval": "NOT YET TESTED"
+}

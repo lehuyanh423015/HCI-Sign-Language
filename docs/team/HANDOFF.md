@@ -14,6 +14,8 @@ npm run doctor
 
 3D member dùng Blender 5.2.4 LTS + MPFB 2.0.18, đọc `SETUP_BLENDER.md`, tạo working copy đúng folder và báo nhóm đang giữ file nào. Web/QA member chạy `npm run check` trước khi push.
 
+Release chuẩn cho cả nhóm là tag `master-avatar-v1.0.0` trên repository `https://github.com/lehuyanh423015/HCI-Sign-Language.git`. Đọc `docs/team/MASTER_V1_HANDOFF.md` trước khi tạo branch hoặc Blender working copy.
+
 ## Xem technical prototype
 
 ```cmd
@@ -45,14 +47,14 @@ Viewer mặc định dùng `technical-hand-test-neutral.glb`. Đây là technica
 
 ## Canonical neutral master
 
-- Official release candidate: `blender/master/avatar_master.blend`, `Master Avatar v1.0.0-rc.1`; exact hash trong manifest.
-- Promotion source được giữ: `blender/master/avatar_master_neutral_candidate.blend`; không dùng tiếp làm canonical.
-- Working source có test action: `blender/working/huy-anh/technical-hand-test-neutral.blend`.
-- Canonical web evidence: `assets/exports/technical/technical-hand-test-neutral.glb`.
-- Master giữ 137-bone hierarchy, `EDU_NeutralTop`, `EDU_NeutralShorts` và ba material không texture; không chứa Action/sign animation.
-- Mien tạo working copy từ canonical exact commit/hash; không copy từ candidate hoặc technical source.
+- Official release: `blender/master/avatar_master.blend`, `Master Avatar v1.0.0`; exact hash trong `blender/master/master-avatar.manifest.json`.
+- Promotion source rc.3 được giữ tại `blender/working/huy-anh/task-0007a-facial-refinement/`; không dùng tiếp làm canonical.
+- Static release GLB: `assets/releases/master-avatar-v1/master-avatar-v1-static.glb`.
+- Technical demo source: `assets/exports/technical/task-0007a/technical-facial-refined-test.glb`; không đưa bốn clip kỹ thuật vào S001–S006.
+- Master giữ 137-bone hierarchy, eye geometry, sáu core `NMM_` targets và bốn technical Action data-block; scene mở neutral và không assign Action/NLA.
+- Mien tạo working copy từ exact tag/commit/hash; không copy từ candidate hoặc technical demo.
 - Khi export MPFB body phải bake current shape-key mix trên export copy, apply non-Armature modifiers để `Hide helpers` có hiệu lực, giới hạn 4 skin influences và không save các thay đổi export-only vào source.
-- Facial audit: facial/head deformation bones tồn tại nhưng không có production facial Shape Keys; visible eye asset và NMM authoring vẫn pending. Diagnostic Morph POC không phải deliverable animation.
+- Facial controls là technical foundation đã owner duyệt về appearance; linguistic validity và production sign usage vẫn `NOT YET TESTED`. Diagnostic Morph POC không phải deliverable animation.
 
 ## Integration
 
@@ -75,7 +77,7 @@ npm run validate:facial-asset
 npm run dev
 ```
 
-Mở `http://localhost:5173/technical-facial-viewer`. Trang phải hiển thị banner `TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE`, six `NMM_` sliders, gaze controls và four technical clips. Source candidate nằm trong `blender/working/huy-anh/task-0006-facial-foundation/`; không thay canonical master bằng candidate này khi chưa có owner approval. Clip/biểu cảm là technical fixture, linguistic status `NOT YET TESTED` và không được đưa vào lesson catalog.
+Mở `http://localhost:5173/technical-facial-viewer`. Trang phải hiển thị banner `TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE`, six `NMM_` sliders, gaze controls và four technical clips. Viewer dùng stable generated asset `master-avatar-v1-technical-demo.glb`; nguồn canonical ghi trong release manifest. Clip/biểu cảm là technical fixture, linguistic status `NOT YET TESTED` và không được đưa vào lesson catalog.
 
 ## Git LFS
 

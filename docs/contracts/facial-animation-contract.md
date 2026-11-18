@@ -18,7 +18,7 @@ Contract này áp dụng cho prototype facial/NMM kỹ thuật bắt đầu từ
 ## 3. Neutral pose convention
 
 - Frame 1, 30 FPS; tất cả `NMM_` weight = `0`, eye/head/neck/jaw neutral, pose basis không làm thay đổi canonical rest pose.
-- Facial candidate là working copy; canonical `blender/master/avatar_master.blend` không chứa các control/Action này.
+- Từ Master Avatar v1.0.0, canonical `blender/master/avatar_master.blend` chứa sáu core Morph Targets và bốn reusable technical Action data-block. Canonical mở ở neutral, không assign Action/NLA; animator vẫn phải tạo working copy.
 
 ## 4. Eye bone conventions
 
@@ -57,7 +57,7 @@ Contract này áp dụng cho prototype facial/NMM kỹ thuật bắt đầu từ
 - Runtime tự khám phá `mesh.morphTargetDictionary`; UI chỉ expose target có prefix `NMM_` thực sự tồn tại.
 - Slider cập nhật mọi mesh binding cùng target name, đặc biệt blink body + eye assembly.
 - Gaze ánh xạ `eye.L`/`eye.R`; reset phục hồi quaternion neutral.
-- Viewer kỹ thuật dùng `/technical-facial-viewer` và `/models/technical/technical-facial-test.glb`, tách khỏi lesson catalog.
+- Viewer kỹ thuật dùng `/technical-facial-viewer` và stable generated asset `/models/technical/master-avatar-v1-technical-demo.glb`, tách khỏi lesson catalog. Nguồn canonical của browser asset là GLB TASK-0007A ghi trong release manifest.
 
 ## 10. Concurrent hand and face animation
 
@@ -76,7 +76,7 @@ Contract này áp dụng cho prototype facial/NMM kỹ thuật bắt đầu từ
 - Banner bắt buộc: `TECHNICAL FACIAL TEST — NOT VERIFIED SIGN LANGUAGE`.
 - Trạng thái linguistic/content TASK-0006: `NOT YET TESTED` cho tới khi có qualified Deaf/native signer hoặc chuyên gia VSL review.
 - Huy Anh duyệt master/rig/candidate; Mien chỉ animate trên working copy; Nhat consume GLB contract; Thao điều phối evidence/content gate.
-- Không promote candidate thành canonical, không đưa clip vào lesson catalog và không gán semantic VSL chỉ dựa trên technical `PASS`.
+- Master v1 đã được owner promote làm technical development baseline. Không đưa technical clip vào lesson catalog và không gán semantic VSL chỉ dựa trên technical `PASS`.
 
 ## Current prototype limitation
 

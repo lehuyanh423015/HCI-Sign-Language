@@ -38,9 +38,17 @@ npm run doctor
 
 ## Asset hiện có
 
-Canonical master: `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0-rc.1`. Kiểm tra hash/version trong `blender/master/avatar_master.manifest.json` trước khi tạo working copy.
+Canonical master: `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0`. Kiểm tra hash/version trong `blender/master/master-avatar.manifest.json` trước khi tạo working copy.
 
-`blender/avatar_master.blend` là pre-neutral legacy source; `blender/master/avatar_master_neutral_candidate.blend` là approved promotion source được giữ để audit. Không ghi đè hoặc dùng hai file này thay canonical. Canonical không chứa technical/sign Action; `TECH_HAND_CONTROL_TEST` nằm trong technical working source.
+`blender/avatar_master.blend` là pre-neutral legacy source; `blender/master/avatar_master_neutral_candidate.blend` và rc.3 trong `blender/working/huy-anh/task-0007a-facial-refinement/` được giữ để audit. Không ghi đè hoặc dùng các file này thay canonical. Canonical giữ bốn Action được gắn nhãn technical fixture nhưng không assign vào scene neutral; chúng không phải sign/lesson đã duyệt.
+
+Tạo working copy trong CMD, không save trực tiếp master:
+
+```cmd
+mkdir blender\working\<member>\<task-or-sign>
+copy /Y blender\master\avatar_master.blend blender\working\<member>\<task-or-sign>\Snnn.blend
+certutil -hashfile blender\working\<member>\<task-or-sign>\Snnn.blend SHA256
+```
 
 Animator copy canonical vào working folder của mình, ghi master commit/hash vào handoff và chỉ save bằng Blender 5.2.4 LTS. Không apply non-identity armature rotation, rename bone hoặc đổi rest pose.
 

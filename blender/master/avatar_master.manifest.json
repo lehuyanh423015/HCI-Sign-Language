@@ -1,26 +1,33 @@
 {
-  "schema_version": 1,
-  "version": "1.0.0-rc.1",
-  "status": "release-candidate",
+  "schema_version": 2,
+  "canonical_manifest": "blender/master/master-avatar.manifest.json",
+  "version": "1.0.0",
+  "status": "Temporary Technical Release",
   "blender_version": "5.2.4 LTS",
   "mpfb_version": "2.0.18",
   "canonical_file": "blender/master/avatar_master.blend",
-  "sha256": "A018FA9BC5129E91A320B2A1BB397D87781B757615F1CD2A7FE568945E010232",
+  "sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC",
   "approved_source": {
-    "commit": "5996ee48637d3d6daa3b7c43c4fc5319a0153e8a",
-    "path": "blender/master/avatar_master_neutral_candidate.blend",
-    "sha256": "2D420B554F13555653D920100042A91F2575302D0EDB08696F8B5C392F50374F"
+    "commit": "db9e13383816ad8f9b7882ad0a05b26d809968d7",
+    "path": "blender/working/huy-anh/task-0007a-facial-refinement/avatar_master_facial_refined_candidate.blend",
+    "sha256": "0D9D2ECE642540B792A79F36003FEE1FBB47C6966FFB8A953B7B7F5F043CCAB7"
   },
-  "mesh_count": 3,
+  "mesh_count": 9,
   "mesh_objects": [
     "Human",
     "EDU_NeutralTop",
-    "EDU_NeutralShorts"
+    "EDU_NeutralShorts",
+    "NMM_Eyeball.L",
+    "NMM_Iris.L",
+    "NMM_Pupil.L",
+    "NMM_Eyeball.R",
+    "NMM_Iris.R",
+    "NMM_Pupil.R"
   ],
   "armature_object": "Human.rig",
   "bone_count": 137,
   "deform_bone_count": 137,
-  "hierarchy_sha256": "5D6A61F33BE4EDBF08D06F0E9D85F5C118924254A2C0F1E5F7776F110F033BCE",
+  "hierarchy_sha256": "0A14E14E5899D4697732D0B0E3F6AC1D6531979B87A7CD23E2652865D9DC2F89",
   "shape_keys": [
     "Basis",
     "$md-$as-$fe-$yn",
@@ -32,9 +39,22 @@
     "$md-universal-$fe-$yn-$av$mu-$av$wg",
     "$md-universal-$ma-$yn-$av$mu-$av$wg",
     "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi",
-    "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi"
+    "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi",
+    "NMM_BROW_RAISE_L",
+    "NMM_BROW_RAISE_R",
+    "NMM_EYE_BLINK_L",
+    "NMM_EYE_BLINK_R",
+    "NMM_LIPS_ROUND",
+    "NMM_LIPS_SPREAD"
   ],
-  "facial_shape_keys": [],
+  "facial_shape_keys": [
+    "NMM_BROW_RAISE_L",
+    "NMM_BROW_RAISE_R",
+    "NMM_EYE_BLINK_L",
+    "NMM_EYE_BLINK_R",
+    "NMM_LIPS_ROUND",
+    "NMM_LIPS_SPREAD"
+  ],
   "facial_and_head_bones": [
     "head", "neck01", "neck02", "neck03", "jaw", "eye.L", "eye.R",
     "levator02.L", "levator02.R", "levator03.L", "levator03.R",
@@ -51,9 +71,17 @@
     "fps": 30,
     "frame_start": 1,
     "frame_end": 1,
-    "actions": []
+    "actions": [
+      "NMM_BLINK_TEST",
+      "NMM_BROW_TEST",
+      "NMM_MOUTH_TEST",
+      "TECH_HAND_FACE_TEST"
+    ]
   },
   "armature_object_rotation_policy": "Retain existing non-identity Euler rotation; verified compatible with TASK-0003/0004 export pipeline. Do not apply blindly.",
-  "last_validation_date": "2026-11-17",
-  "validation_report": "docs/reports/artifacts/TASK-0005-master-facial-audit.json"
+  "last_validation_date": "2026-11-18",
+  "technical_validation": "PASS",
+  "owner_visual_approval": "APPROVED",
+  "vietnamese_sign_language_approval": "NOT YET TESTED",
+  "validation_report": "docs/reports/artifacts/TASK-0008/master-v1-blender-validation.json"
 }

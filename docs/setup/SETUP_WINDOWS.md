@@ -30,8 +30,10 @@ Nếu PowerShell chặn `npm.ps1`, mở CMD như tài liệu này hoặc gọi `
 Nếu đã có remote do nhóm tạo:
 
 ```cmd
-git clone <REPOSITORY_URL>
-cd hci-sign-language
+git clone https://github.com/lehuyanh423015/HCI-Sign-Language.git
+cd HCI-Sign-Language
+git switch main
+npm ci
 ```
 
 Nếu nhận thư mục trực tiếp, mở CMD tại folder có `package.json`. TASK-0001 không tạo/push remote.
@@ -56,8 +58,11 @@ npm run validate:data
 npm run test
 npm run build
 npm run validate:assets
+npm run validate:master-v1
 npm run check
 ```
+
+Git LFS 3.x có thể cài sẵn nhưng Master v1 không dùng LFS pointer. Các binary release hiện dưới 100 MB/file và được clone bằng Git thường. Không chạy `git lfs migrate` hoặc bật pattern LFS nếu chưa có PR/policy chung.
 
 ## Chỉ định Blender
 

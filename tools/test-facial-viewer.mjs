@@ -117,7 +117,7 @@ try {
   })()`);
   const expectedTargets = ['NMM_BROW_RAISE_L','NMM_BROW_RAISE_R','NMM_EYE_BLINK_L','NMM_EYE_BLINK_R','NMM_LIPS_ROUND','NMM_LIPS_SPREAD'];
   const expectedClips = ['NMM_BLINK_TEST','NMM_BROW_TEST','NMM_MOUTH_TEST','TECH_HAND_FACE_TEST'];
-  report.checks.push({ id: 'gltf_canvas_ready', status: ready.canvas && ready.width > 0 && ready.status.includes('technical-facial-test.glb') ? 'PASS' : 'FAIL', evidence: ready });
+  report.checks.push({ id: 'gltf_canvas_ready', status: ready.canvas && ready.width > 0 && ready.status.includes('master-avatar-v1-technical-demo.glb') ? 'PASS' : 'FAIL', evidence: ready });
   report.checks.push({ id: 'actual_morph_inventory', status: expectedTargets.every((name) => ready.morphs.includes(name)) ? 'PASS' : 'FAIL', evidence: ready.morphs });
   report.checks.push({ id: 'clip_inventory', status: expectedClips.every((name) => ready.clips.includes(name)) ? 'PASS' : 'FAIL', evidence: ready.clips });
 

@@ -4,32 +4,40 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const filenames = ['technical-hand-test.glb', 'technical-hand-test-neutral.glb', 'technical-facial-test.glb'];
+const assets = [
+  { source: 'assets/exports/technical/technical-hand-test.glb', destination: 'technical-hand-test.glb' },
+  { source: 'assets/exports/technical/technical-hand-test-neutral.glb', destination: 'technical-hand-test-neutral.glb' },
+  { source: 'assets/exports/technical/technical-facial-test.glb', destination: 'technical-facial-test.glb' },
+  {
+    source: 'assets/exports/technical/task-0007a/technical-facial-refined-test.glb',
+    destination: 'master-avatar-v1-technical-demo.glb',
+  },
+];
 const checkOnly = process.argv.includes('--check');
 
 function sha256(filePath) {
   return createHash('sha256').update(readFileSync(filePath)).digest('hex');
 }
 
-for (const filename of filenames) {
-  const source = path.join(root, 'assets', 'exports', 'technical', filename);
-  const destination = path.join(root, 'apps', 'web', 'public', 'models', 'technical', filename);
+for (const asset of assets) {
+  const source = path.join(root, ...asset.source.split('/'));
+  const destination = path.join(root, 'apps', 'web', 'public', 'models', 'technical', asset.destination);
   if (!existsSync(source)) {
     console.error(`FAIL technical sync: canonical GLB is missing: ${source}`);
     process.exitCode = 1;
   } else if (checkOnly) {
     if (!existsSync(destination)) {
-      console.error(`FAIL technical sync: generated web copy is missing for ${filename}; run npm run sync:technical-assets.`);
+      console.error(`FAIL technical sync: generated web copy is missing for ${asset.destination}; run npm run sync:technical-assets.`);
       process.exitCode = 1;
     } else if (sha256(source) !== sha256(destination)) {
-      console.error(`FAIL technical sync: generated web copy does not match canonical GLB for ${filename}.`);
+      console.error(`FAIL technical sync: generated web copy does not match canonical GLB for ${asset.destination}.`);
       process.exitCode = 1;
     } else {
-      console.log(`PASS technical sync: ${filename} matches canonical GLB (${sha256(source)}).`);
+      console.log(`PASS technical sync: ${asset.destination} matches ${asset.source} (${sha256(source)}).`);
     }
   } else {
     mkdirSync(path.dirname(destination), { recursive: true });
     copyFileSync(source, destination);
-    console.log(`PASS technical sync: copied ${filename} to ${path.relative(root, destination)}.`);
+    console.log(`PASS technical sync: copied ${asset.source} to ${path.relative(root, destination)}.`);
   }
 }

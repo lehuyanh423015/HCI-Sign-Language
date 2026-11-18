@@ -4,12 +4,12 @@ Owner phối hợp: Le Huy Anh (master/rig/export) và Doan Khanh Nhat (viewer).
 
 ## A. Master rig
 
-- Canonical master duy nhất là `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0-rc.1`; hash/version nằm trong `blender/master/avatar_master.manifest.json`.
+- Canonical master duy nhất là `blender/master/avatar_master.blend`, version `Master Avatar v1.0.0`; hash/version nằm trong `blender/master/master-avatar.manifest.json`.
 - `blender/avatar_master.blend` là pre-neutral legacy source; `blender/master/avatar_master_neutral_candidate.blend` là nguồn promotion được giữ để truy vết. Cả hai không còn là canonical.
 - Một canonical armature hierarchy. Không đổi bone name, parent, rest pose, scale hoặc thay rig độc lập.
 - Master change dùng branch/PR riêng, ghi lý do, backup và skeleton signature trước/sau. Huy Anh điều phối; Mien không ghi đè master từ working file.
 - Animator tạo file riêng từ approved revision và ghi master commit/hash trong handoff.
-- TASK-0005 formalize owner approval: canonical copy không chứa `TECH_HAND_CONTROL_TEST`, pose basis neutral, 30 FPS và giữ nguyên 137-bone hierarchy. Technical action tiếp tục nằm trong technical working source.
+- TASK-0008 promote rc.3 đã owner duyệt: canonical mở ở frame 1 neutral, 30 FPS, không có Action/NLA được assign và giữ nguyên 137-bone hierarchy. Bốn Action được giữ trong data-block với nhãn technical fixture để tái sử dụng; không phải lesson content.
 
 ## B–C. ID, clip và file naming
 
