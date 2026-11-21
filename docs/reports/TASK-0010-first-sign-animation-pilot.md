@@ -326,14 +326,17 @@ Canonical master, S001–S006 metadata/packages và lesson catalog không đổi
 - Branch: `feat/task-0010-first-sign-animation-pilot`
 - Base: `b030fcd7d63ee564354ba3d5b20ed479dd2b4b39`
 - Implementation commit: `70e4ac123a492a29e04b1c3d061863a47a25c155` (`feat: add automated pose authoring pilot`).
-- Report publication commit: ghi trong final response vì commit không thể tự chứa hash của chính nó.
+- Report publication commit trước push: `f69971b74c93d2d0e7e9bf96b4e1bcfa28a501eb` (`docs: record TASK-0010 implementation`).
+- Push-status follow-up commit: ghi trong final response vì commit không thể tự chứa hash của chính nó.
 
 ## 23. Remote push status
 
 - Remote/auth URL đã xác nhận: `origin` trỏ đúng GitHub repository.
-- Push status tại thời điểm publication commit: `NOT YET TESTED`; push chỉ chạy sau khi commit này được tạo và remote branch được kiểm tra lại.
+- Remote branch preflight: branch không tồn tại trước push.
+- Push status: **PASS**; local và remote cùng ở `f69971b74c93d2d0e7e9bf96b4e1bcfa28a501eb` trước follow-up này.
+- Upstream: `origin/feat/task-0010-first-sign-animation-pilot`.
+- Pull Request URL: `https://github.com/lehuyanh423015/HCI-Sign-Language/pull/new/feat/task-0010-first-sign-animation-pilot`.
 - Không push `main`, không merge, không force push.
-- Trạng thái thực tế và PR URL sẽ được cập nhật sau khi full staged review/commit/push thành công.
 
 ## 24. Owner manual acceptance checklist
 
