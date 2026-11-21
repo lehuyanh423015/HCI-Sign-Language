@@ -325,13 +325,13 @@ Canonical master, S001–S006 metadata/packages và lesson catalog không đổi
 
 - Branch: `feat/task-0010-first-sign-animation-pilot`
 - Base: `b030fcd7d63ee564354ba3d5b20ed479dd2b4b39`
-- Implementation commit: `PENDING` — sẽ cập nhật bằng follow-up report commit sau khi staged diff được review.
+- Implementation commit: `70e4ac123a492a29e04b1c3d061863a47a25c155` (`feat: add automated pose authoring pilot`).
 - Report publication commit: ghi trong final response vì commit không thể tự chứa hash của chính nó.
 
 ## 23. Remote push status
 
 - Remote/auth URL đã xác nhận: `origin` trỏ đúng GitHub repository.
-- Push status tại thời điểm tạo implementation report: `NOT YET TESTED`.
+- Push status tại thời điểm publication commit: `NOT YET TESTED`; push chỉ chạy sau khi commit này được tạo và remote branch được kiểm tra lại.
 - Không push `main`, không merge, không force push.
 - Trạng thái thực tế và PR URL sẽ được cập nhật sau khi full staged review/commit/push thành công.
 
