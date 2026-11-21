@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_motion_spec_validation",
+  "status": "PASS",
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "fixture_id": "TECH_POSE_AUTHORING_PILOT",
+  "sign_id": null,
+  "animation_name": "TECH_POSE_AUTHORING_PILOT",
+  "duration_frames": 60,
+  "key_pose_count": 6,
+  "pose_library_entries": [
+    "closed_fist",
+    "index_flexed",
+    "neutral_hand",
+    "open_hand",
+    "relaxed_hand",
+    "thumb_flexed"
+  ],
+  "errors": []
+}

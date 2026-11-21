@@ -1,0 +1,1003 @@
+{
+  "schema_version": 1,
+  "artifact": "pose_authoring_pilot_validation",
+  "status": "PASS",
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "linguistic_status": "NOT_APPLICABLE",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\blender\\working\\pilots\\task-0010\\TECH_POSE_AUTHORING_PILOT.blend",
+    "sha256": "665A8254C3334EE137A16C62A2EBEF41777D3300E916D6A9715C03E4CD96531C"
+  },
+  "build_report": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\animation-build.json",
+  "action": {
+    "name": "TECH_POSE_AUTHORING_PILOT",
+    "animated_bones": [
+      "finger1-1.L",
+      "finger1-1.R",
+      "finger1-2.L",
+      "finger1-2.R",
+      "finger1-3.L",
+      "finger1-3.R",
+      "finger2-1.L",
+      "finger2-1.R",
+      "finger2-2.L",
+      "finger2-2.R",
+      "finger2-3.L",
+      "finger2-3.R",
+      "finger3-1.L",
+      "finger3-1.R",
+      "finger3-2.L",
+      "finger3-2.R",
+      "finger3-3.L",
+      "finger3-3.R",
+      "finger4-1.L",
+      "finger4-1.R",
+      "finger4-2.L",
+      "finger4-2.R",
+      "finger4-3.L",
+      "finger4-3.R",
+      "finger5-1.L",
+      "finger5-1.R",
+      "finger5-2.L",
+      "finger5-2.R",
+      "finger5-3.L",
+      "finger5-3.R",
+      "head",
+      "jaw",
+      "lowerarm01.L",
+      "lowerarm01.R",
+      "neck02",
+      "upperarm01.L",
+      "upperarm01.R",
+      "wrist.L",
+      "wrist.R"
+    ],
+    "object_fcurves": 117,
+    "morph_fcurves": 6
+  },
+  "frame_states": {
+    "1": {
+      "frame": 1,
+      "neutral_bones": [
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger1-2.L",
+        "finger1-2.R",
+        "finger1-3.L",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger2-2.L",
+        "finger2-2.R",
+        "finger2-3.L",
+        "finger2-3.R",
+        "finger3-1.L",
+        "finger3-1.R",
+        "finger3-2.L",
+        "finger3-2.R",
+        "finger3-3.L",
+        "finger3-3.R",
+        "finger4-1.L",
+        "finger4-1.R",
+        "finger4-2.L",
+        "finger4-2.R",
+        "finger4-3.L",
+        "finger4-3.R",
+        "finger5-1.L",
+        "finger5-1.R",
+        "finger5-2.L",
+        "finger5-2.R",
+        "finger5-3.L",
+        "finger5-3.R",
+        "head",
+        "jaw",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "neck02",
+        "upperarm01.L",
+        "upperarm01.R",
+        "wrist.L",
+        "wrist.R"
+      ],
+      "changed_bones": [],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.0,
+        "NMM_BROW_RAISE_R": 0.0,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.0,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    },
+    "12": {
+      "frame": 12,
+      "neutral_bones": [
+        "finger1-1.L",
+        "finger1-2.L",
+        "finger1-3.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "head",
+        "jaw",
+        "lowerarm01.L",
+        "neck02",
+        "upperarm01.L",
+        "wrist.L"
+      ],
+      "changed_bones": [
+        "finger1-1.R",
+        "finger1-2.R",
+        "finger1-3.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "lowerarm01.R",
+        "upperarm01.R",
+        "wrist.R"
+      ],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.0,
+        "NMM_BROW_RAISE_R": 0.0,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.0,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    },
+    "24": {
+      "frame": 24,
+      "neutral_bones": [
+        "finger1-1.L",
+        "finger1-2.L",
+        "finger1-3.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "lowerarm01.L",
+        "upperarm01.L",
+        "wrist.L"
+      ],
+      "changed_bones": [
+        "finger1-1.R",
+        "finger1-2.R",
+        "finger1-3.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "head",
+        "jaw",
+        "lowerarm01.R",
+        "neck02",
+        "upperarm01.R",
+        "wrist.R"
+      ],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.0,
+        "NMM_BROW_RAISE_R": 0.699999988079071,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.0,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    },
+    "36": {
+      "frame": 36,
+      "neutral_bones": [
+        "finger1-1.L",
+        "finger1-2.L",
+        "finger1-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "jaw"
+      ],
+      "changed_bones": [
+        "finger1-1.R",
+        "finger1-2.R",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger2-2.L",
+        "finger2-2.R",
+        "finger2-3.L",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "head",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "neck02",
+        "upperarm01.L",
+        "upperarm01.R",
+        "wrist.L",
+        "wrist.R"
+      ],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.0,
+        "NMM_BROW_RAISE_R": 0.0,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.0,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    },
+    "48": {
+      "frame": 48,
+      "neutral_bones": [
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-2.R",
+        "finger5-3.R"
+      ],
+      "changed_bones": [
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger1-2.L",
+        "finger1-2.R",
+        "finger1-3.L",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-1.R",
+        "finger5-2.L",
+        "finger5-3.L",
+        "head",
+        "jaw",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "neck02",
+        "upperarm01.L",
+        "upperarm01.R",
+        "wrist.L",
+        "wrist.R"
+      ],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.5,
+        "NMM_BROW_RAISE_R": 0.5,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.6499999761581421,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    },
+    "60": {
+      "frame": 60,
+      "neutral_bones": [
+        "finger1-1.L",
+        "finger1-1.R",
+        "finger1-2.L",
+        "finger1-2.R",
+        "finger1-3.L",
+        "finger1-3.R",
+        "finger2-1.L",
+        "finger2-1.R",
+        "finger2-2.L",
+        "finger2-2.R",
+        "finger2-3.L",
+        "finger2-3.R",
+        "finger3-1.L",
+        "finger3-1.R",
+        "finger3-2.L",
+        "finger3-2.R",
+        "finger3-3.L",
+        "finger3-3.R",
+        "finger4-1.L",
+        "finger4-1.R",
+        "finger4-2.L",
+        "finger4-2.R",
+        "finger4-3.L",
+        "finger4-3.R",
+        "finger5-1.L",
+        "finger5-1.R",
+        "finger5-2.L",
+        "finger5-2.R",
+        "finger5-3.L",
+        "finger5-3.R",
+        "head",
+        "jaw",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "neck02",
+        "upperarm01.L",
+        "upperarm01.R",
+        "wrist.L",
+        "wrist.R"
+      ],
+      "changed_bones": [],
+      "morphs": {
+        "NMM_BROW_RAISE_L": 0.0,
+        "NMM_BROW_RAISE_R": 0.0,
+        "NMM_EYE_BLINK_L": 0.0,
+        "NMM_EYE_BLINK_R": 0.0,
+        "NMM_LIPS_ROUND": 0.0,
+        "NMM_LIPS_SPREAD": 0.0
+      }
+    }
+  },
+  "deformation": {
+    "24": {
+      "moved_vertices": 6818,
+      "max_distance": 0.1355238760996445,
+      "mean_moved_distance": 0.018102677261432415,
+      "all_finite": true
+    },
+    "36": {
+      "moved_vertices": 9132,
+      "max_distance": 0.13226133091328304,
+      "mean_moved_distance": 0.015099384281890615,
+      "all_finite": true
+    },
+    "48": {
+      "moved_vertices": 9132,
+      "max_distance": 0.15581137166493086,
+      "mean_moved_distance": 0.027410117717350715,
+      "all_finite": true
+    }
+  },
+  "checks": [
+    {
+      "id": "master_version",
+      "status": "PASS",
+      "actual": "1.0.0"
+    },
+    {
+      "id": "fixture_identifier",
+      "status": "PASS",
+      "actual": "TECH_POSE_AUTHORING_PILOT"
+    },
+    {
+      "id": "bone_count",
+      "status": "PASS",
+      "actual": 137
+    },
+    {
+      "id": "hierarchy",
+      "status": "PASS",
+      "actual": "0A14E14E5899D4697732D0B0E3F6AC1D6531979B87A7CD23E2652865D9DC2F89"
+    },
+    {
+      "id": "mesh_armature_bindings",
+      "status": "PASS",
+      "actual": "2AB953B2DE41A87BDB8C8AFFC408647236A18DAFDA3CA140011679A495D2F2C5"
+    },
+    {
+      "id": "object_transforms",
+      "status": "PASS",
+      "actual": "2FF1F56AC998DB52EB6B9E275F642C7FF279CAE486E40597189662048AD2A5A5"
+    },
+    {
+      "id": "six_core_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "expected_action",
+      "status": "PASS",
+      "actual": "TECH_POSE_AUTHORING_PILOT"
+    },
+    {
+      "id": "action_slots",
+      "status": "PASS",
+      "actual": {
+        "object": "OBHuman.rig",
+        "key": "KEKey"
+      }
+    },
+    {
+      "id": "action_frame_range",
+      "status": "PASS",
+      "actual": [
+        1.0,
+        60.0
+      ]
+    },
+    {
+      "id": "positive_keyframes",
+      "status": "PASS",
+      "actual": 1353
+    },
+    {
+      "id": "expected_bone_channels",
+      "status": "PASS",
+      "actual": {
+        "actual": [
+          "finger1-1.L",
+          "finger1-1.R",
+          "finger1-2.L",
+          "finger1-2.R",
+          "finger1-3.L",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-1.R",
+          "finger2-2.L",
+          "finger2-2.R",
+          "finger2-3.L",
+          "finger2-3.R",
+          "finger3-1.L",
+          "finger3-1.R",
+          "finger3-2.L",
+          "finger3-2.R",
+          "finger3-3.L",
+          "finger3-3.R",
+          "finger4-1.L",
+          "finger4-1.R",
+          "finger4-2.L",
+          "finger4-2.R",
+          "finger4-3.L",
+          "finger4-3.R",
+          "finger5-1.L",
+          "finger5-1.R",
+          "finger5-2.L",
+          "finger5-2.R",
+          "finger5-3.L",
+          "finger5-3.R",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "missing": [],
+        "unexpected": []
+      }
+    },
+    {
+      "id": "morph_channels",
+      "status": "PASS",
+      "actual": [
+        "key_blocks[\"NMM_BROW_RAISE_L\"].value",
+        "key_blocks[\"NMM_BROW_RAISE_R\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_L\"].value",
+        "key_blocks[\"NMM_EYE_BLINK_R\"].value",
+        "key_blocks[\"NMM_LIPS_ROUND\"].value",
+        "key_blocks[\"NMM_LIPS_SPREAD\"].value"
+      ]
+    },
+    {
+      "id": "neutral_reset_frame_1",
+      "status": "PASS",
+      "actual": {
+        "frame": 1,
+        "neutral_bones": [
+          "finger1-1.L",
+          "finger1-1.R",
+          "finger1-2.L",
+          "finger1-2.R",
+          "finger1-3.L",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-1.R",
+          "finger2-2.L",
+          "finger2-2.R",
+          "finger2-3.L",
+          "finger2-3.R",
+          "finger3-1.L",
+          "finger3-1.R",
+          "finger3-2.L",
+          "finger3-2.R",
+          "finger3-3.L",
+          "finger3-3.R",
+          "finger4-1.L",
+          "finger4-1.R",
+          "finger4-2.L",
+          "finger4-2.R",
+          "finger4-3.L",
+          "finger4-3.R",
+          "finger5-1.L",
+          "finger5-1.R",
+          "finger5-2.L",
+          "finger5-2.R",
+          "finger5-3.L",
+          "finger5-3.R",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "changed_bones": [],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.0,
+          "NMM_BROW_RAISE_R": 0.0,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.0,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "neutral_reset_frame_60",
+      "status": "PASS",
+      "actual": {
+        "frame": 60,
+        "neutral_bones": [
+          "finger1-1.L",
+          "finger1-1.R",
+          "finger1-2.L",
+          "finger1-2.R",
+          "finger1-3.L",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-1.R",
+          "finger2-2.L",
+          "finger2-2.R",
+          "finger2-3.L",
+          "finger2-3.R",
+          "finger3-1.L",
+          "finger3-1.R",
+          "finger3-2.L",
+          "finger3-2.R",
+          "finger3-3.L",
+          "finger3-3.R",
+          "finger4-1.L",
+          "finger4-1.R",
+          "finger4-2.L",
+          "finger4-2.R",
+          "finger4-3.L",
+          "finger4-3.R",
+          "finger5-1.L",
+          "finger5-1.R",
+          "finger5-2.L",
+          "finger5-2.R",
+          "finger5-3.L",
+          "finger5-3.R",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "changed_bones": [],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.0,
+          "NMM_BROW_RAISE_R": 0.0,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.0,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "right_hand_independent_frame_12",
+      "status": "PASS",
+      "actual": {
+        "frame": 12,
+        "neutral_bones": [
+          "finger1-1.L",
+          "finger1-2.L",
+          "finger1-3.L",
+          "finger2-1.L",
+          "finger2-2.L",
+          "finger2-3.L",
+          "finger3-1.L",
+          "finger3-2.L",
+          "finger3-3.L",
+          "finger4-1.L",
+          "finger4-2.L",
+          "finger4-3.L",
+          "finger5-1.L",
+          "finger5-2.L",
+          "finger5-3.L",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "neck02",
+          "upperarm01.L",
+          "wrist.L"
+        ],
+        "changed_bones": [
+          "finger1-1.R",
+          "finger1-2.R",
+          "finger1-3.R",
+          "finger2-1.R",
+          "finger2-2.R",
+          "finger2-3.R",
+          "finger3-1.R",
+          "finger3-2.R",
+          "finger3-3.R",
+          "finger4-1.R",
+          "finger4-2.R",
+          "finger4-3.R",
+          "finger5-1.R",
+          "finger5-2.R",
+          "finger5-3.R",
+          "lowerarm01.R",
+          "upperarm01.R",
+          "wrist.R"
+        ],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.0,
+          "NMM_BROW_RAISE_R": 0.0,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.0,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "left_hand_control_frame_36",
+      "status": "PASS",
+      "actual": {
+        "frame": 36,
+        "neutral_bones": [
+          "finger1-1.L",
+          "finger1-2.L",
+          "finger1-3.L",
+          "finger3-1.L",
+          "finger3-2.L",
+          "finger3-3.L",
+          "finger4-1.L",
+          "finger4-2.L",
+          "finger4-3.L",
+          "finger5-1.L",
+          "finger5-2.L",
+          "finger5-3.L",
+          "jaw"
+        ],
+        "changed_bones": [
+          "finger1-1.R",
+          "finger1-2.R",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-1.R",
+          "finger2-2.L",
+          "finger2-2.R",
+          "finger2-3.L",
+          "finger2-3.R",
+          "finger3-1.R",
+          "finger3-2.R",
+          "finger3-3.R",
+          "finger4-1.R",
+          "finger4-2.R",
+          "finger4-3.R",
+          "finger5-1.R",
+          "finger5-2.R",
+          "finger5-3.R",
+          "head",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.0,
+          "NMM_BROW_RAISE_R": 0.0,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.0,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "both_hands_frame_48",
+      "status": "PASS",
+      "actual": {
+        "frame": 48,
+        "neutral_bones": [
+          "finger2-1.R",
+          "finger2-2.R",
+          "finger2-3.R",
+          "finger3-1.R",
+          "finger3-2.R",
+          "finger3-3.R",
+          "finger4-1.R",
+          "finger4-2.R",
+          "finger4-3.R",
+          "finger5-2.R",
+          "finger5-3.R"
+        ],
+        "changed_bones": [
+          "finger1-1.L",
+          "finger1-1.R",
+          "finger1-2.L",
+          "finger1-2.R",
+          "finger1-3.L",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-2.L",
+          "finger2-3.L",
+          "finger3-1.L",
+          "finger3-2.L",
+          "finger3-3.L",
+          "finger4-1.L",
+          "finger4-2.L",
+          "finger4-3.L",
+          "finger5-1.L",
+          "finger5-1.R",
+          "finger5-2.L",
+          "finger5-3.L",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.5,
+          "NMM_BROW_RAISE_R": 0.5,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.6499999761581421,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "bone_and_morph_coexist",
+      "status": "PASS",
+      "actual": {
+        "frame": 48,
+        "neutral_bones": [
+          "finger2-1.R",
+          "finger2-2.R",
+          "finger2-3.R",
+          "finger3-1.R",
+          "finger3-2.R",
+          "finger3-3.R",
+          "finger4-1.R",
+          "finger4-2.R",
+          "finger4-3.R",
+          "finger5-2.R",
+          "finger5-3.R"
+        ],
+        "changed_bones": [
+          "finger1-1.L",
+          "finger1-1.R",
+          "finger1-2.L",
+          "finger1-2.R",
+          "finger1-3.L",
+          "finger1-3.R",
+          "finger2-1.L",
+          "finger2-2.L",
+          "finger2-3.L",
+          "finger3-1.L",
+          "finger3-2.L",
+          "finger3-3.L",
+          "finger4-1.L",
+          "finger4-2.L",
+          "finger4-3.L",
+          "finger5-1.L",
+          "finger5-1.R",
+          "finger5-2.L",
+          "finger5-3.L",
+          "head",
+          "jaw",
+          "lowerarm01.L",
+          "lowerarm01.R",
+          "neck02",
+          "upperarm01.L",
+          "upperarm01.R",
+          "wrist.L",
+          "wrist.R"
+        ],
+        "morphs": {
+          "NMM_BROW_RAISE_L": 0.5,
+          "NMM_BROW_RAISE_R": 0.5,
+          "NMM_EYE_BLINK_L": 0.0,
+          "NMM_EYE_BLINK_R": 0.0,
+          "NMM_LIPS_ROUND": 0.6499999761581421,
+          "NMM_LIPS_SPREAD": 0.0
+        }
+      }
+    },
+    {
+      "id": "mesh_deformation_present",
+      "status": "PASS",
+      "actual": {
+        "24": {
+          "moved_vertices": 6818,
+          "max_distance": 0.1355238760996445,
+          "mean_moved_distance": 0.018102677261432415,
+          "all_finite": true
+        },
+        "36": {
+          "moved_vertices": 9132,
+          "max_distance": 0.13226133091328304,
+          "mean_moved_distance": 0.015099384281890615,
+          "all_finite": true
+        },
+        "48": {
+          "moved_vertices": 9132,
+          "max_distance": 0.15581137166493086,
+          "mean_moved_distance": 0.027410117717350715,
+          "all_finite": true
+        }
+      }
+    },
+    {
+      "id": "mesh_coordinates_finite",
+      "status": "PASS",
+      "actual": {
+        "24": {
+          "moved_vertices": 6818,
+          "max_distance": 0.1355238760996445,
+          "mean_moved_distance": 0.018102677261432415,
+          "all_finite": true
+        },
+        "36": {
+          "moved_vertices": 9132,
+          "max_distance": 0.13226133091328304,
+          "mean_moved_distance": 0.015099384281890615,
+          "all_finite": true
+        },
+        "48": {
+          "moved_vertices": 9132,
+          "max_distance": 0.15581137166493086,
+          "mean_moved_distance": 0.027410117717350715,
+          "all_finite": true
+        }
+      }
+    },
+    {
+      "id": "deformation_sanity_bound",
+      "status": "PASS",
+      "actual": {
+        "24": {
+          "moved_vertices": 6818,
+          "max_distance": 0.1355238760996445,
+          "mean_moved_distance": 0.018102677261432415,
+          "all_finite": true
+        },
+        "36": {
+          "moved_vertices": 9132,
+          "max_distance": 0.13226133091328304,
+          "mean_moved_distance": 0.015099384281890615,
+          "all_finite": true
+        },
+        "48": {
+          "moved_vertices": 9132,
+          "max_distance": 0.15581137166493086,
+          "mean_moved_distance": 0.027410117717350715,
+          "all_finite": true
+        }
+      }
+    },
+    {
+      "id": "eye_mesh_bindings",
+      "status": "PASS",
+      "actual": {
+        "NMM_Eyeball.L": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        },
+        "NMM_Iris.L": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        },
+        "NMM_Pupil.L": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        },
+        "NMM_Eyeball.R": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        },
+        "NMM_Iris.R": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        },
+        "NMM_Pupil.R": {
+          "exists": true,
+          "armature": [
+            "Human.rig"
+          ]
+        }
+      }
+    },
+    {
+      "id": "visual_anatomical_quality",
+      "status": "NOT YET TESTED",
+      "actual": "See generated renders and MP4; owner review required."
+    },
+    {
+      "id": "linguistic_review",
+      "status": "NOT_APPLICABLE",
+      "actual": "NOT_APPLICABLE technical fixture; real sign pilot BLOCKED."
+    }
+  ]
+}

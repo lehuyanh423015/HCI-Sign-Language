@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "identification": {
+    "sign_id": null,
+    "fixture_id": "TECH_POSE_AUTHORING_PILOT",
+    "source_reference": null,
+    "master_version": "1.0.0",
+    "animator": "Le Huy Anh",
+    "animation_name": "TECH_POSE_AUTHORING_PILOT",
+    "fps": 30,
+    "dominant_hand": "NOT_APPLICABLE"
+  },
+  "timing": {
+    "frame_start": 1,
+    "duration_frames": 60,
+    "interpolation": "BEZIER",
+    "meaningful_interval": null,
+    "technical_transition_frames": [1, 60]
+  },
+  "key_poses": [
+    {
+      "frame": 1,
+      "label": "neutral_start",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Fixture setup only." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Fixture setup only." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "No linguistic path." }
+      },
+      "right_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Fixture setup only." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Fixture setup only." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "No linguistic path." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [0, 0, 0], "neck_rotation_degrees": [0, 0, 0],
+        "eye_gaze": { "status": "NOT_APPLICABLE", "value": null, "notes": "Neutral fixture start." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Transport test only." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Transport test only." },
+        "jaw_position_degrees": 0, "morph_targets": {}
+      }
+    },
+    {
+      "frame": 12,
+      "label": "right_open_wrist",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Independence check." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Independence check." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "Fixture." }
+      },
+      "right_hand": {
+        "pose": "open_hand", "finger_overrides": {}, "wrist_orientation_degrees": [4, -8, 10], "arm_rotations_degrees": { "upperarm01": [0, 0, -8], "lowerarm01": [0, 5, 8] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "viewer-facing technical pose", "notes": "Not sourced from VSL." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "raised by local arm rotations", "notes": "Deformation visibility." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "neutral to open", "notes": "Technical interpolation." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [0, 0, 0], "neck_rotation_degrees": [0, 0, 0],
+        "eye_gaze": { "status": "NOT_APPLICABLE", "value": null, "notes": "Fixture." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Fixture." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Fixture." },
+        "jaw_position_degrees": 0, "morph_targets": {}
+      }
+    },
+    {
+      "frame": 24,
+      "label": "right_fist_brow",
+      "hold_frames": 3,
+      "left_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Independence check." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Independence check." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "Fixture." }
+      },
+      "right_hand": {
+        "pose": "closed_fist", "finger_overrides": {}, "wrist_orientation_degrees": [8, -12, 12], "arm_rotations_degrees": { "upperarm01": [2, 0, -12], "lowerarm01": [0, 8, 12] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "rotated technical pose", "notes": "Not a linguistic handshape." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "raised", "notes": "Technical visibility." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "open to flexed", "notes": "Technical deformation test." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [0, 0, 3], "neck_rotation_degrees": [0, 0, -1],
+        "eye_gaze": { "status": "NOT_APPLICABLE", "value": null, "notes": "Fixture." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "raised", "notes": "Morph transport test only." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Fixture." },
+        "jaw_position_degrees": 2, "morph_targets": { "NMM_BROW_RAISE_R": 0.7 }
+      }
+    },
+    {
+      "frame": 36,
+      "label": "left_index_right_relaxed",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "index_flexed", "finger_overrides": {}, "wrist_orientation_degrees": [-5, 9, -10], "arm_rotations_degrees": { "upperarm01": [-2, 0, 9], "lowerarm01": [0, -6, -9] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "mirrored technical pose", "notes": "Left-chain test." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "raised", "notes": "Left-chain visibility." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "neutral to isolated index flex", "notes": "Technical only." }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand", "finger_overrides": {}, "wrist_orientation_degrees": [2, -4, 5], "arm_rotations_degrees": { "upperarm01": [0, 0, -5], "lowerarm01": [0, 3, 5] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "relaxed", "notes": "Independent right-hand state." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "near neutral", "notes": "Fixture." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "flexed to relaxed", "notes": "Fixture." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [0, 3, -4], "neck_rotation_degrees": [0, -2, 2],
+        "eye_gaze": { "status": "UNKNOWN", "value": null, "notes": "No linguistic reference; left neutral by generator." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Fixture." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Fixture." },
+        "jaw_position_degrees": 0, "morph_targets": { "NMM_BROW_RAISE_R": 0 }
+      }
+    },
+    {
+      "frame": 48,
+      "label": "both_hands_face",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "closed_fist", "finger_overrides": { "finger2-1": 40 }, "wrist_orientation_degrees": [-8, 12, -12], "arm_rotations_degrees": { "upperarm01": [-3, 0, 12], "lowerarm01": [0, -9, -12] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "left flex test", "notes": "Technical only." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "raised", "notes": "Fixture." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "index isolation to flex", "notes": "Fixture." }
+      },
+      "right_hand": {
+        "pose": "thumb_flexed", "finger_overrides": { "finger5-1": 22 }, "wrist_orientation_degrees": [6, -10, 10], "arm_rotations_degrees": { "upperarm01": [3, 0, -10], "lowerarm01": [0, 7, 10] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "right thumb test", "notes": "Technical only." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "raised", "notes": "Fixture." },
+        "movement_path": { "status": "ASSUMED_TECHNICAL", "value": "relaxed to thumb isolation", "notes": "Fixture." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [2, -3, 5], "neck_rotation_degrees": [-1, 2, -2],
+        "eye_gaze": { "status": "UNKNOWN", "value": null, "notes": "No linguistic reference." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "bilateral raised", "notes": "Morph transport test." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "rounded", "notes": "Morph transport test." },
+        "jaw_position_degrees": 4, "morph_targets": { "NMM_BROW_RAISE_L": 0.5, "NMM_BROW_RAISE_R": 0.5, "NMM_LIPS_ROUND": 0.65 }
+      }
+    },
+    {
+      "frame": 60,
+      "label": "neutral_reset",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Reset evidence." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Reset evidence." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "Technical recovery." }
+      },
+      "right_hand": {
+        "pose": "neutral_hand", "finger_overrides": {}, "wrist_orientation_degrees": [0, 0, 0], "arm_rotations_degrees": { "upperarm01": [0, 0, 0], "lowerarm01": [0, 0, 0] },
+        "palm_orientation": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Reset evidence." },
+        "hand_location": { "status": "ASSUMED_TECHNICAL", "value": "canonical neutral", "notes": "Reset evidence." },
+        "movement_path": { "status": "NOT_APPLICABLE", "value": null, "notes": "Technical recovery." }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [0, 0, 0], "neck_rotation_degrees": [0, 0, 0],
+        "eye_gaze": { "status": "NOT_APPLICABLE", "value": null, "notes": "Reset." },
+        "eyebrow_state": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Reset." },
+        "mouth_shape": { "status": "ASSUMED_TECHNICAL", "value": "neutral", "notes": "Reset." },
+        "jaw_position_degrees": 0, "morph_targets": { "NMM_BROW_RAISE_L": 0, "NMM_BROW_RAISE_R": 0, "NMM_LIPS_ROUND": 0 }
+      }
+    }
+  ],
+  "review": {
+    "reference_status": "NOT_APPLICABLE",
+    "technical_status": "NOT YET TESTED",
+    "linguistic_status": "NOT_APPLICABLE",
+    "uncertainty_notes": [
+      "No owner-provided or verified VSL reference exists for S001-S003.",
+      "Every motion in this file is an explicit technical assumption for rig and pipeline testing.",
+      "Visual anatomical quality requires owner inspection of generated renders and video."
+    ]
+  }
+}

@@ -91,6 +91,18 @@ npm run dev
 
 Mở `/technical-sign-preview`. Pilot hiện là `TECHNICAL_FIXTURE_NOT_A_SIGN`, không thuộc lesson catalog; linguistic status `NOT YET TESTED`. Actual sign pilot `BLOCKED` cho tới khi Thao/content owner cung cấp reference hợp lệ và qualified review path.
 
+## Automated pose authoring TASK-0010
+
+Đọc `docs/workflows/SIGN_POSE_AUTHORING.md` và validate `blender/animation-specs/TECH_POSE_AUTHORING_PILOT.json` bằng `npm run validate:motion-spec`. Fixture mới dùng exact clip `TECH_POSE_AUTHORING_PILOT`, kiểm tra độc lập hai tay, finger/wrist/arm, head/neck/jaw, NMM, reset, GLB và visual review.
+
+```cmd
+npm run validate:pose-pilot
+npm run sync:technical-assets
+npm run dev
+```
+
+Mở `/technical-sign-preview`. Đây vẫn là `TECHNICAL_FIXTURE_NOT_A_SIGN`; linguistic status là `NOT_APPLICABLE`, không phải PASS. Sign thật vẫn `BLOCKED` cho tới khi sign do Huy Anh sở hữu có reference/provenance/permissions đủ để author và review.
+
 ## Git LFS
 
 Git LFS 3.5.1 có trên máy bootstrap và remote endpoint được nhận diện, nhưng repository chưa bật tracking patterns và remote auth/upload chưa được thử. Prototype `.blend`/`.glb` hiện dưới giới hạn GitHub; trước khi thêm nhiều video/GLB lớn, cả bốn máy phải cài `git lfs`, xác nhận remote quota/auth rồi bật patterns trong PR riêng. Không migrate history tùy tiện.

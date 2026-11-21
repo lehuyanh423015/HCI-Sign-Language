@@ -85,9 +85,9 @@ def ensure_collections():
 def main():
     args = arguments()
     sign_id = args.sign_id.upper()
-    allowed_fixture = sign_id == "TECHNICAL_FIXTURE_NOT_A_SIGN"
+    allowed_fixture = sign_id in {"TECHNICAL_FIXTURE_NOT_A_SIGN", "TECH_POSE_AUTHORING_PILOT"}
     if sign_id != "TEMPLATE" and not allowed_fixture and not re.fullmatch(r"S\d{3}", sign_id):
-        raise RuntimeError("--sign-id must be Snnn, TEMPLATE, or TECHNICAL_FIXTURE_NOT_A_SIGN")
+        raise RuntimeError("--sign-id must be Snnn, TEMPLATE, TECHNICAL_FIXTURE_NOT_A_SIGN, or TECH_POSE_AUTHORING_PILOT")
     if bpy.app.version_string != args.expected_version:
         raise RuntimeError(f"Expected Blender {args.expected_version}, got {bpy.app.version_string}")
     source = Path(bpy.data.filepath).resolve()
@@ -115,7 +115,8 @@ def main():
     scene["sign_pipeline_status"] = "TEMPLATE" if sign_id == "TEMPLATE" else "TECHNICAL_FIXTURE" if allowed_fixture else "IN_PRODUCTION"
     scene["source_master_version"] = "1.0.0"
     scene["source_master_sha256"] = EXPECTED_MASTER_SHA256
-    scene["linguistic_review_status"] = "NOT YET TESTED"
+    linguistic_status = "NOT_APPLICABLE" if allowed_fixture else "NOT YET TESTED"
+    scene["linguistic_review_status"] = linguistic_status
     scene["technical_review_status"] = "NOT YET TESTED"
     after = inventory()
     if before != after:
@@ -137,7 +138,7 @@ def main():
         "inventory": after,
         "neutral_state": state,
         "canonical_overwrite_prevented": source != output,
-        "linguistic_status": "NOT YET TESTED",
+        "linguistic_status": linguistic_status,
     }
     if args.report:
         write_json(args.report, payload)

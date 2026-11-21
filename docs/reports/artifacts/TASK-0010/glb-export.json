@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_animation_glb_export",
+  "status": "PASS",
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "linguistic_status": "NOT_APPLICABLE",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\blender\\working\\pilots\\task-0010\\TECH_POSE_AUTHORING_PILOT.blend",
+    "sha256": "665A8254C3334EE137A16C62A2EBEF41777D3300E916D6A9715C03E4CD96531C"
+  },
+  "clip": "TECH_POSE_AUTHORING_PILOT",
+  "nla_bindings": [
+    {
+      "data_block": "Human.rig",
+      "slot": "OBHuman.rig"
+    },
+    {
+      "data_block": "Key.007",
+      "slot": "KEKey"
+    }
+  ],
+  "shape_key_preparation": {
+    "source_values": {
+      "Basis": 1.0,
+      "$md-$as-$fe-$yn": 0.16500000655651093,
+      "$md-$as-$ma-$yn": 0.16500000655651093,
+      "$md-$ca-$fe-$yn": 0.16500000655651093,
+      "$md-$ca-$ma-$yn": 0.16500000655651093,
+      "$md-$af-$fe-$yn": 0.16500000655651093,
+      "$md-$af-$ma-$yn": 0.16500000655651093,
+      "$md-universal-$fe-$yn-$av$mu-$av$wg": 0.5,
+      "$md-universal-$ma-$yn-$av$mu-$av$wg": 0.5,
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi": 0.08856657892465591,
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi": 0.088466577231884,
+      "NMM_BROW_RAISE_L": 0.0,
+      "NMM_BROW_RAISE_R": 0.0,
+      "NMM_EYE_BLINK_L": 0.0,
+      "NMM_EYE_BLINK_R": 0.0,
+      "NMM_LIPS_ROUND": 0.0,
+      "NMM_LIPS_SPREAD": 0.0
+    },
+    "export_targets": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "vertex_count": 19158
+  },
+  "modifier_preparation": {
+    "status": "PASS",
+    "modifiers": [
+      "Hide helpers"
+    ],
+    "vertices_before": 19158,
+    "vertices_after": 13380,
+    "fully_weighted_vertices": 13380
+  },
+  "output": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\assets\\exports\\technical\\task-0010\\tech-pose-authoring-pilot.glb",
+    "sha256": "993A979FD7CAAD7B8F6CC8874894097C4A67A72510276F4A0AB9CEB5A3A8E76F",
+    "size_bytes": 2341612
+  },
+  "settings": {
+    "filepath": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\assets\\exports\\technical\\task-0010\\tech-pose-authoring-pilot.glb",
+    "export_format": "GLB",
+    "use_selection": true,
+    "export_animations": true,
+    "export_animation_mode": "NLA_TRACKS",
+    "export_merge_animation": "NLA_TRACK",
+    "export_frame_range": true,
+    "export_force_sampling": false,
+    "export_skins": true,
+    "export_armature_object_remove": true,
+    "export_rest_position_armature": true,
+    "export_apply": false,
+    "export_all_influences": false,
+    "export_morph": true,
+    "export_morph_normal": true,
+    "export_morph_tangent": false,
+    "export_cameras": false,
+    "export_lights": false,
+    "export_yup": true
+  }
+}

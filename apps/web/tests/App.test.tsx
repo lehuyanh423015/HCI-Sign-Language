@@ -44,10 +44,11 @@ describe('application routes', () => {
 
   it('renders the isolated sign production preview without publishing a sign', () => {
     const html = renderRoute('/technical-sign-preview');
-    expect(html).toContain('Sign animation production preview');
+    expect(html).toContain('Pose authoring pilot preview');
     expect(html).toContain('TECHNICAL_FIXTURE_NOT_A_SIGN');
-    expect(html).toContain('NOT YET TESTED');
-    expect(html).toContain('TECH_HAND_FACE_TEST');
+    expect(html).toContain('NOT_APPLICABLE');
+    expect(html).toContain('TECH_POSE_AUTHORING_PILOT');
+    expect(html).toContain('BLOCKED');
     expect(html).not.toContain('<h2>S001</h2>');
   });
 });

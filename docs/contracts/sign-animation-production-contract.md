@@ -18,6 +18,8 @@ Script kiểm tra SHA-256/version/hierarchy, từ chối ghi đè master hoặc 
 
 ## 3. Sản xuất animation
 
+Motion spec phải theo `docs/contracts/sign-motion-spec.schema.json`; quy trình data-driven và lệnh Blender chuẩn nằm tại `docs/workflows/SIGN_POSE_AUTHORING.md`. Technical pose library chỉ là rig control, không được đổi tên thành linguistic handshape.
+
 - Clip chính tên chính xác `Snnn_MAIN`; frame 1 neutral; frame cuối khớp clip.
 - Dùng body, hai tay, năm chuỗi ngón mỗi tay, head/neck/jaw/eye và sáu `NMM_` targets khi reference yêu cầu.
 - Không thêm/xóa/rename/reparent bone; không sửa rest pose, bindings, geometry hoặc tên Morph Target.
