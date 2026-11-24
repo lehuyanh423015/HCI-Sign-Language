@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "artifact": "projected_sign_landmark_measurement",
+  "status": "PASS",
+  "identifier": "S001",
+  "clip": "S001_MAIN",
+  "classification": "TECHNICAL_GEOMETRY_MEASUREMENT_NOT_LINGUISTIC_VALIDATION",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011B\\blender\\working\\signs\\S001\\S001.blend",
+    "sha256": "207CE81CC6A6CDFA66E37B41899F530F1CE625388450D80FEA49F545FBA0A5D7"
+  },
+  "camera": {
+    "location": [
+      0.0,
+      -2.35,
+      1.42
+    ],
+    "lens_mm": 58,
+    "target": [
+      0.0,
+      -0.04,
+      1.3
+    ]
+  },
+  "coordinate_notes": "NDC uses image width/height in [0,1]; shoulder-normalized values divide by projected shoulder span. Positive y is upward.",
+  "samples": [
+    {
+      "frame": 15,
+      "semantic_label": "initial_open",
+      "shoulder_center_ndc": {
+        "x": 0.513121,
+        "y": 0.515961
+      },
+      "shoulder_span_ndc": 0.22164,
+      "landmarks_ndc": {
+        "L": {
+          "shoulder": {
+            "x": 0.623941,
+            "y": 0.514463,
+            "depth": 2.361717
+          },
+          "elbow": {
+            "x": 0.749216,
+            "y": 0.404045,
+            "depth": 2.31766
+          },
+          "wrist": {
+            "x": 0.86012,
+            "y": 0.529872,
+            "depth": 2.290595
+          },
+          "index_fingertip": {
+            "x": 0.930236,
+            "y": 0.626464,
+            "depth": 2.200347
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x": 0.402301,
+            "y": 0.51746,
+            "depth": 2.443985
+          },
+          "elbow": {
+            "x": 0.286596,
+            "y": 0.417795,
+            "depth": 2.489294
+          },
+          "wrist": {
+            "x": 0.199874,
+            "y": 0.536997,
+            "depth": 2.536097
+          },
+          "index_fingertip": {
+            "x": 0.126426,
+            "y": 0.623782,
+            "depth": 2.490919
+          }
+        }
+      },
+      "landmarks_shoulder_normalized": {
+        "L": {
+          "shoulder": {
+            "x_from_shoulder_center": 0.5,
+            "y_up_from_shoulder_center": -0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": 1.065218,
+            "y_up_from_shoulder_center": -0.504947
+          },
+          "wrist": {
+            "x_from_shoulder_center": 1.565597,
+            "y_up_from_shoulder_center": 0.062762
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": 1.881948,
+            "y_up_from_shoulder_center": 0.498567
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x_from_shoulder_center": -0.5,
+            "y_up_from_shoulder_center": 0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": -1.02204,
+            "y_up_from_shoulder_center": -0.44291
+          },
+          "wrist": {
+            "x_from_shoulder_center": -1.413314,
+            "y_up_from_shoulder_center": 0.094908
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": -1.744699,
+            "y_up_from_shoulder_center": 0.486467
+          }
+        }
+      }
+    },
+    {
+      "frame": 21,
+      "semantic_label": "oscillation_a",
+      "shoulder_center_ndc": {
+        "x": 0.513121,
+        "y": 0.515961
+      },
+      "shoulder_span_ndc": 0.22164,
+      "landmarks_ndc": {
+        "L": {
+          "shoulder": {
+            "x": 0.623941,
+            "y": 0.514463,
+            "depth": 2.361717
+          },
+          "elbow": {
+            "x": 0.749216,
+            "y": 0.404045,
+            "depth": 2.31766
+          },
+          "wrist": {
+            "x": 0.86012,
+            "y": 0.529872,
+            "depth": 2.290595
+          },
+          "index_fingertip": {
+            "x": 0.94052,
+            "y": 0.608714,
+            "depth": 2.176507
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x": 0.402301,
+            "y": 0.51746,
+            "depth": 2.443985
+          },
+          "elbow": {
+            "x": 0.286596,
+            "y": 0.417795,
+            "depth": 2.489294
+          },
+          "wrist": {
+            "x": 0.199874,
+            "y": 0.536997,
+            "depth": 2.536097
+          },
+          "index_fingertip": {
+            "x": 0.111687,
+            "y": 0.608084,
+            "depth": 2.473599
+          }
+        }
+      },
+      "landmarks_shoulder_normalized": {
+        "L": {
+          "shoulder": {
+            "x_from_shoulder_center": 0.5,
+            "y_up_from_shoulder_center": -0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": 1.065218,
+            "y_up_from_shoulder_center": -0.504947
+          },
+          "wrist": {
+            "x_from_shoulder_center": 1.565597,
+            "y_up_from_shoulder_center": 0.062762
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": 1.928348,
+            "y_up_from_shoulder_center": 0.418483
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x_from_shoulder_center": -0.5,
+            "y_up_from_shoulder_center": 0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": -1.02204,
+            "y_up_from_shoulder_center": -0.44291
+          },
+          "wrist": {
+            "x_from_shoulder_center": -1.413314,
+            "y_up_from_shoulder_center": 0.094908
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": -1.811198,
+            "y_up_from_shoulder_center": 0.41564
+          }
+        }
+      }
+    },
+    {
+      "frame": 27,
+      "semantic_label": "oscillation_b",
+      "shoulder_center_ndc": {
+        "x": 0.513121,
+        "y": 0.515961
+      },
+      "shoulder_span_ndc": 0.22164,
+      "landmarks_ndc": {
+        "L": {
+          "shoulder": {
+            "x": 0.623941,
+            "y": 0.514463,
+            "depth": 2.361717
+          },
+          "elbow": {
+            "x": 0.74724,
+            "y": 0.401874,
+            "depth": 2.318137
+          },
+          "wrist": {
+            "x": 0.860351,
+            "y": 0.525727,
+            "depth": 2.290359
+          },
+          "index_fingertip": {
+            "x": 0.907803,
+            "y": 0.641176,
+            "depth": 2.245476
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x": 0.402301,
+            "y": 0.51746,
+            "depth": 2.443985
+          },
+          "elbow": {
+            "x": 0.288188,
+            "y": 0.41567,
+            "depth": 2.488439
+          },
+          "wrist": {
+            "x": 0.199532,
+            "y": 0.533259,
+            "depth": 2.536062
+          },
+          "index_fingertip": {
+            "x": 0.155799,
+            "y": 0.637048,
+            "depth": 2.521564
+          }
+        }
+      },
+      "landmarks_shoulder_normalized": {
+        "L": {
+          "shoulder": {
+            "x_from_shoulder_center": 0.5,
+            "y_up_from_shoulder_center": -0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": 1.056303,
+            "y_up_from_shoulder_center": -0.514742
+          },
+          "wrist": {
+            "x_from_shoulder_center": 1.56664,
+            "y_up_from_shoulder_center": 0.04406
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": 1.780735,
+            "y_up_from_shoulder_center": 0.564945
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x_from_shoulder_center": -0.5,
+            "y_up_from_shoulder_center": 0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": -1.014857,
+            "y_up_from_shoulder_center": -0.452497
+          },
+          "wrist": {
+            "x_from_shoulder_center": -1.414857,
+            "y_up_from_shoulder_center": 0.078043
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": -1.612173,
+            "y_up_from_shoulder_center": 0.546321
+          }
+        }
+      }
+    },
+    {
+      "frame": 33,
+      "semantic_label": "oscillation_a2",
+      "shoulder_center_ndc": {
+        "x": 0.513121,
+        "y": 0.515961
+      },
+      "shoulder_span_ndc": 0.22164,
+      "landmarks_ndc": {
+        "L": {
+          "shoulder": {
+            "x": 0.623941,
+            "y": 0.514463,
+            "depth": 2.361717
+          },
+          "elbow": {
+            "x": 0.749216,
+            "y": 0.404045,
+            "depth": 2.31766
+          },
+          "wrist": {
+            "x": 0.86012,
+            "y": 0.529872,
+            "depth": 2.290595
+          },
+          "index_fingertip": {
+            "x": 0.94052,
+            "y": 0.608714,
+            "depth": 2.176507
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x": 0.402301,
+            "y": 0.51746,
+            "depth": 2.443985
+          },
+          "elbow": {
+            "x": 0.286596,
+            "y": 0.417795,
+            "depth": 2.489294
+          },
+          "wrist": {
+            "x": 0.199874,
+            "y": 0.536997,
+            "depth": 2.536097
+          },
+          "index_fingertip": {
+            "x": 0.111687,
+            "y": 0.608084,
+            "depth": 2.473599
+          }
+        }
+      },
+      "landmarks_shoulder_normalized": {
+        "L": {
+          "shoulder": {
+            "x_from_shoulder_center": 0.5,
+            "y_up_from_shoulder_center": -0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": 1.065218,
+            "y_up_from_shoulder_center": -0.504947
+          },
+          "wrist": {
+            "x_from_shoulder_center": 1.565597,
+            "y_up_from_shoulder_center": 0.062762
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": 1.928348,
+            "y_up_from_shoulder_center": 0.418483
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x_from_shoulder_center": -0.5,
+            "y_up_from_shoulder_center": 0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": -1.02204,
+            "y_up_from_shoulder_center": -0.44291
+          },
+          "wrist": {
+            "x_from_shoulder_center": -1.413314,
+            "y_up_from_shoulder_center": 0.094908
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": -1.811198,
+            "y_up_from_shoulder_center": 0.41564
+          }
+        }
+      }
+    },
+    {
+      "frame": 45,
+      "semantic_label": "final_open",
+      "shoulder_center_ndc": {
+        "x": 0.513121,
+        "y": 0.515961
+      },
+      "shoulder_span_ndc": 0.22164,
+      "landmarks_ndc": {
+        "L": {
+          "shoulder": {
+            "x": 0.623941,
+            "y": 0.514463,
+            "depth": 2.361717
+          },
+          "elbow": {
+            "x": 0.745226,
+            "y": 0.399738,
+            "depth": 2.318626
+          },
+          "wrist": {
+            "x": 0.868316,
+            "y": 0.514213,
+            "depth": 2.273838
+          },
+          "index_fingertip": {
+            "x": 0.948287,
+            "y": 0.59881,
+            "depth": 2.168567
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x": 0.402301,
+            "y": 0.51746,
+            "depth": 2.443985
+          },
+          "elbow": {
+            "x": 0.289816,
+            "y": 0.413575,
+            "depth": 2.487569
+          },
+          "wrist": {
+            "x": 0.188718,
+            "y": 0.523096,
+            "depth": 2.525142
+          },
+          "index_fingertip": {
+            "x": 0.103742,
+            "y": 0.599379,
+            "depth": 2.470581
+          }
+        }
+      },
+      "landmarks_shoulder_normalized": {
+        "L": {
+          "shoulder": {
+            "x_from_shoulder_center": 0.5,
+            "y_up_from_shoulder_center": -0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": 1.047216,
+            "y_up_from_shoulder_center": -0.52438
+          },
+          "wrist": {
+            "x_from_shoulder_center": 1.602576,
+            "y_up_from_shoulder_center": -0.007889
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": 1.963391,
+            "y_up_from_shoulder_center": 0.373798
+          }
+        },
+        "R": {
+          "shoulder": {
+            "x_from_shoulder_center": -0.5,
+            "y_up_from_shoulder_center": 0.006761
+          },
+          "elbow": {
+            "x_from_shoulder_center": -1.007512,
+            "y_up_from_shoulder_center": -0.46195
+          },
+          "wrist": {
+            "x_from_shoulder_center": -1.463648,
+            "y_up_from_shoulder_center": 0.03219
+          },
+          "index_fingertip": {
+            "x_from_shoulder_center": -1.847045,
+            "y_up_from_shoulder_center": 0.376365
+          }
+        }
+      }
+    }
+  ]
+}

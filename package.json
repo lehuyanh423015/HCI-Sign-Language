@@ -38,7 +38,7 @@
     "test:technical-viewer": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer --report docs/reports/artifacts/TASK-0003-browser-runtime.json --screenshot docs/reports/artifacts/TASK-0003-browser-runtime.png",
     "test:neutral-viewer": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-viewer --report docs/reports/artifacts/TASK-0004-browser-runtime.json --full-screenshot docs/reports/artifacts/TASK-0004-browser-full.png --screenshot docs/reports/artifacts/TASK-0004-browser-runtime.png",
     "test:facial-viewer": "node tools/test-facial-viewer.mjs",
-    "test:sign-preview": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-sign-preview --report docs/reports/artifacts/TASK-0010/sign-preview-browser.json --screenshot docs/reports/artifacts/TASK-0010/sign-preview-browser.png",
+    "test:sign-preview": "node tools/test-technical-viewer.mjs --url http://127.0.0.1:4173/technical-sign-preview --report docs/reports/artifacts/TASK-0011A/sign-preview-browser.json --screenshot docs/reports/artifacts/TASK-0011A/sign-preview-browser.png",
     "check": "npm run typecheck && npm run lint && npm run validate:data && npm run validate:motion-spec && npm run validate:sign-packages && npm run validate:pose-pilot && npm run sync:data:check && npm run sync:technical-assets && npm run sync:technical-assets:check && npm run test && npm run build && npm run validate:assets && npm run validate:technical-asset && npm run validate:neutral-asset && npm run validate:facial-asset && npm run verify:master && npm run validate:master-static && npm run validate:morph-poc && npm run validate:master-v1"
   },
   "devDependencies": {

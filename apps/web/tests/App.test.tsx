@@ -42,13 +42,14 @@ describe('application routes', () => {
     expect(html).toContain('master-avatar-v1-technical-demo.glb');
   });
 
-  it('renders the isolated sign production preview without publishing a sign', () => {
+  it('renders the isolated S001 technical draft without publishing approved lesson content', () => {
     const html = renderRoute('/technical-sign-preview');
-    expect(html).toContain('Pose authoring pilot preview');
-    expect(html).toContain('TECHNICAL_FIXTURE_NOT_A_SIGN');
-    expect(html).toContain('NOT_APPLICABLE');
-    expect(html).toContain('TECH_POSE_AUTHORING_PILOT');
-    expect(html).toContain('BLOCKED');
-    expect(html).not.toContain('<h2>S001</h2>');
+    expect(html).toContain('S001 — Xin chào');
+    expect(html).toContain('TECHNICAL DRAFT');
+    expect(html).toContain('PASS — owner accepted prototype 2026-11-24');
+    expect(html).toContain('NOT YET TESTED');
+    expect(html).toContain('S001_MAIN');
+    expect(html).toContain('LOCAL STAGING ONLY — educational publication NOT APPROVED');
+    expect(html).toContain('s001-xin-chao-task-0011b-refined.glb');
   });
 });

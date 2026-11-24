@@ -20,6 +20,10 @@ const assets = [
     source: 'assets/exports/technical/task-0010/tech-pose-authoring-pilot.glb',
     destination: 'tech-pose-authoring-pilot.glb',
   },
+  {
+    source: 'assets/exports/signs/staging/S001-task-0011b.glb',
+    destination: 's001-xin-chao-task-0011b-refined.glb',
+  },
 ];
 const checkOnly = process.argv.includes('--check');
 

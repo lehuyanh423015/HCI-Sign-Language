@@ -69,11 +69,21 @@ const ajv = new Ajv2020({
 const validate = ajv.compile(JSON.parse(readFileSync(schemaPath, 'utf8')));
 const packages = [];
 const allChecks = [];
+let s001Acceptance = null;
 
 for (const signId of ['S001', 'S002', 'S003', 'S004', 'S005', 'S006']) {
   const packageDirectory = path.join(workspaceRoot, signId);
   const metadataPath = path.join(packageDirectory, 'sign.json');
   const metadata = JSON.parse(readFileSync(metadataPath, 'utf8'));
+  if (signId === 'S001') {
+    s001Acceptance = {
+      status: metadata.review.technical_review_status === 'PASS' ? 'TECHNICAL_ACCEPTED' : 'TECHNICAL_REVIEW_PENDING',
+      technical_review_status: metadata.review.technical_review_status,
+      linguistic_review_status: metadata.review.linguistic_review_status,
+      educational_publication_status: metadata.identity.status === 'APPROVED' ? 'APPROVED' : 'NOT_APPROVED',
+      classification: 'TECHNICAL_DRAFT',
+    };
+  }
   const valid = validate(metadata);
   const checks = [
     check('schema', valid ? 'PASS' : 'FAIL', valid ? 'valid' : validate.errors),
@@ -111,7 +121,7 @@ const report = {
   status: allChecks.some((item) => item.status === 'FAIL') ? 'FAIL' : 'PASS',
   placeholder_packages: packages,
   pilot,
-  actual_sign_pilot: { status: 'BLOCKED', reason: 'No verified owner-provided VSL reference exists for S001-S006.' },
+  actual_sign_pilot: s001Acceptance,
   checks: allChecks,
 };
 mkdirSync(path.dirname(reportPath), { recursive: true });

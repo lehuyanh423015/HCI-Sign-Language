@@ -1,8 +1,45 @@
 {
   "schema_version": 1,
-  "identity": { "sign_id": "S001", "display_name": null, "gloss": null, "language_variant": null, "status": "REFERENCE_PENDING" },
-  "reference": { "reference_source": null, "reference_url": null, "reference_author": null, "reference_date": null, "reference_media": [], "reference_notes": null, "source_verification_status": "NOT YET TESTED" },
-  "production": { "master_avatar_version": "1.0.0", "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC", "animation_version": "0.0.0-placeholder", "animation_file": null, "export_file": null, "animation_clips": ["S001_MAIN"], "preview_file": null },
-  "review": { "technical_review_status": "NOT YET TESTED", "linguistic_review_status": "NOT YET TESTED", "reviewer": null, "review_notes": null, "approval_date": null },
-  "non_manual_markers": { "nmm_targets": [], "eye_gaze": null, "head_movement": null, "jaw_movement": null, "notes": null }
+  "identity": {
+    "sign_id": "S001",
+    "display_name": "Xin chào",
+    "gloss": "XIN CHÀO",
+    "language_variant": "Hà Nội",
+    "status": "LINGUISTIC_REVIEW"
+  },
+  "reference": {
+    "reference_source": "Video do chủ dự án cung cấp, trích từ nguồn YouTube đã chỉ định",
+    "reference_url": "https://www.youtube.com/watch?v=4avGnxaLmb0",
+    "reference_author": null,
+    "reference_date": null,
+    "reference_media": [
+      "blender/working/signs/S001/references/xin_chao-owner-provided.mp4",
+      "blender/working/signs/S001/references/s001-take2-analysis-03.05-05.00.mp4"
+    ],
+    "reference_notes": "Nguồn gốc 00:04-00:08; clip cục bộ dài 5,76 giây có hai lượt thực hiện. Lượt 00:03.05-00:05.00 được chọn để authoring kỹ thuật. Các file reference_media là dữ liệu riêng tư, chỉ lưu cục bộ và không được đưa lên GitHub.",
+    "source_verification_status": "PASS"
+  },
+  "production": {
+    "master_avatar_version": "1.0.0",
+    "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC",
+    "animation_version": "0.2.0-draft",
+    "animation_file": "blender/working/signs/S001/S001.blend",
+    "export_file": "assets/exports/signs/S001.glb",
+    "animation_clips": ["S001_MAIN"],
+    "preview_file": "docs/reports/artifacts/TASK-0011B/visual-review/S001-task-0011b-refined-1080p.mp4"
+  },
+  "review": {
+    "technical_review_status": "PASS",
+    "linguistic_review_status": "NOT YET TESTED",
+    "reviewer": "Project owner — technical acceptance",
+    "review_notes": "Chủ dự án chấp nhận TASK-0011B/v4 ngày 2026-11-24 ở mức nguyên mẫu kỹ thuật. Chưa được kiểm tra ngôn ngữ và chưa được phê duyệt để xuất bản giáo dục. Có thể tinh chỉnh thêm nhịp/vòng lặp vẫy tay sau phản hồi ngôn ngữ.",
+    "approval_date": null
+  },
+  "non_manual_markers": {
+    "nmm_targets": [],
+    "eye_gaze": "Quan sát thấy hướng nhìn về camera; chưa author điều khiển gaze riêng.",
+    "head_movement": "Đầu nhìn chung thẳng; chưa xác nhận chuyển động đầu mang chức năng ngôn ngữ.",
+    "jaw_movement": "Có khẩu hình/nụ cười trong video nhưng chưa author vì vai trò NMM chưa được xác minh.",
+    "notes": "Sáu morph target NMM vẫn tồn tại trong asset nhưng đều ở trạng thái trung tính trong draft này."
+  }
 }

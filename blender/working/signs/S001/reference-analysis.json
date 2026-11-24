@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sign_id": "S001",
+  "label": "Xin chào",
+  "language_variant": "Hà Nội",
+  "decision": "SUFFICIENT_FOR_TECHNICAL_DRAFT_NOT_LINGUISTIC_APPROVAL",
+  "reference": {
+    "original_url": "https://www.youtube.com/watch?v=4avGnxaLmb0",
+    "owner_confirmed_permission": true,
+    "original_timestamp_range": "00:04-00:08",
+    "local_media": "blender/working/signs/S001/references/xin_chao-owner-provided.mp4",
+    "local_sha256": "5A84E354C54EBD8446032ACC4C62FD9098E67063DFDAA76EE83B36D11A9100FB",
+    "local_duration_seconds": 5.76,
+    "local_video": { "width": 2560, "height": 1440, "fps": 60 },
+    "selected_take": "local 00:03.05-00:05.00",
+    "secondary_take": "local 00:00.35-00:02.00"
+  },
+  "observations": {
+    "performer_orientation": { "status": "OBSERVED", "value": "frontal to camera" },
+    "dominant_hand": { "status": "OBSERVED", "value": "BOTH; approximately symmetrical" },
+    "starting_pose": { "status": "OBSERVED", "value": "both hands low at lower torso, relaxed/overlapping before lift" },
+    "ending_pose": { "status": "OBSERVED", "value": "both hands lower from signing space toward relaxed lower-torso recovery" },
+    "active_handshape": { "status": "OBSERVED", "value": "both hands open; five digits extended and visibly spread; thumbs abducted" },
+    "inactive_handshape": { "status": "NOT_APPLICABLE", "value": "both hands participate" },
+    "finger_openness": { "status": "OBSERVED", "value": "open/spread with natural joint flex; no closed fist or body contact" },
+    "palm_orientation": { "status": "OBSERVED", "value": "generally toward camera/front during raised interval" },
+    "wrist_orientation": { "status": "OBSERVED", "value": "alternating bilateral side tilt/oscillation while palms remain broadly forward" },
+    "upper_arm_elbow": { "status": "OBSERVED", "value": "bilateral shoulder abduction and elbow flexion raise hands to shoulder/face height" },
+    "hand_location": { "status": "OBSERVED", "value": "bilateral signing space lateral to upper chest and shoulders" },
+    "motion_path": { "status": "OBSERVED", "value": "low center/lower torso -> outward and upward -> localized repeated wrist/hand oscillation -> downward recovery" },
+    "motion_direction": { "status": "OBSERVED", "value": "bilateral outward/upward entry, symmetric localized alternating tilt, then downward exit" },
+    "speed_pattern": { "status": "OBSERVED", "value": "quick lift, approximately even oscillation, slower recovery" },
+    "repetition": { "status": "NEEDS_CONFIRMATION", "value": "at least two clear alternating wrist/hand tilts; exact linguistic cycle count is ambiguous" },
+    "body_contact": { "status": "OBSERVED", "value": "none visible" },
+    "head_movement": { "status": "OBSERVED", "value": "head remains broadly upright; small natural performance motion only" },
+    "eye_gaze": { "status": "OBSERVED", "value": "toward camera/viewer for most of the sign" },
+    "facial_expression": { "status": "NEEDS_CONFIRMATION", "value": "friendly smile and speech-like mouth articulation are visible; lexical/grammatical NMM role is unknown" }
+  },
+  "uncertainties": [
+    "Single frontal camera does not establish exact depth or local Euler wrist/arm rotations.",
+    "Motion blur prevents exact finger joint angles at the fastest oscillation frames.",
+    "Exact linguistic repetition count needs qualified reviewer confirmation.",
+    "Visible smile/mouth movement may be presentation or spoken Vietnamese rather than required NMM.",
+    "Neutral entry/recovery are video presentation transitions, not claimed as part of the lexical sign."
+  ],
+  "draft_policy": {
+    "exact_rotations": "ASSUMED_TECHNICAL from frontal evidence",
+    "facial_morphs": "left neutral; NMM remains UNKNOWN",
+    "linguistic_status": "NOT YET TESTED",
+    "lesson_catalog": "FORBIDDEN pending qualified review"
+  }
+}

@@ -26,6 +26,19 @@ def arguments():
     parser.add_argument("--output-directory", required=True)
     parser.add_argument("--report", required=True)
     parser.add_argument("--expected-version", default="5.2.4 LTS")
+    parser.add_argument("--identifier", default=FIXTURE_ID)
+    parser.add_argument("--clip", default=CLIP_NAME)
+    parser.add_argument("--classification", default="TECHNICAL_FIXTURE_NOT_A_SIGN")
+    parser.add_argument("--linguistic-status", default="NOT_APPLICABLE")
+    parser.add_argument("--key-frames", default="1,12,24,36,48,60")
+    parser.add_argument("--upper-frame", type=int, default=24)
+    parser.add_argument("--left-frame", type=int, default=36)
+    parser.add_argument("--right-frame", type=int, default=24)
+    parser.add_argument("--front-frame", type=int, default=48)
+    parser.add_argument("--three-quarter-frame", type=int, default=48)
+    parser.add_argument("--video-name", default="tech-pose-authoring-pilot.mp4")
+    parser.add_argument("--resolution-x", type=int, default=640)
+    parser.add_argument("--resolution-y", type=int, default=640)
     values = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     return parser.parse_args(values)
 
@@ -50,12 +63,14 @@ def create_label(scene, camera):
     data = bpy.data.curves.new("TASK0010_LabelData", "FONT")
     data.align_x = "LEFT"
     data.align_y = "TOP"
-    data.size = 0.020
+    data.size = 0.011
     data.extrude = 0.001
     obj = bpy.data.objects.new("TASK0010_Label", data)
     scene.collection.objects.link(obj)
     obj.parent = camera
-    obj.location = (-0.46, 0.40, -1.45)
+    # Keep a safe inset from the camera frustum so labels remain readable at
+    # square and widescreen review resolutions.
+    obj.location = (-0.36, 0.22, -1.45)
     obj.rotation_euler = (0.0, 0.0, 0.0)
     material = make_emission_material()
     data.materials.append(material)
@@ -70,12 +85,12 @@ def hand_target(armature, side):
 def configure_camera(camera, mode, armature):
     if mode == "left_hand":
         target = hand_target(armature, "L")
-        camera.location = target + Vector((0.0, -0.50, 0.06))
-        camera.data.lens = 66
+        camera.location = target + Vector((0.0, -0.75, 0.06))
+        camera.data.lens = 60
     elif mode == "right_hand":
         target = hand_target(armature, "R")
-        camera.location = target + Vector((0.0, -0.50, 0.06))
-        camera.data.lens = 66
+        camera.location = target + Vector((0.0, -0.75, 0.06))
+        camera.data.lens = 60
     elif mode == "three_quarter":
         target = Vector((0.0, -0.04, 1.24))
         camera.location = Vector((1.75, -2.25, 1.48))
@@ -91,12 +106,16 @@ def configure_camera(camera, mode, armature):
     look_at(camera, target)
 
 
-def render_still(scene, camera, label, frame, mode, output):
+def review_label(identifier, clip, classification, frame, fps):
+    return "ID: %s | CLIP: %s\nF%03d | %.2fs\n%s" % (
+        identifier, clip, frame, (frame - 1) / fps, classification.replace("_", " "),
+    )
+
+
+def render_still(scene, camera, label, frame, mode, output, args):
     scene.frame_set(frame)
     configure_camera(camera, mode, bpy.data.objects["Human.rig"])
-    label.data.body = "ID/CLIP: TECH_POSE_AUTHORING_PILOT\nF%03d | %.2fs\nTECHNICAL FIXTURE | NOT A SIGN" % (
-        frame, (frame - 1) / scene.render.fps,
-    )
+    label.data.body = review_label(args.identifier, args.clip, args.classification, frame, scene.render.fps)
     scene.render.filepath = str(output)
     scene.render.image_settings.file_format = "PNG"
     bpy.ops.render.render(write_still=True)
@@ -135,8 +154,13 @@ def main():
     if bpy.app.version_string != args.expected_version:
         raise RuntimeError("Expected Blender %s, got %s" % (args.expected_version, bpy.app.version_string))
     scene = bpy.context.scene
-    if bpy.data.actions.get(CLIP_NAME) is None:
-        raise RuntimeError("Required Action missing: %s" % CLIP_NAME)
+    if bpy.data.actions.get(args.clip) is None:
+        raise RuntimeError("Required Action missing: %s" % args.clip)
+    key_frames = [int(value.strip()) for value in args.key_frames.split(",") if value.strip()]
+    if len(key_frames) < 2 or key_frames != sorted(set(key_frames)):
+        raise RuntimeError("--key-frames must contain unique increasing integers")
+    if args.resolution_x < 320 or args.resolution_y < 320:
+        raise RuntimeError("Review resolution must be at least 320x320")
     output_directory = Path(args.output_directory).resolve()
     raw_directory = output_directory / "raw"
     raw_directory.mkdir(parents=True, exist_ok=True)
@@ -166,41 +190,39 @@ def main():
 
     scene.render.engine = "BLENDER_EEVEE"
     scene.world.color = (0.025, 0.035, 0.032)
-    scene.render.resolution_x = 640
-    scene.render.resolution_y = 640
+    scene.render.resolution_x = args.resolution_x
+    scene.render.resolution_y = args.resolution_y
     scene.render.resolution_percentage = 100
     scene.render.film_transparent = False
 
     evidence = []
-    evidence.append(render_still(scene, camera, label, 24, "upper_body", output_directory / "upper-body-frame-024.png"))
-    evidence.append(render_still(scene, camera, label, 36, "left_hand", output_directory / "left-hand-frame-036.png"))
-    evidence.append(render_still(scene, camera, label, 24, "right_hand", output_directory / "right-hand-frame-024.png"))
-    evidence.append(render_still(scene, camera, label, 48, "full_front", output_directory / "front-frame-048.png"))
-    evidence.append(render_still(scene, camera, label, 48, "three_quarter", output_directory / "three-quarter-frame-048.png"))
+    evidence.append(render_still(scene, camera, label, args.upper_frame, "upper_body", output_directory / ("upper-body-frame-%03d.png" % args.upper_frame), args))
+    evidence.append(render_still(scene, camera, label, args.left_frame, "left_hand", output_directory / ("left-hand-frame-%03d.png" % args.left_frame), args))
+    evidence.append(render_still(scene, camera, label, args.right_frame, "right_hand", output_directory / ("right-hand-frame-%03d.png" % args.right_frame), args))
+    evidence.append(render_still(scene, camera, label, args.front_frame, "full_front", output_directory / ("front-frame-%03d.png" % args.front_frame), args))
+    evidence.append(render_still(scene, camera, label, args.three_quarter_frame, "three_quarter", output_directory / ("three-quarter-frame-%03d.png" % args.three_quarter_frame), args))
 
     key_paths = []
-    for frame in (1, 12, 24, 36, 48, 60):
+    for frame in key_frames:
         path = raw_directory / ("key-pose-%03d.png" % frame)
-        evidence.append(render_still(scene, camera, label, frame, "upper_body", path))
+        evidence.append(render_still(scene, camera, label, frame, "upper_body", path, args))
         key_paths.append(path)
     contact = create_contact_sheet(scene, key_paths, output_directory / "key-pose-contact-sheet.png")
 
     configure_camera(camera, "upper_body", bpy.data.objects["Human.rig"])
-    scene.frame_start = 1
-    scene.frame_end = 60
-    scene.render.resolution_x = 640
-    scene.render.resolution_y = 640
+    scene.frame_start = key_frames[0]
+    scene.frame_end = key_frames[-1]
+    scene.render.resolution_x = args.resolution_x
+    scene.render.resolution_y = args.resolution_y
     sequence_directory = output_directory / "animation-frames"
     sequence_directory.mkdir(parents=True, exist_ok=True)
     scene.render.image_settings.file_format = "PNG"
-    video_path = output_directory / "tech-pose-authoring-pilot.mp4"
+    video_path = output_directory / args.video_name
     scene.render.filepath = str(sequence_directory / "frame_")
 
     def update_label(current_scene):
         frame = current_scene.frame_current
-        label.data.body = "ID/CLIP: TECH_POSE_AUTHORING_PILOT\nF%03d | %.2fs\nTECHNICAL FIXTURE | NOT A SIGN" % (
-            frame, (frame - 1) / current_scene.render.fps,
-        )
+        label.data.body = review_label(args.identifier, args.clip, args.classification, frame, current_scene.render.fps)
 
     bpy.app.handlers.frame_change_pre.append(update_label)
     try:
@@ -224,7 +246,7 @@ def main():
     sequence_directory.rmdir()
     video = {
         "path": str(video_path), "sha256": sha256(video_path), "size_bytes": video_path.stat().st_size,
-        "frames": 60, "fps": 30, "encoder": ffmpeg, "command": ffmpeg_command,
+        "frames": scene.frame_end - scene.frame_start + 1, "fps": 30, "encoder": ffmpeg, "command": ffmpeg_command,
     }
     scene.camera = original_camera
     bpy.data.objects.remove(label, do_unlink=True)
@@ -238,12 +260,15 @@ def main():
 
     report = {
         "schema_version": 1,
-        "artifact": "task0010_pose_authoring_visual_review",
-        "status": "PASS" if len(evidence) == 11 and video["size_bytes"] > 0 else "FAIL",
-        "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
-        "linguistic_status": "NOT_APPLICABLE",
+        "artifact": "sign_animation_visual_review",
+        "status": "PASS" if len(evidence) == 5 + len(key_frames) and video["size_bytes"] > 0 else "FAIL",
+        "identifier": args.identifier,
+        "clip": args.clip,
+        "classification": args.classification,
+        "linguistic_status": args.linguistic_status,
         "blender_version": bpy.app.version_string,
         "source": {"path": bpy.data.filepath, "sha256": sha256(bpy.data.filepath)},
+        "resolution": {"width": args.resolution_x, "height": args.resolution_y},
         "stills": evidence,
         "contact_sheet": contact,
         "video": video,

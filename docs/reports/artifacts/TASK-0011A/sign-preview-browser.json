@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "url": "http://127.0.0.1:4173/technical-sign-preview",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "gltf_and_canvas_ready",
+      "status": "PASS",
+      "evidence": {
+        "status": "Sẵn sàng · S001_MAIN · 2.00s",
+        "canvas": true,
+        "width": 1118,
+        "height": 620
+      }
+    },
+    {
+      "id": "animation_progresses",
+      "status": "PASS",
+      "evidence": {
+        "timeBefore": 0.22,
+        "timeAfter": 0.42
+      }
+    },
+    {
+      "id": "pause",
+      "status": "PASS",
+      "evidence": {
+        "pausedA": 0.42,
+        "pausedB": 0.42
+      }
+    },
+    {
+      "id": "resume",
+      "status": "PASS",
+      "evidence": {
+        "pausedB": 0.42,
+        "resumed": 0.59
+      }
+    },
+    {
+      "id": "replay",
+      "status": "PASS",
+      "evidence": {
+        "replayed": 0.04
+      }
+    },
+    {
+      "id": "loop_toggle",
+      "status": "PASS",
+      "evidence": {
+        "loopLabel": "Loop: Tắt"
+      }
+    },
+    {
+      "id": "speed_toggle",
+      "status": "PASS",
+      "evidence": {
+        "speedLabel": "Tốc độ: 0.5×"
+      }
+    },
+    {
+      "id": "camera_controls",
+      "status": "PASS",
+      "evidence": {
+        "resetFound": true,
+        "resetPreset": "full",
+        "handFound": true,
+        "handPreset": "hand"
+      }
+    }
+  ],
+  "screenshot": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\sign-preview-browser.png",
+  "runtime_exceptions": []
+}

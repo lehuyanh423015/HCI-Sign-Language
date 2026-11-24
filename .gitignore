@@ -41,3 +41,7 @@ assets/previews/*
 
 # Generated web copy; canonical technical GLB lives in assets/exports/technical/.
 apps/web/public/models/technical/*.glb
+
+# Private sign reference media and extracted performer frames are local-only.
+blender/working/signs/*/references/
+docs/reports/artifacts/*/reference-analysis/

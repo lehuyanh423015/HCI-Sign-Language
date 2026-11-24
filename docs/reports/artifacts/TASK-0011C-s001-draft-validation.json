@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_production_candidate_glb_validation",
+  "status": "PASS",
+  "classification": "SIGN_PRODUCTION_CANDIDATE_TECHNICAL_DRAFT",
+  "linguistic_status": "NOT YET TESTED",
+  "sign_id": "S001",
+  "clip": "S001_MAIN",
+  "asset": {
+    "path": "assets/exports/signs/S001.glb",
+    "sha256": "006109E192A82898F0C0997D0DC11F8E31BC08362DA34A517AE3B7A40C19B627",
+    "size_bytes": 2338800
+  },
+  "checks": [
+    {
+      "id": "sign_id_format",
+      "status": "PASS",
+      "actual": "S001"
+    },
+    {
+      "id": "gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "mesh_count",
+      "status": "PASS",
+      "actual": 9
+    },
+    {
+      "id": "single_skin",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "canonical_joint_count",
+      "status": "PASS",
+      "actual": [
+        137
+      ]
+    },
+    {
+      "id": "single_expected_clip",
+      "status": "PASS",
+      "actual": [
+        "S001_MAIN"
+      ]
+    },
+    {
+      "id": "positive_clip_duration",
+      "status": "PASS",
+      "actual": {
+        "clip": "S001_MAIN",
+        "seconds": 2
+      }
+    },
+    {
+      "id": "bilateral_arm_controls",
+      "status": "PASS",
+      "actual": [
+        "upperarm01.L",
+        "upperarm01.R",
+        "lowerarm01.L",
+        "lowerarm01.R",
+        "wrist.L",
+        "wrist.R"
+      ]
+    },
+    {
+      "id": "six_core_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "khronos_validator",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "hints": 0
+      }
+    }
+  ]
+}

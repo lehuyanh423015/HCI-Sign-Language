@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "artifact": "task0011b_headless_browser_smoke",
+  "status": "PASS",
+  "url": "http://127.0.0.1:5173/technical-sign-preview",
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "classification": "LOCAL_TECHNICAL_STAGING_ONLY",
+  "checks": [
+    {
+      "id": "page_route",
+      "status": "PASS",
+      "actual": {
+        "url": "http://127.0.0.1:5173/technical-sign-preview",
+        "title": "VSL 3D Learning"
+      }
+    },
+    {
+      "id": "actual_glb_ready",
+      "status": "PASS",
+      "actual": "Sẵn sàng · S001_MAIN · 2.00s"
+    },
+    {
+      "id": "expected_clip",
+      "status": "PASS",
+      "actual": "S001_MAIN"
+    },
+    {
+      "id": "webgl_canvas",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "controls_enabled",
+      "status": "PASS",
+      "actual": [
+        {
+          "text": "Tạm dừng",
+          "disabled": false
+        },
+        {
+          "text": "Phát lại",
+          "disabled": false
+        },
+        {
+          "text": "Loop: Bật",
+          "disabled": false
+        },
+        {
+          "text": "Tốc độ: 1×",
+          "disabled": false
+        },
+        {
+          "text": "Đặt lại camera",
+          "disabled": false
+        },
+        {
+          "text": "Cận cảnh tay phải",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "id": "animation_progresses",
+      "status": "PASS",
+      "actual": {
+        "initial": 0,
+        "progressed": 0.41
+      }
+    },
+    {
+      "id": "pause",
+      "status": "PASS",
+      "actual": {
+        "start": 0.53,
+        "end": 0.53
+      }
+    },
+    {
+      "id": "resume",
+      "status": "PASS",
+      "actual": {
+        "paused": 0.53,
+        "resumed": 0.8
+      }
+    },
+    {
+      "id": "replay",
+      "status": "PASS",
+      "actual": 0.11
+    },
+    {
+      "id": "loop_toggle",
+      "status": "PASS",
+      "actual": "Loop: Tắt"
+    },
+    {
+      "id": "speed_toggle",
+      "status": "PASS",
+      "actual": "Tốc độ: 0.5×"
+    },
+    {
+      "id": "hand_camera",
+      "status": "PASS",
+      "actual": "hand"
+    },
+    {
+      "id": "camera_reset",
+      "status": "PASS",
+      "actual": "full"
+    },
+    {
+      "id": "no_runtime_exceptions",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "id": "no_console_errors",
+      "status": "PASS",
+      "actual": {
+        "relevant": [],
+        "ignored_favicon": [
+          {
+            "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "url": "http://127.0.0.1:5173/favicon.ico",
+            "source": "network"
+          }
+        ]
+      }
+    },
+    {
+      "id": "no_network_failures",
+      "status": "PASS",
+      "actual": []
+    }
+  ],
+  "screenshot": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011B\\docs\\reports\\artifacts\\TASK-0011B\\browser-smoke.png"
+}

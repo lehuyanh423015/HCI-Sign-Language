@@ -20,28 +20,28 @@
         },
         {
           "id": "source_reference",
-          "status": "NOT YET TESTED",
-          "actual": "NOT YET TESTED"
+          "status": "PASS",
+          "actual": "PASS"
         },
         {
           "id": "blender_source",
-          "status": "NOT YET TESTED",
-          "actual": null
+          "status": "PASS",
+          "actual": "blender/working/signs/S001/S001.blend"
         },
         {
           "id": "glb_export",
-          "status": "NOT YET TESTED",
-          "actual": null
+          "status": "PASS",
+          "actual": "assets/exports/signs/S001.glb"
         },
         {
           "id": "preview",
-          "status": "NOT YET TESTED",
-          "actual": null
+          "status": "PASS",
+          "actual": "docs/reports/artifacts/TASK-0011B/visual-review/S001-task-0011b-refined-1080p.mp4"
         },
         {
           "id": "no_accidental_approval",
           "status": "PASS",
-          "actual": "REFERENCE_PENDING"
+          "actual": "LINGUISTIC_REVIEW"
         }
       ]
     },
@@ -325,8 +325,11 @@
     "linguistic_status": "NOT YET TESTED"
   },
   "actual_sign_pilot": {
-    "status": "BLOCKED",
-    "reason": "No verified owner-provided VSL reference exists for S001-S006."
+    "status": "TECHNICAL_ACCEPTED",
+    "technical_review_status": "PASS",
+    "linguistic_review_status": "NOT YET TESTED",
+    "educational_publication_status": "NOT_APPROVED",
+    "classification": "TECHNICAL_DRAFT"
   },
   "checks": [
     {
@@ -341,28 +344,28 @@
     },
     {
       "id": "S001_source_reference",
-      "status": "NOT YET TESTED",
-      "actual": "NOT YET TESTED"
+      "status": "PASS",
+      "actual": "PASS"
     },
     {
       "id": "S001_blender_source",
-      "status": "NOT YET TESTED",
-      "actual": null
+      "status": "PASS",
+      "actual": "blender/working/signs/S001/S001.blend"
     },
     {
       "id": "S001_glb_export",
-      "status": "NOT YET TESTED",
-      "actual": null
+      "status": "PASS",
+      "actual": "assets/exports/signs/S001.glb"
     },
     {
       "id": "S001_preview",
-      "status": "NOT YET TESTED",
-      "actual": null
+      "status": "PASS",
+      "actual": "docs/reports/artifacts/TASK-0011B/visual-review/S001-task-0011b-refined-1080p.mp4"
     },
     {
       "id": "S001_no_accidental_approval",
       "status": "PASS",
-      "actual": "REFERENCE_PENDING"
+      "actual": "LINGUISTIC_REVIEW"
     },
     {
       "id": "S002_schema",

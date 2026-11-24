@@ -1,31 +1,33 @@
 import { TechnicalViewer } from '../../components/viewer/TechnicalViewer';
 
-const PILOT_URL = '/models/technical/tech-pose-authoring-pilot.glb';
+const S001_DRAFT_URL = '/models/technical/s001-xin-chao-task-0011b-refined.glb';
 
 export function SignAnimationPreviewPage() {
   return (
     <article>
       <div className="page-heading technical-heading">
-        <p className="eyebrow">Automated pose authoring · TASK-0010</p>
-        <h2>Pose authoring pilot preview</h2>
-        <p className="technical-warning">TECHNICAL_FIXTURE_NOT_A_SIGN</p>
+        <p className="eyebrow">S001 reference-driven refined candidate · TASK-0011B</p>
+        <h2>S001 — Xin chào</h2>
+        <p className="technical-warning">TECHNICAL DRAFT — NOT LINGUISTICALLY APPROVED</p>
         <p>
-          Fixture kỹ thuật này kiểm tra pose library, animation dữ liệu hóa và xuất GLB; không thuộc S001–S006 và không phải nội dung VSL đã xác minh.
-          Pilot ký hiệu thật vẫn bị chặn vì repository chưa có reference hợp lệ.
+          Bản dựng cục bộ dựa trên video tham chiếu do chủ dự án cung cấp. Trang này chỉ dùng để kiểm tra chuyển động,
+          camera và bàn tay; nội dung chưa được người có chuyên môn xác nhận và chưa thuộc catalog bài học đã duyệt.
         </p>
         <dl className="preview-review-status" data-testid="sign-preview-review-status">
-          <div><dt>ID</dt><dd>TECHNICAL_FIXTURE_NOT_A_SIGN</dd></div>
+          <div><dt>ID</dt><dd>S001</dd></div>
+          <div><dt>Variant</dt><dd>Hà Nội</dd></div>
           <div><dt>Master</dt><dd>1.0.0</dd></div>
-          <div><dt>Primary clip</dt><dd>TECH_POSE_AUTHORING_PILOT</dd></div>
-          <div><dt>Technical</dt><dd>PASS — automated pose fixture</dd></div>
-          <div><dt>Linguistic</dt><dd>NOT_APPLICABLE — fixture</dd></div>
-          <div><dt>Real sign pilot</dt><dd>BLOCKED — reference required</dd></div>
+          <div><dt>Asset</dt><dd>s001-xin-chao-task-0011b-refined.glb</dd></div>
+          <div><dt>Primary clip</dt><dd>S001_MAIN</dd></div>
+          <div><dt>Technical</dt><dd>PASS — owner accepted prototype 2026-11-24</dd></div>
+          <div><dt>Linguistic</dt><dd>NOT YET TESTED</dd></div>
+          <div><dt>Publication</dt><dd>LOCAL STAGING ONLY — educational publication NOT APPROVED</dd></div>
         </dl>
       </div>
       <TechnicalViewer
-        modelUrl={PILOT_URL}
-        clipName="TECH_POSE_AUTHORING_PILOT"
-        classification="TECHNICAL_FIXTURE_NOT_A_SIGN · linguistic NOT_APPLICABLE"
+        modelUrl={S001_DRAFT_URL}
+        clipName="S001_MAIN"
+        classification="SIGN_PRODUCTION_CANDIDATE · technical draft · linguistic NOT YET TESTED"
       />
     </article>
   );

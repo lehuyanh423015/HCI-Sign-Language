@@ -13,6 +13,14 @@
       "minItems": 3,
       "maxItems": 3
     },
+    "lowerArmDegrees3": {
+      "type": "array",
+      "description": "Rig-local lower-arm rotation. The wider Z range supports an anatomically bent elbow without clamping at the generic wrist/head limit.",
+      "prefixItems": [{ "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -150, "maximum": 150 }],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
     "knownOrUnknown": {
       "type": "object",
       "additionalProperties": false,
@@ -37,8 +45,12 @@
         "wrist_orientation_degrees": { "$ref": "#/$defs/degrees3" },
         "arm_rotations_degrees": {
           "type": "object",
-          "propertyNames": { "enum": ["upperarm01", "lowerarm01"] },
-          "additionalProperties": { "$ref": "#/$defs/degrees3" }
+          "additionalProperties": false,
+          "required": ["upperarm01", "lowerarm01"],
+          "properties": {
+            "upperarm01": { "$ref": "#/$defs/degrees3" },
+            "lowerarm01": { "$ref": "#/$defs/lowerArmDegrees3" }
+          }
         },
         "palm_orientation": { "$ref": "#/$defs/knownOrUnknown" },
         "hand_location": { "$ref": "#/$defs/knownOrUnknown" },
@@ -55,6 +67,9 @@
       "required": ["sign_id", "fixture_id", "source_reference", "master_version", "animator", "animation_name", "fps", "dominant_hand"],
       "properties": {
         "sign_id": { "type": ["string", "null"], "pattern": "^S[0-9]{3}$" },
+        "label": { "type": ["string", "null"], "minLength": 1 },
+        "language_variant": { "type": ["string", "null"], "minLength": 1 },
+        "reference_timestamp_range": { "type": ["string", "null"], "minLength": 1 },
         "fixture_id": { "type": ["string", "null"], "pattern": "^[A-Z][A-Z0-9_]+$" },
         "source_reference": { "type": ["string", "null"], "minLength": 1 },
         "master_version": { "const": "1.0.0" },
