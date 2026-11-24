@@ -161,7 +161,12 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
 ## Git branch and commit information
 
 - Branch: `feat/task-0011-mien-signs-s004-s006`, base `b030fcd7d63ee564354ba3d5b20ed479dd2b4b39`.
-- **Chưa commit và chưa push.** Các thay đổi đang ở working tree để Miền xem lại trước. Khi đồng ý, stage các tệp ở mục "Created and modified files", trừ `Snnn_base.blend`, rồi commit trên branch này.
+- Commit trên branch, **chưa push**:
+  - `d8711b2` feat(blender): add landmark retarget and sign review rendering
+  - `02f5bc8` feat(sign): add S004-S006 draft animations from reference video
+  - `2886cb1` docs: record TASK-0011 sign drafts S004-S006
+  - Commit cập nhật mục này được tạo sau, nên không tự ghi được hash của chính nó.
+- `Snnn_base.blend` không đưa vào commit.
 
 ## Outstanding blockers
 
