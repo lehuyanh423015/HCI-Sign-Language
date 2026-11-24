@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_landmark_retarget",
+  "status": "PASS",
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "linguistic_status": "NOT YET TESTED",
+  "method": "MEDIAPIPE_HOLISTIC_GEOMETRIC_RETARGET_DRAFT",
+  "blender_version": "5.2.4 LTS",
+  "sign_id": "S004",
+  "clip": "S004_MAIN",
+  "landmarks": {
+    "path": "S004.raw.json",
+    "sha256": "F831DB5CE90B1E19F1802F6EFA4018861C7C1F9DAEE6815ECDC641AB84566D55",
+    "source_media": "S004.mp4",
+    "fps": 30
+  },
+  "segment_seconds": [
+    0.15,
+    2.2
+  ],
+  "segment_frames": 62,
+  "return_via_first_pose": true,
+  "timeline": {
+    "frame_start": 1,
+    "motion_start": 9,
+    "motion_end": 70,
+    "frame_end": 82,
+    "lead_in": 8,
+    "lead_out": 12
+  },
+  "smoothing_radius": 2,
+  "depth_scale": 0.5,
+  "arm_mode": "ik",
+  "hand_depth_scale": 1.0,
+  "handshape_overrides": [
+    {
+      "side": "R",
+      "shape": "fist",
+      "seconds": [
+        0.1667,
+        2.2
+      ],
+      "flex_degrees": [
+        95,
+        105,
+        70
+      ],
+      "spread": 0.7
+    }
+  ],
+  "frames_with_mouth_anchor": 15,
+  "frames_with_mouth_contact": 0,
+  "arm_scale": {
+    "L": 1.3358532153732054,
+    "R": 1.3498643552406902
+  },
+  "head_weight": 0.7,
+  "animated_bones": 39,
+  "keyframes_written": 12792,
+  "solved_coverage": {
+    "finger1-1.L": 1.0,
+    "finger1-1.R": 1.0,
+    "finger1-2.L": 1.0,
+    "finger1-2.R": 1.0,
+    "finger1-3.L": 1.0,
+    "finger1-3.R": 1.0,
+    "finger2-1.L": 1.0,
+    "finger2-1.R": 1.0,
+    "finger2-2.L": 1.0,
+    "finger2-2.R": 1.0,
+    "finger2-3.L": 1.0,
+    "finger2-3.R": 1.0,
+    "finger3-1.L": 1.0,
+    "finger3-1.R": 1.0,
+    "finger3-2.L": 1.0,
+    "finger3-2.R": 1.0,
+    "finger3-3.L": 1.0,
+    "finger3-3.R": 1.0,
+    "finger4-1.L": 1.0,
+    "finger4-1.R": 1.0,
+    "finger4-2.L": 1.0,
+    "finger4-2.R": 1.0,
+    "finger4-3.L": 1.0,
+    "finger4-3.R": 1.0,
+    "finger5-1.L": 1.0,
+    "finger5-1.R": 1.0,
+    "finger5-2.L": 1.0,
+    "finger5-2.R": 1.0,
+    "finger5-3.L": 1.0,
+    "finger5-3.R": 1.0,
+    "head": 1.0,
+    "lowerarm01.L": 1.0,
+    "lowerarm01.R": 1.0,
+    "lowerarm02.L": 1.0,
+    "lowerarm02.R": 1.0,
+    "upperarm01.L": 1.0,
+    "upperarm01.R": 1.0,
+    "wrist.L": 1.0,
+    "wrist.R": 1.0
+  },
+  "rig_inventory_unchanged": true,
+  "neutral_frame_1": true,
+  "output": {
+    "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\blender\\working\\signs\\S004\\S004.blend",
+    "sha256": "ED52D776EF44EBF0DE09D8CEF584D676FEA98502AE5782E80D201F7FDD72E3C7"
+  }
+}

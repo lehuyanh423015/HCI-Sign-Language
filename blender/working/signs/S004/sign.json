@@ -1,8 +1,46 @@
 {
   "schema_version": 1,
-  "identity": { "sign_id": "S004", "display_name": null, "gloss": null, "language_variant": null, "status": "REFERENCE_PENDING" },
-  "reference": { "reference_source": null, "reference_url": null, "reference_author": null, "reference_date": null, "reference_media": [], "reference_notes": null, "source_verification_status": "NOT YET TESTED" },
-  "production": { "master_avatar_version": "1.0.0", "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC", "animation_version": "0.0.0-placeholder", "animation_file": null, "export_file": null, "animation_clips": ["S004_MAIN"], "preview_file": null },
-  "review": { "technical_review_status": "NOT YET TESTED", "linguistic_review_status": "NOT YET TESTED", "reviewer": null, "review_notes": null, "approval_date": null },
-  "non_manual_markers": { "nmm_targets": [], "eye_gaze": null, "head_movement": null, "jaw_movement": null, "notes": null }
+  "identity": {
+    "sign_id": "S004",
+    "display_name": "giúp đỡ",
+    "gloss": "GIÚP-ĐỠ",
+    "language_variant": "Biến thể miền Bắc theo nhãn B của bộ dữ liệu; chưa được người thành thạo xác nhận",
+    "status": "REFERENCE_PENDING"
+  },
+  "reference": {
+    "reference_source": "QIPEDC, từ điển ngôn ngữ ký hiệu Việt Nam, qua bản sao Hugging Face Lakeserl/SignConnect",
+    "reference_url": "https://huggingface.co/datasets/Lakeserl/SignConnect",
+    "reference_author": "QIPEDC",
+    "reference_date": null,
+    "reference_media": [
+      "W01497B.mp4 (QIPEDC, nhãn \"giúp đỡ\"; không lưu trong repo)"
+    ],
+    "reference_notes": "Video đúng từ \"giúp đỡ\". Dùng đoạn 0,15–2,20 giây. Quan sát: tay phải giơ ngón cái đặt trên lòng bàn tay trái ngửa, hai tay cùng đưa lên trước ngực. Nguồn lấy qua bản sao Hugging Face của QIPEDC; chưa xác nhận quyền sử dụng và chưa đối chiếu với trang QIPEDC gốc.",
+    "source_verification_status": "NOT YET TESTED"
+  },
+  "production": {
+    "master_avatar_version": "1.0.0",
+    "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC",
+    "animation_version": "0.2.0-draft",
+    "animation_file": "blender/working/signs/S004/S004.blend",
+    "export_file": "assets/exports/signs/S004.glb",
+    "animation_clips": [
+      "S004_MAIN"
+    ],
+    "preview_file": "blender/working/signs/S004/previews/S004-key-poses.png"
+  },
+  "review": {
+    "technical_review_status": "NOT YET TESTED",
+    "linguistic_review_status": "NOT YET TESTED",
+    "reviewer": null,
+    "review_notes": "Bản nháp dựng tự động từ điểm mốc MediaPipe bằng blender/scripts/retarget_landmarks_to_sign.py; cần Huy Anh duyệt kỹ thuật, Thảo xác nhận nguồn và người thành thạo kiểm chứng.",
+    "approval_date": null
+  },
+  "non_manual_markers": {
+    "nmm_targets": [],
+    "eye_gaze": null,
+    "head_movement": "Xoay đầu lấy từ điểm mốc khuôn mặt, hệ số 0,7; không có yêu cầu riêng từ tham chiếu.",
+    "jaw_movement": null,
+    "notes": "Chưa dựng biểu cảm. Tham chiếu không thể hiện biểu cảm rõ."
+  }
 }
