@@ -36,6 +36,8 @@ def main():
     bpy.context.view_layer.update()
     neutral = neutral_state()
     expected_clip = args.expected_clip or (f"{args.sign_id}_MAIN" if args.sign_id.startswith("S") else None)
+    is_fixture = args.sign_id in {"TECHNICAL_FIXTURE_NOT_A_SIGN", "TECH_POSE_AUTHORING_PILOT"}
+    is_sign = args.sign_id.startswith("S")
     action = bpy.data.actions.get(expected_clip) if expected_clip else None
     checks = []
 
@@ -57,15 +59,18 @@ def main():
     add("expected_action", action is not None, expected_clip, pending=expected_clip is None)
     if action:
         add("positive_action_range", action.frame_range[1] > action.frame_range[0], list(action.frame_range))
-    add("linguistic_review", False, scene.get("linguistic_review_status", "NOT YET TESTED"), pending=True)
+    if is_fixture:
+        checks.append({"id": "linguistic_review", "status": "NOT_APPLICABLE", "actual": scene.get("linguistic_review_status")})
+    else:
+        add("linguistic_review", False, scene.get("linguistic_review_status", "NOT YET TESTED"), pending=True)
     status = "FAIL" if any(item["status"] == "FAIL" for item in checks) else "PASS"
     report = {
         "schema_version": 1,
         "artifact": "sign_animation_blender_validation",
         "status": status,
         "technical_validation": status,
-        "linguistic_validation": "NOT YET TESTED",
-        "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN" if not args.sign_id.startswith("S") else "SIGN_PRODUCTION_CANDIDATE",
+        "linguistic_validation": "NOT_APPLICABLE" if is_fixture else "NOT YET TESTED",
+        "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN" if not is_sign else "SIGN_PRODUCTION_CANDIDATE",
         "source": {"path": bpy.data.filepath, "sha256": hashlib.sha256(Path(bpy.data.filepath).read_bytes()).hexdigest().upper()},
         "inventory": current,
         "neutral_state": neutral,

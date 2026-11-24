@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "artifact": "task0010_pose_authoring_pilot_glb_validation",
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "linguistic_status": "NOT_APPLICABLE",
+  "status": "PASS",
+  "path": "assets/exports/technical/task-0010/tech-pose-authoring-pilot.glb",
+  "sha256": "993A979FD7CAAD7B8F6CC8874894097C4A67A72510276F4A0AB9CEB5A3A8E76F",
+  "size_bytes": 2341612,
+  "structural": {
+    "nodes": 146,
+    "meshes": 9,
+    "skins": 1,
+    "joints": 137,
+    "clip_names": [
+      "TECH_POSE_AUTHORING_PILOT"
+    ],
+    "durations": [
+      {
+        "name": "TECH_POSE_AUTHORING_PILOT",
+        "seconds": 2
+      }
+    ],
+    "channel_count": 412,
+    "morph_target_names": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ]
+  },
+  "checks": [
+    {
+      "id": "gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "mesh_count",
+      "status": "PASS",
+      "actual": 9
+    },
+    {
+      "id": "single_skin",
+      "status": "PASS",
+      "actual": 1
+    },
+    {
+      "id": "canonical_joint_count",
+      "status": "PASS",
+      "actual": 137
+    },
+    {
+      "id": "single_expected_clip",
+      "status": "PASS",
+      "actual": [
+        "TECH_POSE_AUTHORING_PILOT"
+      ]
+    },
+    {
+      "id": "positive_duration",
+      "status": "PASS",
+      "actual": [
+        {
+          "name": "TECH_POSE_AUTHORING_PILOT",
+          "seconds": 2
+        }
+      ]
+    },
+    {
+      "id": "both_hand_nodes",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "id": "eye_nodes",
+      "status": "PASS",
+      "actual": [
+        "NMM_Eyeball.L",
+        "NMM_Iris.L",
+        "NMM_Pupil.L",
+        "NMM_Eyeball.R",
+        "NMM_Iris.R",
+        "NMM_Pupil.R"
+      ]
+    },
+    {
+      "id": "six_core_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "both_hand_animation_channels",
+      "status": "PASS",
+      "actual": [
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-1.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-2.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-3.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger1-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger1-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger1-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger2-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger2-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger2-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger3-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger3-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger3-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger4-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger4-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger4-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-1.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-2.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "finger5-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "finger5-3.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "finger5-3.R"
+        }
+      ]
+    },
+    {
+      "id": "wrist_arm_channels",
+      "status": "PASS",
+      "actual": [
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "upperarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "upperarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "upperarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "upperarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "upperarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "upperarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "lowerarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "lowerarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "lowerarm01.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "lowerarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "lowerarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "lowerarm02.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "wrist.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "wrist.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "wrist.L"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "upperarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "upperarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "upperarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "upperarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "upperarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "upperarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "lowerarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "lowerarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "lowerarm01.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "lowerarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "lowerarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "lowerarm02.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "wrist.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "wrist.R"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "wrist.R"
+        }
+      ]
+    },
+    {
+      "id": "head_neck_jaw_channels",
+      "status": "PASS",
+      "actual": [
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "neck02"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "neck02"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "neck02"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "head"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "head"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "head"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "translation",
+          "node": "jaw"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "rotation",
+          "node": "jaw"
+        },
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "scale",
+          "node": "jaw"
+        }
+      ]
+    },
+    {
+      "id": "morph_weight_channel",
+      "status": "PASS",
+      "actual": [
+        {
+          "clip": "TECH_POSE_AUTHORING_PILOT",
+          "path": "weights",
+          "node": "Human"
+        }
+      ]
+    },
+    {
+      "id": "khronos_validator",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "hints": 0
+      }
+    }
+  ],
+  "khronos": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 1,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+      }
+    ],
+    "truncated": false
+  }
+}

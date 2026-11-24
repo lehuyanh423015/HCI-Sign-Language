@@ -96,7 +96,7 @@ def main():
         "artifact": "sign_animation_glb_export",
         "status": "PASS" if result == {"FINISHED"} and output.exists() and output.stat().st_size > 0 else "FAIL",
         "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN" if args.technical_fixture else "SIGN_PRODUCTION_CANDIDATE",
-        "linguistic_status": "NOT YET TESTED",
+        "linguistic_status": "NOT_APPLICABLE" if args.technical_fixture else "NOT YET TESTED",
         "blender_version": bpy.app.version_string,
         "source": source,
         "clip": args.clip,

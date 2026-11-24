@@ -1,0 +1,1000 @@
+{
+  "schema_version": 1,
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "identification": {
+    "sign_id": "S001",
+    "label": "Xin chào",
+    "language_variant": "Hà Nội",
+    "reference_timestamp_range": "original 00:04-00:08; selected local take 00:03.05-00:05.00; refined key mapping 03.55/03.80/04.10/04.40/04.60",
+    "fixture_id": null,
+    "source_reference": "https://www.youtube.com/watch?v=4avGnxaLmb0; blender/working/signs/S001/references/xin_chao-owner-provided.mp4",
+    "master_version": "1.0.0",
+    "animator": "Le Huy Anh / TASK-0011B technical refinement",
+    "animation_name": "S001_MAIN",
+    "fps": 30,
+    "dominant_hand": "BOTH"
+  },
+  "timing": {
+    "frame_start": 1,
+    "duration_frames": 60,
+    "interpolation": "BEZIER",
+    "meaningful_interval": [
+      8,
+      47
+    ],
+    "technical_transition_frames": [
+      1,
+      5,
+      60
+    ]
+  },
+  "key_poses": [
+    {
+      "frame": 1,
+      "label": "neutral_pre_sign",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Video entry transition, outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "low lower-torso area",
+          "notes": "Canonical rig neutral approximates reference setup."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "pre-sign neutral",
+          "notes": "Not claimed lexical."
+        }
+      },
+      "right_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Video entry transition, outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "low lower-torso area",
+          "notes": "Canonical rig neutral approximates reference setup."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "pre-sign neutral",
+          "notes": "Not claimed lexical."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Gaze control is not authored in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No verified lexical NMM."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible speech/smile not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 5,
+      "label": "pre_sign_gather_refined",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -15,
+          -2
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -10
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            25
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "turning from low/up toward front",
+          "notes": "Exact local Euler values are ASSUMED_TECHNICAL."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "moving outward from lower center",
+          "notes": "Technical pre-sign setup: hand remains low and moves closer to the front of the torso."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "outward and upward",
+          "notes": "Outside meaningful interval; avoids an exaggerated lateral sweep."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          15,
+          2
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            10
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -25
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "turning from low/up toward front",
+          "notes": "Exact local Euler values are ASSUMED_TECHNICAL."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "moving outward from lower center",
+          "notes": "Technical pre-sign setup: hand remains low and moves closer to the front of the torso."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "outward and upward",
+          "notes": "Outside meaningful interval; avoids an exaggerated lateral sweep."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored in draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 8,
+      "label": "bilateral_compact_lift_refined",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -30,
+          -4
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -12
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            65
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "turning from low/up toward front",
+          "notes": "Exact local Euler values are ASSUMED_TECHNICAL."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "moving outward from lower center",
+          "notes": "Lower/central entry toward upper-body signing space."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "outward and upward",
+          "notes": "Compact upward path with reduced lateral spreading."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          30,
+          4
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            12
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -65
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "turning from low/up toward front",
+          "notes": "Exact local Euler values are ASSUMED_TECHNICAL."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "moving outward from lower center",
+          "notes": "Lower/central entry toward upper-body signing space."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "outward and upward",
+          "notes": "Compact upward path with reduced lateral spreading."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored in draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 16,
+      "label": "initial_open_raised_refined",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -58,
+          -8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -14
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            132
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front/toward camera",
+          "notes": "Exact angle assumed technically."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "left of face/shoulder",
+          "notes": "Near the left shoulder/face space with elbow closer to torso."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "entry completes at shoulder/face height",
+          "notes": "Reference-aligned raised pose at local 03.55s; exact depth remains technical."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          58,
+          8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            14
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -132
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front/toward camera",
+          "notes": "Exact angle assumed technically."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "right of face/shoulder",
+          "notes": "Near the right shoulder/face space with elbow closer to torso."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "entry completes at shoulder/face height",
+          "notes": "Reference-aligned raised pose at local 03.55s; exact depth remains technical."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored in draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No verified NMM."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Smile/speech visible but not authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 23,
+      "label": "oscillation_a_refined",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -54,
+          -28
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -13
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            125
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with outward bilateral tilt",
+          "notes": "3D angle assumed from frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Outer oscillation position near shoulder/face level."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt A",
+          "notes": "Combined forearm opening and wrist tilt at local 03.80s."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          54,
+          28
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            13
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -125
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with outward bilateral tilt",
+          "notes": "3D angle assumed from frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Outer oscillation position near shoulder/face level."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt A",
+          "notes": "Combined forearm opening and wrist tilt at local 03.80s."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 32,
+      "label": "oscillation_b_refined",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -66,
+          26
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -15
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            145
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with inward bilateral tilt",
+          "notes": "3D angle assumed from frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Inner oscillation position closer to face while elbow stays compact."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt B",
+          "notes": "Combined forearm closing and wrist/palm change at local 04.10s."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          66,
+          -26
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            15
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -145
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with inward bilateral tilt",
+          "notes": "3D angle assumed from frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Inner oscillation position closer to face while elbow stays compact."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt B",
+          "notes": "Combined forearm closing and wrist/palm change at local 04.10s."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 41,
+      "label": "oscillation_a2_refined",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -54,
+          -28
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -13
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            125
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with outward bilateral tilt",
+          "notes": "Repeated A position."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Return to outer oscillation position."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt A repeat",
+          "notes": "Single observed return toward A at local 04.40s; no extra cycle added."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          54,
+          28
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            13
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -125
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front with outward bilateral tilt",
+          "notes": "Repeated A position."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral shoulder/face space",
+          "notes": "Return to outer oscillation position."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "localized wrist/hand tilt A repeat",
+          "notes": "Single observed return toward A at local 04.40s; no extra cycle added."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 47,
+      "label": "final_open_raised_refined",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          -60,
+          -8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -14
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            135
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front/toward camera",
+          "notes": "End of meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral upper chest/shoulder",
+          "notes": "Final open pose near shoulder/face level."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "oscillation settles",
+          "notes": "Settles from observed oscillation at local 04.60s."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          60,
+          8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            14
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            -135
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "front/toward camera",
+          "notes": "End of meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lateral upper chest/shoulder",
+          "notes": "Final open pose near shoulder/face level."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "oscillation settles",
+          "notes": "Settles from observed oscillation at local 04.60s."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Not rig-authored."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Unverified."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 60,
+      "label": "neutral_recovery",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Video recovery transition, outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lowering toward lower torso",
+          "notes": "Canonical neutral used as safe recovery."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "downward recovery",
+          "notes": "Not claimed lexical."
+        }
+      },
+      "right_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Video recovery transition, outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "lowering toward lower torso",
+          "notes": "Canonical neutral used as safe recovery."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "downward recovery",
+          "notes": "Not claimed lexical."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Recovery."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No verified NMM."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No verified NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    }
+  ],
+  "review": {
+    "reference_status": "REFERENCE_READY",
+    "technical_status": "NOT YET TESTED",
+    "linguistic_status": "NOT YET TESTED",
+    "uncertainty_notes": [
+      "Exact 3D arm and wrist Euler values are technical approximations from a single frontal camera.",
+      "Exact linguistic repetition count requires qualified reviewer confirmation.",
+      "Visible smile and speech-like mouth articulation are not authored as NMM in this draft.",
+      "Neutral entry and recovery frames are technical transitions outside frames 8-47.",
+      "TASK-0011B lower-arm Z values above 90 degrees are deliberate rig-local elbow bends, validated visually and no longer clamped to the generic degrees3 boundary.",
+      "Oscillation uses observed hand translation plus wrist/palm change; amplitude remains a technical approximation from one frontal camera."
+    ]
+  }
+}

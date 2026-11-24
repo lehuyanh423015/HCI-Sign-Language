@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hci-sign-language.local/contracts/sign-motion-spec.schema.json",
+  "title": "Data-driven sign motion specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "classification", "identification", "timing", "key_poses", "review"],
+  "$defs": {
+    "degrees3": {
+      "type": "array",
+      "prefixItems": [{ "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -90, "maximum": 90 }],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "lowerArmDegrees3": {
+      "type": "array",
+      "description": "Rig-local lower-arm rotation. The wider Z range supports an anatomically bent elbow without clamping at the generic wrist/head limit.",
+      "prefixItems": [{ "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -90, "maximum": 90 }, { "type": "number", "minimum": -150, "maximum": 150 }],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "knownOrUnknown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "notes"],
+      "properties": {
+        "status": { "enum": ["OBSERVED", "ASSUMED_TECHNICAL", "UNKNOWN", "NOT_APPLICABLE"] },
+        "value": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "hand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pose", "finger_overrides", "wrist_orientation_degrees", "arm_rotations_degrees", "palm_orientation", "hand_location", "movement_path"],
+      "properties": {
+        "pose": { "type": "string", "minLength": 1 },
+        "finger_overrides": {
+          "type": "object",
+          "propertyNames": { "pattern": "^finger[1-5]-[1-3]$" },
+          "additionalProperties": { "type": "number", "minimum": -10, "maximum": 90 }
+        },
+        "wrist_orientation_degrees": { "$ref": "#/$defs/degrees3" },
+        "arm_rotations_degrees": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["upperarm01", "lowerarm01"],
+          "properties": {
+            "upperarm01": { "$ref": "#/$defs/degrees3" },
+            "lowerarm01": { "$ref": "#/$defs/lowerArmDegrees3" }
+          }
+        },
+        "palm_orientation": { "$ref": "#/$defs/knownOrUnknown" },
+        "hand_location": { "$ref": "#/$defs/knownOrUnknown" },
+        "movement_path": { "$ref": "#/$defs/knownOrUnknown" }
+      }
+    }
+  },
+  "properties": {
+    "schema_version": { "const": 1 },
+    "classification": { "enum": ["SIGN_PRODUCTION_CANDIDATE", "TECHNICAL_FIXTURE_NOT_A_SIGN"] },
+    "identification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sign_id", "fixture_id", "source_reference", "master_version", "animator", "animation_name", "fps", "dominant_hand"],
+      "properties": {
+        "sign_id": { "type": ["string", "null"], "pattern": "^S[0-9]{3}$" },
+        "label": { "type": ["string", "null"], "minLength": 1 },
+        "language_variant": { "type": ["string", "null"], "minLength": 1 },
+        "reference_timestamp_range": { "type": ["string", "null"], "minLength": 1 },
+        "fixture_id": { "type": ["string", "null"], "pattern": "^[A-Z][A-Z0-9_]+$" },
+        "source_reference": { "type": ["string", "null"], "minLength": 1 },
+        "master_version": { "const": "1.0.0" },
+        "animator": { "type": "string", "minLength": 1 },
+        "animation_name": { "type": "string", "pattern": "^([A-Z][A-Z0-9_]+|S[0-9]{3}_MAIN)$" },
+        "fps": { "const": 30 },
+        "dominant_hand": { "enum": ["LEFT", "RIGHT", "BOTH", "NOT_APPLICABLE", "UNKNOWN"] }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frame_start", "duration_frames", "interpolation", "meaningful_interval", "technical_transition_frames"],
+      "properties": {
+        "frame_start": { "const": 1 },
+        "duration_frames": { "type": "integer", "minimum": 2, "maximum": 900 },
+        "interpolation": { "enum": ["BEZIER", "LINEAR", "CONSTANT"] },
+        "meaningful_interval": {
+          "type": ["array", "null"],
+          "prefixItems": [{ "type": "integer", "minimum": 1 }, { "type": "integer", "minimum": 2 }],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "technical_transition_frames": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true }
+      }
+    },
+    "key_poses": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["frame", "label", "hold_frames", "left_hand", "right_hand", "non_manual"],
+        "properties": {
+          "frame": { "type": "integer", "minimum": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "hold_frames": { "type": "integer", "minimum": 0, "maximum": 120 },
+          "left_hand": { "$ref": "#/$defs/hand" },
+          "right_hand": { "$ref": "#/$defs/hand" },
+          "non_manual": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["head_orientation_degrees", "neck_rotation_degrees", "eye_gaze", "eyebrow_state", "mouth_shape", "jaw_position_degrees", "morph_targets"],
+            "properties": {
+              "head_orientation_degrees": { "$ref": "#/$defs/degrees3" },
+              "neck_rotation_degrees": { "$ref": "#/$defs/degrees3" },
+              "eye_gaze": { "$ref": "#/$defs/knownOrUnknown" },
+              "eyebrow_state": { "$ref": "#/$defs/knownOrUnknown" },
+              "mouth_shape": { "$ref": "#/$defs/knownOrUnknown" },
+              "jaw_position_degrees": { "type": "number", "minimum": -20, "maximum": 20 },
+              "morph_targets": {
+                "type": "object",
+                "propertyNames": { "enum": ["NMM_BROW_RAISE_L", "NMM_BROW_RAISE_R", "NMM_EYE_BLINK_L", "NMM_EYE_BLINK_R", "NMM_LIPS_ROUND", "NMM_LIPS_SPREAD"] },
+                "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference_status", "technical_status", "linguistic_status", "uncertainty_notes"],
+      "properties": {
+        "reference_status": { "enum": ["REFERENCE_PENDING", "REFERENCE_READY", "NOT_APPLICABLE"] },
+        "technical_status": { "enum": ["NOT YET TESTED", "PASS", "FAIL"] },
+        "linguistic_status": { "enum": ["NOT YET TESTED", "PASS", "FAIL", "NOT_APPLICABLE"] },
+        "uncertainty_notes": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "classification": { "const": "TECHNICAL_FIXTURE_NOT_A_SIGN" } } },
+      "then": {
+        "properties": {
+          "identification": { "type": "object", "properties": { "sign_id": { "type": "null" }, "fixture_id": { "type": "string" }, "source_reference": { "type": "null" } } },
+          "review": { "type": "object", "properties": { "reference_status": { "const": "NOT_APPLICABLE" }, "linguistic_status": { "const": "NOT_APPLICABLE" } } }
+        }
+      }
+    }
+  ]
+}

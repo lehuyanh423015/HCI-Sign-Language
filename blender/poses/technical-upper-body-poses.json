@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "classification": "TECHNICAL_RIG_CONTROLS_NOT_LINGUISTIC_POSES",
+  "angle_unit": "degrees",
+  "poses": {
+    "neutral_upper_body": {
+      "description": "Identity local rotations for wrists, arms, neck, head and jaw.",
+      "bones": {
+        "upperarm01.L": [0, 0, 0], "lowerarm01.L": [0, 0, 0], "wrist.L": [0, 0, 0],
+        "upperarm01.R": [0, 0, 0], "lowerarm01.R": [0, 0, 0], "wrist.R": [0, 0, 0],
+        "neck02": [0, 0, 0], "head": [0, 0, 0], "jaw": [0, 0, 0]
+      }
+    }
+  }
+}

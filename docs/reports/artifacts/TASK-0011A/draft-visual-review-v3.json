@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_animation_visual_review",
+  "status": "PASS",
+  "identifier": "S001",
+  "clip": "S001_MAIN",
+  "classification": "SIGN_PRODUCTION_CANDIDATE_TECHNICAL_DRAFT",
+  "linguistic_status": "NOT YET TESTED",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\blender\\working\\signs\\S001\\S001_v3.blend",
+    "sha256": "207CE81CC6A6CDFA66E37B41899F530F1CE625388450D80FEA49F545FBA0A5D7"
+  },
+  "stills": [
+    {
+      "frame": 27,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\upper-body-frame-027.png",
+      "sha256": "1C59994C2A103564090B6BFF2772F17AC7225B858B4F25599C3D3745DCA583F9"
+    },
+    {
+      "frame": 27,
+      "view": "left_hand",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\left-hand-frame-027.png",
+      "sha256": "469E493576B20A965F0AE3C155CE827F695F7BDF3C0C8BB8E9B8154C336C084C"
+    },
+    {
+      "frame": 27,
+      "view": "right_hand",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\right-hand-frame-027.png",
+      "sha256": "3A0D72509B06AB5AE8B04312C00CB4F4DF64BCB13B817B5CFD00A580E3CEEF82"
+    },
+    {
+      "frame": 45,
+      "view": "full_front",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\front-frame-045.png",
+      "sha256": "86BEBDC55674E53DE23AD284B9F263092767AAE7939AD228A420354A37E4B4F7"
+    },
+    {
+      "frame": 45,
+      "view": "three_quarter",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\three-quarter-frame-045.png",
+      "sha256": "58099444A541665CD8F81B919A1B6F3B1FCA48F992843B58D840F38610CD0E8C"
+    },
+    {
+      "frame": 1,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-001.png",
+      "sha256": "E0EDC3B22DD302CCE6F5A46A2850F70A4EB426D6CF37D9CB2769BD8288D4B547"
+    },
+    {
+      "frame": 8,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-008.png",
+      "sha256": "2B7297D822E5567F40955F73118067E862AEEB18E6EBEC8C49DC6AA9D96FD8A9"
+    },
+    {
+      "frame": 15,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-015.png",
+      "sha256": "4CA479BA01303548D066713E306250AEF480B2471EDAD08C9D4FF746197BDC0D"
+    },
+    {
+      "frame": 21,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-021.png",
+      "sha256": "70D6107A4F17202C87B6FCAD90BCCF8798909341F719BEE160D137C12D9E065A"
+    },
+    {
+      "frame": 27,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-027.png",
+      "sha256": "08DD60ECF830018C390AEDECAA453F95337691EE144B9A0AB4B1C211E36C2A4D"
+    },
+    {
+      "frame": 33,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-033.png",
+      "sha256": "841356801B3F968474BD102DDF5B8ABD9B8F82AFEA33EE5D67E114C078DD0671"
+    },
+    {
+      "frame": 39,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-039.png",
+      "sha256": "3236249E75AFD07F922FF9261A9A35B0D1331AEF499C8675C4BE456070520A0B"
+    },
+    {
+      "frame": 45,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-045.png",
+      "sha256": "F7B8E32A5FD1D96D1CF51D909BA5524CDF568238FAD740E1AD19EF73E6BA1B3C"
+    },
+    {
+      "frame": 60,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\raw\\key-pose-060.png",
+      "sha256": "B0AB25FF976FCE7BBAB409CE1F0D91D15614B0F77027A7B4374E3A9EC23B45F4"
+    }
+  ],
+  "contact_sheet": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\key-pose-contact-sheet.png",
+    "sha256": "6FFE6F7A92FC8B64B0070F5F51FBEC63E4AA7B1D5E99386142738C89383A623F",
+    "columns": 3,
+    "rows": 3
+  },
+  "video": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\s001-main-technical-draft-v3.mp4",
+    "sha256": "9AF43F2F84CCA82C534C3D4BF36E9BBB23F074586BEEF2E0595E966623A8ECFE",
+    "size_bytes": 71212,
+    "frames": 60,
+    "fps": 30,
+    "encoder": "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+    "command": [
+      "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+      "-y",
+      "-framerate",
+      "30",
+      "-start_number",
+      "1",
+      "-i",
+      "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\animation-frames\\frame_%04d.png",
+      "-c:v",
+      "libx264",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011A\\docs\\reports\\artifacts\\TASK-0011A\\draft-visual-review-v3\\s001-main-technical-draft-v3.mp4"
+    ]
+  },
+  "visual_quality": "NOT YET TESTED - owner must inspect generated evidence"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_animation_glb_export",
+  "status": "PASS",
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "linguistic_status": "NOT YET TESTED",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011B\\blender\\working\\signs\\S001\\refinements\\task-0011b\\S001_refined.blend",
+    "sha256": "BD0F3877040257785D0CAA6EB8BA5E7B57F07A74445532D103A93981D9483063"
+  },
+  "clip": "S001_MAIN",
+  "nla_bindings": [
+    {
+      "data_block": "Human.rig",
+      "slot": "OBHuman.rig"
+    },
+    {
+      "data_block": "Key.007",
+      "slot": "KEKey"
+    }
+  ],
+  "shape_key_preparation": {
+    "source_values": {
+      "Basis": 1.0,
+      "$md-$as-$fe-$yn": 0.16500000655651093,
+      "$md-$as-$ma-$yn": 0.16500000655651093,
+      "$md-$ca-$fe-$yn": 0.16500000655651093,
+      "$md-$ca-$ma-$yn": 0.16500000655651093,
+      "$md-$af-$fe-$yn": 0.16500000655651093,
+      "$md-$af-$ma-$yn": 0.16500000655651093,
+      "$md-universal-$fe-$yn-$av$mu-$av$wg": 0.5,
+      "$md-universal-$ma-$yn-$av$mu-$av$wg": 0.5,
+      "$md-$fe-$yn-$av$mu-$av$wg-$avcup-max$fi": 0.08856657892465591,
+      "$md-$fe-$yn-$av$mu-$av$wg-maxcup-$av$fi": 0.088466577231884,
+      "NMM_BROW_RAISE_L": 0.0,
+      "NMM_BROW_RAISE_R": 0.0,
+      "NMM_EYE_BLINK_L": 0.0,
+      "NMM_EYE_BLINK_R": 0.0,
+      "NMM_LIPS_ROUND": 0.0,
+      "NMM_LIPS_SPREAD": 0.0
+    },
+    "export_targets": [
+      "NMM_BROW_RAISE_L",
+      "NMM_BROW_RAISE_R",
+      "NMM_EYE_BLINK_L",
+      "NMM_EYE_BLINK_R",
+      "NMM_LIPS_ROUND",
+      "NMM_LIPS_SPREAD"
+    ],
+    "vertex_count": 19158
+  },
+  "modifier_preparation": {
+    "status": "PASS",
+    "modifiers": [
+      "Hide helpers"
+    ],
+    "vertices_before": 19158,
+    "vertices_after": 13380,
+    "fully_weighted_vertices": 13380
+  },
+  "output": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011B\\assets\\exports\\signs\\staging\\S001-task-0011b.glb",
+    "sha256": "006109E192A82898F0C0997D0DC11F8E31BC08362DA34A517AE3B7A40C19B627",
+    "size_bytes": 2338800
+  },
+  "settings": {
+    "filepath": "E:\\University\\Semester_7\\HCI\\BTL-worktrees\\TASK-0011B\\assets\\exports\\signs\\staging\\S001-task-0011b.glb",
+    "export_format": "GLB",
+    "use_selection": true,
+    "export_animations": true,
+    "export_animation_mode": "NLA_TRACKS",
+    "export_merge_animation": "NLA_TRACK",
+    "export_frame_range": true,
+    "export_force_sampling": false,
+    "export_skins": true,
+    "export_armature_object_remove": true,
+    "export_rest_position_armature": true,
+    "export_apply": false,
+    "export_all_influences": false,
+    "export_morph": true,
+    "export_morph_normal": true,
+    "export_morph_tangent": false,
+    "export_cameras": false,
+    "export_lights": false,
+    "export_yup": true
+  }
+}

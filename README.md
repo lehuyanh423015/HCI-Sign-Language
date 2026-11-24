@@ -70,7 +70,7 @@ Prototype kỹ thuật: chạy `npm run sync:technical-assets`, `npm run dev`, r
 - Workspaces/metadata: `blender/working/signs/S001`–`S006`; hiện chỉ là placeholder `REFERENCE_PENDING`.
 - Technical staging: chạy `npm run sync:technical-assets`, `npm run dev`, mở `/technical-sign-preview`.
 
-Pilot TASK-0009 dùng `TECHNICAL_FIXTURE_NOT_A_SIGN`, linguistic status `NOT YET TESTED`. Repository chưa có reference VSL hợp lệ cho pilot ký hiệu thật.
+TASK-0010 bổ sung pose library, motion spec và generator Blender tự động; xem `docs/workflows/SIGN_POSE_AUTHORING.md`. Staging hiện dùng `TECH_POSE_AUTHORING_PILOT`, classification `TECHNICAL_FIXTURE_NOT_A_SIGN`, linguistic status `NOT_APPLICABLE`. Repository chưa có reference VSL hợp lệ nên pilot ký hiệu thật vẫn `BLOCKED`.
 
 ## Mốc dự án (chưa hoàn thành trong TASK-0001)
 

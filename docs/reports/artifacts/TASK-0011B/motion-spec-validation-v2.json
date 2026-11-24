@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_motion_spec_validation",
+  "status": "PASS",
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "fixture_id": null,
+  "sign_id": "S001",
+  "animation_name": "S001_MAIN",
+  "duration_frames": 60,
+  "key_pose_count": 9,
+  "pose_library_entries": [
+    "closed_fist",
+    "index_flexed",
+    "neutral_hand",
+    "open_hand",
+    "relaxed_hand",
+    "thumb_flexed"
+  ],
+  "errors": []
+}

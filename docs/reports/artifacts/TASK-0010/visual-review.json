@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "artifact": "task0010_pose_authoring_visual_review",
+  "status": "PASS",
+  "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+  "linguistic_status": "NOT_APPLICABLE",
+  "blender_version": "5.2.4 LTS",
+  "source": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\blender\\working\\pilots\\task-0010\\TECH_POSE_AUTHORING_PILOT.blend",
+    "sha256": "665A8254C3334EE137A16C62A2EBEF41777D3300E916D6A9715C03E4CD96531C"
+  },
+  "stills": [
+    {
+      "frame": 24,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\upper-body-frame-024.png",
+      "sha256": "57303CF723D11F112279EFCF24E990F2F3B1CDE50E59DE7C9014BD97E0D2E846"
+    },
+    {
+      "frame": 36,
+      "view": "left_hand",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\left-hand-frame-036.png",
+      "sha256": "9BC95FC7694F01075C62E95F97D5122C7E8C164817215AF2BF3F0A491BD57A0A"
+    },
+    {
+      "frame": 24,
+      "view": "right_hand",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\right-hand-frame-024.png",
+      "sha256": "492DD19B87D9E3DFC730CE61310BF8269094ED926EB9646AFE3378FCD376D588"
+    },
+    {
+      "frame": 48,
+      "view": "full_front",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\front-frame-048.png",
+      "sha256": "AE909982C7CB1DD668AB8694AAFB73F97A0A03BD42B4A1E5CFD8A9FFC931AD3A"
+    },
+    {
+      "frame": 48,
+      "view": "three_quarter",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\three-quarter-frame-048.png",
+      "sha256": "A3B694FE58138FDD6B09054E3B91BADB21B5988950400A045202D13EEBA26971"
+    },
+    {
+      "frame": 1,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-001.png",
+      "sha256": "6F6711F08A41C907018B1EED725961714F9961520B21FB52169B1B396A2638FB"
+    },
+    {
+      "frame": 12,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-012.png",
+      "sha256": "053EB61B236E30B2109B1FB06D374FF9A2D4FC786298216CDBE6C5F4937411B8"
+    },
+    {
+      "frame": 24,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-024.png",
+      "sha256": "ABEFF66B0DC3A10F2792CA7CC2816000F2AADE4DCFEEB2923493F27A8F1BF522"
+    },
+    {
+      "frame": 36,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-036.png",
+      "sha256": "0D69E4571333879DA8D2DA8321AD1882050A0A20F7469D8B3B2D120FB258BECC"
+    },
+    {
+      "frame": 48,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-048.png",
+      "sha256": "2BB4012705F442F94E72C1AE8F5B71A8D2028E820B7541DE1AC86AE0724A9C47"
+    },
+    {
+      "frame": 60,
+      "view": "upper_body",
+      "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\raw\\key-pose-060.png",
+      "sha256": "439B60A9BA12D7C89E06FB71E31F2E76EC361C659210C891252C12805ED39F76"
+    }
+  ],
+  "contact_sheet": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\key-pose-contact-sheet.png",
+    "sha256": "3F9F1D6D4123A4772FF3CFEEF35E4BD8FFD4300489A8C918CF9A0F6C3628B502",
+    "columns": 3,
+    "rows": 2
+  },
+  "video": {
+    "path": "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\tech-pose-authoring-pilot.mp4",
+    "sha256": "98B9D823E50B7BAF16A82BFC7B0A3F540206CE72E6EE24FA0AB60C7E1BEF767C",
+    "size_bytes": 52861,
+    "frames": 60,
+    "fps": 30,
+    "encoder": "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+    "command": [
+      "C:\\Users\\admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-N-121938-g2456a39581-win64-gpl/bin\\ffmpeg.EXE",
+      "-y",
+      "-framerate",
+      "30",
+      "-start_number",
+      "1",
+      "-i",
+      "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\animation-frames\\frame_%04d.png",
+      "-c:v",
+      "libx264",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "E:\\University\\Semester_7\\HCI\\BTL\\node_modules\\.task0010\\docs\\reports\\artifacts\\TASK-0010\\visual-review\\tech-pose-authoring-pilot.mp4"
+    ]
+  },
+  "visual_quality": "NOT YET TESTED - owner must inspect generated evidence"
+}

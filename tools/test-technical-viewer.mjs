@@ -149,8 +149,11 @@ try {
   }
 
   const timeBefore = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]')?.textContent?.replace('s','')"));
-  await delay(300);
-  const timeAfter = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]')?.textContent?.replace('s','')"));
+  let timeAfter = timeBefore;
+  for (let attempt = 0; attempt < 8 && timeAfter === timeBefore; attempt += 1) {
+    await delay(150);
+    timeAfter = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]')?.textContent?.replace('s','')"));
+  }
   report.checks.push({ id: 'animation_progresses', status: timeAfter !== timeBefore ? 'PASS' : 'FAIL', evidence: { timeBefore, timeAfter } });
 
   await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent === 'Tạm dừng').click()")

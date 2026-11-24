@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact": "owner_reference_2d_landmark_estimates",
+  "status": "ESTIMATED_FROM_2D_REFERENCE",
+  "source": "docs/reports/artifacts/TASK-0011A/reference-analysis/s001-annotated-key-pose-sheet.png",
+  "selected_take": "local 00:03.05-00:05.00",
+  "coordinate_system": "absolute horizontal distance from estimated shoulder center, divided by estimated shoulder span",
+  "uncertainty": "+/- 0.10 shoulder span; single frontal video does not establish depth",
+  "body_proportions": {
+    "shoulder_span": 1.0,
+    "head_height_over_shoulder_span": 1.05,
+    "notes": "Used only for visual scale/context; the canonical avatar proportions were not modified."
+  },
+  "samples": [
+    { "semantic_label": "initial_open", "local_time_seconds": 3.55, "elbow_abs_x": 0.87, "wrist_abs_x": 1.06, "index_fingertip_abs_x": 1.29 },
+    { "semantic_label": "oscillation_a", "local_time_seconds": 3.80, "elbow_abs_x": 0.79, "wrist_abs_x": 0.93, "index_fingertip_abs_x": 1.16 },
+    { "semantic_label": "oscillation_b", "local_time_seconds": 4.10, "elbow_abs_x": 0.82, "wrist_abs_x": 0.68, "index_fingertip_abs_x": 0.92 },
+    { "semantic_label": "oscillation_a2", "local_time_seconds": 4.40, "elbow_abs_x": 0.82, "wrist_abs_x": 0.96, "index_fingertip_abs_x": 1.20 },
+    { "semantic_label": "final_open", "local_time_seconds": 4.60, "elbow_abs_x": 0.80, "wrist_abs_x": 1.00, "index_fingertip_abs_x": 1.20 }
+  ],
+  "policy_note": "These measurements guide technical geometry only and are not linguistic validation."
+}
