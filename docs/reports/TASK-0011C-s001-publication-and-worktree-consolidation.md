@@ -1,10 +1,10 @@
 # TASK-0011C — Chấp nhận kỹ thuật S001, xuất bản an toàn và hợp nhất worktree
 
 - Ngày/Timezone: 2026-11-24, Asia/Saigon
-- Active worktree: `E:\University\Semester_7\HCI\BTL-worktrees\TASK-0011B`
+- Active worktree: `E:\University\Semester_7\HCI\BTL-worktrees\active-3d`
 - Branch/base commit: `feat/s001-xin-chao-reviewed` / `54a1cc376764495e633c3eca85ce5c8fecf90a26` (`origin/feat/task-0010-first-sign-animation-pilot`)
 - Scope: hợp nhất artefact S001 v3/v4 đã có, ghi nhận owner acceptance, kiểm tra an toàn lịch sử và xuất bản feature branch; không tạo animation/render mới
-- Overall status: PASS — chờ ghi nhận kết quả push/PR và dọn worktree ở phần cuối task
+- Overall status: PASS — feature branch đã được push và worktree đã được hợp nhất; main chưa merge
 
 ## 1. Executive summary và trạng thái chấp nhận kỹ thuật
 
@@ -55,7 +55,7 @@ Các visual được giữ để review công khai chỉ chứa avatar kỹ thu�
 - Giữ bản v3 tại `blender/working/signs/S001/versions/task-0011a/S001-v3.blend` và `assets/exports/signs/versions/S001-task-0011a-v3.glb`.
 - Promote bản v4 không đổi sang `blender/working/signs/S001/S001.blend` và `assets/exports/signs/S001.glb`; giữ thêm source refinement/staging gốc.
 - Cập nhật metadata, UI staging, test, validator package và artefact báo cáo liên quan.
-- Commit nội dung publication: ghi trong Git history của nhánh; final response ghi SHA remote cuối cùng.
+- Commit nội dung publication: `e7d375f2f67dd6befc22366dae97e9e3bdabe4e2`.
 
 ## 8. Commands đã thực thi
 
@@ -103,29 +103,36 @@ Ghi chú: Vite cảnh báo chunk JS lớn hơn 500 kB; đây là warning đã bi
 
 ## 11. Remote push và commit
 
-- Push result: sẽ cập nhật sau normal push.
-- Remote commit verification: sẽ cập nhật sau push.
+- Push result: PASS — normal push tạo `origin/feat/s001-xin-chao-reviewed` và thiết lập upstream.
+- Remote commit đã xác minh bằng `git ls-remote`: `e7d375f2f67dd6befc22366dae97e9e3bdabe4e2`.
+- Branch URL: `https://github.com/lehuyanh423015/HCI-Sign-Language/tree/feat/s001-xin-chao-reviewed`.
 - Không force-push, không push trực tiếp `main`.
 
 ## 12. Pull Request và trạng thái main
 
-- PR URL: sẽ cập nhật sau khi tạo/chuẩn bị PR.
+- GitHub CLI (`gh`) không có trong môi trường, vì vậy PR chưa được submit tự động.
+- URL tạo PR đã chuẩn bị: `https://github.com/lehuyanh423015/HCI-Sign-Language/compare/main...feat/s001-xin-chao-reviewed?expand=1`.
 - Merge vào `main`: **NOT PERFORMED**.
 - Gate tiếp theo: **WAITING_FOR_MERGE_APPROVAL** sau khi nhánh/PR được xuất bản.
 
 ## 13. Worktree đã xóa an toàn
 
-Sẽ cập nhật sau khi push được xác minh. Chỉ dùng `git worktree remove` không có `--force`.
+- `E:\University\Semester_7\HCI\BTL-worktrees\TASK-0011A` — sạch, branch/commit local vẫn được giữ, artefact cần thiết đã nằm trong nhánh publication; tháo bằng `git worktree remove` không `--force`.
+- `E:\University\Semester_7\HCI\BTL\node_modules\.task0010` — sạch, commit đã có trên remote; tháo bằng `git worktree remove` không `--force`.
+- Prune metadata stale của `.task0008` và `.task0009` sau khi xác nhận hai đường dẫn vật lý không tồn tại.
 
 ## 14. Worktree giữ lại và lý do
 
 - Primary: giữ vì là repository chính và có user-owned changes.
 - `POLICY-LOCAL-REVIEW`: giữ vì chứa policy branch local chưa xuất bản.
-- Publication worktree: dự kiến giữ/move thành `E:\University\Semester_7\HCI\BTL-worktrees\active-3d` để tái sử dụng cho 3D task.
+- `E:\University\Semester_7\HCI\BTL-worktrees\active-3d`: publication worktree sạch, giữ để tái sử dụng cho 3D task.
+- Nhánh local gốc `feat/task-0011a-s001-xin-chao` và `feat/task-0011b-s001-motion-refinement` vẫn được giữ nguyên; chỉ worktree cũ được tháo.
 
 ## 15. Disk space reclaimed
 
-Sẽ đo và cập nhật sau consolidation.
+- `TASK-0011A`: 194.053.413 byte (185,06 MiB).
+- `.task0010`: 161.100.856 byte (153,64 MiB).
+- Tổng đo trước khi tháo: **355.154.269 byte (338,70 MiB)**. Metadata stale không có thư mục vật lý nên không cộng dung lượng.
 
 ## 16. Known issues, blockers và giới hạn
 
