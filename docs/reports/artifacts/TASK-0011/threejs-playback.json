@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_glb_threejs_playback",
+  "three_version": "0.187.0",
+  "loader": "GLTFLoader + AnimationMixer",
+  "browser": "Chrome headless, GPU",
+  "note": "Trang thử riêng ngoài repo; một lỗi 404 favicon đã loại khỏi danh sách lỗi.",
+  "samples_fraction_of_clip": [
+    0,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "results": {
+    "S004": {
+      "status": "ready",
+      "clips": [
+        "S004_MAIN"
+      ],
+      "duration_seconds": 2.733,
+      "tracks": 411,
+      "nmm_morph_targets": 6,
+      "page_errors": []
+    },
+    "S005": {
+      "status": "ready",
+      "clips": [
+        "S005_MAIN"
+      ],
+      "duration_seconds": 2.8,
+      "tracks": 411,
+      "nmm_morph_targets": 6,
+      "page_errors": []
+    },
+    "S006": {
+      "status": "ready",
+      "clips": [
+        "S006_MAIN"
+      ],
+      "duration_seconds": 1.633,
+      "tracks": 411,
+      "nmm_morph_targets": 6,
+      "page_errors": []
+    }
+  }
+}

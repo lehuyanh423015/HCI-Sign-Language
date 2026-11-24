@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "artifact": "task0009_sign_package_validation",
+  "status": "PASS",
+  "placeholder_packages": [
+    {
+      "sign_id": "S001",
+      "path": "blender/working/signs/S001/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S001"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "glb_export",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "preview",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    },
+    {
+      "sign_id": "S002",
+      "path": "blender/working/signs/S002/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S002"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "glb_export",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "preview",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    },
+    {
+      "sign_id": "S003",
+      "path": "blender/working/signs/S003/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S003"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "glb_export",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "preview",
+          "status": "NOT YET TESTED",
+          "actual": null
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    },
+    {
+      "sign_id": "S004",
+      "path": "blender/working/signs/S004/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S004"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "PASS",
+          "actual": "blender/working/signs/S004/S004.blend"
+        },
+        {
+          "id": "glb_export",
+          "status": "PASS",
+          "actual": "assets/exports/signs/S004.glb"
+        },
+        {
+          "id": "preview",
+          "status": "PASS",
+          "actual": "blender/working/signs/S004/previews/S004-key-poses.png"
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    },
+    {
+      "sign_id": "S005",
+      "path": "blender/working/signs/S005/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S005"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "PASS",
+          "actual": "blender/working/signs/S005/S005.blend"
+        },
+        {
+          "id": "glb_export",
+          "status": "PASS",
+          "actual": "assets/exports/signs/S005.glb"
+        },
+        {
+          "id": "preview",
+          "status": "PASS",
+          "actual": "blender/working/signs/S005/previews/S005-key-poses.png"
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    },
+    {
+      "sign_id": "S006",
+      "path": "blender/working/signs/S006/sign.json",
+      "status": "PASS",
+      "checks": [
+        {
+          "id": "schema",
+          "status": "PASS",
+          "actual": "valid"
+        },
+        {
+          "id": "identity_matches_directory",
+          "status": "PASS",
+          "actual": "S006"
+        },
+        {
+          "id": "source_reference",
+          "status": "NOT YET TESTED",
+          "actual": "NOT YET TESTED"
+        },
+        {
+          "id": "blender_source",
+          "status": "PASS",
+          "actual": "blender/working/signs/S006/S006.blend"
+        },
+        {
+          "id": "glb_export",
+          "status": "PASS",
+          "actual": "assets/exports/signs/S006.glb"
+        },
+        {
+          "id": "preview",
+          "status": "PASS",
+          "actual": "blender/working/signs/S006/previews/S006-key-poses.png"
+        },
+        {
+          "id": "no_accidental_approval",
+          "status": "PASS",
+          "actual": "REFERENCE_PENDING"
+        }
+      ]
+    }
+  ],
+  "pilot": {
+    "path": "assets/exports/signs/S004.glb",
+    "sha256": "8F96538EF1A419790F3E8F031A3E25029E2048FDD529B71A7320CD7F5238AA81",
+    "size_bytes": 2355036,
+    "clip_names": [
+      "S004_MAIN"
+    ],
+    "durations": [
+      {
+        "name": "S004_MAIN",
+        "seconds": 2.7333333333333334
+      }
+    ],
+    "checks": [
+      {
+        "id": "gltf_version",
+        "status": "PASS",
+        "actual": "2.0"
+      },
+      {
+        "id": "mesh_and_skin",
+        "status": "PASS",
+        "actual": {
+          "meshes": 9,
+          "skins": 1
+        }
+      },
+      {
+        "id": "expected_clips",
+        "status": "PASS",
+        "actual": [
+          "S004_MAIN"
+        ]
+      },
+      {
+        "id": "positive_durations",
+        "status": "PASS",
+        "actual": [
+          {
+            "name": "S004_MAIN",
+            "seconds": 2.7333333333333334
+          }
+        ]
+      },
+      {
+        "id": "six_core_nmm_targets",
+        "status": "PASS",
+        "actual": [
+          "NMM_BROW_RAISE_L",
+          "NMM_BROW_RAISE_R",
+          "NMM_EYE_BLINK_L",
+          "NMM_EYE_BLINK_R",
+          "NMM_LIPS_ROUND",
+          "NMM_LIPS_SPREAD"
+        ]
+      },
+      {
+        "id": "khronos_validator",
+        "status": "PASS",
+        "actual": {
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    ],
+    "classification": "TECHNICAL_FIXTURE_NOT_A_SIGN",
+    "linguistic_status": "NOT YET TESTED"
+  },
+  "actual_sign_pilot": {
+    "status": "BLOCKED",
+    "reason": "No verified owner-provided VSL reference exists for S001-S006."
+  },
+  "checks": [
+    {
+      "id": "S001_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S001_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S001"
+    },
+    {
+      "id": "S001_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S001_blender_source",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S001_glb_export",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S001_preview",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S001_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "S002_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S002_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S002"
+    },
+    {
+      "id": "S002_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S002_blender_source",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S002_glb_export",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S002_preview",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S002_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "S003_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S003_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S003"
+    },
+    {
+      "id": "S003_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S003_blender_source",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S003_glb_export",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S003_preview",
+      "status": "NOT YET TESTED",
+      "actual": null
+    },
+    {
+      "id": "S003_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "S004_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S004_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S004"
+    },
+    {
+      "id": "S004_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S004_blender_source",
+      "status": "PASS",
+      "actual": "blender/working/signs/S004/S004.blend"
+    },
+    {
+      "id": "S004_glb_export",
+      "status": "PASS",
+      "actual": "assets/exports/signs/S004.glb"
+    },
+    {
+      "id": "S004_preview",
+      "status": "PASS",
+      "actual": "blender/working/signs/S004/previews/S004-key-poses.png"
+    },
+    {
+      "id": "S004_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "S005_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S005_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S005"
+    },
+    {
+      "id": "S005_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S005_blender_source",
+      "status": "PASS",
+      "actual": "blender/working/signs/S005/S005.blend"
+    },
+    {
+      "id": "S005_glb_export",
+      "status": "PASS",
+      "actual": "assets/exports/signs/S005.glb"
+    },
+    {
+      "id": "S005_preview",
+      "status": "PASS",
+      "actual": "blender/working/signs/S005/previews/S005-key-poses.png"
+    },
+    {
+      "id": "S005_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "S006_schema",
+      "status": "PASS",
+      "actual": "valid"
+    },
+    {
+      "id": "S006_identity_matches_directory",
+      "status": "PASS",
+      "actual": "S006"
+    },
+    {
+      "id": "S006_source_reference",
+      "status": "NOT YET TESTED",
+      "actual": "NOT YET TESTED"
+    },
+    {
+      "id": "S006_blender_source",
+      "status": "PASS",
+      "actual": "blender/working/signs/S006/S006.blend"
+    },
+    {
+      "id": "S006_glb_export",
+      "status": "PASS",
+      "actual": "assets/exports/signs/S006.glb"
+    },
+    {
+      "id": "S006_preview",
+      "status": "PASS",
+      "actual": "blender/working/signs/S006/previews/S006-key-poses.png"
+    },
+    {
+      "id": "S006_no_accidental_approval",
+      "status": "PASS",
+      "actual": "REFERENCE_PENDING"
+    },
+    {
+      "id": "pilot_gltf_version",
+      "status": "PASS",
+      "actual": "2.0"
+    },
+    {
+      "id": "pilot_mesh_and_skin",
+      "status": "PASS",
+      "actual": {
+        "meshes": 9,
+        "skins": 1
+      }
+    },
+    {
+      "id": "pilot_expected_clips",
+      "status": "PASS",
+      "actual": [
+        "S004_MAIN"
+      ]
+    },
+    {
+      "id": "pilot_positive_durations",
+      "status": "PASS",
+      "actual": [
+        {
+          "name": "S004_MAIN",
+          "seconds": 2.7333333333333334
+        }
+      ]
+    },
+    {
+      "id": "pilot_six_core_nmm_targets",
+      "status": "PASS",
+      "actual": [
+        "NMM_BROW_RAISE_L",
+        "NMM_BROW_RAISE_R",
+        "NMM_EYE_BLINK_L",
+        "NMM_EYE_BLINK_R",
+        "NMM_LIPS_ROUND",
+        "NMM_LIPS_SPREAD"
+      ]
+    },
+    {
+      "id": "pilot_khronos_validator",
+      "status": "PASS",
+      "actual": {
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  ]
+}
