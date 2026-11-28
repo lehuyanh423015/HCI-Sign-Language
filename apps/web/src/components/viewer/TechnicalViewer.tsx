@@ -92,13 +92,15 @@ export function TechnicalViewer({
 
     if (handPreset) {
       // GLTFLoader sanitizes Blender node names; match semantic names defensively.
-      const wanted = new Set(['wristr', 'finger21r', 'finger51r']);
-      const handNodes = findSemanticNodes(model, wanted);
-      if (handNodes.size === wanted.size) {
-        const target = [...handNodes.values()]
+      const legacy = new Set(['wristr', 'finger21r', 'finger51r']);
+      const snow = new Set(['defwristr', 'deffingerindex1r', 'deffingerpinky1r']);
+      const handNodes = findSemanticNodes(model, legacy);
+      const landmarks = handNodes.size === legacy.size ? handNodes : findSemanticNodes(model, snow);
+      if (landmarks.size === legacy.size) {
+        const target = [...landmarks.values()]
           .map((object) => object.getWorldPosition(new Vector3()))
           .reduce((sum, point) => sum.add(point), new Vector3())
-          .multiplyScalar(1 / handNodes.size);
+          .multiplyScalar(1 / landmarks.size);
         const { up, forward } = skeletonBasis(model);
         controls.target.copy(target);
         camera.position.copy(target).addScaledVector(forward, 0.42).addScaledVector(up, 0.02);
@@ -272,8 +274,9 @@ export function TechnicalViewer({
   const replay = () => {
     const action = actionRef.current;
     if (!action) return;
-    action.paused = false;
     action.reset().play();
+    mixerRef.current?.update(0);
+    setAnimationTime(0);
     setPlaying(true);
   };
 

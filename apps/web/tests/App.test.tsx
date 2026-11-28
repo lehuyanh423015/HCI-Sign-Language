@@ -50,10 +50,11 @@ describe('application routes', () => {
     const html = renderRoute('/technical-sign-preview');
     expect(html).toContain('S001 — Xin chào');
     expect(html).toContain('Chờ xác minh ngôn ngữ');
-    expect(html).toContain('PASS — owner accepted prototype 2026-11-24');
+    expect(html).toContain('Snow v4.2');
+    expect(html).toContain('Snow Rig (CC) Blender Foundation');
     expect(html).toContain('NOT YET TESTED');
     expect(html).toContain('S001_MAIN');
     expect(html).toContain('LOCAL STAGING ONLY — educational publication NOT APPROVED');
-    expect(html).toContain('s001-xin-chao-task-0011b-refined.glb');
+    expect(html).toContain('s001-snow.glb');
   });
 });

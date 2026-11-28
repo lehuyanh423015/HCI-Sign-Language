@@ -21,8 +21,8 @@ const assets = [
     destination: 'tech-pose-authoring-pilot.glb',
   },
   {
-    source: 'assets/exports/signs/staging/S001-task-0011b.glb',
-    destination: 's001-xin-chao-task-0011b-refined.glb',
+    source: 'assets/exports/signs/staging/S001-snow.glb',
+    destination: 's001-snow.glb',
   },
 ];
 const checkOnly = process.argv.includes('--check');
