@@ -30,8 +30,26 @@ main { padding: 40px 0; min-height: 65vh; }
 footer { border-top: 1px solid #cbd5cf; padding: 24px 0 40px; color: #59736c; font-size: .9rem; }
 
 .technical-heading { max-width: 820px; }
-.preview-avatar-select { display: grid; gap: 6px; width: min(100%, 270px); margin-bottom: 14px; font-weight: 650; }
-.preview-avatar-select select { min-height: 44px; }
+.preview-picker { display: grid; grid-template-columns: minmax(0, 1fr) minmax(155px, .38fr); gap: 16px; align-items: start; margin-bottom: 16px; }
+.preview-avatar-picker { min-inline-size: 0; margin: 0; padding: 0; border: 0; }
+.preview-avatar-picker legend, .preview-animation-select { font-weight: 700; }
+.preview-avatar-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 6px; }
+.preview-avatar-card { display: flex; align-items: center; gap: 9px; min-height: 68px; padding: 10px; border: 1px solid #cbd5cf; border-radius: 14px; background: #fff; cursor: pointer; }
+.preview-avatar-card:has(input:checked) { border-color: #176555; background: #e8f4ef; box-shadow: inset 0 0 0 1px #176555; }
+.preview-avatar-card:focus-within { outline: 2px solid #176555; outline-offset: 2px; }
+.preview-avatar-card input { flex: none; margin: 0; accent-color: #176555; }
+.preview-avatar-card strong, .preview-avatar-card small { display: block; overflow-wrap: anywhere; }
+.preview-avatar-card small { color: #455e57; font-size: .75rem; }
+.preview-avatar-initial { display: grid; flex: none; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: #cfebdf; color: #184f40; font-weight: 800; }
+.preview-avatar-initial--vroid { background: #f4dce4; color: #72334d; }
+.preview-animation-select { display: grid; gap: 6px; }
+.preview-animation-select select { width: 100%; min-height: 44px; border: 1px solid #cbd5cf; border-radius: 10px; padding: 8px 10px; color: inherit; background: #fff; }
+@media (max-width: 680px) {
+  .preview-picker { grid-template-columns: 1fr; }
+}
+@media (max-width: 400px) {
+  .preview-avatar-initial { display: none; }
+}
 .technical-warning { display: inline-block; margin: 14px 0 0; padding: 8px 12px; border: 1px solid #c8682c; border-radius: 8px; color: #7a2e0d; background: #fff0e7; font-weight: 800; letter-spacing: .04em; }
 .technical-viewer { position: relative; overflow: hidden; background: #172421; min-height: 620px; }
 .technical-canvas { width: 100%; height: 620px; }

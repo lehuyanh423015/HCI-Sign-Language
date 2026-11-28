@@ -103,6 +103,8 @@ action.setLoop(LoopOnce, 1);
 action.clampWhenFinished = true;
 action.play();
 const samples = Array.from({ length: Math.round(animation.duration * 30) + 1 }, (_, i) => i / 30);
+const head = vrm.nodes[humanoid.get('head')];
+const headRest = rotation(head);
 function key(bone, absolute) {
   bone.quaternion.copy(rotation(bone.parent).invert().multiply(absolute)).normalize();
   const values = outputTracks.get(bone) ?? [];
@@ -125,6 +127,22 @@ for (const time of samples) {
     // Both rigs now face the same way. Apply the rest-frame correction per digit.
     for (const { src, dst, offset } of fingers) key(dst, rotation(src).multiply(offset));
   }
+  const phase = time / animation.duration;
+  const envelope = Math.sin(Math.PI * phase) ** 2;
+  const nod = new Quaternion().setFromAxisAngle(new Vector3(1, 0, 0), 0.045 * envelope);
+  const tilt = new Quaternion().setFromAxisAngle(new Vector3(0, 0, 1), 0.035 * envelope * Math.sin(2 * Math.PI * phase));
+  key(head, nod.multiply(tilt).multiply(headRest));
+}
+
+// Ease the small jerks from frame-to-frame retargeting without changing the endpoint poses.
+for (const [bone, values] of outputTracks) {
+  const smooth = values.slice();
+  for (let i = 4; i < values.length - 4; i += 4) {
+    const before = new Quaternion().fromArray(values, i - 4);
+    const after = new Quaternion().fromArray(values, i + 4);
+    new Quaternion().fromArray(values, i).slerp(before.slerp(after, 0.5), 0.55).toArray(smooth, i);
+  }
+  outputTracks.set(bone, smooth);
 }
 
 const { doc } = target;

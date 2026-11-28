@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import {
   AnimationAction,
+  AnimationClip,
   AnimationMixer,
   Box3,
   Color,
   DirectionalLight,
   HemisphereLight,
+  InterpolateDiscrete,
   LoopOnce,
   LoopRepeat,
   Mesh,
@@ -24,11 +26,31 @@ export const TECHNICAL_MODEL_URL = '/models/technical/technical-hand-test-neutra
 export const TECHNICAL_CLIP_NAME = 'TECH_HAND_CONTROL_TEST';
 
 type TechnicalViewerProps = {
+  practice?: { label: string; range: readonly [number, number] };
   modelUrl?: string;
   clipName?: string;
   classification?: string;
   learner?: boolean;
 };
+
+function practiceClip(source: AnimationClip, practice: NonNullable<TechnicalViewerProps['practice']>) {
+  const [start, end] = practice.range;
+  const span = end - start;
+  const steps = Math.ceil(span * 30);
+  // Play forward and back so the drill loops without snapping to its first pose.
+  const times = Array.from({ length: steps * 2 + 1 }, (_, i) => span * i / steps);
+  const tracks = source.tracks.map((track) => {
+    const interpolant = track.getInterpolation() === InterpolateDiscrete
+      ? track.InterpolantFactoryMethodDiscrete()
+      : track.InterpolantFactoryMethodLinear();
+    const copy = track.clone();
+    copy.times = Float32Array.from(times);
+    copy.values = Float32Array.from(times.flatMap((time) =>
+      Array.from(interpolant.evaluate(start + Math.min(time, 2 * span - time)))));
+    return copy;
+  });
+  return new AnimationClip(practice.label, 2 * span, tracks);
+}
 
 type ViewerStatus = 'loading' | 'ready' | 'error';
 
@@ -68,6 +90,7 @@ function skeletonBasis(model: Object3D) {
 export function TechnicalViewer({
   learner = false,
   modelUrl = TECHNICAL_MODEL_URL,
+  practice,
   clipName = TECHNICAL_CLIP_NAME,
   classification = 'TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE',
 }: TechnicalViewerProps = {}) {
@@ -193,12 +216,13 @@ export function TechnicalViewer({
       (gltf) => {
         if (disposed) return;
         setClipNames(gltf.animations.map((item) => item.name));
-        const clip = gltf.animations.find((item) => item.name === clipName);
-        if (!clip) {
+        const sourceClip = gltf.animations.find((item) => item.name === clipName);
+        if (!sourceClip) {
           setStatus('error');
           setStatusMessage(`Không tìm thấy clip ${clipName}.`);
           return;
         }
+        const clip = practice ? practiceClip(sourceClip, practice) : sourceClip;
         modelRef.current = gltf.scene;
         scene.add(gltf.scene);
         setDuration(clip.duration);
@@ -267,7 +291,7 @@ export function TechnicalViewer({
       cameraRef.current = null;
       modelRef.current = null;
     };
-  }, [clipName, modelUrl, attempt, learner]);
+  }, [clipName, modelUrl, attempt, learner, practice]);
 
   const togglePlayback = () => {
     const action = actionRef.current;
