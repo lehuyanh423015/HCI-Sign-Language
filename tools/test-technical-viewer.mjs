@@ -124,6 +124,17 @@ try {
   await client.send('Page.enable');
   await client.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
   await client.send('Page.navigate', { url });
+  const selectAvatar = (value) => evaluate(client, `(() => {
+    const select = document.querySelector('.preview-avatar-select select');
+    select.value = '${value}';
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+  })()`);
+  const testAvatarSwitch = process.argv.includes('--vroid');
+  if (testAvatarSwitch) {
+    await waitFor(client, "Boolean(document.querySelector('.preview-avatar-select select'))", 'avatar picker');
+    await selectAvatar('vroid');
+    await waitFor(client, "document.querySelector('[data-testid=sign-preview-review-status]').textContent.includes('s001-vroid.glb')", 'VRoid selection');
+  }
   await waitFor(client, "document.querySelector('[data-testid=viewer-status]')?.textContent?.startsWith('Sẵn sàng')", 'Three.js viewer readiness');
 
   const readiness = await evaluate(client, `(() => {
@@ -235,6 +246,13 @@ try {
   if (process.argv.includes('--mobile-screenshot')) {
     const mobileScreenshot = await client.send('Page.captureScreenshot', {format:'png'});
     writeFileSync(path.resolve(argument('--mobile-screenshot','')), Buffer.from(mobileScreenshot.data,'base64'));
+  }
+  if (testAvatarSwitch) {
+    const loadedVroid = await evaluate(client, "performance.getEntriesByType('resource').some(entry => entry.name.endsWith('/s001-vroid.glb'))");
+    await selectAvatar('snow');
+    await waitFor(client, "document.querySelector('[data-testid=sign-preview-review-status]').textContent.includes('s001-snow.glb')", 'Snow selection');
+    await waitFor(client, "document.querySelector('[data-testid=viewer-status]')?.textContent?.startsWith('Sẵn sàng')", 'Snow after switching back');
+    report.checks.push({ id: 'switch_between_avatars', status: loadedVroid ? 'PASS' : 'FAIL' });
   }
   report.runtime_exceptions = client.events.filter((event) => event.method === 'Runtime.exceptionThrown');
   report.status = report.checks.every((check) => check.status === 'PASS') && report.runtime_exceptions.length === 0 ? 'PASS' : 'FAIL';

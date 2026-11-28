@@ -24,6 +24,10 @@ const assets = [
     source: 'assets/exports/signs/staging/S001-snow.glb',
     destination: 's001-snow.glb',
   },
+  {
+    source: 'assets/exports/signs/staging/S001-vroid.glb',
+    destination: 's001-vroid.glb',
+  },
 ];
 const checkOnly = process.argv.includes('--check');
 

@@ -49,6 +49,10 @@ function skeletonBasis(model: Object3D) {
   const wanted = new Set(['shoulder01l', 'shoulder01r', 'head', 'pelvis']);
   const nodes = findSemanticNodes(model, wanted);
   if (nodes.size !== wanted.size) {
+    // VRM 0 avatars from VRoid face -Z in glTF coordinates.
+    if (model.getObjectByName('J_Bip_C_Hips')) {
+      return { up: new Vector3(0, 1, 0), forward: new Vector3(0, 0, -1) };
+    }
     return { up: new Vector3(0, 1, 0), forward: new Vector3(0, 0, 1) };
   }
   const left = nodes.get('shoulder01l')!.getWorldPosition(new Vector3());
@@ -95,7 +99,9 @@ export function TechnicalViewer({
       const legacy = new Set(['wristr', 'finger21r', 'finger51r']);
       const snow = new Set(['defwristr', 'deffingerindex1r', 'deffingerpinky1r']);
       const handNodes = findSemanticNodes(model, legacy);
-      const landmarks = handNodes.size === legacy.size ? handNodes : findSemanticNodes(model, snow);
+      const snowNodes = handNodes.size === legacy.size ? handNodes : findSemanticNodes(model, snow);
+      const landmarks = snowNodes.size === legacy.size ? snowNodes
+        : findSemanticNodes(model, new Set(['jbiprhand', 'jbiprindex1', 'jbiprlittle1']));
       if (landmarks.size === legacy.size) {
         const target = [...landmarks.values()]
           .map((object) => object.getWorldPosition(new Vector3()))

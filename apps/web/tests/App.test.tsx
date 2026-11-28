@@ -56,5 +56,6 @@ describe('application routes', () => {
     expect(html).toContain('S001_MAIN');
     expect(html).toContain('LOCAL STAGING ONLY — educational publication NOT APPROVED');
     expect(html).toContain('s001-snow.glb');
+    expect(html).toContain('AvatarSample_A (VRoid)');
   });
 });
