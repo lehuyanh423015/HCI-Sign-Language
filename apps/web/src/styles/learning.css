@@ -638,8 +638,9 @@ main fieldset {
     height: 158px;
   }
   .hero-art img {
-    width: auto;
-    height: 100%;
+    width: 150px;
+    height: 150px;
+    max-height: none;
   }
   .hero h2 {
     max-width: 100%;

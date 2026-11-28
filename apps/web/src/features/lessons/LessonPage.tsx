@@ -83,11 +83,11 @@ export function Home() {
         <div className="hero-art">
           <div className="orbit" />
           <img
-            src="/images/avatar-preview.webp"
-            alt="Nhân vật 3D của dự án trong bản dựng kỹ thuật"
+            src="/images/linh-preview.webp"
+            alt="Nhân vật 3D Linh đang vẫy tay"
           />
           <span>
-            <Box size={14} /> Avatar 3D · Bản mẫu
+            <Box size={14} /> Linh · Avatar 3D
           </span>
         </div>
       </section>
