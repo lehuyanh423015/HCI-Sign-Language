@@ -16,6 +16,7 @@ import {
   Vector3,
   WebGLRenderer,
 } from 'three';
+import { Play, Pause, RotateCcw, Repeat2, Gauge, Focus, Hand, MousePointer2, SlidersHorizontal, Minus, Plus, RotateCw } from 'lucide-react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -79,7 +80,8 @@ export function TechnicalViewer({
   const [looping, setLooping] = useState(true);
   const [speed, setSpeed] = useState<0.5 | 1>(1);
   const [animationTime, setAnimationTime] = useState(0);
-  const [cameraPreset, setCameraPreset] = useState<'full' | 'hand'>('full');
+  const [cameraPreset, setCameraPreset] = useState<'full' | 'hand' | 'custom'>('full');
+  const [duration,setDuration] = useState(0);
   const [clipNames, setClipNames] = useState<string[]>([]);
 
   const frameModel = (handPreset = false) => {
@@ -151,6 +153,10 @@ export function TechnicalViewer({
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
+    controls.rotateSpeed = 0.8;
+    controls.zoomSpeed = 0.85;
+    const onInteraction = () => setCameraPreset('custom');
+    controls.addEventListener('start', onInteraction);
     controls.enablePan = false;
     controls.minDistance = 0.15;
     controls.maxDistance = 8;
@@ -166,7 +172,7 @@ export function TechnicalViewer({
       const height = Math.max(mount.clientHeight, 1);
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
-      if (modelRef.current) frameModel();
+      if (modelRef.current && frameModel()) setCameraPreset('full');
       camera.updateProjectionMatrix();
     };
     const resizeObserver = new ResizeObserver(resize);
@@ -187,6 +193,7 @@ export function TechnicalViewer({
         }
         modelRef.current = gltf.scene;
         scene.add(gltf.scene);
+        setDuration(clip.duration);
         const mixer = new AnimationMixer(gltf.scene);
         const action = mixer.clipAction(clip);
         action.setLoop(LoopRepeat, Infinity);
@@ -233,6 +240,7 @@ export function TechnicalViewer({
       disposed = true;
       cancelAnimationFrame(animationFrame);
       resizeObserver.disconnect();
+      controls.removeEventListener('start', onInteraction);
       controls.dispose();
       actionRef.current?.stop();
       mixerRef.current?.stopAllAction();
@@ -290,31 +298,57 @@ export function TechnicalViewer({
     const offset=camera.position.clone().sub(controls.target).applyAxisAngle(camera.up,angle);
     offset.setLength(Math.min(controls.maxDistance,Math.max(controls.minDistance,offset.length()*scale)));
     camera.position.copy(controls.target).add(offset); controls.update();
+    setCameraPreset('custom');
   }
+  function seek(time: number) {
+    const action = actionRef.current;
+    const mixer = mixerRef.current;
+    if (!action || !mixer) return;
+    action.paused = true;
+    action.time = time;
+    mixer.update(0);
+    setPlaying(false);
+    setAnimationTime(time);
+  }
+
   const disabled = status !== 'ready';
+  const formatTime = (time: number) => time.toLocaleString('vi-VN', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   return (
-    <section className="technical-viewer" aria-label="Technical Three.js animation viewer">
+    <section className="technical-viewer" aria-label="Trình xem nhân vật 3D">
       <div ref={mountRef} className="technical-canvas" data-testid="technical-canvas" data-camera-preset={cameraPreset} />
-      <div className={`viewer-runtime-status ${status}`} role="status" data-testid="viewer-status">
-        {learner ? (status==='error'?'Không thể mở hoạt ảnh.':status==='ready'?'Sẵn sàng':'Đang tải hoạt ảnh…') : statusMessage}
-        {status==='error' && <button onClick={()=>{setStatus('loading');setAttempt(n=>n+1)}}>Thử lại</button>}
-      </div>
-      {!learner && <><div className="runtime-metrics" aria-label="Animation runtime metrics">
-        Thời gian: <output data-testid="animation-time">{animationTime.toFixed(2)}s</output> · Góc xem: {cameraPreset==='full'?'Chính diện':'Cận cảnh tay'}
-      </div>
-      <div className="technical-asset-metadata" data-testid="technical-asset-metadata">
-        <strong>{classification}</strong>
-        <span>Hoạt ảnh: <output data-testid="technical-clip-list">{clipNames.join(', ') || 'Đang tải…'}</output></span>
-      </div>
-      </>}
-      <div className="technical-controls" aria-label="Điều khiển technical animation">
-        <button type="button" onClick={togglePlayback} disabled={disabled}>{playing ? 'Tạm dừng' : 'Tiếp tục'}</button>
-        <button type="button" onClick={replay} disabled={disabled}>Phát lại</button>
-        <button type="button" onClick={toggleLoop} disabled={disabled} aria-pressed={looping}>Lặp lại: {looping ? 'Bật' : 'Tắt'}</button>
-        <button type="button" onClick={toggleSpeed} disabled={disabled}>Tốc độ: {speed.toLocaleString('vi-VN')}×</button>
-        <button type="button" onClick={() => applyCameraPreset('full')} disabled={disabled}>Về góc ban đầu</button>
-        <button type="button" onClick={() => applyCameraPreset('hand')} disabled={disabled}>Cận cảnh tay phải</button>
-        {[[ 'Xoay trái',-0.3,1 ],[ 'Xoay phải',0.3,1 ],['Phóng to',0,0.8],['Thu nhỏ',0,1.25]].map(([label,angle,scale])=><button key={label} disabled={disabled} onClick={()=>adjustCamera(Number(angle),Number(scale))}>{label}</button>)}
+      <div className="viewer-console">
+        <div className="viewer-timeline">
+          <output aria-live="off" aria-label="Thời điểm hiện tại">{formatTime(animationTime)} s</output>
+          <input type="range" aria-label="Tua hoạt ảnh" aria-valuetext={formatTime(animationTime) + ' giây'} min="0" max={duration} step="0.01" value={Math.min(animationTime,duration)} disabled={disabled} onChange={e=>seek(e.currentTarget.valueAsNumber)} />
+          <span>{formatTime(duration)} s</span>
+        </div>
+        <div className="playback-row" role="group" aria-label="Điều khiển phát">
+          <button className="play-primary" onClick={togglePlayback} disabled={disabled}>{playing ? <Pause/> : <Play/>}{playing ? 'Tạm dừng' : 'Tiếp tục'}</button>
+          <button onClick={replay} disabled={disabled}><RotateCcw/>Phát lại</button>
+          <button onClick={toggleLoop} disabled={disabled} aria-pressed={looping}><Repeat2/>Lặp lại: {looping ? 'Bật' : 'Tắt'}</button>
+          <button onClick={toggleSpeed} disabled={disabled}><Gauge/>Tốc độ: {speed.toLocaleString('vi-VN')}×</button>
+        </div>
+        <div className="camera-row">
+          <span className="gesture-help"><MousePointer2/><span className="mouse-help">Kéo để xoay · Lăn chuột để thu phóng</span><span className="touch-help">Vuốt để xoay · Chụm hai ngón để thu phóng</span></span>
+          <details className="camera-options"><summary><SlidersHorizontal/>Góc nhìn</summary>
+            <div role="group" aria-label="Chỉnh góc nhìn">
+              <button onClick={()=>applyCameraPreset('full')} disabled={disabled}><Focus/>Về góc ban đầu</button>
+              <button onClick={()=>applyCameraPreset('hand')} disabled={disabled}><Hand/>Cận cảnh tay phải</button>
+              <button onClick={()=>adjustCamera(-0.3,1)} disabled={disabled}><RotateCcw/>Xoay trái</button>
+              <button onClick={()=>adjustCamera(0.3,1)} disabled={disabled}><RotateCw/>Xoay phải</button>
+              <button onClick={()=>adjustCamera(0,0.8)} disabled={disabled}><Plus/>Phóng to</button>
+              <button onClick={()=>adjustCamera(0,1.25)} disabled={disabled}><Minus/>Thu nhỏ</button>
+            </div>
+          </details>
+        </div>
+        <div className={disabled ? 'viewer-feedback' : 'sr-only'} role="status" data-testid="viewer-status">
+          {learner ? (status==='error'?'Không thể mở hoạt ảnh.':status==='ready'?'Sẵn sàng':'Đang tải hoạt ảnh…') : statusMessage}
+          {status==='error' && <button onClick={()=>{setStatus('loading');setAttempt(n=>n+1)}}>Thử lại</button>}
+        </div>
+        {!learner && <details className="viewer-info"><summary>Thông tin kỹ thuật</summary>
+          <div data-testid="technical-asset-metadata"><p>{classification}</p><p>Hoạt ảnh: <output data-testid="technical-clip-list">{clipNames.join(', ') || 'Đang tải…'}</output></p>
+          <span>Thời gian: <span data-testid="animation-time">{animationTime.toFixed(2)}s</span></span></div>
+        </details>}
       </div>
     </section>
   );

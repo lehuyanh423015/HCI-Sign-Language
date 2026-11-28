@@ -656,3 +656,35 @@ main fieldset {
     bottom: -90%;
   }
 }
+
+/* Bộ điều khiển dưới khung 3D */
+.technical-canvas canvas { cursor: grab; touch-action: none; }
+.technical-canvas canvas:active { cursor: grabbing; }
+.viewer-console { --control-line: #d8e5df; background: white; padding: 16px clamp(14px, 2vw, 26px) 8px; }
+.viewer-console svg { width: 18px; height: 18px; flex: none; }
+.viewer-timeline { display: flex; align-items: center; gap: 14px; color: #455e57; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.viewer-timeline input { flex: 1; min-width: 0; accent-color: #0f766e; cursor: pointer; height: 28px; }
+.playback-row, .camera-row, .camera-options>div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.playback-row { padding: 6px 0 16px; }
+.viewer-console button, .camera-options summary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 13px; border: 1px solid var(--control-line); border-radius: 9px; color: #294d45; background: #fff; font-weight: 600; font-size: .9rem; }
+.viewer-console button:hover:not(:disabled), .camera-options summary:hover { background: #edf6f1; border-color: #92b5a6; }
+.viewer-console button[aria-pressed=true] { color: #145d50; border-color: #b1d8c9; background: #e6f4ec; }
+.viewer-console .play-primary, .viewer-console .play-primary:hover:not(:disabled) { background: #0e695d; color: #fff; border-color: #0e695d; min-width: 118px; }
+.camera-row { border-top: 1px solid var(--control-line); padding: 10px 0; justify-content: space-between; }
+.gesture-help { display: inline-flex; align-items: center; gap: 8px; color: #50675e; font-size: .86rem; }
+.camera-options[open] { width: 100%; }
+.camera-options>div { margin-top: 8px; }
+.camera-options summary { cursor: pointer; list-style: none; }
+.camera-options summary::after { content: '⌄'; }
+.camera-options[open] summary::after { transform: rotate(180deg); }
+.viewer-info { border-top: 1px solid var(--control-line); font-size: .83rem; color: #4c625a; }
+.viewer-info summary { padding: 12px 0; cursor: pointer; }
+.viewer-info p { margin: 0 0 6px; overflow-wrap: anywhere; }
+.viewer-feedback { padding: 8px 0; }
+.touch-help { display: none; }
+@media (pointer: coarse) { .touch-help { display: inline; } .mouse-help { display: none; } }
+@media (max-width: 540px) {
+  .playback-row { display: grid; grid-template-columns: 1fr 1fr; }
+  .viewer-console .play-primary { min-width: 0; }
+  .camera-options>div { display: grid; grid-template-columns: 1fr 1fr; }
+}
