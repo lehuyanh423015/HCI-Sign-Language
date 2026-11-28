@@ -1,6 +1,7 @@
 """Retarget the existing S001 technical draft to Snow and export the web GLB."""
 
 import argparse
+import json
 import math
 import sys
 from pathlib import Path
@@ -121,6 +122,18 @@ def retarget(rig, scene, frames, source_rest):
 
     scene.frame_start, scene.frame_end = min(frames), max(frames)
     scene.render.fps, scene.render.fps_base = 30, 1.0
+    measures = Path(__file__).resolve().parents[1] / "working/signs/S001/refinements/task-0011b/reference-landmark-estimates.json"
+    samples = json.loads(measures.read_text(encoding="utf-8"))["samples"]
+    # Reference take starts at 3.05 s. Convert measured widths to Snow's proportions.
+    span = (bones["FK-UpperArm.L"].head - bones["FK-UpperArm.R"].head).length
+    landmarks = [(1 + (s["local_time_seconds"] - 3.05) * 30, s["wrist_abs_x"] * span) for s in samples]
+
+    def wrist_width(frame):
+        for (start, first), (end, last) in zip(landmarks, landmarks[1:]):
+            if frame <= end:
+                t = max(0, (frame - start) / (end - start))
+                return first + (last - first) * t * t * (3 - 2 * t)
+        return landmarks[-1][1]
     def smooth_rotation(frame, delay, group, name):
         # Centered binomial filter in rotation space. Clamp at the loop seam.
         def at(time):
@@ -148,7 +161,19 @@ def retarget(rig, scene, frames, source_rest):
             for segment, (src, dst, offset) in enumerate(arms):
                 rotation = smooth_rotation(frame, lag + 0.4 * segment, "rotations", src)
                 pitch = math.radians(12 if segment else -9) * lift
-                key_absolute(bones[dst], frame, Quaternion((1, 0, 0), pitch) @ settle @ rotation @ offset)
+                desired = Quaternion((1, 0, 0), pitch) @ settle @ rotation @ offset
+                if segment:
+                    bpy.context.view_layer.update()
+                    arm = bones[dst]
+                    direction = desired @ Vector((0, 1, 0))
+                    # Keep the elbow path. Place the wrist on the observed frontal arc.
+                    target_x = wrist_width(frame - lag) * (1 if side == "L" else -1)
+                    x = max(-0.95, min(0.95, (target_x - arm.head.x) / arm.length))
+                    yz = Vector((0, direction.y, direction.z)).normalized()
+                    target = Vector((x, 0, 0)) + yz * math.sqrt(1 - x * x)
+                    correction = Quaternion().slerp(direction.rotation_difference(target), lift * 0.9)
+                    desired = correction @ desired
+                key_absolute(bones[dst], frame, desired)
             palm = smooth_rotation(frame, lag + 0.9, "palms", side)
             key_absolute(bones[wrist], frame, settle @ palm @ wrist_offset)
             for src, parent, dst, neutral, offset, finger in fingers:
