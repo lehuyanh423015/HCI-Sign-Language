@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_glb_threejs_node_playback",
+  "three_version": "0.187.0",
+  "loader": "GLTFLoader.parse + AnimationMixer.setTime, Node.js, không render",
+  "note": "Kiểm tra lại S004 0.3.0-draft. Chỉ nạp và lấy mẫu hoạt ảnh, không vẽ hình; vị trí xương wristR theo hệ glTF (Y hướng lên).",
+  "samples_fraction_of_clip": [
+    0,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "results": {
+    "S004": {
+      "status": "ready",
+      "clips": [
+        "S004_MAIN"
+      ],
+      "duration_seconds": 2.733,
+      "tracks": 411,
+      "nmm_morph_targets": 6,
+      "wrist_R_world_at_samples": [
+        [
+          -0.38,
+          1.033,
+          0.277
+        ],
+        [
+          0.075,
+          1.192,
+          0.243
+        ],
+        [
+          0.03,
+          1.151,
+          0.3
+        ],
+        [
+          -0.172,
+          0.855,
+          0.127
+        ]
+      ]
+    }
+  }
+}

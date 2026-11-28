@@ -63,6 +63,10 @@ def arguments():
     parser.add_argument("--handshape", action="append", default=[],
                         help="SIDE:SHAPE[:START:END] with SIDE L or R, SHAPE in " + ", ".join(HANDSHAPES)
                         + "; times in source seconds, default the whole segment")
+    parser.add_argument("--contact", help="R:L:START:END[:GAP_CM[:LEVEL]] keeps the right fist resting on the left palm in that source time window; LEVEL 0..1 turns the left palm toward facing up")
+    parser.add_argument("--contact-thumb-up", type=float, default=0.0,
+                        help="0..1, during contact turn the right hand so its thumb points up")
+    parser.add_argument("--outlier-deg", type=float, default=35.0, help="drop solved rotations this far from their neighbourhood medoid; 0 disables")
     parser.add_argument("--smooth", type=int, default=2, help="triangular window radius in frames")
     parser.add_argument("--head-weight", type=float, default=0.7)
     parser.add_argument("--hand-depth-scale", type=float, default=1.0,
@@ -131,6 +135,7 @@ class Solver:
         self.bones = armature.data.bones
         self.rest = {b.name: b.matrix_local.to_3x3().normalized() for b in self.bones}
         self.head = {b.name: b.head_local.copy() for b in self.bones}
+        self.tail = {b.name: b.tail_local.copy() for b in self.bones}
         # Mouth centre between the lip-corner bones; used as an anchor for signs made at the mouth.
         self.mouth = (self.head["oris03.L"] + self.head["oris03.R"]) * 0.5
         self.face_weights = []
@@ -392,6 +397,28 @@ def fill_track(track):
     return out
 
 
+def reject_outliers(track, radius=3, threshold_deg=35.0):
+    """Drop frames whose rotation is far from the medoid of their neighbourhood; fill_track re-interpolates them.
+
+    MediaPipe sometimes flips a hand for one to a few frames when hands overlap or move fast.
+    """
+    def angle(a, b):
+        return math.degrees(2 * math.acos(min(1.0, abs(a.dot(b)))))
+    out = list(track)
+    removed = 0
+    for i, q in enumerate(track):
+        if q is None:
+            continue
+        window = [track[j] for j in range(max(0, i - radius), min(len(track), i + radius + 1)) if track[j] is not None]
+        if len(window) < 3:
+            continue
+        medoid = min(window, key=lambda c: sum(angle(c, o) for o in window))
+        if angle(q, medoid) > threshold_deg:
+            out[i] = None
+            removed += 1
+    return out, removed
+
+
 def align(track):
     for i in range(1, len(track)):
         if track[i].dot(track[i - 1]) < 0:
@@ -416,6 +443,201 @@ def smooth(track, radius):
 
 def ease(t):
     return t * t * (3 - 2 * t)
+
+
+# ---------- two-hand contact ----------
+
+ARM = ("upperarm01", "upperarm02", "lowerarm01", "lowerarm02", "wrist")
+
+
+class Pose:
+    """Forward kinematics from local pose quaternions, in armature space, for the arm and hand chains."""
+
+    def __init__(self, solver, local):
+        self.s = solver
+        self.local = local
+        self.world = {}
+        self.pos = {}
+
+    def q(self, name):
+        return self.local.get(name, Quaternion())
+
+    def bone(self, name):
+        if name in self.world:
+            return self.world[name], self.pos[name]
+        s = self.s
+        parent = s.bones[name].parent
+        if parent is None or parent.name in ("clavicle.L", "clavicle.R", "spine01") or name.startswith("shoulder01"):
+            # Spine, clavicle and shoulder stay at rest in this pipeline.
+            world, pos = s.rest[name] @ self.q(name).to_matrix(), s.head[name].copy()
+        else:
+            pw, pp = self.bone(parent.name)
+            world = s.identity_matrix(name, pw) @ self.q(name).to_matrix()
+            pos = pp + pw @ s.rest[parent.name].transposed() @ (s.head[name] - s.head[parent.name])
+        self.world[name], self.pos[name] = world, pos
+        return world, pos
+
+    def tail(self, name):
+        world, pos = self.bone(name)
+        return pos + world @ self.s.rest[name].transposed() @ (self.s.tail[name] - self.s.head[name])
+
+
+def palm_frame(pose, side):
+    """Palm centre and the normal pointing out of the palm, matching the review measurement."""
+    s = side
+    mcp = [pose.bone(f"finger{k}-1.{s}")[1] for k in (2, 3, 4, 5)]
+    wrist = pose.bone(f"wrist.{s}")[1]
+    # Between the wrist and the knuckles, nearer the knuckles: where a fist resting in the palm sits.
+    centre = (sum(mcp, Vector()) / 4) * 0.65 + wrist * 0.35
+    fwd = (pose.bone(f"finger3-1.{s}")[1] - wrist).normalized()
+    across = (pose.bone(f"finger2-1.{s}")[1] - pose.bone(f"finger5-1.{s}")[1]).normalized()
+    normal = fwd.cross(across).normalized() * (1.0 if side == "L" else -1.0)
+    return centre, normal
+
+
+def fist_points(pose, side):
+    s = side
+    pts = [pose.bone(f"finger{k}-{j}.{s}")[1] for k in (2, 3, 4, 5) for j in (1, 2, 3)]
+    pts += [pose.tail(f"finger{k}-3.{s}") for k in (2, 3, 4, 5)]
+    return pts
+
+
+def mean_rotation(mats):
+    quats = [m.to_quaternion() for m in mats]
+    ref = quats[len(quats) // 2]
+    acc = Quaternion((0.0, 0.0, 0.0, 0.0))
+    for q in quats:
+        q = q if q.dot(ref) >= 0 else -q
+        acc = Quaternion((acc.w + q.w, acc.x + q.x, acc.y + q.y, acc.z + q.z))
+    return acc.normalized().to_matrix()
+
+
+def solve_arm_to(solver, local, side, target, elbow_hint, wrist_world):
+    """Two-bone IK for one arm to a wrist head target, keeping the given wrist world orientation."""
+    s = side
+    u1, u2, l1, l2, w = (f"{b}.{s}" for b in ARM)
+    head = solver.head
+    shoulder = head[u1]
+    a, b = (head[l1] - head[u1]).length, (head[w] - head[l1]).length
+    u = target - shoulder
+    d = max(abs(a - b) + 1e-4, min(u.length, a + b - 1e-4))
+    u.normalize()
+    pole = elbow_hint - shoulder
+    pole = (pole - u * pole.dot(u)).normalized()
+    cos_a = (a * a + d * d - b * b) / (2 * a * d)
+    elbow = shoulder + (u * cos_a + pole * math.sqrt(max(0.0, 1 - cos_a * cos_a))) * a
+    d_upper, d_lower = (elbow - shoulder).normalized(), (shoulder + u * d - elbow).normalized()
+    rest_upper, rest_lower = solver.segment(u1, l1), solver.segment(l1, w)
+    rest_bend = rest_lower - rest_upper * rest_lower.dot(rest_upper)
+    bend = d_lower - d_upper * d_lower.dot(d_upper)
+    m_shoulder = solver.rest[f"shoulder01.{s}"]
+    r_upper = from_basis(rest_upper, rest_bend, d_upper, bend)
+    m_u1 = r_upper @ solver.identity_matrix(u1, m_shoulder)
+    out = {u1: solver.local(u1, m_shoulder, m_u1), u2: Quaternion()}
+    m_u2 = solver.identity_matrix(u2, m_u1)
+    m_l1 = unit_from(r_upper @ rest_lower, d_lower) @ solver.identity_matrix(l1, m_u2)
+    out[l1] = solver.local(l1, m_u2, m_l1)
+    m_l2 = solver.identity_matrix(l2, m_l1)
+    delta = (m_l2.inverted() @ wrist_world) @ (m_l2.inverted() @ solver.identity_matrix(w, m_l2)).inverted()
+    dq = delta.to_quaternion()
+    twist = Quaternion((dq.w, 0.0, dq.y, 0.0))
+    half = Quaternion().slerp(twist.normalized(), 0.5) if twist.magnitude > 1e-9 else Quaternion()
+    out[l2] = half
+    out[w] = solver.local(w, m_l2 @ half.to_matrix(), wrist_world)
+    return out
+
+
+def apply_hand_contact(solver, tracks, frames, spec, gap_cm, level=0.0, thumb_up=0.0):
+    """The right fist rests on the left palm during [a, b] seconds and moves with it.
+
+    The left arm keeps the video motion; both wrists keep a steady orientation taken from the median
+    of the contact window; the right wrist is placed by IK so the lowest fist joint sits ``gap_cm``
+    above the left palm centre along its normal. Weights ease in and out over 0.15 s.
+    """
+    a, b = spec
+    times = [f["t"] for f in frames]
+    ramp = 0.15
+    weights = []
+    for t in times:
+        if t < a - ramp or t > b + ramp:
+            weights.append(0.0)
+            continue
+        w = min(1.0, (t - (a - ramp)) / ramp, ((b + ramp) - t) / ramp)
+        weights.append(ease(max(0.0, w)))
+    core = [i for i, t in enumerate(times) if a <= t <= b]
+    if not core:
+        raise RuntimeError("Contact window outside the segment")
+
+    def local_at(i):
+        return {name: track[i] for name, track in tracks.items()}
+
+    poses = [Pose(solver, local_at(i)) for i in core]
+    wl = mean_rotation([p.bone("wrist.L")[0] for p in poses])
+    # Right wrist orientation relative to the left palm, kept constant so the two hands move as one.
+    rel = mean_rotation([p.bone("wrist.L")[0].inverted() @ p.bone("wrist.R")[0] for p in poses])
+    if level > 0:
+        # Turn the steady left palm toward facing up; the right hand follows through ``rel``.
+        probe_local = {name: track[core[len(core) // 2]] for name, track in tracks.items()}
+        probe = Pose(solver, probe_local)
+        probe_local["wrist.L"] = (solver.identity_matrix("wrist.L", probe.bone("lowerarm02.L")[0]).inverted() @ wl).to_quaternion()
+        _, normal = palm_frame(Pose(solver, probe_local), "L")
+        turn = Quaternion().slerp(normal.rotation_difference(Vector((0.0, 0.0, 1.0))), level)
+        wl = turn.to_matrix() @ wl
+    wr = wl @ rel
+    if thumb_up > 0:
+        # Stand the fist up: rotate the right hand so the thumb points toward +Z, keeping its contact handled below.
+        probe_local = {name: track[core[len(core) // 2]] for name, track in tracks.items()}
+        probe_local.update(solve_arm_to(solver, probe_local, "R", Pose(solver, probe_local).bone("wrist.R")[1],
+                                        Pose(solver, probe_local).bone("lowerarm01.R")[1], wr))
+        probe = Pose(solver, probe_local)
+        thumb = (probe.tail("finger1-3.R") - probe.bone("finger1-2.R")[1]).normalized()
+        turn = Quaternion().slerp(thumb.rotation_difference(Vector((0.0, 0.0, 1.0))), thumb_up)
+        wr = turn.to_matrix() @ wr
+    names = [f"{b}.{s}" for s in ("L", "R") for b in ARM]
+    # Thumbs are often occluded while the hands touch; hold each at its median pose from the contact window.
+    thumbs = [f"finger1-{k}.{s}" for s in ("L", "R") for k in (1, 2, 3) if f"finger1-{k}.{s}" in tracks]
+    steady = {name: mean_rotation([tracks[name][i].to_matrix() for i in core]).to_quaternion() for name in thumbs}
+    names += thumbs
+    for name in names:
+        tracks.setdefault(name, [Quaternion() for _ in frames])
+    stats = []
+    for i, w in enumerate(weights):
+        if w <= 0:
+            continue
+        local = local_at(i)
+        local.update(steady)
+        left = Pose(solver, local)
+        wl2 = left.bone("lowerarm02.L")[0]
+        local["wrist.L"] = (solver.identity_matrix("wrist.L", wl2).inverted() @ wl).to_quaternion()
+        left = Pose(solver, local)
+        centre, normal = palm_frame(left, "L")
+        # Fist shape relative to the right wrist with the steady orientation.
+        trial = dict(local)
+        trial.update(solve_arm_to(solver, local, "R", Pose(solver, local).bone("wrist.R")[1], Pose(solver, local).bone("lowerarm01.R")[1], wr))
+        probe = Pose(solver, trial)
+        wpos = probe.bone("wrist.R")[1]
+        pts = [p - wpos for p in fist_points(probe, "R")]
+        fist_centre = sum(pts, Vector()) / len(pts)
+        low = min(pts, key=lambda v: v.dot(normal))
+        # Wrist head position that puts the fist centre over the palm centre and its lowest joint gap_cm above it.
+        ideal = centre - fist_centre + normal * (gap_cm / 100 - (low - fist_centre).dot(normal))
+        target = ideal.copy()
+        elbow_hint = Pose(solver, local).bone("lowerarm01.R")[1]
+        for _ in range(3):
+            corrected = solve_arm_to(solver, local, "R", target, elbow_hint, wr)
+            target -= Pose(solver, {**local, **corrected}).bone("wrist.R")[1] - ideal
+        final = {**local, **corrected}
+        result = Pose(solver, final)
+        c2, n2 = palm_frame(result, "L")
+        pts2 = fist_points(result, "R")
+        gap = min((p - c2).dot(n2) for p in pts2)
+        centre2 = sum(pts2, Vector()) / len(pts2)
+        lateral = ((centre2 - c2) - n2 * (centre2 - c2).dot(n2)).length
+        stats.append({"t": round(times[i], 3), "weight": round(w, 2), "gap_cm": round(gap * 100, 2), "lateral_cm": round(lateral * 100, 2)})
+        for name in names:
+            if name in final:
+                tracks[name][i] = tracks[name][i].slerp(final[name], w) if tracks[name][i].dot(final[name]) >= 0 else tracks[name][i].slerp(-final[name], w)
+    return stats
 
 
 # ---------- main ----------
@@ -462,10 +684,26 @@ def main():
     names = sorted({name for row in solved for name in row})
     tracks = {}
     coverage = {}
+    outliers = {}
     for name in names:
         track = [row.get(name) for row in solved]
         coverage[name] = round(sum(q is not None for q in track) / len(track), 3)
+        if args.outlier_deg > 0:
+            track, removed = reject_outliers(track, threshold_deg=args.outlier_deg)
+            if removed:
+                outliers[name] = removed
         tracks[name] = smooth(align(fill_track(track)), args.smooth)
+
+    contact_stats = []
+    if args.contact:
+        parts = args.contact.split(":")
+        if len(parts) not in (4, 5, 6) or parts[:2] != ["R", "L"]:
+            raise RuntimeError("--contact must be R:L:START:END[:GAP_CM[:LEVEL]]")
+        gap_cm = float(parts[4]) if len(parts) >= 5 else 2.0
+        level = float(parts[5]) if len(parts) == 6 else 0.0
+        contact_stats = apply_hand_contact(solver, tracks, frames, (float(parts[2]), float(parts[3])), gap_cm, level, args.contact_thumb_up)
+        for name in tracks:
+            tracks[name] = align(tracks[name])
 
     # Timeline: frame 1 neutral, ease into the first solved pose, play the segment, ease back to neutral.
     n = len(frames)
@@ -544,6 +782,9 @@ def main():
         "depth_scale": args.depth_scale,
         "arm_mode": args.arm_mode,
         "hand_depth_scale": args.hand_depth_scale,
+        "hand_contact": {"spec": args.contact, "thumb_up": args.contact_thumb_up, "frames": contact_stats} if args.contact else None,
+        "outlier_threshold_deg": args.outlier_deg,
+        "outliers_removed": outliers,
         "handshape_overrides": [{"side": h[0], "shape": h[1], "seconds": [h[2], h[3]], "flex_degrees": HANDSHAPES[h[1]]["flex"], "spread": HANDSHAPES[h[1]]["spread"]} for h in solver.handshapes],
         "frames_with_mouth_anchor": sum(1 for w in solver.face_weights if w > 0.5),
         "frames_with_mouth_contact": solver.contact_frames,
