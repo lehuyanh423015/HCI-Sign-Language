@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_landmark_retarget",
+  "status": "PASS",
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "linguistic_status": "NOT YET TESTED",
+  "method": "MEDIAPIPE_HOLISTIC_GEOMETRIC_RETARGET_DRAFT",
+  "blender_version": "5.2.4 LTS",
+  "sign_id": "S006",
+  "clip": "S006_MAIN",
+  "landmarks": {
+    "path": "S006.raw.json",
+    "sha256": "7917937C5DACF1FF3850769AE64416373CDBD078FD26C617855DCB331BB3AA7B",
+    "source_media": "S006.mp4",
+    "fps": 30
+  },
+  "segment_seconds": [
+    1.5,
+    2.3
+  ],
+  "segment_frames": 25,
+  "return_via_first_pose": true,
+  "timeline": {
+    "frame_start": 1,
+    "motion_start": 9,
+    "motion_end": 33,
+    "frame_end": 49,
+    "lead_in": 8,
+    "lead_out": 16
+  },
+  "smoothing_radius": 2,
+  "depth_scale": 0.5,
+  "arm_mode": "ik",
+  "hand_depth_scale": 0.3,
+  "handshape_overrides": [
+    {
+      "side": "R",
+      "shape": "bunched",
+      "seconds": [
+        1.5,
+        2.3
+      ],
+      "flex_degrees": [
+        48,
+        38,
+        22
+      ],
+      "spread": 1.0
+    }
+  ],
+  "frames_with_mouth_anchor": 12,
+  "frames_with_mouth_contact": 11,
+  "arm_scale": {
+    "L": 1.0224742278546295,
+    "R": 1.261824008280525
+  },
+  "head_weight": 0.7,
+  "animated_bones": 22,
+  "keyframes_written": 4312,
+  "solved_coverage": {
+    "finger1-1.R": 0.84,
+    "finger1-2.R": 0.84,
+    "finger1-3.R": 0.84,
+    "finger2-1.R": 0.84,
+    "finger2-2.R": 0.84,
+    "finger2-3.R": 0.84,
+    "finger3-1.R": 0.84,
+    "finger3-2.R": 0.84,
+    "finger3-3.R": 0.84,
+    "finger4-1.R": 0.84,
+    "finger4-2.R": 0.84,
+    "finger4-3.R": 0.84,
+    "finger5-1.R": 0.84,
+    "finger5-2.R": 0.84,
+    "finger5-3.R": 0.84,
+    "head": 1.0,
+    "lowerarm01.L": 1.0,
+    "lowerarm01.R": 1.0,
+    "lowerarm02.R": 0.84,
+    "upperarm01.L": 1.0,
+    "upperarm01.R": 1.0,
+    "wrist.R": 0.84
+  },
+  "rig_inventory_unchanged": true,
+  "neutral_frame_1": true,
+  "output": {
+    "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\blender\\working\\signs\\S006\\S006.blend",
+    "sha256": "1DDB272A8F089D491F7A74E6123C05C2A4D021B9D24B4DF07840FA25C84D9825"
+  }
+}

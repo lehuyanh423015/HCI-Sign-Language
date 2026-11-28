@@ -1,8 +1,46 @@
 {
   "schema_version": 1,
-  "identity": { "sign_id": "S006", "display_name": null, "gloss": null, "language_variant": null, "status": "REFERENCE_PENDING" },
-  "reference": { "reference_source": null, "reference_url": null, "reference_author": null, "reference_date": null, "reference_media": [], "reference_notes": null, "source_verification_status": "NOT YET TESTED" },
-  "production": { "master_avatar_version": "1.0.0", "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC", "animation_version": "0.0.0-placeholder", "animation_file": null, "export_file": null, "animation_clips": ["S006_MAIN"], "preview_file": null },
-  "review": { "technical_review_status": "NOT YET TESTED", "linguistic_review_status": "NOT YET TESTED", "reviewer": null, "review_notes": null, "approval_date": null },
-  "non_manual_markers": { "nmm_targets": [], "eye_gaze": null, "head_movement": null, "jaw_movement": null, "notes": null }
+  "identity": {
+    "sign_id": "S006",
+    "display_name": "ăn",
+    "gloss": "ĂN",
+    "language_variant": "Chưa xác định; video không ghi biến thể vùng miền",
+    "status": "REFERENCE_PENDING"
+  },
+  "reference": {
+    "reference_source": "QIPEDC, từ điển ngôn ngữ ký hiệu Việt Nam, qua bản sao Hugging Face Lakeserl/SignConnect",
+    "reference_url": "https://huggingface.co/datasets/Lakeserl/SignConnect",
+    "reference_author": "QIPEDC",
+    "reference_date": null,
+    "reference_media": [
+      "W00042.mp4 (QIPEDC, nhãn \"ăn uống\"; không lưu trong repo)"
+    ],
+    "reference_notes": "Bộ dữ liệu không có video riêng cho \"ăn\". Dùng phần đầu của \"ăn uống\", đoạn 1,50–2,30 giây: các đầu ngón chụm lại đưa lên chạm miệng. Video D0444 \"đồ ăn\" mở đầu bằng cùng động tác. Chưa rõ ký hiệu đứng riêng có lặp động tác chạm miệng hay không.",
+    "source_verification_status": "NOT YET TESTED"
+  },
+  "production": {
+    "master_avatar_version": "1.0.0",
+    "master_avatar_sha256": "DCA77E3D11463C25B783310D057CFD64C38D04A6D89A0F181B27F9CA143C5FEC",
+    "animation_version": "0.2.0-draft",
+    "animation_file": "blender/working/signs/S006/S006.blend",
+    "export_file": "assets/exports/signs/S006.glb",
+    "animation_clips": [
+      "S006_MAIN"
+    ],
+    "preview_file": "blender/working/signs/S006/previews/S006-key-poses.png"
+  },
+  "review": {
+    "technical_review_status": "NOT YET TESTED",
+    "linguistic_review_status": "NOT YET TESTED",
+    "reviewer": null,
+    "review_notes": "Bản nháp dựng tự động từ điểm mốc MediaPipe bằng blender/scripts/retarget_landmarks_to_sign.py; cần Huy Anh duyệt kỹ thuật, Thảo xác nhận nguồn và người thành thạo kiểm chứng.",
+    "approval_date": null
+  },
+  "non_manual_markers": {
+    "nmm_targets": [],
+    "eye_gaze": null,
+    "head_movement": "Xoay đầu lấy từ điểm mốc khuôn mặt, hệ số 0,7.",
+    "jaw_movement": null,
+    "notes": "Chưa dựng chuyển động miệng. Cần người thành thạo xác nhận khẩu hình đi kèm."
+  }
 }

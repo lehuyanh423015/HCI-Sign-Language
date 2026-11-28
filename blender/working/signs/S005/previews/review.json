@@ -1,0 +1,25 @@
+{
+  "scene": "S005.blend",
+  "frames": [
+    1,
+    15,
+    25,
+    35,
+    45,
+    55,
+    65,
+    84
+  ],
+  "views": [
+    "front",
+    "side"
+  ],
+  "stills": [],
+  "contact_sheet": "S005-key-poses.png",
+  "video": {
+    "file": "S005-front-side.mp4",
+    "frames": 84,
+    "fps": 30,
+    "exists": true
+  }
+}

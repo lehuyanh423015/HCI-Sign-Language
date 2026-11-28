@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "artifact": "sign_hand_contact_metrics",
+  "source": "S004.blend",
+  "summary": {
+    "frames": [
+      22,
+      53
+    ],
+    "gap_cm": {
+      "min": 2.31,
+      "max": 2.44
+    },
+    "lateral_cm_max": 0.38,
+    "left_palm_up": {
+      "min": 0.957,
+      "max": 0.958
+    },
+    "thumb_up": {
+      "min": 0.999,
+      "max": 0.999
+    },
+    "wrist_bend_deg_max": {
+      "L": 10.3,
+      "R": 13.6
+    }
+  },
+  "wrist_bend_deg_max_all_frames": {
+    "L": 35.2,
+    "R": 35.0
+  },
+  "motion": {
+    "upperarm01.R": {
+      "max_deg_per_frame": 23.98,
+      "at_frame": 13,
+      "max_change_deg": 8.89,
+      "change_at_frame": 13
+    },
+    "lowerarm01.R": {
+      "max_deg_per_frame": 21.29,
+      "at_frame": 13,
+      "max_change_deg": 9.76,
+      "change_at_frame": 13
+    },
+    "wrist.R": {
+      "max_deg_per_frame": 24.21,
+      "at_frame": 57,
+      "max_change_deg": 15.07,
+      "change_at_frame": 56
+    },
+    "upperarm01.L": {
+      "max_deg_per_frame": 25.47,
+      "at_frame": 14,
+      "max_change_deg": 9.44,
+      "change_at_frame": 14
+    },
+    "lowerarm01.L": {
+      "max_deg_per_frame": 21.88,
+      "at_frame": 14,
+      "max_change_deg": 8.3,
+      "change_at_frame": 14
+    },
+    "wrist.L": {
+      "max_deg_per_frame": 11.2,
+      "at_frame": 54,
+      "max_change_deg": 8.21,
+      "change_at_frame": 62
+    },
+    "head": {
+      "max_deg_per_frame": 0.99,
+      "at_frame": 70,
+      "max_change_deg": 0.46,
+      "change_at_frame": 69
+    }
+  },
+  "frames": {
+    "1": {
+      "gap_cm": 72.31,
+      "lateral_cm": 61.83,
+      "left_palm_up": -0.663,
+      "thumb_up": -0.493,
+      "wrist_bend_deg": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    },
+    "2": {
+      "gap_cm": 73.8,
+      "lateral_cm": 57.2,
+      "left_palm_up": -0.631,
+      "thumb_up": -0.47,
+      "wrist_bend_deg": {
+        "L": 1.5,
+        "R": 1.5
+      }
+    },
+    "3": {
+      "gap_cm": 76.17,
+      "lateral_cm": 44.85,
+      "left_palm_up": -0.544,
+      "thumb_up": -0.415,
+      "wrist_bend_deg": {
+        "L": 5.5,
+        "R": 5.5
+      }
+    },
+    "4": {
+      "gap_cm": 74.7,
+      "lateral_cm": 28.19,
+      "left_palm_up": -0.41,
+      "thumb_up": -0.359,
+      "wrist_bend_deg": {
+        "L": 11.1,
+        "R": 11.2
+      }
+    },
+    "5": {
+      "gap_cm": 66.02,
+      "lateral_cm": 12.32,
+      "left_palm_up": -0.245,
+      "thumb_up": -0.343,
+      "wrist_bend_deg": {
+        "L": 17.5,
+        "R": 17.7
+      }
+    },
+    "6": {
+      "gap_cm": 51.78,
+      "lateral_cm": 4.51,
+      "left_palm_up": -0.074,
+      "thumb_up": -0.386,
+      "wrist_bend_deg": {
+        "L": 23.9,
+        "R": 24.1
+      }
+    },
+    "7": {
+      "gap_cm": 38.89,
+      "lateral_cm": 7.9,
+      "left_palm_up": 0.076,
+      "thumb_up": -0.467,
+      "wrist_bend_deg": {
+        "L": 29.5,
+        "R": 29.7
+      }
+    },
+    "8": {
+      "gap_cm": 30.28,
+      "lateral_cm": 9.73,
+      "left_palm_up": 0.179,
+      "thumb_up": -0.54,
+      "wrist_bend_deg": {
+        "L": 33.5,
+        "R": 33.5
+      }
+    },
+    "9": {
+      "gap_cm": 27.2,
+      "lateral_cm": 10.07,
+      "left_palm_up": 0.218,
+      "thumb_up": -0.57,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "10": {
+      "gap_cm": 27.7,
+      "lateral_cm": 11.42,
+      "left_palm_up": 0.228,
+      "thumb_up": -0.463,
+      "wrist_bend_deg": {
+        "L": 32.0,
+        "R": 35.0
+      }
+    },
+    "11": {
+      "gap_cm": 25.66,
+      "lateral_cm": 14.7,
+      "left_palm_up": 0.214,
+      "thumb_up": -0.254,
+      "wrist_bend_deg": {
+        "L": 26.2,
+        "R": 35.0
+      }
+    },
+    "12": {
+      "gap_cm": 22.91,
+      "lateral_cm": 21.09,
+      "left_palm_up": 0.223,
+      "thumb_up": 0.115,
+      "wrist_bend_deg": {
+        "L": 21.9,
+        "R": 27.5
+      }
+    },
+    "13": {
+      "gap_cm": 21.64,
+      "lateral_cm": 26.59,
+      "left_palm_up": 0.228,
+      "thumb_up": 0.562,
+      "wrist_bend_deg": {
+        "L": 20.2,
+        "R": 23.9
+      }
+    },
+    "14": {
+      "gap_cm": 16.32,
+      "lateral_cm": 27.19,
+      "left_palm_up": 0.236,
+      "thumb_up": 0.875,
+      "wrist_bend_deg": {
+        "L": 19.1,
+        "R": 24.5
+      }
+    },
+    "15": {
+      "gap_cm": 8.36,
+      "lateral_cm": 21.81,
+      "left_palm_up": 0.286,
+      "thumb_up": 0.975,
+      "wrist_bend_deg": {
+        "L": 15.9,
+        "R": 25.1
+      }
+    },
+    "16": {
+      "gap_cm": 1.16,
+      "lateral_cm": 17.41,
+      "left_palm_up": 0.399,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 13.7,
+        "R": 25.7
+      }
+    },
+    "17": {
+      "gap_cm": -2.35,
+      "lateral_cm": 17.42,
+      "left_palm_up": 0.539,
+      "thumb_up": 0.981,
+      "wrist_bend_deg": {
+        "L": 12.5,
+        "R": 28.7
+      }
+    },
+    "18": {
+      "gap_cm": -0.81,
+      "lateral_cm": 14.82,
+      "left_palm_up": 0.708,
+      "thumb_up": 0.953,
+      "wrist_bend_deg": {
+        "L": 14.8,
+        "R": 31.3
+      }
+    },
+    "19": {
+      "gap_cm": 0.85,
+      "lateral_cm": 8.95,
+      "left_palm_up": 0.858,
+      "thumb_up": 0.962,
+      "wrist_bend_deg": {
+        "L": 15.7,
+        "R": 24.6
+      }
+    },
+    "20": {
+      "gap_cm": 1.37,
+      "lateral_cm": 4.07,
+      "left_palm_up": 0.921,
+      "thumb_up": 0.987,
+      "wrist_bend_deg": {
+        "L": 10.1,
+        "R": 12.0
+      }
+    },
+    "21": {
+      "gap_cm": 1.95,
+      "lateral_cm": 1.35,
+      "left_palm_up": 0.945,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 4.3,
+        "R": 1.3
+      }
+    },
+    "22": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 3.4,
+        "R": 2.6
+      }
+    },
+    "23": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 4.8,
+        "R": 1.1
+      }
+    },
+    "24": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 7.2,
+        "R": 2.8
+      }
+    },
+    "25": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 8.4,
+        "R": 3.9
+      }
+    },
+    "26": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 7.5,
+        "R": 3.1
+      }
+    },
+    "27": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 5.3,
+        "R": 1.1
+      }
+    },
+    "28": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.16,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 2.6,
+        "R": 2.4
+      }
+    },
+    "29": {
+      "gap_cm": 2.42,
+      "lateral_cm": 0.17,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 2.1,
+        "R": 4.8
+      }
+    },
+    "30": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.17,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 3.9,
+        "R": 7.2
+      }
+    },
+    "31": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.17,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 5.7,
+        "R": 9.5
+      }
+    },
+    "32": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 7.5,
+        "R": 12.0
+      }
+    },
+    "33": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 8.3,
+        "R": 13.6
+      }
+    },
+    "34": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 8.1,
+        "R": 13.3
+      }
+    },
+    "35": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.19,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 6.4,
+        "R": 10.3
+      }
+    },
+    "36": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.19,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 3.9,
+        "R": 5.5
+      }
+    },
+    "37": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.19,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.3,
+        "R": 0.2
+      }
+    },
+    "38": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.19,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 0.6,
+        "R": 4.3
+      }
+    },
+    "39": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.0,
+        "R": 6.6
+      }
+    },
+    "40": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 0.8,
+        "R": 7.1
+      }
+    },
+    "41": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 0.7,
+        "R": 7.5
+      }
+    },
+    "42": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 0.6,
+        "R": 7.8
+      }
+    },
+    "43": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 0.8,
+        "R": 8.1
+      }
+    },
+    "44": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.0,
+        "R": 8.2
+      }
+    },
+    "45": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.0,
+        "R": 8.1
+      }
+    },
+    "46": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.0,
+        "R": 8.1
+      }
+    },
+    "47": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.1,
+        "R": 8.2
+      }
+    },
+    "48": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.3,
+        "R": 8.4
+      }
+    },
+    "49": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 1.8,
+        "R": 8.6
+      }
+    },
+    "50": {
+      "gap_cm": 2.43,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 2.4,
+        "R": 8.8
+      }
+    },
+    "51": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 3.6,
+        "R": 8.9
+      }
+    },
+    "52": {
+      "gap_cm": 2.44,
+      "lateral_cm": 0.18,
+      "left_palm_up": 0.957,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 6.3,
+        "R": 8.2
+      }
+    },
+    "53": {
+      "gap_cm": 2.31,
+      "lateral_cm": 0.38,
+      "left_palm_up": 0.958,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 10.3,
+        "R": 7.6
+      }
+    },
+    "54": {
+      "gap_cm": 1.18,
+      "lateral_cm": 1.76,
+      "left_palm_up": 0.969,
+      "thumb_up": 0.999,
+      "wrist_bend_deg": {
+        "L": 15.9,
+        "R": 11.9
+      }
+    },
+    "55": {
+      "gap_cm": 0.43,
+      "lateral_cm": 4.45,
+      "left_palm_up": 0.962,
+      "thumb_up": 0.982,
+      "wrist_bend_deg": {
+        "L": 22.5,
+        "R": 18.9
+      }
+    },
+    "56": {
+      "gap_cm": 1.55,
+      "lateral_cm": 8.72,
+      "left_palm_up": 0.92,
+      "thumb_up": 0.839,
+      "wrist_bend_deg": {
+        "L": 30.5,
+        "R": 20.2
+      }
+    },
+    "57": {
+      "gap_cm": 6.29,
+      "lateral_cm": 12.39,
+      "left_palm_up": 0.815,
+      "thumb_up": 0.459,
+      "wrist_bend_deg": {
+        "L": 34.9,
+        "R": 19.4
+      }
+    },
+    "58": {
+      "gap_cm": 12.19,
+      "lateral_cm": 15.64,
+      "left_palm_up": 0.734,
+      "thumb_up": 0.142,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 30.7
+      }
+    },
+    "59": {
+      "gap_cm": 17.29,
+      "lateral_cm": 18.55,
+      "left_palm_up": 0.479,
+      "thumb_up": -0.212,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "60": {
+      "gap_cm": 21.92,
+      "lateral_cm": 18.21,
+      "left_palm_up": 0.375,
+      "thumb_up": -0.437,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "61": {
+      "gap_cm": 24.76,
+      "lateral_cm": 16.63,
+      "left_palm_up": 0.323,
+      "thumb_up": -0.52,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "62": {
+      "gap_cm": 25.86,
+      "lateral_cm": 15.35,
+      "left_palm_up": 0.446,
+      "thumb_up": -0.54,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "63": {
+      "gap_cm": 26.42,
+      "lateral_cm": 15.11,
+      "left_palm_up": 0.427,
+      "thumb_up": -0.529,
+      "wrist_bend_deg": {
+        "L": 35.1,
+        "R": 34.9
+      }
+    },
+    "64": {
+      "gap_cm": 27.46,
+      "lateral_cm": 14.4,
+      "left_palm_up": 0.379,
+      "thumb_up": -0.51,
+      "wrist_bend_deg": {
+        "L": 35.2,
+        "R": 34.7
+      }
+    },
+    "65": {
+      "gap_cm": 28.09,
+      "lateral_cm": 13.25,
+      "left_palm_up": 0.32,
+      "thumb_up": -0.509,
+      "wrist_bend_deg": {
+        "L": 35.2,
+        "R": 34.7
+      }
+    },
+    "66": {
+      "gap_cm": 28.21,
+      "lateral_cm": 11.83,
+      "left_palm_up": 0.267,
+      "thumb_up": -0.53,
+      "wrist_bend_deg": {
+        "L": 35.2,
+        "R": 34.7
+      }
+    },
+    "67": {
+      "gap_cm": 27.56,
+      "lateral_cm": 10.59,
+      "left_palm_up": 0.231,
+      "thumb_up": -0.557,
+      "wrist_bend_deg": {
+        "L": 35.1,
+        "R": 34.9
+      }
+    },
+    "68": {
+      "gap_cm": 27.2,
+      "lateral_cm": 10.07,
+      "left_palm_up": 0.218,
+      "thumb_up": -0.57,
+      "wrist_bend_deg": {
+        "L": 35.0,
+        "R": 35.0
+      }
+    },
+    "69": {
+      "gap_cm": 32.58,
+      "lateral_cm": 9.36,
+      "left_palm_up": 0.151,
+      "thumb_up": -0.519,
+      "wrist_bend_deg": {
+        "L": 32.4,
+        "R": 32.5
+      }
+    },
+    "70": {
+      "gap_cm": 47.15,
+      "lateral_cm": 5.39,
+      "left_palm_up": -0.02,
+      "thumb_up": -0.411,
+      "wrist_bend_deg": {
+        "L": 25.9,
+        "R": 26.1
+      }
+    },
+    "71": {
+      "gap_cm": 66.02,
+      "lateral_cm": 12.32,
+      "left_palm_up": -0.245,
+      "thumb_up": -0.343,
+      "wrist_bend_deg": {
+        "L": 17.5,
+        "R": 17.7
+      }
+    },
+    "72": {
+      "gap_cm": 76.3,
+      "lateral_cm": 33.93,
+      "left_palm_up": -0.459,
+      "thumb_up": -0.375,
+      "wrist_bend_deg": {
+        "L": 9.1,
+        "R": 9.2
+      }
+    },
+    "73": {
+      "gap_cm": 74.68,
+      "lateral_cm": 53.81,
+      "left_palm_up": -0.608,
+      "thumb_up": -0.454,
+      "wrist_bend_deg": {
+        "L": 2.6,
+        "R": 2.6
+      }
+    },
+    "74": {
+      "gap_cm": 72.31,
+      "lateral_cm": 61.83,
+      "left_palm_up": -0.663,
+      "thumb_up": -0.493,
+      "wrist_bend_deg": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    }
+  }
+}
