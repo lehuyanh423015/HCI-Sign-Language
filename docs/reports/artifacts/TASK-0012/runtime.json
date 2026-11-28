@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Trang chủ 1440 px",
+    "Trang chủ 768 px",
+    "Trang chủ 375 px",
+    "Thư viện chỉ hiển thị học liệu đã duyệt",
+    "Quiz minh họa và kết quả",
+    "Phục hồi sau reload, cô lập hồ sơ A/B",
+    "Hoàn thành lượt ôn chỉ bằng bàn phím",
+    "S001 GLB mobile"
+  ]
+}

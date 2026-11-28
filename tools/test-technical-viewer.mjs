@@ -122,6 +122,7 @@ try {
   const client = new CdpClient(pageTarget.webSocketDebuggerUrl);
   await client.send('Runtime.enable');
   await client.send('Page.enable');
+  await client.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
   await client.send('Page.navigate', { url });
   await waitFor(client, "document.querySelector('[data-testid=viewer-status]')?.textContent?.startsWith('Sẵn sàng')", 'Three.js viewer readiness');
 
@@ -173,17 +174,17 @@ try {
   const replayed = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]').textContent.replace('s','')"));
   report.checks.push({ id: 'replay', status: replayed <= 0.3 ? 'PASS' : 'FAIL', evidence: { replayed } });
 
-  await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Loop:')).click()")
+  await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Lặp lại:')).click()")
   await delay(80);
-  const loopLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Loop:')).textContent")
-  report.checks.push({ id: 'loop_toggle', status: loopLabel === 'Loop: Tắt' ? 'PASS' : 'FAIL', evidence: { loopLabel } });
+  const loopLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Lặp lại:')).textContent")
+  report.checks.push({ id: 'loop_toggle', status: loopLabel === 'Lặp lại: Tắt' ? 'PASS' : 'FAIL', evidence: { loopLabel } });
 
   await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Tốc độ:')).click()")
   await delay(80);
   const speedLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Tốc độ:')).textContent")
-  report.checks.push({ id: 'speed_toggle', status: speedLabel === 'Tốc độ: 0.5×' ? 'PASS' : 'FAIL', evidence: { speedLabel } });
+  report.checks.push({ id: 'speed_toggle', status: speedLabel === 'Tốc độ: 0,5×' ? 'PASS' : 'FAIL', evidence: { speedLabel } });
 
-  const resetFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Đặt lại camera'); b?.click(); return Boolean(b); })()")
+  const resetFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Về góc ban đầu'); b?.click(); return Boolean(b); })()")
   await delay(100);
   const resetPreset = await evaluate(client, "document.querySelector('[data-testid=technical-canvas]').dataset.cameraPreset")
   const handFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Cận cảnh tay phải'); b?.click(); return Boolean(b); })()")

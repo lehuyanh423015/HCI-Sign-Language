@@ -1,29 +1,30 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
+import { LearningProvider } from '../src/app/LearningState';
 import { AppRoutes } from '../src/app/AppRoutes';
 
 function renderRoute(path: string) {
   return renderToStaticMarkup(
     <MemoryRouter initialEntries={[path]}>
-      <AppRoutes />
+      <LearningProvider profile="demo-a"><AppRoutes /></LearningProvider>
     </MemoryRouter>,
   );
 }
 
 describe('application routes', () => {
-  it('renders the neutral technical viewer on the landing route', () => {
+  it('renders the workspace home with an explicitly technical preview', () => {
     const html = renderRoute('/');
-    expect(html).toContain('Avatar giáo dục trung tính');
-    expect(html).toContain('TECHNICAL TEST - NOT VERIFIED SIGN LANGUAGE');
-    expect(html).toContain('Cận cảnh tay phải');
+    expect(html).toContain('Không gian học tập');
+    expect(html).toContain('Xem bản mẫu 3D');
+    expect(html).toContain('Thư viện bài học');
     expect(html).not.toContain('Chưa có GLB');
     expect(html).not.toContain('<h2>S001</h2>');
   });
 
   it('renders quiz and review routes', () => {
-    expect(renderRoute('/quiz')).toContain('Khu vực câu hỏi');
-    expect(renderRoute('/review')).toContain('Danh sách ôn tập');
+    expect(renderRoute('/quiz')).toContain('Kiểm tra nhận biết');
+    expect(renderRoute('/review')).toContain('Ôn tập cá nhân');
   });
 
   it('renders the isolated technical viewer warning and controls', () => {
@@ -45,7 +46,7 @@ describe('application routes', () => {
   it('renders the isolated S001 technical draft without publishing approved lesson content', () => {
     const html = renderRoute('/technical-sign-preview');
     expect(html).toContain('S001 — Xin chào');
-    expect(html).toContain('TECHNICAL DRAFT');
+    expect(html).toContain('Chờ xác minh ngôn ngữ');
     expect(html).toContain('PASS — owner accepted prototype 2026-11-24');
     expect(html).toContain('NOT YET TESTED');
     expect(html).toContain('S001_MAIN');

@@ -6,23 +6,22 @@ export function SignAnimationPreviewPage() {
   return (
     <article>
       <div className="page-heading technical-heading">
-        <p className="eyebrow">S001 reference-driven refined candidate · TASK-0011B</p>
-        <h2>S001 — Xin chào</h2>
-        <p className="technical-warning">TECHNICAL DRAFT — NOT LINGUISTICALLY APPROVED</p>
+        <p className="eyebrow">Xem trước kỹ thuật · Phiên bản 4</p>
+        <h1>S001 — Xin chào</h1>
+        <p className="technical-warning">Bản mẫu kỹ thuật · Chờ xác minh ngôn ngữ</p>
         <p>
-          Bản dựng cục bộ dựa trên video tham chiếu do chủ dự án cung cấp. Trang này chỉ dùng để kiểm tra chuyển động,
-          camera và bàn tay; nội dung chưa được người có chuyên môn xác nhận và chưa thuộc catalog bài học đã duyệt.
+          Quan sát bàn tay và nét mặt. Chọn tốc độ 0,5× để xem chậm, hoặc xoay nhân vật để xem từ góc khác.
         </p>
-        <dl className="preview-review-status" data-testid="sign-preview-review-status">
+        <details><summary>Thông tin bản dựng và kiểm chứng</summary><dl className="preview-review-status" data-testid="sign-preview-review-status">
           <div><dt>ID</dt><dd>S001</dd></div>
-          <div><dt>Variant</dt><dd>Hà Nội</dd></div>
+          <div><dt>Biến thể</dt><dd>Hà Nội</dd></div>
           <div><dt>Master</dt><dd>1.0.0</dd></div>
-          <div><dt>Asset</dt><dd>s001-xin-chao-task-0011b-refined.glb</dd></div>
-          <div><dt>Primary clip</dt><dd>S001_MAIN</dd></div>
-          <div><dt>Technical</dt><dd>PASS — owner accepted prototype 2026-11-24</dd></div>
-          <div><dt>Linguistic</dt><dd>NOT YET TESTED</dd></div>
-          <div><dt>Publication</dt><dd>LOCAL STAGING ONLY — educational publication NOT APPROVED</dd></div>
-        </dl>
+          <div><dt>Tệp mô hình</dt><dd>s001-xin-chao-task-0011b-refined.glb</dd></div>
+          <div><dt>Hoạt ảnh</dt><dd>S001_MAIN</dd></div>
+          <div><dt>Kỹ thuật</dt><dd>PASS — owner accepted prototype 2026-11-24</dd></div>
+          <div><dt>Ngôn ngữ</dt><dd>NOT YET TESTED</dd></div>
+          <div><dt>Xuất bản</dt><dd>LOCAL STAGING ONLY — educational publication NOT APPROVED</dd></div>
+        </dl></details>
       </div>
       <TechnicalViewer
         modelUrl={S001_DRAFT_URL}

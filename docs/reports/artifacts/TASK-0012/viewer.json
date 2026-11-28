@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "url": "http://localhost:5173/technical-sign-preview",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "gltf_and_canvas_ready",
+      "status": "PASS",
+      "evidence": {
+        "status": "Sẵn sàng · S001_MAIN · 2.00s",
+        "canvas": true,
+        "width": 924,
+        "height": 402
+      }
+    },
+    {
+      "id": "animation_progresses",
+      "status": "PASS",
+      "evidence": {
+        "timeBefore": 0.2,
+        "timeAfter": 0.32
+      }
+    },
+    {
+      "id": "pause",
+      "status": "PASS",
+      "evidence": {
+        "pausedA": 0.32,
+        "pausedB": 0.32
+      }
+    },
+    {
+      "id": "resume",
+      "status": "PASS",
+      "evidence": {
+        "pausedB": 0.32,
+        "resumed": 0.47
+      }
+    },
+    {
+      "id": "replay",
+      "status": "PASS",
+      "evidence": {
+        "replayed": 0.07
+      }
+    },
+    {
+      "id": "loop_toggle",
+      "status": "PASS",
+      "evidence": {
+        "loopLabel": "Lặp lại: Tắt"
+      }
+    },
+    {
+      "id": "speed_toggle",
+      "status": "PASS",
+      "evidence": {
+        "speedLabel": "Tốc độ: 0,5×"
+      }
+    },
+    {
+      "id": "camera_controls",
+      "status": "PASS",
+      "evidence": {
+        "resetFound": true,
+        "resetPreset": "full",
+        "handFound": true,
+        "handPreset": "hand"
+      }
+    }
+  ],
+  "screenshot": "D:\\HMI\\HCI-Sign-Language\\docs\\reports\\artifacts\\TASK-0012\\viewer.png",
+  "runtime_exceptions": []
+}
