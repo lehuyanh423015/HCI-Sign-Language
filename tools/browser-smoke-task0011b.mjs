@@ -12,6 +12,8 @@ const url = arg('--url', 'http://127.0.0.1:5173/technical-sign-preview');
 const reportPath = path.resolve(arg('--report', 'docs/reports/artifacts/TASK-0011B/browser-smoke.json'));
 const screenshotPath = path.resolve(arg('--screenshot', 'docs/reports/artifacts/TASK-0011B/browser-smoke.png'));
 const chromePath = arg('--chrome', 'C:/Program Files/Google/Chrome/Application/chrome.exe');
+const expectedClip = arg('--clip', 'S001_MAIN');
+const taskId = arg('--task', 'TASK-0011B');
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const freePort = await new Promise((resolve, reject) => {
@@ -23,7 +25,7 @@ const freePort = await new Promise((resolve, reject) => {
   });
 });
 
-const profile = mkdtempSync(path.join(tmpdir(), 'task0011b-chrome-'));
+const profile = mkdtempSync(path.join(tmpdir(), `${taskId.toLowerCase()}-chrome-`));
 const chrome = spawn(chromePath, [
   '--headless=new',
   '--no-first-run',
@@ -108,6 +110,9 @@ for (let attempt = 0; attempt < 100; attempt += 1) {
   if (ready) break;
   await delay(100);
 }
+// The explicit reload can abort Chrome's initial navigation. Only runtime
+// failures after the viewer is ready are relevant to this smoke check.
+networkFailures.length = 0;
 
 const snapshot = () => evaluate(`(() => ({
   title: document.title,
@@ -151,8 +156,8 @@ writeFileSync(screenshotPath, Buffer.from(screenshot.data, 'base64'));
 
 const checks = [
   ['page_route', initial.title.length > 0, { url, title: initial.title }],
-  ['actual_glb_ready', initial.statusClass.includes('ready') && initial.status.includes('S001_MAIN'), initial.status],
-  ['expected_clip', initial.clipList === 'S001_MAIN', initial.clipList],
+  ['actual_glb_ready', initial.statusClass.includes('ready') && initial.status.includes(expectedClip), initial.status],
+  ['expected_clip', initial.clipList === expectedClip, initial.clipList],
   ['webgl_canvas', initial.canvasCount === 1, initial.canvasCount],
   ['controls_enabled', initial.buttons.length === 6 && initial.buttons.every((button) => !button.disabled), initial.buttons],
   ['animation_progresses', progressed.time > initial.time, { initial: initial.time, progressed: progressed.time }],
@@ -170,11 +175,12 @@ const checks = [
 
 const report = {
   schema_version: 1,
-  artifact: 'task0011b_headless_browser_smoke',
+  artifact: `${taskId.toLowerCase()}_headless_browser_smoke`,
   status: checks.some((check) => check.status === 'FAIL') ? 'FAIL' : 'PASS',
   url,
   browser: chromePath,
   classification: 'LOCAL_TECHNICAL_STAGING_ONLY',
+  expected_clip: expectedClip,
   checks,
   screenshot: screenshotPath,
 };
@@ -191,5 +197,5 @@ try {
 } catch (error) {
   console.warn(`WARN temporary Chrome profile cleanup deferred: ${error.message}`);
 }
-console.log(`${report.status} TASK-0011B browser smoke (${checks.filter((check) => check.status === 'PASS').length}/${checks.length})`);
+console.log(`${report.status} ${taskId} browser smoke (${checks.filter((check) => check.status === 'PASS').length}/${checks.length})`);
 if (report.status !== 'PASS') process.exitCode = 1;

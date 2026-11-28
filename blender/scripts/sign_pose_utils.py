@@ -177,7 +177,7 @@ class PoseAuthor:
         bone.rotation_euler[axis["axis_index"]] = axis["sign"] * math.radians(float(degrees))
         return axis
 
-    def apply_named_hand_pose(self, side, pose_name, library, overrides=None):
+    def apply_named_hand_pose(self, side, pose_name, library, overrides=None, adduction=None):
         pose = library.get("poses", {}).get(pose_name)
         if pose is None:
             raise PoseAuthoringError("Unknown pose name: %s" % pose_name)
@@ -193,6 +193,21 @@ class PoseAuthor:
             if family is None:
                 raise PoseAuthoringError("Unsupported finger pose bone: %s" % semantic)
             self.apply_flex(actual, chains[family], side, degrees)
+            affected.append(actual)
+        # MPFB proximal finger bones flex about local X; local Z controls splay.
+        # Apply Z after flex so adduction does not replace the soft finger curl.
+        for semantic, degrees in (adduction or {}).items():
+            if semantic not in {"finger2-1", "finger3-1", "finger4-1", "finger5-1"}:
+                raise PoseAuthoringError("Unsupported adduction bone: %s" % semantic)
+            degrees = float(degrees)
+            if not math.isfinite(degrees) or abs(degrees) > 12:
+                raise PoseAuthoringError("Adduction exceeds local Z limit: %s" % semantic)
+            actual = semantic_finger_name(semantic, side)
+            family = next(name for name, chain in chains.items() if actual in chain)
+            if self.axis_for(actual, chains[family], side)["axis"] != "X":
+                raise PoseAuthoringError("Proximal finger flex axis changed: %s" % actual)
+            bone = require_pose_bone(self.armature, actual)
+            bone.rotation_euler.z = math.radians(degrees)
             affected.append(actual)
         bpy.context.view_layer.update()
         return affected

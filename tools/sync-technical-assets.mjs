@@ -24,6 +24,10 @@ const assets = [
     source: 'assets/exports/signs/staging/S001-task-0011b.glb',
     destination: 's001-xin-chao-task-0011b-refined.glb',
   },
+  {
+    source: 'assets/exports/signs/staging/S002-technical-draft.glb',
+    destination: 's002-cam-on-technical-draft.glb',
+  },
 ];
 const checkOnly = process.argv.includes('--check');
 

@@ -69,6 +69,27 @@ def main():
     add("left_hand_independent_control", right_stable and left_changed and left_delta["moved_vertices"] > 0, {"right_stable": right_stable, "left_changed": left_changed, "mesh_delta": left_delta})
 
     reset_full_pose(armature, body)
+    author.apply_named_hand_pose("L", "relaxed_hand", library, {"finger2-1": 11}, {"finger2-1": -6})
+    author.apply_named_hand_pose("R", "relaxed_hand", library, {"finger2-1": 11}, {"finger2-1": 6})
+    left_index = require_pose_bone(armature, "finger2-1.L")
+    right_index = require_pose_bone(armature, "finger2-1.R")
+    from math import degrees
+    adduction_actual = {
+        "L_x_flex": round(degrees(left_index.rotation_euler.x), 3),
+        "L_z_adduction": round(degrees(left_index.rotation_euler.z), 3),
+        "R_x_flex": round(degrees(right_index.rotation_euler.x), 3),
+        "R_z_adduction": round(degrees(right_index.rotation_euler.z), 3),
+    }
+    add("proximal_finger_adduction_independent_of_flexion",
+        author.axis_map["finger2-1.L"]["axis"] == "X"
+        and author.axis_map["finger2-1.R"]["axis"] == "X"
+        and abs(adduction_actual["L_x_flex"]) == 11
+        and abs(adduction_actual["R_x_flex"]) == 11
+        and adduction_actual["L_z_adduction"] == -6
+        and adduction_actual["R_z_adduction"] == 6,
+        adduction_actual)
+
+    reset_full_pose(armature, body)
     final_vertices = evaluated_mesh_vertices(body)
     final_delta = mesh_delta(baseline_vertices, final_vertices)
     all_neutral = all(identity_matrix_values(bone.matrix_basis) for bone in armature.pose.bones)

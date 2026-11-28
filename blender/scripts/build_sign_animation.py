@@ -106,7 +106,7 @@ def main():
         affected = []
         for side_key, side in (("left_hand", "L"), ("right_hand", "R")):
             hand = key_pose[side_key]
-            affected.extend(author.apply_named_hand_pose(side, hand["pose"], pose_library, hand.get("finger_overrides")))
+            affected.extend(author.apply_named_hand_pose(side, hand["pose"], pose_library, hand.get("finger_overrides"), hand.get("finger_adduction_degrees")))
             affected.append(author.apply_local_rotation("wrist.%s" % side, hand["wrist_orientation_degrees"]))
             for semantic, degrees in hand["arm_rotations_degrees"].items():
                 affected.append(author.apply_local_rotation("%s.%s" % (semantic, side), degrees))

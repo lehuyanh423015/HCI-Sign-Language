@@ -42,14 +42,14 @@ describe('application routes', () => {
     expect(html).toContain('master-avatar-v1-technical-demo.glb');
   });
 
-  it('renders the isolated S001 technical draft without publishing approved lesson content', () => {
+  it('renders the isolated S002 technical draft without publishing approved lesson content', () => {
     const html = renderRoute('/technical-sign-preview');
-    expect(html).toContain('S001 — Xin chào');
+    expect(html).toContain('S002 — Cảm ơn');
     expect(html).toContain('TECHNICAL DRAFT');
-    expect(html).toContain('PASS — owner accepted prototype 2026-11-24');
+    expect(html).toContain('NOT YET TESTED — owner review required');
     expect(html).toContain('NOT YET TESTED');
-    expect(html).toContain('S001_MAIN');
+    expect(html).toContain('S002_MAIN');
     expect(html).toContain('LOCAL STAGING ONLY — educational publication NOT APPROVED');
-    expect(html).toContain('s001-xin-chao-task-0011b-refined.glb');
+    expect(html).toContain('s002-cam-on-technical-draft.glb');
   });
 });

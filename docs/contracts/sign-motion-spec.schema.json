@@ -42,14 +42,22 @@
           "propertyNames": { "pattern": "^finger[1-5]-[1-3]$" },
           "additionalProperties": { "type": "number", "minimum": -10, "maximum": 90 }
         },
+        "finger_adduction_degrees": {
+          "type": "object",
+          "description": "Signed MPFB local-Z adduction on proximal finger bones; independent of flexion.",
+          "propertyNames": { "pattern": "^finger[2-5]-1$" },
+          "additionalProperties": { "type": "number", "minimum": -12, "maximum": 12 }
+        },
         "wrist_orientation_degrees": { "$ref": "#/$defs/degrees3" },
         "arm_rotations_degrees": {
           "type": "object",
           "additionalProperties": false,
           "required": ["upperarm01", "lowerarm01"],
           "properties": {
+            "shoulder01": { "$ref": "#/$defs/degrees3" },
             "upperarm01": { "$ref": "#/$defs/degrees3" },
-            "lowerarm01": { "$ref": "#/$defs/lowerArmDegrees3" }
+            "lowerarm01": { "$ref": "#/$defs/lowerArmDegrees3" },
+            "lowerarm02": { "$ref": "#/$defs/degrees3" }
           }
         },
         "palm_orientation": { "$ref": "#/$defs/knownOrUnknown" },

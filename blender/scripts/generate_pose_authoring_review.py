@@ -39,6 +39,7 @@ def arguments():
     parser.add_argument("--video-name", default="tech-pose-authoring-pilot.mp4")
     parser.add_argument("--resolution-x", type=int, default=640)
     parser.add_argument("--resolution-y", type=int, default=640)
+    parser.add_argument("--video-only", action="store_true", help="Skip stills/contact sheet for lightweight owner review")
     values = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     return parser.parse_args(values)
 
@@ -162,8 +163,10 @@ def main():
     if args.resolution_x < 320 or args.resolution_y < 320:
         raise RuntimeError("Review resolution must be at least 320x320")
     output_directory = Path(args.output_directory).resolve()
+    output_directory.mkdir(parents=True, exist_ok=True)
     raw_directory = output_directory / "raw"
-    raw_directory.mkdir(parents=True, exist_ok=True)
+    if not args.video_only:
+        raw_directory.mkdir(parents=True, exist_ok=True)
     original_camera = scene.camera
 
     camera_data = bpy.data.cameras.new("TASK0010_ReviewCameraData")
@@ -196,18 +199,20 @@ def main():
     scene.render.film_transparent = False
 
     evidence = []
-    evidence.append(render_still(scene, camera, label, args.upper_frame, "upper_body", output_directory / ("upper-body-frame-%03d.png" % args.upper_frame), args))
-    evidence.append(render_still(scene, camera, label, args.left_frame, "left_hand", output_directory / ("left-hand-frame-%03d.png" % args.left_frame), args))
-    evidence.append(render_still(scene, camera, label, args.right_frame, "right_hand", output_directory / ("right-hand-frame-%03d.png" % args.right_frame), args))
-    evidence.append(render_still(scene, camera, label, args.front_frame, "full_front", output_directory / ("front-frame-%03d.png" % args.front_frame), args))
-    evidence.append(render_still(scene, camera, label, args.three_quarter_frame, "three_quarter", output_directory / ("three-quarter-frame-%03d.png" % args.three_quarter_frame), args))
+    contact = None
+    if not args.video_only:
+        evidence.append(render_still(scene, camera, label, args.upper_frame, "upper_body", output_directory / ("upper-body-frame-%03d.png" % args.upper_frame), args))
+        evidence.append(render_still(scene, camera, label, args.left_frame, "left_hand", output_directory / ("left-hand-frame-%03d.png" % args.left_frame), args))
+        evidence.append(render_still(scene, camera, label, args.right_frame, "right_hand", output_directory / ("right-hand-frame-%03d.png" % args.right_frame), args))
+        evidence.append(render_still(scene, camera, label, args.front_frame, "full_front", output_directory / ("front-frame-%03d.png" % args.front_frame), args))
+        evidence.append(render_still(scene, camera, label, args.three_quarter_frame, "three_quarter", output_directory / ("three-quarter-frame-%03d.png" % args.three_quarter_frame), args))
 
-    key_paths = []
-    for frame in key_frames:
-        path = raw_directory / ("key-pose-%03d.png" % frame)
-        evidence.append(render_still(scene, camera, label, frame, "upper_body", path, args))
-        key_paths.append(path)
-    contact = create_contact_sheet(scene, key_paths, output_directory / "key-pose-contact-sheet.png")
+        key_paths = []
+        for frame in key_frames:
+            path = raw_directory / ("key-pose-%03d.png" % frame)
+            evidence.append(render_still(scene, camera, label, frame, "upper_body", path, args))
+            key_paths.append(path)
+        contact = create_contact_sheet(scene, key_paths, output_directory / "key-pose-contact-sheet.png")
 
     configure_camera(camera, "upper_body", bpy.data.objects["Human.rig"])
     scene.frame_start = key_frames[0]
@@ -261,7 +266,7 @@ def main():
     report = {
         "schema_version": 1,
         "artifact": "sign_animation_visual_review",
-        "status": "PASS" if len(evidence) == 5 + len(key_frames) and video["size_bytes"] > 0 else "FAIL",
+        "status": "PASS" if video["size_bytes"] > 0 and (args.video_only or len(evidence) == 5 + len(key_frames)) else "FAIL",
         "identifier": args.identifier,
         "clip": args.clip,
         "classification": args.classification,
@@ -269,6 +274,7 @@ def main():
         "blender_version": bpy.app.version_string,
         "source": {"path": bpy.data.filepath, "sha256": sha256(bpy.data.filepath)},
         "resolution": {"width": args.resolution_x, "height": args.resolution_y},
+        "video_only": args.video_only,
         "stills": evidence,
         "contact_sheet": contact,
         "video": video,
@@ -277,7 +283,9 @@ def main():
     report_path = Path(args.report).resolve()
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("%s visual review: %d stills, contact sheet, %d-byte MP4" % (report["status"], len(evidence), video["size_bytes"]))
+    print("%s visual review: %d stills, %s, %d-byte MP4" % (
+        report["status"], len(evidence), "no contact sheet" if contact is None else "contact sheet", video["size_bytes"],
+    ))
     if report["status"] != "PASS":
         raise RuntimeError("Visual review generation failed")
 

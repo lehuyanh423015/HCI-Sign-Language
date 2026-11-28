@@ -1,0 +1,4481 @@
+{
+  "schema_version": 1,
+  "classification": "SIGN_PRODUCTION_CANDIDATE",
+  "identification": {
+    "sign_id": "S002",
+    "label": "Cảm ơn",
+    "language_variant": "Hà Nội",
+    "reference_timestamp_range": "source 00:10-00:16; local take 1 00:01.40-00:02.55; local take 2 00:04.20-00:05.55",
+    "fixture_id": null,
+    "source_reference": "https://www.youtube.com/watch?v=4avGnxaLmb0; private local media blender/working/signs/S002/references/cam_on-owner-provided.mp4",
+    "master_version": "1.0.0",
+    "animator": "Le Huy Anh",
+    "animation_name": "S002_MAIN",
+    "fps": 30,
+    "dominant_hand": "BOTH"
+  },
+  "timing": {
+    "frame_start": 1,
+    "duration_frames": 66,
+    "interpolation": "BEZIER",
+    "meaningful_interval": [
+      10,
+      40
+    ],
+    "technical_transition_frames": [
+      1,
+      6,
+      50,
+      66
+    ]
+  },
+  "key_poses": [
+    {
+      "frame": 1,
+      "label": "technical_neutral_setup",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Validator-required neutral frame."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "right_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Validator-required neutral frame."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 6,
+      "label": "low_center_preparation",
+      "hold_frames": 4,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            -55
+          ],
+          "lowerarm01": [
+            0,
+            -30,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "upper/mid chest near torso center",
+          "notes": "Consistent across both takes."
+        },
+        "movement_path": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "technical entry into observed preparation",
+          "notes": "Meaningful interval begins at frame 10."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            55
+          ],
+          "lowerarm01": [
+            0,
+            30,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "upper/mid chest near torso center",
+          "notes": "Consistent across both takes."
+        },
+        "movement_path": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "technical entry into observed preparation",
+          "notes": "Meaningful interval begins at frame 10."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 10,
+      "label": "meaningful_start_low_center",
+      "hold_frames": 1,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -8
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            -15.9123,
+            -14.7957,
+            -51.2905
+          ],
+          "lowerarm01": [
+            12.4855,
+            -33.8003,
+            16.5488
+          ],
+          "shoulder01": [
+            30.0445,
+            6.3782,
+            -4.7729
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "upper/mid chest near torso center",
+          "notes": "Start landmark common to both takes."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "begins upward and inward",
+          "notes": "No wide lateral sweep."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          -24.8362,
+          -48.5486,
+          29.8868
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            41.6201,
+            51.369,
+            78.5761
+          ],
+          "lowerarm01": [
+            -14.8006,
+            56.911,
+            10.6613
+          ],
+          "lowerarm02": [
+            0,
+            -10.7686,
+            0
+          ],
+          "shoulder01": [
+            35.6669,
+            -33.3015,
+            -13.5326
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "upper/mid chest near torso center",
+          "notes": "Start landmark common to both takes."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "begins upward and inward",
+          "notes": "No wide lateral sweep."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 12,
+      "label": "mirrored_inward_continuity_12",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.1481,
+          "finger1-2": 12.1481,
+          "finger1-3": 8.0741,
+          "finger2-1": 12.8889,
+          "finger2-2": 17.037,
+          "finger2-3": 10.5926,
+          "finger3-1": 15.8148,
+          "finger3-2": 20.8889,
+          "finger3-3": 12.5926,
+          "finger4-1": 18.7407,
+          "finger4-2": 23.8148,
+          "finger4-3": 14.5185,
+          "finger5-1": 22.5926,
+          "finger5-2": 27.6666,
+          "finger5-3": 16.4445
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -7.949
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            28.0396,
+            3.8868,
+            -4.851
+          ],
+          "upperarm01": [
+            -16.6908,
+            -9.6422,
+            -51.7477
+          ],
+          "lowerarm01": [
+            15.5914,
+            -34.1478,
+            16.6521
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.1481,
+          "finger1-2": 12.1481,
+          "finger1-3": 8.0741,
+          "finger2-1": 12.8889,
+          "finger2-2": 17.037,
+          "finger2-3": 10.5926,
+          "finger3-1": 15.8148,
+          "finger3-2": 20.8889,
+          "finger3-3": 12.5926,
+          "finger4-1": 18.7407,
+          "finger4-2": 23.8148,
+          "finger4-3": 14.5185,
+          "finger5-1": 22.5926,
+          "finger5-2": 27.6666,
+          "finger5-3": 16.4445
+        },
+        "wrist_orientation_degrees": [
+          -42.9817,
+          -50.2874,
+          52.3509
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            35.2519,
+            -30.3105,
+            -18.1796
+          ],
+          "upperarm01": [
+            41.4358,
+            36.5512,
+            83.756
+          ],
+          "lowerarm01": [
+            -8.2081,
+            48.0865,
+            -1.7333
+          ],
+          "lowerarm02": [
+            0,
+            8.6344,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 13,
+      "label": "mirrored_inward_rise_pre_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.5185,
+          "finger1-2": 12.5185,
+          "finger1-3": 8.2593,
+          "finger2-1": 15.1111,
+          "finger2-2": 19.6296,
+          "finger2-3": 12.0741,
+          "finger3-1": 17.8519,
+          "finger3-2": 23.1111,
+          "finger3-3": 14.0741,
+          "finger4-1": 20.5926,
+          "finger4-2": 25.8519,
+          "finger4-3": 15.8148,
+          "finger5-1": 24.0741,
+          "finger5-2": 29.3333,
+          "finger5-3": 17.5556
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -7.8426
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.0272,
+            -2.3418,
+            -5.0461
+          ],
+          "upperarm01": [
+            -18.6372,
+            3.2337,
+            -53.0921
+          ],
+          "lowerarm01": [
+            23.3104,
+            -35.1082,
+            17.3379
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Existing path preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.5185,
+          "finger1-2": 12.5185,
+          "finger1-3": 8.2593,
+          "finger2-1": 15.1111,
+          "finger2-2": 19.6296,
+          "finger2-3": 12.0741,
+          "finger3-1": 17.8519,
+          "finger3-2": 23.1111,
+          "finger3-3": 14.0741,
+          "finger4-1": 20.5926,
+          "finger4-2": 25.8519,
+          "finger4-3": 15.8148,
+          "finger5-1": 24.0741,
+          "finger5-2": 29.3333,
+          "finger5-3": 17.5556
+        },
+        "wrist_orientation_degrees": [
+          2.0155,
+          -4.7267,
+          28.214
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            27.3961,
+            -0.9253,
+            -2.0942
+          ],
+          "upperarm01": [
+            11.0392,
+            40.5016,
+            73.2375
+          ],
+          "lowerarm01": [
+            0.6308,
+            65.6705,
+            -0.4515
+          ],
+          "lowerarm02": [
+            0,
+            -79.0689,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Elbow-close path preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 14,
+      "label": "mirrored_inward_rise_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 11,
+          "finger1-2": 13,
+          "finger1-3": 8.5,
+          "finger2-1": 18,
+          "finger2-2": 23,
+          "finger2-3": 14,
+          "finger3-1": 20.5,
+          "finger3-2": 26,
+          "finger3-3": 16,
+          "finger4-1": 23,
+          "finger4-2": 28.5,
+          "finger4-3": 17.5,
+          "finger5-1": 26,
+          "finger5-2": 31.5,
+          "finger5-3": 19
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -7.75
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            16.5111,
+            -10.439,
+            -5.2998
+          ],
+          "upperarm01": [
+            -21.1675,
+            19.9552,
+            -55.2832
+          ],
+          "lowerarm01": [
+            33.2443,
+            -36.558,
+            19.1703
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Preserved from the accepted model-left interpolation at frame 14."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Interpolation anchor; does not change the staged landmark."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Preserves the existing model-left path."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 11,
+          "finger1-2": 13,
+          "finger1-3": 8.5,
+          "finger2-1": 18,
+          "finger2-2": 23,
+          "finger2-3": 14,
+          "finger3-1": 20.5,
+          "finger3-2": 26,
+          "finger3-3": 16,
+          "finger4-1": 23,
+          "finger4-2": 28.5,
+          "finger4-3": 17.5,
+          "finger5-1": 26,
+          "finger5-2": 31.5,
+          "finger5-3": 19
+        },
+        "wrist_orientation_degrees": [
+          10.7245,
+          4.3435,
+          30.5095
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            32.2101,
+            -15.8004,
+            -13.937
+          ],
+          "upperarm01": [
+            27.4001,
+            -8.586,
+            65.6711
+          ],
+          "lowerarm01": [
+            15.3532,
+            84.6126,
+            -24.9893
+          ],
+          "lowerarm02": [
+            0,
+            -73.1887,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Anatomically mirrored to the accepted model-left hand; Euler values are intentionally not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Mirrored frame-14 anchor removes the previous interpolation drift."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Maintains the existing elbow-close staged path."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 15,
+      "label": "mirrored_inward_continuity_15",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.3334,
+          "finger1-2": 12.1334,
+          "finger1-3": 7.8666,
+          "finger2-1": 18.8,
+          "finger2-2": 23.7334,
+          "finger2-3": 14.3333,
+          "finger3-1": 20.8333,
+          "finger3-2": 26.0,
+          "finger3-3": 16.1333,
+          "finger4-1": 22.8667,
+          "finger4-2": 28.0334,
+          "finger4-3": 17.2667,
+          "finger5-1": 25.1333,
+          "finger5-2": 30.2999,
+          "finger5-3": 18.4001
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -7.655
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            9.995,
+            -18.5362,
+            -5.5535
+          ],
+          "upperarm01": [
+            -23.6978,
+            36.6767,
+            -58.2802
+          ],
+          "lowerarm01": [
+            43.1782,
+            -38.3738,
+            22.7258
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 10.3334,
+          "finger1-2": 12.1334,
+          "finger1-3": 7.8666,
+          "finger2-1": 18.8,
+          "finger2-2": 23.7334,
+          "finger2-3": 14.3333,
+          "finger3-1": 20.8333,
+          "finger3-2": 26.0,
+          "finger3-3": 16.1333,
+          "finger4-1": 22.8667,
+          "finger4-2": 28.0334,
+          "finger4-3": 17.2667,
+          "finger5-1": 25.1333,
+          "finger5-2": 30.2999,
+          "finger5-3": 18.4001
+        },
+        "wrist_orientation_degrees": [
+          25.9003,
+          31.7162,
+          29.2328
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            33.1057,
+            -33.4007,
+            -20.9446
+          ],
+          "upperarm01": [
+            54.5482,
+            -30.6469,
+            29.4963
+          ],
+          "lowerarm01": [
+            66.4138,
+            90,
+            -1.6453
+          ],
+          "lowerarm02": [
+            0,
+            -90,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 16,
+      "label": "mirrored_inward_rise_post_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 9.4815,
+          "finger1-2": 11.0815,
+          "finger1-3": 7.1407,
+          "finger2-1": 18.4889,
+          "finger2-2": 23.1704,
+          "finger2-3": 13.9259,
+          "finger3-1": 20.1482,
+          "finger3-2": 24.8889,
+          "finger3-3": 15.5259,
+          "finger4-1": 21.8074,
+          "finger4-2": 26.5482,
+          "finger4-3": 16.3852,
+          "finger5-1": 23.5259,
+          "finger5-2": 28.2666,
+          "finger5-3": 17.2445
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -7.2176
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            4.9826,
+            -24.7648,
+            -5.7487
+          ],
+          "upperarm01": [
+            -25.6442,
+            49.678,
+            -62.0424
+          ],
+          "lowerarm01": [
+            51.6305,
+            -40.4322,
+            28.63
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Existing path preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 9.4815,
+          "finger1-2": 11.0815,
+          "finger1-3": 7.1407,
+          "finger2-1": 18.4889,
+          "finger2-2": 23.1704,
+          "finger2-3": 13.9259,
+          "finger3-1": 20.1482,
+          "finger3-2": 24.8889,
+          "finger3-3": 15.5259,
+          "finger4-1": 21.8074,
+          "finger4-2": 26.5482,
+          "finger4-3": 16.3852,
+          "finger5-1": 23.5259,
+          "finger5-2": 28.2666,
+          "finger5-3": 17.2445
+        },
+        "wrist_orientation_degrees": [
+          -27.0129,
+          -43.8194,
+          39.6582
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            27.8491,
+            -1.7308,
+            -2.8604
+          ],
+          "upperarm01": [
+            13.509,
+            -57.0054,
+            43.3071
+          ],
+          "lowerarm01": [
+            68.1777,
+            77.3927,
+            -5.5055
+          ],
+          "lowerarm02": [
+            0,
+            21.7921,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Elbow-close path preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 17,
+      "label": "forearms_rise_inward",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 7.8,
+          "finger1-2": 9.1,
+          "finger1-3": 5.85,
+          "finger2-1": 15.6,
+          "finger2-2": 20.5,
+          "finger2-3": 11.7,
+          "finger3-1": 16.9,
+          "finger3-2": 22.0,
+          "finger3-3": 13.0,
+          "finger4-1": 18.2,
+          "finger4-2": 23.3,
+          "finger4-3": 13.65,
+          "finger5-1": 19.5,
+          "finger5-2": 24.4,
+          "finger5-3": 14.3
+        },
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          -6
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            -26.4227,
+            55.2704,
+            -66.5292
+          ],
+          "lowerarm01": [
+            57.303,
+            -42.6098,
+            37.5208
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ],
+          "shoulder01": [
+            2.9777,
+            -27.2562,
+            -5.8268
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Forearm rises more than upper arm."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Elbow remains close to torso."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -1.2,
+          "finger4-1": 0.8,
+          "finger5-1": 1.0
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 7.8,
+          "finger1-2": 9.1,
+          "finger1-3": 5.85,
+          "finger2-1": 15.6,
+          "finger2-2": 20.5,
+          "finger2-3": 11.7,
+          "finger3-1": 16.9,
+          "finger3-2": 22.0,
+          "finger3-3": 13.0,
+          "finger4-1": 18.2,
+          "finger4-2": 23.3,
+          "finger4-3": 13.65,
+          "finger5-1": 19.5,
+          "finger5-2": 24.4,
+          "finger5-3": 14.3
+        },
+        "wrist_orientation_degrees": [
+          15.8009,
+          41.2369,
+          2.9388
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            2.683,
+            -50.0507,
+            49.1574
+          ],
+          "lowerarm01": [
+            37.4219,
+            42.5632,
+            -45.4741
+          ],
+          "lowerarm02": [
+            0,
+            -33.523,
+            0
+          ],
+          "shoulder01": [
+            28.3527,
+            4.7632,
+            -1.149
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "between upper chest and lower face",
+          "notes": "Forearm rises more than upper arm."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Elbow remains close to torso."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 1.2,
+          "finger4-1": -0.8,
+          "finger5-1": -1.0
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 18,
+      "label": "mirrored_near_face_continuity_18",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 7.1111,
+          "finger1-2": 8.3111,
+          "finger1-3": 5.3555,
+          "finger2-1": 14.2222,
+          "finger2-2": 19.1528,
+          "finger2-3": 10.6667,
+          "finger3-1": 15.4222,
+          "finger3-2": 20.6278,
+          "finger3-3": 11.8222,
+          "finger4-1": 16.6222,
+          "finger4-2": 21.8278,
+          "finger4-3": 12.4222,
+          "finger5-1": 17.8222,
+          "finger5-2": 22.7528,
+          "finger5-3": 13.0222
+        },
+        "wrist_orientation_degrees": [
+          0.5841,
+          4.132,
+          -3.6705
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            7.7512,
+            -26.3507,
+            -2.2439
+          ],
+          "upperarm01": [
+            -24.397,
+            55.7285,
+            -71.6239
+          ],
+          "lowerarm01": [
+            59.9816,
+            -44.7837,
+            49.6304
+          ],
+          "lowerarm02": [
+            0,
+            1.0123,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "approaching lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Existing path preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -2.4,
+          "finger4-1": 1.6,
+          "finger5-1": 2.0
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 7.1111,
+          "finger1-2": 8.3111,
+          "finger1-3": 5.3555,
+          "finger2-1": 14.2222,
+          "finger2-2": 19.1528,
+          "finger2-3": 10.6667,
+          "finger3-1": 15.4222,
+          "finger3-2": 20.6278,
+          "finger3-3": 11.8222,
+          "finger4-1": 16.6222,
+          "finger4-2": 21.8278,
+          "finger4-3": 12.4222,
+          "finger5-1": 17.8222,
+          "finger5-2": 22.7528,
+          "finger5-3": 13.0222
+        },
+        "wrist_orientation_degrees": [
+          -5.5088,
+          90,
+          -32.5337
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            29.9933,
+            18.1012,
+            0.6214
+          ],
+          "upperarm01": [
+            -8.6654,
+            -30.5686,
+            65.0606
+          ],
+          "lowerarm01": [
+            48.0745,
+            21.804,
+            -44.7532
+          ],
+          "lowerarm02": [
+            0,
+            -75.4468,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "approaching lower face",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Existing path preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 2.4,
+          "finger4-1": -1.6,
+          "finger5-1": -2.0
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 20,
+      "label": "mirrored_near_face_approach_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 6.05,
+          "finger1-2": 7.15,
+          "finger1-3": 4.675,
+          "finger2-1": 12.1,
+          "finger2-2": 17.0,
+          "finger2-3": 9.075,
+          "finger3-1": 13.2,
+          "finger3-2": 18.475,
+          "finger3-3": 9.9,
+          "finger4-1": 14.3,
+          "finger4-2": 19.575,
+          "finger4-3": 10.45,
+          "finger5-1": 15.4,
+          "finger5-2": 20.3,
+          "finger5-3": 11.0
+        },
+        "wrist_orientation_degrees": [
+          3.3527,
+          10.759,
+          -2.088
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            35.1991,
+            -21.1438,
+            18.3575
+          ],
+          "upperarm01": [
+            -12.7492,
+            55.9288,
+            -81.8786
+          ],
+          "lowerarm01": [
+            61.1528,
+            -48.6363,
+            77.536
+          ],
+          "lowerarm02": [
+            0,
+            -9.0403,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Preserved from the model-left path."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "approaching lower face",
+          "notes": "Existing landmark preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Interpolation anchor only."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -4.5,
+          "finger4-1": 3.0,
+          "finger5-1": 3.75
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 6.05,
+          "finger1-2": 7.15,
+          "finger1-3": 4.675,
+          "finger2-1": 12.1,
+          "finger2-2": 17.0,
+          "finger2-3": 9.075,
+          "finger3-1": 13.2,
+          "finger3-2": 18.475,
+          "finger3-3": 9.9,
+          "finger4-1": 14.3,
+          "finger4-2": 19.575,
+          "finger4-3": 10.45,
+          "finger5-1": 15.4,
+          "finger5-2": 20.3,
+          "finger5-3": 11.0
+        },
+        "wrist_orientation_degrees": [
+          14.1582,
+          6.7262,
+          -0.6232
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.6696,
+            19.8833,
+            -15.643
+          ],
+          "upperarm01": [
+            1.8728,
+            -27.4276,
+            70.9008
+          ],
+          "lowerarm01": [
+            67.0292,
+            4.4956,
+            -56.4537
+          ],
+          "lowerarm02": [
+            0,
+            43.4803,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Anatomically mirrored to model-left; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "approaching lower face",
+          "notes": "Mirrored interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "upward and inward toward mouth",
+          "notes": "Keeps the elbow-close path."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 4.5,
+          "finger4-1": -3.0,
+          "finger5-1": -3.75
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 23,
+      "label": "curled_hands_near_lower_face",
+      "hold_frames": 2,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.5,
+          "finger1-2": 6.6,
+          "finger1-3": 4.4,
+          "finger2-1": 11.0,
+          "finger2-2": 16.25,
+          "finger2-3": 8.25,
+          "finger3-1": 12.1,
+          "finger3-2": 17.85,
+          "finger3-3": 8.8,
+          "finger4-1": 13.2,
+          "finger4-2": 18.95,
+          "finger4-3": 9.35,
+          "finger5-1": 14.3,
+          "finger5-2": 19.55,
+          "finger5-3": 9.9
+        },
+        "wrist_orientation_degrees": [
+          8.7503,
+          24.9223,
+          2.9945
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            61.7028,
+            -51.3687,
+            101.6559
+          ],
+          "lowerarm02": [
+            0,
+            -15.4748,
+            0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "near mouth/lower cheek, below eye level",
+          "notes": "No exact contact claimed."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "arrival in lower-face signing space",
+          "notes": "Single continuous rise."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -6,
+          "finger4-1": 4,
+          "finger5-1": 5
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.5,
+          "finger1-2": 6.6,
+          "finger1-3": 4.4,
+          "finger2-1": 11.0,
+          "finger2-2": 16.25,
+          "finger2-3": 8.25,
+          "finger3-1": 12.1,
+          "finger3-2": 17.85,
+          "finger3-3": 8.8,
+          "finger4-1": 13.2,
+          "finger4-2": 18.95,
+          "finger4-3": 9.35,
+          "finger5-1": 14.3,
+          "finger5-2": 19.55,
+          "finger5-3": 9.9
+        },
+        "wrist_orientation_degrees": [
+          -1.6115,
+          60.0,
+          -27.4979
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            74.8503,
+            -18.7791,
+            -150
+          ],
+          "lowerarm02": [
+            0,
+            77.7779,
+            0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "near mouth/lower cheek, below eye level",
+          "notes": "No exact contact claimed."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "arrival in lower-face signing space",
+          "notes": "Single continuous rise."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 6,
+          "finger4-1": -4,
+          "finger5-1": -5
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 26,
+      "label": "compact_forearm_release_pre_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.52,
+          "finger1-2": 6.54,
+          "finger1-3": 4.32,
+          "finger2-1": 10.74,
+          "finger2-2": 14.63,
+          "finger2-3": 7.86,
+          "finger3-1": 11.85,
+          "finger3-2": 15.84,
+          "finger3-3": 8.46,
+          "finger4-1": 12.96,
+          "finger4-2": 17.07,
+          "finger4-3": 9.06,
+          "finger5-1": 14.07,
+          "finger5-2": 17.9,
+          "finger5-3": 9.69
+        },
+        "wrist_orientation_degrees": [
+          9.0638,
+          5.5113,
+          16.1532
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            47.6268,
+            -45.2324,
+            117.9597
+          ],
+          "lowerarm02": [
+            0.0,
+            0.9847,
+            0.0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "near mouth/lower cheek, below eye level",
+          "notes": "No exact contact claimed."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "arrival in lower-face signing space",
+          "notes": "Single continuous rise."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -4.5,
+          "finger4-1": 3.0,
+          "finger5-1": 3.75
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.52,
+          "finger1-2": 6.54,
+          "finger1-3": 4.32,
+          "finger2-1": 10.74,
+          "finger2-2": 14.63,
+          "finger2-3": 7.86,
+          "finger3-1": 11.85,
+          "finger3-2": 15.84,
+          "finger3-3": 8.46,
+          "finger4-1": 12.96,
+          "finger4-2": 17.07,
+          "finger4-3": 9.06,
+          "finger5-1": 14.07,
+          "finger5-2": 17.9,
+          "finger5-3": 9.69
+        },
+        "wrist_orientation_degrees": [
+          -1.512,
+          39.4612,
+          -29.9484
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            71.5411,
+            -17.4664,
+            -137.4596
+          ],
+          "lowerarm02": [
+            0.0,
+            76.8785,
+            0.0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "inward/partly toward face",
+          "notes": "Exact 3D normal unresolved by frontal view."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "near mouth/lower cheek, below eye level",
+          "notes": "No exact contact claimed."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "arrival in lower-face signing space",
+          "notes": "Single continuous rise."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 4.5,
+          "finger4-1": -3.0,
+          "finger5-1": -3.75
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 27,
+      "label": "mirrored_opening_pre_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.46,
+          "finger1-2": 6.37,
+          "finger1-3": 4.16,
+          "finger2-1": 10.27,
+          "finger2-2": 13.24,
+          "finger2-3": 7.28,
+          "finger3-1": 11.375,
+          "finger3-2": 14.12,
+          "finger3-3": 7.93,
+          "finger4-1": 12.48,
+          "finger4-2": 15.485,
+          "finger4-3": 8.58,
+          "finger5-1": 13.585,
+          "finger5-2": 16.425,
+          "finger5-3": 9.295
+        },
+        "wrist_orientation_degrees": [
+          0.3412,
+          -13.9654,
+          30.7367
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            34.4644,
+            -35.3034,
+            131.8777
+          ],
+          "lowerarm02": [
+            0.0,
+            16.0118,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "opening toward palm-up",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -3.0,
+          "finger4-1": 2.0,
+          "finger5-1": 2.5
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.46,
+          "finger1-2": 6.37,
+          "finger1-3": 4.16,
+          "finger2-1": 10.27,
+          "finger2-2": 13.24,
+          "finger2-3": 7.28,
+          "finger3-1": 11.375,
+          "finger3-2": 14.12,
+          "finger3-3": 7.93,
+          "finger4-1": 12.48,
+          "finger4-2": 15.485,
+          "finger4-3": 8.58,
+          "finger5-1": 13.585,
+          "finger5-2": 16.425,
+          "finger5-3": 9.295
+        },
+        "wrist_orientation_degrees": [
+          0.9746,
+          12.8352,
+          -31.0907
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            67.8395,
+            -17.39,
+            -124.0458
+          ],
+          "lowerarm02": [
+            0.0,
+            84.147,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "opening toward palm-up",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 3.0,
+          "finger4-1": -2.0,
+          "finger5-1": -2.5
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 28,
+      "label": "mirrored_opening_continuity_28",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.25,
+          "finger1-2": 6.3351,
+          "finger1-3": 3.85,
+          "finger2-1": 10.2292,
+          "finger2-2": 12.7309,
+          "finger2-3": 7.0118,
+          "finger3-1": 11.5123,
+          "finger3-2": 13.777,
+          "finger3-3": 8.1204,
+          "finger4-1": 12.6196,
+          "finger4-2": 15.0188,
+          "finger4-3": 8.4829,
+          "finger5-1": 13.7269,
+          "finger5-2": 16.1261,
+          "finger5-3": 9.1829
+        },
+        "wrist_orientation_degrees": [
+          -0.2278,
+          -14.1428,
+          40.1063
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            30.4985,
+            -37.1406,
+            131.5895
+          ],
+          "lowerarm02": [
+            0.0,
+            19.7651,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "opening toward palm-up",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -1.8,
+          "finger4-1": 1.2,
+          "finger5-1": 1.5
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.25,
+          "finger1-2": 6.3351,
+          "finger1-3": 3.85,
+          "finger2-1": 10.2292,
+          "finger2-2": 12.7309,
+          "finger2-3": 7.0118,
+          "finger3-1": 11.5123,
+          "finger3-2": 13.777,
+          "finger3-3": 8.1204,
+          "finger4-1": 12.6196,
+          "finger4-2": 15.0188,
+          "finger4-3": 8.4829,
+          "finger5-1": 13.7269,
+          "finger5-2": 16.1261,
+          "finger5-3": 9.1829
+        },
+        "wrist_orientation_degrees": [
+          -0.2558,
+          13.9453,
+          -40.7007
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            67.1834,
+            -21.3042,
+            -122.3982
+          ],
+          "lowerarm02": [
+            0.0,
+            81.1555,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "opening toward palm-up",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 1.8,
+          "finger4-1": -1.2,
+          "finger5-1": -1.5
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 29,
+      "label": "mirrored_progressive_opening_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.037,
+          "finger1-2": 5.9852,
+          "finger1-3": 3.437,
+          "finger2-1": 9.363,
+          "finger2-2": 11.5259,
+          "finger2-3": 6.0148,
+          "finger3-1": 10.6749,
+          "finger3-2": 12.5334,
+          "finger3-3": 7.3249,
+          "finger4-1": 11.7598,
+          "finger4-2": 13.7948,
+          "finger4-3": 7.5555,
+          "finger5-1": 12.8448,
+          "finger5-2": 14.8798,
+          "finger5-3": 8.3555
+        },
+        "wrist_orientation_degrees": [
+          -2.4854,
+          -13.3783,
+          52.1639
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            26.8802,
+            -38.6651,
+            131.5951
+          ],
+          "lowerarm02": [
+            0.0,
+            27.135,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating toward palm-up",
+          "notes": "Preserved from model-left progressive opening."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Existing staged path preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Interpolation anchor only."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": -0.9,
+          "finger4-1": 0.6,
+          "finger5-1": 0.75
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.037,
+          "finger1-2": 5.9852,
+          "finger1-3": 3.437,
+          "finger2-1": 9.363,
+          "finger2-2": 11.5259,
+          "finger2-3": 6.0148,
+          "finger3-1": 10.6749,
+          "finger3-2": 12.5334,
+          "finger3-3": 7.3249,
+          "finger4-1": 11.7598,
+          "finger4-2": 13.7948,
+          "finger4-3": 7.5555,
+          "finger5-1": 12.8448,
+          "finger5-2": 14.8798,
+          "finger5-3": 8.3555
+        },
+        "wrist_orientation_degrees": [
+          -5.2908,
+          15.1569,
+          -54.3069
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            66.7075,
+            -24.8679,
+            -121.2732
+          ],
+          "lowerarm02": [
+            0.0,
+            71.8439,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating toward palm-up",
+          "notes": "Anatomically mirrored to model-left; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Mirrored interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        },
+        "finger_adduction_degrees": {
+          "finger2-1": 0.9,
+          "finger4-1": -0.6,
+          "finger5-1": -0.75
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 30,
+      "label": "forearm_arc_continuity_30",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.6481,
+          "finger1-2": 6.2408,
+          "finger1-3": 3.6481,
+          "finger2-1": 9.3518,
+          "finger2-2": 11.2037,
+          "finger2-3": 5.7592,
+          "finger3-1": 10.6718,
+          "finger3-2": 12.3333,
+          "finger3-3": 7.0781,
+          "finger4-1": 11.8499,
+          "finger4-2": 13.6218,
+          "finger4-3": 7.2222,
+          "finger5-1": 13.028,
+          "finger5-2": 14.7998,
+          "finger5-3": 8.2222
+        },
+        "wrist_orientation_degrees": [
+          -6.1162,
+          -7.8167,
+          61.6848
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            23.6827,
+            -39.9436,
+            131.7555
+          ],
+          "lowerarm02": [
+            0.0,
+            32.0107,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating toward palm-up",
+          "notes": "Preserved from model-left progressive opening."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Existing staged path preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Interpolation anchor only."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5.6481,
+          "finger1-2": 6.2408,
+          "finger1-3": 3.6481,
+          "finger2-1": 9.3518,
+          "finger2-2": 11.2037,
+          "finger2-3": 5.7592,
+          "finger3-1": 10.6718,
+          "finger3-2": 12.3333,
+          "finger3-3": 7.0781,
+          "finger4-1": 11.8499,
+          "finger4-2": 13.6218,
+          "finger4-3": 7.2222,
+          "finger5-1": 13.028,
+          "finger5-2": 14.7998,
+          "finger5-3": 8.2222
+        },
+        "wrist_orientation_degrees": [
+          -6.3272,
+          7.1433,
+          -63.0681
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            66.3555,
+            -27.9768,
+            -120.4124
+          ],
+          "lowerarm02": [
+            0.0,
+            71.1718,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating toward palm-up",
+          "notes": "Anatomically mirrored to model-left; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Mirrored interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 31,
+      "label": "progressive_opening_forward_down",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 5,
+          "finger1-3": 3,
+          "finger2-1": 7,
+          "finger2-2": 8,
+          "finger2-3": 4,
+          "finger3-1": 8,
+          "finger3-2": 9,
+          "finger3-3": 5,
+          "finger4-1": 9,
+          "finger4-2": 10,
+          "finger4-3": 5,
+          "finger5-1": 10,
+          "finger5-2": 11,
+          "finger5-3": 6
+        },
+        "wrist_orientation_degrees": [
+          -6.0496,
+          -5.873,
+          67.3908
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            19.8866,
+            -41.5529,
+            132.0453
+          ],
+          "lowerarm02": [
+            0.0,
+            34.3544,
+            0.0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating from inward toward up/forward",
+          "notes": "Opening and wrist roll are coordinated."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "leaving lower face toward upper chest",
+          "notes": "Hands remain in front signing space."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward with progressive finger opening",
+          "notes": "Common to both takes."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 5,
+          "finger1-3": 3,
+          "finger2-1": 7,
+          "finger2-2": 8,
+          "finger2-3": 4,
+          "finger3-1": 8,
+          "finger3-2": 9,
+          "finger3-3": 5,
+          "finger4-1": 9,
+          "finger4-2": 10,
+          "finger4-3": 5,
+          "finger5-1": 10,
+          "finger5-2": 11,
+          "finger5-3": 6
+        },
+        "wrist_orientation_degrees": [
+          -6.8275,
+          6.689,
+          -68.4152
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            65.5388,
+            -31.3121,
+            -118.5724
+          ],
+          "lowerarm02": [
+            0.0,
+            69.5618,
+            0.0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "rotating from inward toward up/forward",
+          "notes": "Opening and wrist roll are coordinated."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "leaving lower face toward upper chest",
+          "notes": "Hands remain in front signing space."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward with progressive finger opening",
+          "notes": "Common to both takes."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 33,
+      "label": "mirrored_palm_up_transition_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4.1917,
+          "finger1-3": 3,
+          "finger2-1": 5.45,
+          "finger2-2": 5.575,
+          "finger2-3": 3.2583,
+          "finger3-1": 5.7806,
+          "finger3-2": 6.6417,
+          "finger3-3": 3.4042,
+          "finger4-1": 6.7109,
+          "finger4-2": 7.0176,
+          "finger4-3": 3.3833,
+          "finger5-1": 7.6412,
+          "finger5-2": 7.9479,
+          "finger5-3": 4.3833
+        },
+        "wrist_orientation_degrees": [
+          -3.5299,
+          -11.1768,
+          66.0161
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            11.326,
+            -45.2739,
+            133.2907
+          ],
+          "lowerarm02": [
+            0.0,
+            31.9125,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Preserved from model-left transition."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Existing staged path preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Interpolation anchor only."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4.1917,
+          "finger1-3": 3,
+          "finger2-1": 5.45,
+          "finger2-2": 5.575,
+          "finger2-3": 3.2583,
+          "finger3-1": 5.7806,
+          "finger3-2": 6.6417,
+          "finger3-3": 3.4042,
+          "finger4-1": 6.7109,
+          "finger4-2": 7.0176,
+          "finger4-3": 3.3833,
+          "finger5-1": 7.6412,
+          "finger5-2": 7.9479,
+          "finger5-3": 4.3833
+        },
+        "wrist_orientation_degrees": [
+          -3.8591,
+          11.7078,
+          -67.104
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            63.0757,
+            -38.2132,
+            -113.7415
+          ],
+          "lowerarm02": [
+            0.0,
+            74.7963,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Anatomically mirrored to model-left; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Mirrored interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Progressive opening preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 34,
+      "label": "mirrored_palm_up_pre_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4.0965,
+          "finger1-3": 3,
+          "finger2-1": 5.2619,
+          "finger2-2": 5.2721,
+          "finger2-3": 3.1872,
+          "finger3-1": 5.3825,
+          "finger3-2": 6.3497,
+          "finger3-3": 3.1925,
+          "finger4-1": 6.345,
+          "finger4-2": 6.4975,
+          "finger4-3": 3.1843,
+          "finger5-1": 7.3075,
+          "finger5-2": 7.46,
+          "finger5-3": 4.1843
+        },
+        "wrist_orientation_degrees": [
+          -1.5403,
+          -15.0698,
+          64.965
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            6.4746,
+            -47.7775,
+            134.3527
+          ],
+          "lowerarm02": [
+            0.0,
+            30.421,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4.0965,
+          "finger1-3": 3,
+          "finger2-1": 5.2619,
+          "finger2-2": 5.2721,
+          "finger2-3": 3.1872,
+          "finger3-1": 5.3825,
+          "finger3-2": 6.3497,
+          "finger3-3": 3.1925,
+          "finger4-1": 6.345,
+          "finger4-2": 6.4975,
+          "finger4-3": 3.1843,
+          "finger5-1": 7.3075,
+          "finger5-2": 7.46,
+          "finger5-3": 4.1843
+        },
+        "wrist_orientation_degrees": [
+          -3.3705,
+          16.5062,
+          -66.7871
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            62.0327,
+            -42.1928,
+            -111.7728
+          ],
+          "lowerarm02": [
+            0.0,
+            77.2881,
+            0.0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "forward of upper torso",
+          "notes": "Interpolation anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Existing path preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 35,
+      "label": "mirrored_opening_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4,
+          "finger1-3": 3,
+          "finger2-1": 5,
+          "finger2-2": 5,
+          "finger2-3": 3,
+          "finger3-1": 5,
+          "finger3-2": 6,
+          "finger3-3": 3,
+          "finger4-1": 6,
+          "finger4-2": 6,
+          "finger4-3": 3,
+          "finger5-1": 7,
+          "finger5-2": 7,
+          "finger5-3": 4
+        },
+        "wrist_orientation_degrees": [
+          0.4248,
+          -18.5966,
+          64.4521
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            0.5183,
+            -50.6919,
+            136.2026
+          ],
+          "lowerarm02": [
+            0.0,
+            29.1107,
+            0.0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "continuing toward up/forward",
+          "notes": "Intermediate anchor preserving the accepted left-hand behavior."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso after leaving lower face",
+          "notes": "Intermediate point in the continuous release."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward with progressive finger opening",
+          "notes": "Anchor added only to keep bilateral visual synchronization."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 5,
+          "finger1-2": 4,
+          "finger1-3": 3,
+          "finger2-1": 5,
+          "finger2-2": 5,
+          "finger2-3": 3,
+          "finger3-1": 5,
+          "finger3-2": 6,
+          "finger3-3": 3,
+          "finger4-1": 6,
+          "finger4-2": 6,
+          "finger4-3": 3,
+          "finger5-1": 7,
+          "finger5-2": 7,
+          "finger5-3": 4
+        },
+        "wrist_orientation_degrees": [
+          -2.5943,
+          20.7111,
+          -67.0105
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            59.6547,
+            -46.1027,
+            -107.8959
+          ],
+          "lowerarm02": [
+            0.0,
+            79.4638,
+            0.0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "mirrored continuation toward up/forward",
+          "notes": "Solved from mirrored left-hand world-space vectors, not copied Euler values."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso after leaving lower face",
+          "notes": "Corrective anchor for synchronized bilateral release."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward with progressive finger opening",
+          "notes": "Matches the left-hand stage in mirrored form."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 36,
+      "label": "mirrored_endpoint_continuity_36",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.896,
+          "finger1-2": 3.8079,
+          "finger1-3": 2.896,
+          "finger2-1": 4.4294,
+          "finger2-2": 4.4319,
+          "finger2-3": 2.6113,
+          "finger3-1": 4.3748,
+          "finger3-2": 5.2413,
+          "finger3-3": 2.6155,
+          "finger4-1": 5.3942,
+          "finger4-2": 5.1728,
+          "finger4-3": 2.6199,
+          "finger5-1": 6.4136,
+          "finger5-2": 6.1922,
+          "finger5-3": 3.6199
+        },
+        "wrist_orientation_degrees": [
+          1.7517,
+          -20.349,
+          63.3561
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -5.4023,
+            -53.556,
+            138.6297
+          ],
+          "lowerarm02": [
+            0,
+            27.8113,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Endpoint approach preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.896,
+          "finger1-2": 3.8079,
+          "finger1-3": 2.896,
+          "finger2-1": 4.4294,
+          "finger2-2": 4.4319,
+          "finger2-3": 2.6113,
+          "finger3-1": 4.3748,
+          "finger3-2": 5.2413,
+          "finger3-3": 2.6155,
+          "finger4-1": 5.3942,
+          "finger4-2": 5.1728,
+          "finger4-3": 2.6199,
+          "finger5-1": 6.4136,
+          "finger5-2": 6.1922,
+          "finger5-3": 3.6199
+        },
+        "wrist_orientation_degrees": [
+          -3.1751,
+          23.5947,
+          -67.1129
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            57.8674,
+            -49.8924,
+            -105.0458
+          ],
+          "lowerarm02": [
+            0,
+            81.7897,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Endpoint approach preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 37,
+      "label": "mirrored_endpoint_continuity_37",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.648,
+          "finger1-2": 3.5502,
+          "finger1-3": 2.648,
+          "finger2-1": 3.6543,
+          "finger2-2": 3.6559,
+          "finger2-3": 2.0976,
+          "finger3-1": 3.5916,
+          "finger3-2": 4.2072,
+          "finger3-3": 2.0974,
+          "finger4-1": 4.6134,
+          "finger4-2": 4.1294,
+          "finger4-3": 2.1031,
+          "finger5-1": 5.6353,
+          "finger5-2": 5.1513,
+          "finger5-3": 3.1031
+        },
+        "wrist_orientation_degrees": [
+          2.0808,
+          -21.6873,
+          63.7245
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -10.4535,
+            -55.9663,
+            141.1845
+          ],
+          "lowerarm02": [
+            0,
+            26.0214,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Endpoint approach preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.648,
+          "finger1-2": 3.5502,
+          "finger1-3": 2.648,
+          "finger2-1": 3.6543,
+          "finger2-2": 3.6559,
+          "finger2-3": 2.0976,
+          "finger3-1": 3.5916,
+          "finger3-2": 4.2072,
+          "finger3-3": 2.0974,
+          "finger4-1": 4.6134,
+          "finger4-2": 4.1294,
+          "finger4-3": 2.1031,
+          "finger5-1": 5.6353,
+          "finger5-2": 5.1513,
+          "finger5-3": 3.1031
+        },
+        "wrist_orientation_degrees": [
+          -4.348,
+          25.6594,
+          -68.4843
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            56.2212,
+            -52.6617,
+            -102.5558
+          ],
+          "lowerarm02": [
+            0,
+            84.7441,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Endpoint approach preserved."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 38,
+      "label": "mirrored_endpoint_approach_anchor",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.352,
+          "finger1-2": 3.288,
+          "finger1-3": 2.352,
+          "finger2-1": 2.864,
+          "finger2-2": 2.864,
+          "finger2-3": 1.576,
+          "finger3-1": 2.8211,
+          "finger3-2": 3.152,
+          "finger3-3": 1.5716,
+          "finger4-1": 3.8356,
+          "finger4-2": 3.0996,
+          "finger4-3": 1.576,
+          "finger5-1": 4.8502,
+          "finger5-2": 4.1142,
+          "finger5-3": 2.576
+        },
+        "wrist_orientation_degrees": [
+          2.6315,
+          -27.7694,
+          65.3326
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -15.8162,
+            -57.4236,
+            144.0873
+          ],
+          "lowerarm02": [
+            0,
+            21.2654,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Preserved from model-left endpoint approach."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Existing endpoint approach preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Interpolation anchor only."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.352,
+          "finger1-2": 3.288,
+          "finger1-3": 2.352,
+          "finger2-1": 2.864,
+          "finger2-2": 2.864,
+          "finger2-3": 1.576,
+          "finger3-1": 2.8211,
+          "finger3-2": 3.152,
+          "finger3-3": 1.5716,
+          "finger4-1": 3.8356,
+          "finger4-2": 3.0996,
+          "finger4-3": 1.576,
+          "finger5-1": 4.8502,
+          "finger5-2": 4.1142,
+          "finger5-3": 2.576
+        },
+        "wrist_orientation_degrees": [
+          -6.4172,
+          32.4857,
+          -72.3992
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            55.1125,
+            -55.7671,
+            -100.7564
+          ],
+          "lowerarm02": [
+            0,
+            90,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Anatomically mirrored to model-left; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Mirrored endpoint approach."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Avoids excessive lateral separation."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 39,
+      "label": "mirrored_endpoint_continuity_39",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.104,
+          "finger1-2": 3.0829,
+          "finger1-3": 2.104,
+          "finger2-1": 2.2483,
+          "finger2-2": 2.248,
+          "finger2-3": 1.1664,
+          "finger3-1": 2.2337,
+          "finger3-2": 2.3308,
+          "finger3-3": 1.1639,
+          "finger4-1": 3.2385,
+          "finger4-2": 2.3132,
+          "finger4-3": 1.1655,
+          "finger5-1": 4.2434,
+          "finger5-2": 3.3181,
+          "finger5-3": 2.1655
+        },
+        "wrist_orientation_degrees": [
+          2.1902,
+          -32.6564,
+          65.9337
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ],
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -20.2315,
+            -57.8523,
+            146.4282
+          ],
+          "lowerarm02": [
+            0,
+            17.2522,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Model-left path preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Endpoint approach preserved."
+        }
+      },
+      "right_hand": {
+        "pose": "relaxed_hand",
+        "finger_overrides": {
+          "finger1-1": 4.104,
+          "finger1-2": 3.0829,
+          "finger1-3": 2.104,
+          "finger2-1": 2.2483,
+          "finger2-2": 2.248,
+          "finger2-3": 1.1664,
+          "finger3-1": 2.2337,
+          "finger3-2": 2.3308,
+          "finger3-3": 1.1639,
+          "finger4-1": 3.2385,
+          "finger4-2": 2.3132,
+          "finger4-3": 1.1655,
+          "finger5-1": 4.2434,
+          "finger5-2": 3.3181,
+          "finger5-3": 2.1655
+        },
+        "wrist_orientation_degrees": [
+          -12.539,
+          38.8426,
+          -77.8522
+        ],
+        "arm_rotations_degrees": {
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ],
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            52.6651,
+            -57.7101,
+            -97.433
+          ],
+          "lowerarm02": [
+            0,
+            90,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "upward and slightly forward",
+          "notes": "Mirrored geometry; Euler values are not copied."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "in front of upper torso",
+          "notes": "Continuity anchor."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "forward and downward",
+          "notes": "Avoids excessive lateral separation."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 40,
+      "label": "open_hands_upper_torso_endpoint",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          1.8274,
+          -35.3394,
+          65.4607
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -22.7252,
+            -57.7462,
+            147.6447
+          ],
+          "lowerarm02": [
+            0,
+            15.191,
+            0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Exact 3D normal is a technical approximation."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "open in front of upper torso",
+          "notes": "Take 2 is slightly lower than take 1."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "release completes forward/down from face",
+          "notes": "Meaningful interval ends here."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          -11.8426,
+          41.0847,
+          -76.953
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            46.5455,
+            -56.4015,
+            -89.9445
+          ],
+          "lowerarm02": [
+            0,
+            89.5284,
+            0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Exact 3D normal is a technical approximation."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "open in front of upper torso",
+          "notes": "Take 2 is slightly lower than take 1."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "release completes forward/down from face",
+          "notes": "Meaningful interval ends here."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 42,
+      "label": "subtle_bilateral_finger_settle",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {
+          "finger1-1": 3.8,
+          "finger1-2": 2.8,
+          "finger2-1": 1.8,
+          "finger2-2": 1.8,
+          "finger3-1": 1.8,
+          "finger3-2": 1.8,
+          "finger4-1": 2.8,
+          "finger4-2": 1.8,
+          "finger5-1": 3.8,
+          "finger5-2": 2.8
+        },
+        "wrist_orientation_degrees": [
+          1.8274,
+          -35.3394,
+          65.4607
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -22.7252,
+            -57.7462,
+            147.6447
+          ],
+          "lowerarm02": [
+            0,
+            15.191,
+            0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Endpoint orientation is preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "open in front of upper torso",
+          "notes": "Endpoint position is preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "subtle finger follow-through only",
+          "notes": "No extra sign movement."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {
+          "finger1-1": 3.8,
+          "finger1-2": 2.8,
+          "finger2-1": 1.8,
+          "finger2-2": 1.8,
+          "finger3-1": 1.8,
+          "finger3-2": 1.8,
+          "finger4-1": 2.8,
+          "finger4-2": 1.8,
+          "finger5-1": 3.8,
+          "finger5-2": 2.8
+        },
+        "wrist_orientation_degrees": [
+          -11.8426,
+          41.0847,
+          -76.953
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            46.415,
+            -56.3207,
+            -89.787
+          ],
+          "lowerarm02": [
+            0,
+            89.5284,
+            0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Mirrored endpoint orientation is preserved."
+        },
+        "hand_location": {
+          "status": "OBSERVED",
+          "value": "open in front of upper torso",
+          "notes": "Mirrored endpoint position is preserved."
+        },
+        "movement_path": {
+          "status": "OBSERVED",
+          "value": "subtle finger follow-through only",
+          "notes": "No extra sign movement."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Technically neutral."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "No linguistic NMM authored."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 50,
+      "label": "technical_endpoint_hold",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          1.8274,
+          -35.3394,
+          65.4607
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0.9243,
+            56.0228,
+            -89.9747
+          ],
+          "lowerarm01": [
+            -22.7252,
+            -57.7462,
+            147.6447
+          ],
+          "lowerarm02": [
+            0,
+            15.191,
+            0
+          ],
+          "shoulder01": [
+            67.4206,
+            -15.0315,
+            42.5418
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Exact 3D normal is a technical approximation."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "held endpoint",
+          "notes": "Hold outside meaningful interval."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "right_hand": {
+        "pose": "open_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          -11.8426,
+          41.0847,
+          -76.953
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            30.0255,
+            -41.7737,
+            52.0333
+          ],
+          "lowerarm01": [
+            46.4145,
+            -56.3205,
+            -89.7865
+          ],
+          "lowerarm02": [
+            0,
+            89.5284,
+            0
+          ],
+          "shoulder01": [
+            23.8552,
+            1.63,
+            -28.3761
+          ]
+        },
+        "palm_orientation": {
+          "status": "OBSERVED",
+          "value": "approximately upward and slightly forward",
+          "notes": "Exact 3D normal is a technical approximation."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "held endpoint",
+          "notes": "Hold outside meaningful interval."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    },
+    {
+      "frame": 66,
+      "label": "technical_neutral_recovery",
+      "hold_frames": 0,
+      "left_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Recovery is not part of sign."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "right_hand": {
+        "pose": "neutral_hand",
+        "finger_overrides": {},
+        "wrist_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "arm_rotations_degrees": {
+          "upperarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm01": [
+            0,
+            0,
+            0
+          ],
+          "lowerarm02": [
+            0,
+            0,
+            0
+          ],
+          "shoulder01": [
+            0,
+            0,
+            0
+          ]
+        },
+        "palm_orientation": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Outside meaningful interval."
+        },
+        "hand_location": {
+          "status": "ASSUMED_TECHNICAL",
+          "value": "canonical neutral",
+          "notes": "Recovery is not part of sign."
+        },
+        "movement_path": {
+          "status": "NOT_APPLICABLE",
+          "value": "technical state",
+          "notes": "Outside meaningful interval."
+        }
+      },
+      "non_manual": {
+        "head_orientation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "neck_rotation_degrees": [
+          0,
+          0,
+          0
+        ],
+        "eye_gaze": {
+          "status": "OBSERVED",
+          "value": "toward camera",
+          "notes": "Visible in both takes; gaze remains technically neutral in this draft."
+        },
+        "eyebrow_state": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Presentation expression; linguistic role not established."
+        },
+        "mouth_shape": {
+          "status": "UNKNOWN",
+          "value": null,
+          "notes": "Visible mouthing is not authored as linguistic NMM."
+        },
+        "jaw_position_degrees": 0,
+        "morph_targets": {}
+      }
+    }
+  ],
+  "review": {
+    "reference_status": "REFERENCE_READY",
+    "technical_status": "NOT YET TESTED",
+    "linguistic_status": "NOT YET TESTED",
+    "uncertainty_notes": [
+      "Exact forward depth and palm normal are not fully resolved by the frontal reference.",
+      "Thumb configuration is partially occluded near the mouth.",
+      "Visible smile, mouthing and slight body lean are not authored as linguistic NMM.",
+      "TASK-0012A motion values were rejected and are not retained in the meaningful sequence.",
+      "Owner revision tightened the lower-face convergence, softened the curled handshape, made opening progressive, and rotated the final palm planes upward/forward; exact depth remains subject to owner review."
+    ]
+  }
+}
