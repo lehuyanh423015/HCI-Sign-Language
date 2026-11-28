@@ -160,7 +160,8 @@ def retarget(rig, scene, frames, source_rest):
             settle = Quaternion((0, 1, 0), inward)
             for segment, (src, dst, offset) in enumerate(arms):
                 rotation = smooth_rotation(frame, lag + 0.4 * segment, "rotations", src)
-                pitch = math.radians(12 if segment else -9) * lift
+                # Move the raised wrist in front of the shoulder (Snow faces -Y).
+                pitch = math.radians(38 if segment else -21) * lift
                 desired = Quaternion((1, 0, 0), pitch) @ settle @ rotation @ offset
                 if segment:
                     bpy.context.view_layer.update()
@@ -175,7 +176,12 @@ def retarget(rig, scene, frames, source_rest):
                     desired = correction @ desired
                 key_absolute(bones[dst], frame, desired)
             palm = smooth_rotation(frame, lag + 0.9, "palms", side)
-            key_absolute(bones[wrist], frame, settle @ palm @ wrist_offset)
+            palm = settle @ palm
+            knuckle_direction = palm @ Vector((0, 1, 0))
+            backward_tilt = math.atan2(knuckle_direction.y, knuckle_direction.z)
+            # Ease the raised hand toward upright while retaining its sideways wave.
+            upright = Quaternion((1, 0, 0), max(0, backward_tilt + math.radians(4)) * lift)
+            key_absolute(bones[wrist], frame, upright @ palm @ wrist_offset)
             for src, parent, dst, neutral, offset, finger in fingers:
                 rotations = frames[frame]["rotations"]
                 delta = neutral.inverted() @ rotations[parent].inverted() @ rotations[src]
