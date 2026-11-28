@@ -122,6 +122,7 @@ try {
   const client = new CdpClient(pageTarget.webSocketDebuggerUrl);
   await client.send('Runtime.enable');
   await client.send('Page.enable');
+  await client.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
   await client.send('Page.navigate', { url });
   await waitFor(client, "document.querySelector('[data-testid=viewer-status]')?.textContent?.startsWith('Sẵn sàng')", 'Three.js viewer readiness');
 
@@ -173,17 +174,48 @@ try {
   const replayed = Number(await evaluate(client, "document.querySelector('[data-testid=animation-time]').textContent.replace('s','')"));
   report.checks.push({ id: 'replay', status: replayed <= 0.3 ? 'PASS' : 'FAIL', evidence: { replayed } });
 
-  await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Loop:')).click()")
+  await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Lặp lại:')).click()")
   await delay(80);
-  const loopLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Loop:')).textContent")
-  report.checks.push({ id: 'loop_toggle', status: loopLabel === 'Loop: Tắt' ? 'PASS' : 'FAIL', evidence: { loopLabel } });
+  const loopLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Lặp lại:')).textContent")
+  report.checks.push({ id: 'loop_toggle', status: loopLabel === 'Lặp lại: Tắt' ? 'PASS' : 'FAIL', evidence: { loopLabel } });
 
   await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Tốc độ:')).click()")
   await delay(80);
   const speedLabel = await evaluate(client, "[...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Tốc độ:')).textContent")
-  report.checks.push({ id: 'speed_toggle', status: speedLabel === 'Tốc độ: 0.5×' ? 'PASS' : 'FAIL', evidence: { speedLabel } });
+  report.checks.push({ id: 'speed_toggle', status: speedLabel === 'Tốc độ: 0,5×' ? 'PASS' : 'FAIL', evidence: { speedLabel } });
 
-  const resetFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Đặt lại camera'); b?.click(); return Boolean(b); })()")
+  // Use browser input rather than dispatching DOM events: OrbitControls consumes pointer capture and wheel.
+  const slider = await evaluate(client, `(() => {
+    const el = document.querySelector('input[aria-label="Tua hoạt ảnh"]');
+    el.scrollIntoView({block:'center'});
+    const r = el.getBoundingClientRect();
+    return { x:r.left + r.width * 0.65, y:r.top + r.height/2, duration:Number(el.max) };
+  })()`);
+  const mouse = (type, params) => client.send('Input.dispatchMouseEvent', {type, ...params});
+  await mouse('mousePressed', {x:slider.x, y:slider.y, button:'left', buttons:1, clickCount:1});
+  await mouse('mouseReleased', {x:slider.x, y:slider.y, button:'left', clickCount:1});
+  await delay(250);
+  const progress = await evaluate(client, "Number(document.querySelector('input[type=range]').value)");
+  const isPaused = await evaluate(client, "document.querySelector('.play-primary').textContent === 'Tiếp tục'");
+  report.checks.push({id:'mouse_seek', status: isPaused && Math.abs(progress/slider.duration - 0.65)<0.05 ? 'PASS':'FAIL', evidence:{progress,duration:slider.duration}});
+  const point = await evaluate(client, `(() => {
+    const el=document.querySelector('[data-testid=technical-canvas] canvas');
+    el.scrollIntoView({block:'center'}); const r=el.getBoundingClientRect();
+    return {x:Math.round(r.left+r.width/2),y:Math.round(r.top+r.height/2)};
+  })()`);
+  const shot = async () => (await client.send('Page.captureScreenshot', {format:'png'})).data;
+  const beforeDrag = await shot();
+  await mouse('mousePressed',{...point,button:'left',buttons:1,clickCount:1});
+  await mouse('mouseMoved',{x:point.x+75,y:point.y+12,buttons:1});
+  await mouse('mouseReleased',{x:point.x+75,y:point.y+12,button:'left',clickCount:1});
+  await delay(1100);
+  const afterDrag = await shot();
+  await mouse('mouseWheel',{...point,deltaX:0,deltaY:-220});
+  await delay(500);
+  const afterWheel = await shot();
+  report.checks.push({id:'mouse_drag_and_wheel',status:beforeDrag!==afterDrag && afterDrag!==afterWheel ? 'PASS':'FAIL'});
+  await evaluate(client, "document.querySelector('.camera-options summary').click()");
+  const resetFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Về góc ban đầu'); b?.click(); return Boolean(b); })()")
   await delay(100);
   const resetPreset = await evaluate(client, "document.querySelector('[data-testid=technical-canvas]').dataset.cameraPreset")
   const handFound = await evaluate(client, "(() => { const b=[...document.querySelectorAll('button')].find(b => b.textContent==='Cận cảnh tay phải'); b?.click(); return Boolean(b); })()")
@@ -191,10 +223,19 @@ try {
   const handPreset = await evaluate(client, "document.querySelector('[data-testid=technical-canvas]').dataset.cameraPreset")
   report.checks.push({ id: 'camera_controls', status: resetFound && handFound && resetPreset === 'full' && handPreset === 'hand' ? 'PASS' : 'FAIL', evidence: { resetFound, resetPreset, handFound, handPreset } });
 
+  await evaluate(client, "document.querySelector('.camera-options summary').click(); document.querySelector('.viewer-console').scrollIntoView({block:'center'})");
   const screenshot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
   mkdirSync(path.dirname(screenshotPath), { recursive: true });
   writeFileSync(screenshotPath, Buffer.from(screenshot.data, 'base64'));
   report.screenshot = screenshotPath;
+  await client.send('Emulation.setDeviceMetricsOverride', {width:375,height:812,mobile:false,deviceScaleFactor:1});
+  await evaluate(client, "document.querySelector('.viewer-console').scrollIntoView({block:'center'})");
+  const mobileFits = await evaluate(client, "document.documentElement.scrollWidth <= innerWidth && [...document.querySelectorAll('.playback-row button')].every(b=>b.getBoundingClientRect().height>=44)");
+  report.checks.push({id:'mobile_controls_fit',status:mobileFits?'PASS':'FAIL'});
+  if (process.argv.includes('--mobile-screenshot')) {
+    const mobileScreenshot = await client.send('Page.captureScreenshot', {format:'png'});
+    writeFileSync(path.resolve(argument('--mobile-screenshot','')), Buffer.from(mobileScreenshot.data,'base64'));
+  }
   report.runtime_exceptions = client.events.filter((event) => event.method === 'Runtime.exceptionThrown');
   report.status = report.checks.every((check) => check.status === 'PASS') && report.runtime_exceptions.length === 0 ? 'PASS' : 'FAIL';
   client.close();

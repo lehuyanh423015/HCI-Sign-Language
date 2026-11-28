@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "url": "http://localhost:5173/technical-sign-preview",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "gltf_and_canvas_ready",
+      "status": "PASS",
+      "evidence": {
+        "status": "Sẵn sàng · S001_MAIN · 2.00s",
+        "canvas": true,
+        "width": 924,
+        "height": 402
+      }
+    },
+    {
+      "id": "animation_progresses",
+      "status": "PASS",
+      "evidence": {
+        "timeBefore": 0.2,
+        "timeAfter": 0.32
+      }
+    },
+    {
+      "id": "pause",
+      "status": "PASS",
+      "evidence": {
+        "pausedA": 0.4,
+        "pausedB": 0.4
+      }
+    },
+    {
+      "id": "resume",
+      "status": "PASS",
+      "evidence": {
+        "pausedB": 0.4,
+        "resumed": 0.7
+      }
+    },
+    {
+      "id": "replay",
+      "status": "PASS",
+      "evidence": {
+        "replayed": 0.17
+      }
+    },
+    {
+      "id": "loop_toggle",
+      "status": "PASS",
+      "evidence": {
+        "loopLabel": "Lặp lại: Tắt"
+      }
+    },
+    {
+      "id": "speed_toggle",
+      "status": "PASS",
+      "evidence": {
+        "speedLabel": "Tốc độ: 0,5×"
+      }
+    },
+    {
+      "id": "mouse_seek",
+      "status": "PASS",
+      "evidence": {
+        "progress": 1.31,
+        "duration": 2
+      }
+    },
+    {
+      "id": "mouse_drag_and_wheel",
+      "status": "PASS"
+    },
+    {
+      "id": "camera_controls",
+      "status": "PASS",
+      "evidence": {
+        "resetFound": true,
+        "resetPreset": "full",
+        "handFound": true,
+        "handPreset": "hand"
+      }
+    },
+    {
+      "id": "mobile_controls_fit",
+      "status": "PASS"
+    }
+  ],
+  "screenshot": "D:\\HMI\\HCI-Sign-Language\\docs\\reports\\artifacts\\TASK-0013\\controls.png",
+  "runtime_exceptions": []
+}

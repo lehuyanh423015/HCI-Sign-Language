@@ -13,6 +13,8 @@
   },
   "packageManager": "npm@11.12.1",
   "scripts": {
+    "admin:create": "node apps/server/create-admin.mjs",
+    "preview": "npm run preview --workspace @hci-sign/web",
     "dev": "npm run dev --workspace @hci-sign/web",
     "build": "npm run build --workspace @hci-sign/web",
     "lint": "npm run lint --workspace @hci-sign/web",
