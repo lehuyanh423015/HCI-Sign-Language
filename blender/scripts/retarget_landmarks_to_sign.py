@@ -41,10 +41,16 @@ FACE = {"eye_outer_r": 33, "eye_outer_l": 263, "forehead": 10, "chin": 152}
 # flexion when fingers are occluded, so the animator can impose a shape on a time range while palm
 # orientation and the thumb still follow the video. Angles are flexion in degrees at MCP, PIP, DIP;
 # ``spread`` pulls the fingers parallel to the middle finger (0 keeps the rig's natural spread).
+# ``thumb``, when present, also sets the thumb: angles of its three segments from the hand's forward axis
+# toward the index side, in the palm plane, so 90 means the thumb stands across the hand.
 # These are technical building blocks, not a validated VSL handshape inventory.
 HANDSHAPES = {
     "fist": {"flex": (95, 105, 70), "spread": 0.7},
+    # Fist with the thumb raised along the index side, as in a thumbs-up.
+    "fist_thumb_up": {"flex": (95, 105, 70), "spread": 0.7, "thumb": (40, 80, 85)},
     "flat": {"flex": (4, 4, 2), "spread": 0.3},
+    # Hand at rest: fingers lightly curled, thumb alongside the index finger.
+    "relaxed": {"flex": (18, 24, 12), "spread": 0.4, "thumb": (25, 30, 30)},
     "bunched": {"flex": (48, 38, 22), "spread": 1.0},
 }
 
@@ -66,6 +72,12 @@ def arguments():
     parser.add_argument("--contact", help="R:L:START:END[:GAP_CM[:LEVEL]] keeps the right fist resting on the left palm in that source time window; LEVEL 0..1 turns the left palm toward facing up")
     parser.add_argument("--contact-thumb-up", type=float, default=0.0,
                         help="0..1, during contact turn the right hand so its thumb points up")
+    parser.add_argument("--contact-swivel", action="store_true",
+                        help="during contact swing each elbow about the shoulder-wrist axis so the forearm lines up with the hand")
+    parser.add_argument("--wrist-limit", type=float, default=0.0,
+                        help="cap wrist bend away from the forearm line, in degrees; twist is kept; 0 disables")
+    parser.add_argument("--forearm-twist", default="0:0.5",
+                        help="F1:F2, shares of forearm twist on lowerarm01 and lowerarm02; the wrist keeps 1-F1-F2")
     parser.add_argument("--outlier-deg", type=float, default=35.0, help="drop solved rotations this far from their neighbourhood medoid; 0 disables")
     parser.add_argument("--smooth", type=int, default=2, help="triangular window radius in frames")
     parser.add_argument("--head-weight", type=float, default=0.7)
@@ -143,6 +155,8 @@ class Solver:
         self.handshapes = []
         self.segment_bounds = (0.0, 0.0)
         self.prev_bend = {}
+        # Forearm twist shares: lowerarm01 and lowerarm02 take these fractions, the wrist the rest.
+        self.twist_split = (0.0, 0.5)
 
     def identity_matrix(self, name, parent_matrix):
         """Armature-space orientation of ``name`` when its own pose basis is identity."""
@@ -218,18 +232,23 @@ class Solver:
         wrist = shoulder + u * d
         return (elbow - shoulder).normalized(), (wrist - elbow).normalized()
 
-    def handshape_weight(self, side, t):
-        """Which override applies to this side at source time t, with a short ease at inner boundaries."""
+    def handshape_weights(self, side, t):
+        """Overrides active on this side at source time t, by start time, each eased over 0.12 s at inner boundaries.
+
+        Applied in order on top of the landmark directions, so a later shape fades in over an earlier one.
+        """
         ramp = 0.12
         seg_a, seg_b = self.segment_bounds
-        for hs_side, name, a, b in self.handshapes:
+        out = []
+        for hs_side, name, a, b in sorted(self.handshapes, key=lambda h: h[2]):
             if hs_side != side or not (a - ramp <= t <= b + ramp):
                 continue
             left = 1.0 if a <= seg_a + 1e-6 else min(1.0, max(0.0, (t - a + ramp) / ramp))
             right = 1.0 if b >= seg_b - 1e-6 else min(1.0, max(0.0, (b + ramp - t) / ramp))
             weight = min(left, right)
-            return HANDSHAPES[name], weight * weight * (3 - 2 * weight)
-        return None, 0.0
+            if weight > 0:
+                out.append((HANDSHAPES[name], weight * weight * (3 - 2 * weight)))
+        return out
 
     def shaped_directions(self, side, finger, palm_rotation, shape):
         """Segment directions of one finger for a hand-shape preset, in armature space."""
@@ -256,6 +275,14 @@ class Solver:
             total += math.radians(angle)
             out.append((Matrix.Rotation(total, 3, axis) @ base).normalized())
         return out
+
+    def thumb_directions(self, side, palm_rotation, shape):
+        """Thumb segment directions for a preset, turned from the hand's forward axis toward the index side."""
+        s = side
+        forward = palm_rotation @ (self.head[f"finger3-1.{s}"] - self.head[f"wrist.{s}"]).normalized()
+        across = palm_rotation @ (self.head[f"finger2-1.{s}"] - self.head[f"finger5-1.{s}"]).normalized()
+        across = (across - forward * across.dot(forward)).normalized()
+        return [(forward * math.cos(math.radians(a)) + across * math.sin(math.radians(a))).normalized() for a in shape["thumb"]]
 
     def mouth_contact(self, side, frame, hp, width, height):
         """Weight 0..1 that the fingertips touch the mouth in the image, and the avatar wrist-to-fingertip vector."""
@@ -334,27 +361,27 @@ class Solver:
                 continue
             palm_rotation = from_basis(rest_forward, rest_across, t_forward, t_across)
             m_w = palm_rotation @ self.rest[w]
-            # Share forearm twist: half on lowerarm02, the rest on the wrist, to limit candy-wrapper skinning.
-            m_w_id = self.identity_matrix(w, m_l2)
-            delta = (m_l2.inverted() @ m_w) @ (m_l2.inverted() @ m_w_id).inverted()
-            dq = delta.to_quaternion()
-            twist = Quaternion((dq.w, 0.0, dq.y, 0.0))
-            if twist.magnitude > 1e-9:
-                twist.normalize()
-                half = Quaternion().slerp(twist, 0.5)
-                out[l2] = half
-                m_l2 = self.identity_matrix(l2, m_l1) @ half.to_matrix()
-            out[w] = self.local(w, m_l2, m_w)
+            out.update(distribute_twist(self, s, m_u2, m_l1, m_w))
 
-            shape, shape_weight = self.handshape_weight(side, frame["t"])
+            # Every override active at this time, in the order given; consecutive shapes cross-fade.
+            active_shapes = self.handshape_weights(side, frame["t"])
             for finger, idx in FINGERS.items():
                 chain = [f"finger{finger}-{k}.{s}" for k in (1, 2, 3)]
-                shaped = self.shaped_directions(side, finger, palm_rotation, shape) if shape and finger != 1 and shape_weight > 0 else None
+                layers = []
+                for shape, shape_weight in active_shapes:
+                    if finger != 1:
+                        shaped = self.shaped_directions(side, finger, palm_rotation, shape)
+                    elif "thumb" in shape:
+                        shaped = self.thumb_directions(side, palm_rotation, shape)
+                    else:
+                        shaped = None
+                    if shaped:
+                        layers.append((shaped, shape_weight))
                 first_parent = w if finger == 1 else f"metacarpal{finger - 1}.{s}"
                 parent_matrix = m_w if finger == 1 else self.identity_matrix(first_parent, m_w)
                 for k, bone in enumerate(chain):
                     target = direction(hp[idx[k]], hp[idx[k + 1]])
-                    if shaped:
+                    for shaped, shape_weight in layers:
                         target = shaped[k] if target is None else target.lerp(shaped[k], shape_weight).normalized()
                     m_id = self.identity_matrix(bone, parent_matrix)
                     if target is None:
@@ -441,6 +468,29 @@ def smooth(track, radius):
     return out
 
 
+def limit_swing(track, limit_deg):
+    """Cap how far each wrist bends away from the forearm line, keeping its twist.
+
+    MediaPipe hand orientation is unreliable when a hand is small, blurred or near the frame edge, and
+    the result can be a wrist bent near 90 degrees. The pose basis is split into a twist about the bone
+    axis and a swing; a swing beyond ``limit_deg`` is scaled down to it. Returns the track and how many
+    frames were limited.
+    """
+    out, count = [], 0
+    for q in track:
+        twist = Quaternion((q.w, 0.0, q.y, 0.0))
+        twist = twist.normalized() if twist.magnitude > 1e-9 else Quaternion()
+        swing = q @ twist.inverted()
+        if swing.w < 0:
+            swing = -swing
+        angle = math.degrees(swing.angle)
+        if angle > limit_deg:
+            swing = Quaternion().slerp(swing, limit_deg / angle)
+            count += 1
+        out.append((swing @ twist).normalized())
+    return out, count
+
+
 def ease(t):
     return t * t * (3 - 2 * t)
 
@@ -448,6 +498,10 @@ def ease(t):
 # ---------- two-hand contact ----------
 
 ARM = ("upperarm01", "upperarm02", "lowerarm01", "lowerarm02", "wrist")
+# Elbows stay outside this ellipse around the torso at elbow height, in armature space: centre y, half
+# width in x, half depth in y. Measured on Master v1 (skin about 0.13 m half width, shirt about 0.22 m,
+# body from y -0.14 to 0.05) plus about 3.5 cm for the elbow's own thickness.
+TORSO_KEEP_OUT = (-0.045, 0.255, 0.165)
 
 
 class Pose:
@@ -537,17 +591,73 @@ def solve_arm_to(solver, local, side, target, elbow_hint, wrist_world):
     m_u2 = solver.identity_matrix(u2, m_u1)
     m_l1 = unit_from(r_upper @ rest_lower, d_lower) @ solver.identity_matrix(l1, m_u2)
     out[l1] = solver.local(l1, m_u2, m_l1)
-    m_l2 = solver.identity_matrix(l2, m_l1)
-    delta = (m_l2.inverted() @ wrist_world) @ (m_l2.inverted() @ solver.identity_matrix(w, m_l2)).inverted()
-    dq = delta.to_quaternion()
-    twist = Quaternion((dq.w, 0.0, dq.y, 0.0))
-    half = Quaternion().slerp(twist.normalized(), 0.5) if twist.magnitude > 1e-9 else Quaternion()
-    out[l2] = half
-    out[w] = solver.local(w, m_l2 @ half.to_matrix(), wrist_world)
+    out.update(distribute_twist(solver, s, m_u2, m_l1, wrist_world))
     return out
 
 
-def apply_hand_contact(solver, tracks, frames, spec, gap_cm, level=0.0, thumb_up=0.0):
+def wrist_bend(solver, local, side):
+    """Angle in degrees between the forearm-continued wrist axis and the actual hand axis; twist is ignored."""
+    pose = Pose(solver, local)
+    m_l2 = pose.bone(f"lowerarm02.{side}")[0]
+    straight = solver.identity_matrix(f"wrist.{side}", m_l2).col[1].to_3d()
+    actual = pose.bone(f"wrist.{side}")[0].col[1].to_3d()
+    return math.degrees(straight.angle(actual)), pose.bone(f"lowerarm01.{side}")[1]
+
+
+def swivel_hint(solver, side, target, hint, degrees):
+    """Elbow hint turned about the shoulder-to-wrist axis: the wrist stays put, the elbow swings."""
+    shoulder = solver.head[f"upperarm01.{side}"]
+    axis = (target - shoulder).normalized()
+    return shoulder + Matrix.Rotation(math.radians(degrees), 3, axis) @ (hint - shoulder)
+
+
+def choose_swivel(solver, local, side, target, hint, wrist_world, limit=100):
+    """Elbow swing angle that lines the forearm up with the hand, so the wrist bends least.
+
+    The hand orientation is fixed by the contact constraint; with the elbow left where the video put it,
+    the whole difference lands on the wrist joint. Penalties keep the elbow below the shoulder, outside
+    the torso and not behind the back, and a small cost per degree keeps it near the video.
+    """
+    shoulder = solver.head[f"upperarm01.{side}"]
+    cy, half_width, half_depth = TORSO_KEEP_OUT
+
+    def cost(degrees):
+        res = solve_arm_to(solver, local, side, target, swivel_hint(solver, side, target, hint, degrees), wrist_world)
+        bend, elbow = wrist_bend(solver, {**local, **res}, side)
+        c = bend + 0.1 * abs(degrees)
+        c += 1000 * max(0.0, elbow.z - (shoulder.z - 0.05))
+        inside = 1.0 - math.hypot(elbow.x / half_width, (elbow.y - cy) / half_depth)
+        c += 1000 * max(0.0, inside) * half_width
+        c += 1000 * max(0.0, elbow.y - (shoulder.y + 0.12))
+        return c, bend
+
+    best = min(range(-limit, limit + 1, 5), key=lambda d: cost(d)[0])
+    best = min(range(best - 4, best + 5), key=lambda d: cost(d)[0])
+    c, bend = cost(best)
+    return float(best), bend, c
+
+
+def distribute_twist(solver, s, m_u2, m_l1, m_w):
+    """Local rotations of lowerarm01, lowerarm02 and wrist for a desired hand orientation ``m_w``.
+
+    Forearm rotation (pronation and supination) happens along the whole forearm, not at the wrist;
+    putting it all on the wrist bone wrings the skin there. The twist about the bone axis is shared by
+    ``solver.twist_split``: lowerarm01 and lowerarm02 take those fractions and the wrist keeps the rest.
+    """
+    l1, l2, w = f"lowerarm01.{s}", f"lowerarm02.{s}", f"wrist.{s}"
+    m_l2_id = solver.identity_matrix(l2, m_l1)
+    delta = (m_l2_id.inverted() @ m_w) @ (m_l2_id.inverted() @ solver.identity_matrix(w, m_l2_id)).inverted()
+    dq = delta.to_quaternion()
+    twist = Quaternion((dq.w, 0.0, dq.y, 0.0))
+    twist = twist.normalized() if twist.magnitude > 1e-9 else Quaternion()
+    f1, f2 = solver.twist_split
+    t1, t2 = Quaternion().slerp(twist, f1), Quaternion().slerp(twist, f2)
+    m_l1t = m_l1 @ t1.to_matrix()
+    m_l2 = solver.identity_matrix(l2, m_l1t) @ t2.to_matrix()
+    return {l1: solver.local(l1, m_u2, m_l1t), l2: t2, w: solver.local(w, m_l2, m_w)}
+
+
+def apply_hand_contact(solver, tracks, frames, spec, gap_cm, level=0.0, thumb_up=0.0, swivel=False):
     """The right fist rests on the left palm during [a, b] seconds and moves with it.
 
     The left arm keeps the video motion; both wrists keep a steady orientation taken from the median
@@ -600,44 +710,88 @@ def apply_hand_contact(solver, tracks, frames, spec, gap_cm, level=0.0, thumb_up
     names += thumbs
     for name in names:
         tracks.setdefault(name, [Quaternion() for _ in frames])
-    stats = []
-    for i, w in enumerate(weights):
-        if w <= 0:
-            continue
+    active = [i for i, w in enumerate(weights) if w > 0]
+
+    def targets(i, wl, wr):
+        """Video pose at frame i plus both wrist targets and the video elbows as swing references."""
         local = local_at(i)
         local.update(steady)
-        left = Pose(solver, local)
-        wl2 = left.bone("lowerarm02.L")[0]
-        local["wrist.L"] = (solver.identity_matrix("wrist.L", wl2).inverted() @ wl).to_quaternion()
-        left = Pose(solver, local)
-        centre, normal = palm_frame(left, "L")
+        video = Pose(solver, local)
+        left_target, left_hint = video.bone("wrist.L")[1], video.bone("lowerarm01.L")[1]
+        right_hint = video.bone("lowerarm01.R")[1]
+        # The left wrist stays where the video puts it; only its orientation is steadied.
+        left_local = {**local, **solve_arm_to(solver, local, "L", left_target, left_hint, wl)}
+        centre, normal = palm_frame(Pose(solver, left_local), "L")
         # Fist shape relative to the right wrist with the steady orientation.
-        trial = dict(local)
-        trial.update(solve_arm_to(solver, local, "R", Pose(solver, local).bone("wrist.R")[1], Pose(solver, local).bone("lowerarm01.R")[1], wr))
-        probe = Pose(solver, trial)
+        probe = Pose(solver, {**left_local, **solve_arm_to(solver, local, "R", video.bone("wrist.R")[1], right_hint, wr)})
         wpos = probe.bone("wrist.R")[1]
         pts = [p - wpos for p in fist_points(probe, "R")]
         fist_centre = sum(pts, Vector()) / len(pts)
         low = min(pts, key=lambda v: v.dot(normal))
         # Wrist head position that puts the fist centre over the palm centre and its lowest joint gap_cm above it.
         ideal = centre - fist_centre + normal * (gap_cm / 100 - (low - fist_centre).dot(normal))
-        target = ideal.copy()
-        elbow_hint = Pose(solver, local).bone("lowerarm01.R")[1]
-        for _ in range(3):
-            corrected = solve_arm_to(solver, local, "R", target, elbow_hint, wr)
-            target -= Pose(solver, {**local, **corrected}).bone("wrist.R")[1] - ideal
-        final = {**local, **corrected}
+        return local, {"L": left_target, "R": ideal}, {"L": left_hint, "R": right_hint}
+
+    yaw = {"L": 0.0, "R": 0.0}
+    if swivel:
+        # Turn each steady hand about the vertical axis so it lines up with a reachable forearm. A vertical
+        # turn keeps the left palm facing up and the right thumb pointing up.
+        samples = [core[len(core) // 4], core[len(core) // 2], core[(3 * len(core)) // 4]]
+        turn = lambda m, d: Matrix.Rotation(math.radians(d), 3, "Z") @ m
+
+        def mean_cost(side, wl_, wr_):
+            total = 0.0
+            for i in samples:
+                local, tg, hints = targets(i, wl_, wr_)
+                total += choose_swivel(solver, local, side, tg[side], hints[side], wl_ if side == "L" else wr_)[2]
+            return total / len(samples)
+
+        yaw["L"] = float(min(range(-60, 61, 5), key=lambda d: mean_cost("L", turn(wl, d), wr) + 0.05 * abs(d)))
+        wl = turn(wl, yaw["L"])
+        yaw["R"] = float(min(range(-60, 61, 5), key=lambda d: mean_cost("R", wl, turn(wr, d)) + 0.05 * abs(d)))
+        wr = turn(wr, yaw["R"])
+
+    # Pass 1: wrist targets and the elbow swing that lines each forearm up with its steady hand.
+    plan = {}
+    for i in active:
+        local, tg, hints = targets(i, wl, wr)
+        swing = {}
+        for side, orient in (("L", wl), ("R", wr)):
+            swing[side] = choose_swivel(solver, local, side, tg[side], hints[side], orient) if swivel else (0.0, None, None)
+        plan[i] = {"local": local, "targets": tg, "hints": hints, "swing": swing}
+    # Smooth the swing angles over time so the elbows do not hop between neighbouring optima.
+    for side in ("L", "R"):
+        raw = [plan[i]["swing"][side][0] for i in active]
+        for k, i in enumerate(active):
+            window = [(3 + 1 - abs(k - j), raw[j]) for j in range(max(0, k - 3), min(len(raw), k + 4))]
+            plan[i][f"angle_{side}"] = sum(wt * v for wt, v in window) / sum(wt for wt, _ in window)
+    # Pass 2: solve both arms with the smoothed swing and blend into the tracks.
+    stats = []
+    for i in active:
+        w, p = weights[i], plan[i]
+        local = p["local"]
+        final = dict(local)
+        for side, orient in (("L", wl), ("R", wr)):
+            ideal = p["targets"][side]
+            hint = swivel_hint(solver, side, ideal, p["hints"][side], p[f"angle_{side}"])
+            target = ideal.copy()
+            for _ in range(3):
+                corrected = solve_arm_to(solver, final, side, target, hint, orient)
+                target -= Pose(solver, {**final, **corrected}).bone(f"wrist.{side}")[1] - ideal
+            final.update(corrected)
         result = Pose(solver, final)
         c2, n2 = palm_frame(result, "L")
         pts2 = fist_points(result, "R")
-        gap = min((p - c2).dot(n2) for p in pts2)
+        gap = min((q - c2).dot(n2) for q in pts2)
         centre2 = sum(pts2, Vector()) / len(pts2)
         lateral = ((centre2 - c2) - n2 * (centre2 - c2).dot(n2)).length
-        stats.append({"t": round(times[i], 3), "weight": round(w, 2), "gap_cm": round(gap * 100, 2), "lateral_cm": round(lateral * 100, 2)})
+        bends = {side: round(wrist_bend(solver, final, side)[0], 1) for side in ("L", "R")}
+        stats.append({"t": round(times[i], 3), "weight": round(w, 2), "gap_cm": round(gap * 100, 2), "lateral_cm": round(lateral * 100, 2),
+                      "elbow_swing_deg": {s: round(p[f"angle_{s}"], 1) for s in ("L", "R")}, "wrist_bend_deg": bends})
         for name in names:
             if name in final:
                 tracks[name][i] = tracks[name][i].slerp(final[name], w) if tracks[name][i].dot(final[name]) >= 0 else tracks[name][i].slerp(-final[name], w)
-    return stats
+    return {"hand_yaw_deg": yaw, "frames": stats}
 
 
 # ---------- main ----------
@@ -674,6 +828,10 @@ def main():
     solver = Solver(armature, args.depth_scale, args.arm_mode, args.hand_depth_scale)
     arm_scale = solver.calibrate(frames)
     solver.segment_bounds = (frames[0]["t"], frames[-1]["t"])
+    twist = [float(v) for v in args.forearm_twist.split(":")]
+    if len(twist) != 2 or min(twist) < 0 or sum(twist) > 1:
+        raise RuntimeError("--forearm-twist must be F1:F2 with F1, F2 >= 0 and F1 + F2 <= 1")
+    solver.twist_split = tuple(twist)
     for spec in args.handshape:
         parts = spec.split(":")
         if len(parts) not in (2, 4) or parts[0] not in ("L", "R") or parts[1] not in HANDSHAPES:
@@ -694,16 +852,21 @@ def main():
                 outliers[name] = removed
         tracks[name] = smooth(align(fill_track(track)), args.smooth)
 
-    contact_stats = []
+    contact_stats = {}
     if args.contact:
         parts = args.contact.split(":")
         if len(parts) not in (4, 5, 6) or parts[:2] != ["R", "L"]:
             raise RuntimeError("--contact must be R:L:START:END[:GAP_CM[:LEVEL]]")
         gap_cm = float(parts[4]) if len(parts) >= 5 else 2.0
         level = float(parts[5]) if len(parts) == 6 else 0.0
-        contact_stats = apply_hand_contact(solver, tracks, frames, (float(parts[2]), float(parts[3])), gap_cm, level, args.contact_thumb_up)
+        contact_stats = apply_hand_contact(solver, tracks, frames, (float(parts[2]), float(parts[3])), gap_cm, level, args.contact_thumb_up, args.contact_swivel)
         for name in tracks:
             tracks[name] = align(tracks[name])
+    wrist_limited = {}
+    if args.wrist_limit > 0:
+        for name in ("wrist.L", "wrist.R"):
+            if name in tracks:
+                tracks[name], wrist_limited[name] = limit_swing(tracks[name], args.wrist_limit)
 
     # Timeline: frame 1 neutral, ease into the first solved pose, play the segment, ease back to neutral.
     n = len(frames)
@@ -782,8 +945,11 @@ def main():
         "depth_scale": args.depth_scale,
         "arm_mode": args.arm_mode,
         "hand_depth_scale": args.hand_depth_scale,
-        "hand_contact": {"spec": args.contact, "thumb_up": args.contact_thumb_up, "frames": contact_stats} if args.contact else None,
+        "hand_contact": {"spec": args.contact, "thumb_up": args.contact_thumb_up, "elbow_swivel": args.contact_swivel, **contact_stats} if args.contact else None,
         "outlier_threshold_deg": args.outlier_deg,
+        "forearm_twist_split": list(solver.twist_split),
+        "wrist_limit_deg": args.wrist_limit,
+        "wrist_frames_limited": wrist_limited,
         "outliers_removed": outliers,
         "handshape_overrides": [{"side": h[0], "shape": h[1], "seconds": [h[2], h[3]], "flex_degrees": HANDSHAPES[h[1]]["flex"], "spread": HANDSHAPES[h[1]]["spread"]} for h in solver.handshapes],
         "frames_with_mouth_anchor": sum(1 for w in solver.face_weights if w > 0.5),

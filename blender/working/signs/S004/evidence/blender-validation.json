@@ -7,7 +7,7 @@
   "classification": "SIGN_PRODUCTION_CANDIDATE",
   "source": {
     "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\blender\\working\\signs\\S004\\S004.blend",
-    "sha256": "A9FBEB6B653AF69F597B3EEE3BBD53B852534C465473E39F5DF08CC75400F8BE"
+    "sha256": "0821B0A989A9FE526523A5CA1832D7002AC1C88D1DE941A25F024C6E677EC2AC"
   },
   "inventory": {
     "armature_object": "Human.rig",
@@ -88,7 +88,7 @@
     "frame_current": 1,
     "fps": 30,
     "frame_start": 1,
-    "frame_end": 82,
+    "frame_end": 74,
     "nmm_values": {
       "NMM_BROW_RAISE_L": 0.0,
       "NMM_BROW_RAISE_R": 0.0,
@@ -160,7 +160,7 @@
       "status": "PASS",
       "actual": [
         1,
-        82
+        74
       ]
     },
     {
@@ -190,7 +190,7 @@
       "status": "PASS",
       "actual": [
         1.0,
-        82.0
+        74.0
       ]
     },
     {

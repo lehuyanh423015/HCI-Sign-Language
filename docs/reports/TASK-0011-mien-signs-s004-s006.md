@@ -1,6 +1,6 @@
 # TASK-0011 — Bản nháp hoạt ảnh S004–S006 từ video tham chiếu
 
-- Ngày/Timezone: 2026-11-22, Asia/Ho_Chi_Minh; cập nhật S004 0.3.0-draft ngày 2026-11-28
+- Ngày/Timezone: 2026-11-22, Asia/Ho_Chi_Minh; cập nhật S004 0.3.0-draft và 0.4.0-draft ngày 2026-11-28
 - Branch/base commit: `feat/task-0011-mien-signs-s004-s006` từ `main` tại `b030fcd7d63ee564354ba3d5b20ed479dd2b4b39`
 - Scope: dựng bản nháp kỹ thuật cho ba ký hiệu được giao cho Lê Quang Miền trên Master Avatar v1.0.0: S004 "giúp đỡ", S005 "yêu", S006 "ăn"
 - Overall status: PARTIAL. Technical pipeline PASS; reference, technical review của 3D Lead và linguistic review chưa thực hiện
@@ -12,6 +12,8 @@ Ba ký hiệu có Action `Snnn_MAIN`, `.blend` làm việc, GLB, ảnh khung hì
 Chuyển động được dựng tự động từ điểm mốc MediaPipe Holistic của video từ điển QIPEDC, bằng script mới `blender/scripts/retarget_landmarks_to_sign.py`, thay cho keyframe tay từ tư thế trống. Ở bản 0.2.0-draft, hình dạng bốn ngón tay được đặt theo mẫu gập ngón, vì MediaPipe đoán thiếu độ gập khi ngón bị che: nắm tay cho S004 và S005, chụm ngón cho S006. Đây là **bản nháp kỹ thuật**, chưa phải Ngôn ngữ Ký hiệu Việt Nam đã xác minh. Trạng thái metadata giữ `REFERENCE_PENDING` vì quyền sử dụng video và việc chọn biến thể chưa được Thảo hoặc người thành thạo xác nhận.
 
 Ngày 2026-11-28, S004 "giúp đỡ" được tinh chỉnh lên **0.3.0-draft**. Đo bản 0.2.0-draft cho thấy nắm tay phải lúc lún sâu vào lòng bàn tay trái tới 11,6 cm, lúc lơ lửng 6,6 cm; lòng bàn tay trái có frame bị lật úp; cổ tay phải giật 58° trong một frame. Bản 0.3.0-draft thêm ràng buộc tiếp xúc hai tay vào script retarget: trong suốt đoạn chạm, nắm tay phải đặt đúng giữa lòng bàn tay trái với khe 2,4–2,5 cm giữa các khớp xương, tức hai lớp da vừa chạm; lòng bàn tay trái ngửa ổn định; ngón cái phải dựng đứng. Số đo trước và sau ở mục Known issues, chi tiết trong `blender/working/signs/S004/evidence/contact-metrics.json`. S005 và S006 giữ nguyên 0.2.0-draft.
+
+Cùng ngày, sau khi xem bản 0.3.0-draft, chủ task nhận xét bàn tay đã ổn nhưng cẳng tay và cổ tay phải trông không tự nhiên. Đo lại cho thấy hướng bàn tay bị ép cố định trong khi khuỷu tay vẫn theo video, nên toàn bộ chênh lệch dồn vào khớp cổ tay: cổ tay phải gập tới 73°, cổ tay trái 62°. Bản **0.4.0-draft** sửa bằng cách: dùng mẫu nắm tay có ngón cái dựng dọc cạnh ngón trỏ để trục bàn tay nằm ngang; chọn lại vị trí khuỷu tay và xoay mỗi bàn tay quanh trục đứng để cẳng tay thẳng hàng với bàn tay; chia độ xoắn cẳng tay ra dọc cẳng tay; giới hạn độ gập cổ tay ở 35°; thả lỏng bàn tay trước và sau ký hiệu; kết thúc đoạn video ở 1,95 giây. Độ gập cổ tay trong đoạn chạm còn tối đa 14° bên phải và 10° bên trái; tư thế khớp với video: hai khuỷu giơ sang hai bên, cẳng tay nằm ngang.
 
 ## Initial repository status
 
@@ -52,13 +54,20 @@ Ngày 2026-11-28, S004 "giúp đỡ" được tinh chỉnh lên **0.3.0-draft**.
    - `--contact-thumb-up 0..1`: xoay nắm tay phải để ngón cái hướng lên theo hệ số.
    - Mẫu `flat` dùng cho tay trái S004 để lòng bàn tay phẳng.
    - `retarget.json` ghi thêm `hand_contact` theo từng frame, `outliers_removed`, `outlier_threshold_deg`.
-6. **`blender/scripts/measure_hand_contact.py`** mới. Đo theo từng frame khe hở giữa nắm tay phải và lòng bàn tay trái, độ lệch ngang, hướng lòng bàn tay trái, hướng ngón cái phải, và tốc độ góc cùng độ thay đổi tốc độ của các xương tay và đầu để tìm chỗ giật. Không sửa `.blend`.
+6. **`blender/scripts/measure_hand_contact.py`** mới. Đo theo từng frame khe hở giữa nắm tay phải và lòng bàn tay trái, độ lệch ngang, hướng lòng bàn tay trái, hướng ngón cái phải, độ gập cổ tay so với đường cẳng tay, và tốc độ góc cùng độ thay đổi tốc độ của các xương tay và đầu để tìm chỗ giật. Không sửa `.blend`.
+7. **Bổ sung cho S004 0.4.0-draft**, trong `retarget_landmarks_to_sign.py`. Các tùy chọn mới đều tắt theo mặc định; dựng lại S005 và S006 bằng lệnh cũ với `--outlier-deg 0` cho keyframe trùng khớp tuyệt đối với bản đã commit.
+   - Mẫu `fist_thumb_up`: nắm tay, ngón cái dựng dọc cạnh ngón trỏ, ba đốt lệch 40/80/85° khỏi trục bàn tay. Mẫu `relaxed`: ngón hơi cong 18/24/12°, ngón cái nằm cạnh ngón trỏ. Mẫu có khóa `thumb` thì đặt cả ngón cái.
+   - Nhiều `--handshape` cùng một tay được áp dụng theo thứ tự thời gian và chuyển mượt sang nhau trong 0,12 giây; trước đây chỉ mẫu đầu tiên có hiệu lực.
+   - `--contact-swivel`: trong đoạn chạm, mỗi khuỷu tay được xoay quanh trục vai tới cổ tay, cổ tay giữ nguyên vị trí, sao cho cẳng tay thẳng hàng với bàn tay nhất. Có phạt khi khuỷu cao quá vai, ra sau lưng, hoặc lọt vào vùng elip quanh thân đo trên Master v1 (`TORSO_KEEP_OUT`). Góc khuỷu được làm mượt theo thời gian. Trước đó, mỗi bàn tay được xoay quanh trục đứng (giữ lòng bàn tay trái ngửa, ngón cái phải dựng) theo góc làm cổ tay gập ít nhất, lấy trung bình trên ba frame của đoạn chạm. S004: tay trái −45°, tay phải +35°.
+   - `--forearm-twist F1:F2`: tỷ lệ độ xoắn cẳng tay đặt lên `lowerarm01` và `lowerarm02`, phần còn lại ở `wrist`. Mặc định `0:0.5` giữ cách cũ; S004 dùng `0.3:0.4`, vì xoay sấp ngửa xảy ra dọc cả cẳng tay chứ không ở khớp cổ tay.
+   - `--wrist-limit DEG`: giới hạn độ gập cổ tay so với đường cẳng tay, giữ nguyên độ xoắn. S004 dùng 35°; giới hạn tác động 6 frame tay trái và 7 frame tay phải, đều ở lúc tay đang hạ, khi MediaPipe đoán hướng bàn tay sai ở mép khung hình.
+   - `retarget.json` ghi thêm `hand_yaw_deg`, góc khuỷu và độ gập cổ tay theo từng frame chạm, `forearm_twist_split`, `wrist_limit_deg`, `wrist_frames_limited`.
 
 ### Tham chiếu và đoạn sử dụng
 
 | Sign | Từ | Video QIPEDC | Đoạn | Tham số | Mức chắc chắn |
 |---|---|---|---|---|---|
-| S004 | giúp đỡ | W01497B "giúp đỡ" | 0,15–2,20 giây | depth 0,5; hand depth 1,0; tay phải `fist`, tay trái `flat`; tiếp xúc 0,6–1,62 giây, khe 2,5 cm, ngửa 0,6, ngón cái 0,9 | Đúng từ; chưa xác nhận biến thể |
+| S004 | giúp đỡ | W01497B "giúp đỡ" | 0,15–1,95 giây | depth 0,5; hand depth 1,0; tay phải `relaxed` → `fist_thumb_up` 0,3–1,72 giây → `relaxed`, tay trái `relaxed` → `flat` → `relaxed`; tiếp xúc 0,6–1,62 giây, khe 2,5 cm, ngửa 0,6, ngón cái 0,9; chọn khuỷu; xoắn 0,3:0,4; giới hạn cổ tay 35° | Đúng từ; chưa xác nhận biến thể |
 | S005 | yêu | W03373B "thương yêu" | 1,00–3,10 giây | depth 0,5; hand depth 1,0; hai tay `fist` | Gần nghĩa; cần chọn biến thể cho "yêu" |
 | S006 | ăn | W00042 "ăn uống", phần đầu | 1,50–2,30 giây | depth 0,5; hand depth 0,3; lead-out 16; tay phải `bunched` | Một phần của từ ghép; "đồ ăn" D0444 có cùng động tác mở đầu |
 
@@ -74,7 +83,8 @@ Video lấy qua bản sao Hugging Face `Lakeserl/SignConnect`. Sau đó đã t�
   - `assets/exports/signs/Snnn.glb`
 - Sửa: `blender/working/signs/S004/sign.json`, `S005/sign.json`, `S006/sign.json`
 - Mới: `docs/reports/artifacts/TASK-0011/` gồm kết quả validator và kiểm tra three.js; báo cáo này
-- Cập nhật S004 0.3.0-draft: sửa `retarget_landmarks_to_sign.py`; mới `blender/scripts/measure_hand_contact.py`, `blender/working/signs/S004/evidence/contact-metrics.json`, `docs/reports/artifacts/TASK-0011/S004-v0.3-threejs-node-playback.json`; tạo lại `S004.blend`, `S004.glb`, evidence, preview và `sign.json` của S004
+- Cập nhật S004 0.3.0-draft: sửa `retarget_landmarks_to_sign.py`; mới `blender/scripts/measure_hand_contact.py`, `blender/working/signs/S004/evidence/contact-metrics.json`; tạo lại `S004.blend`, `S004.glb`, evidence, preview và `sign.json` của S004
+- Cập nhật S004 0.4.0-draft: sửa `retarget_landmarks_to_sign.py`, `measure_hand_contact.py`; tạo lại `S004.blend`, `S004.glb`, evidence, preview, `sign.json`; `S004-v0.3-threejs-node-playback.json` đổi thành `docs/reports/artifacts/TASK-0011/S004-threejs-node-playback.json` cho bản hiện hành
 - Không đưa vào commit: `blender/working/signs/Snnn/Snnn_base.blend`, là working copy trung gian, tạo lại được bằng lệnh ở mục dưới
 
 ## Commands actually executed
@@ -89,26 +99,30 @@ certutil -hashfile blender/master/avatar_master.blend SHA256
 # Trích điểm mốc, ngoài repo, bằng studio của vsl-learn:
 npm run eval -w studio -- <thư mục chứa S004.mp4, S005.mp4, S006.mp4> <eval.json>   với RAW_DIR=<RAW>
 
-%B% -b blender/working/signs/S004/S004_base.blend --python blender/scripts/retarget_landmarks_to_sign.py -- --raw %RAW%/S004.raw.json --sign-id S004 --start 0.15 --end 2.2 --handshape R:fist --handshape L:flat --contact R:L:0.6:1.62:2.5:0.6 --contact-thumb-up 0.9 --output-blend blender/working/signs/S004/S004.blend --report blender/working/signs/S004/evidence/retarget.json
-  (lệnh S004 ở trên là của 0.3.0-draft; bản 0.2.0-draft chỉ có --handshape R:fist)
+%B% -b blender/working/signs/S004/S004_base.blend --python blender/scripts/retarget_landmarks_to_sign.py -- --raw %RAW%/S004.raw.json --sign-id S004 --start 0.15 --end 1.95 --handshape R:relaxed:0.15:0.25 --handshape R:fist_thumb_up:0.3:1.72 --handshape R:relaxed:1.8:1.95 --handshape L:relaxed:0.15:0.25 --handshape L:flat:0.3:1.72 --handshape L:relaxed:1.8:1.95 --contact R:L:0.6:1.62:2.5:0.6 --contact-thumb-up 0.9 --contact-swivel --forearm-twist 0.3:0.4 --wrist-limit 35 --output-blend blender/working/signs/S004/S004.blend --report blender/working/signs/S004/evidence/retarget.json
+  (lệnh S004 ở trên là của 0.4.0-draft. 0.3.0-draft: --end 2.2 --handshape R:fist --handshape L:flat --contact R:L:0.6:1.62:2.5:0.6 --contact-thumb-up 0.9. 0.2.0-draft: --end 2.2 --handshape R:fist)
 %B% -b blender/working/signs/S005/S005_base.blend --python blender/scripts/retarget_landmarks_to_sign.py -- --raw %RAW%/S005.raw.json --sign-id S005 --start 1.0 --end 3.1 --handshape L:fist --handshape R:fist --output-blend blender/working/signs/S005/S005.blend --report blender/working/signs/S005/evidence/retarget.json
 %B% -b blender/working/signs/S006/S006_base.blend --python blender/scripts/retarget_landmarks_to_sign.py -- --raw %RAW%/S006.raw.json --sign-id S006 --start 1.5 --end 2.3 --hand-depth-scale 0.3 --lead-out 16 --handshape R:bunched --output-blend blender/working/signs/S006/S006.blend --report blender/working/signs/S006/evidence/retarget.json
 
 %B% -b blender/working/signs/S004/S004.blend --python blender/scripts/validate_sign_animation.py -- --sign-id S004 --expected-clip S004_MAIN --output blender/working/signs/S004/evidence/blender-validation.json
 %B% -b blender/working/signs/S004/S004.blend --python blender/scripts/export_sign_animation.py -- --clip S004_MAIN --output assets/exports/signs/S004.glb --report blender/working/signs/S004/evidence/glb-export.json
-%B% -b blender/working/signs/S004/S004.blend --python blender/scripts/render_sign_review.py -- --output-directory blender/working/signs/S004/previews --resolution 360 480 --contact-sheet S004-key-poses.png --video S004-front-side.mp4 --frames 1 20 30 40 50 60 82
-  (tương tự S005 với frames 1 15 25 35 45 55 65 84; S006 với frames 1 16 22 28 34 40 49)
+%B% -b blender/working/signs/S004/S004.blend --python blender/scripts/render_sign_review.py -- --output-directory blender/working/signs/S004/previews --resolution 360 480 --contact-sheet S004-key-poses.png --video S004-front-side.mp4 --frames 1 18 30 40 50 60 74
+  (frames của S004 0.4.0-draft; tương tự S005 với frames 1 15 25 35 45 55 65 84; S006 với frames 1 16 22 28 34 40 49)
 %B% -b blender/working/signs/S004/S004.blend --python blender/scripts/render_sign_review.py -- --output-directory blender/working/signs/S004/previews --views front side --focus-bone finger3-1.R --focus-distance 0.5 --resolution 360 360 --contact-sheet S004-hands.png --frames 20 30 40 50
   (tương tự S005 với finger3-1.R và finger3-1.L, frames 25 35 45 55; S006 với finger3-1.R, frames 22 26 30 34)
 %B% -b blender/working/signs/S004/S004.blend --python blender/scripts/measure_hand_contact.py -- --output blender/working/signs/S004/evidence/contact-metrics.json --window 22 53
-  (đo bản 0.2.0-draft bằng cùng lệnh trên tệp lấy từ `git show f1c7b76:blender/working/signs/S004/S004.blend`, kết quả để ngoài repo)
+  (đo bản 0.2.0-draft và 0.3.0-draft bằng cùng lệnh trên tệp lấy từ `git show f1c7b76:...` và `git show cf35186:...`, kết quả để ngoài repo)
+
+# Kiểm tra hồi quy: dựng lại S005, S006 bằng lệnh cũ thêm --outlier-deg 0 vào thư mục tạm, so từng keyframe với bản đã commit
+%B% -b blender/working/signs/S005/S005_base.blend --python blender/scripts/retarget_landmarks_to_sign.py -- <lệnh S005 ở trên> --outlier-deg 0 --output-blend <tạm>/S005r.blend --report <tạm>/S005r.json
+  (tương tự S006; chênh lệch lớn nhất 0 ở cả hai)
 
 npm ci
 node tools/validate-sign-package.mjs --report docs/reports/artifacts/TASK-0011/sign-package-validation.json --pilot-glb assets/exports/technical/task-0009/technical-sign-pipeline-pilot.glb --pilot-clip TECH_HAND_FACE_TEST
 node tools/validate-sign-package.mjs --report docs/reports/artifacts/TASK-0011/S004-glb-validation.json --pilot-glb assets/exports/signs/S004.glb --pilot-clip S004_MAIN
   (tương tự S005, S006)
 npm run verify:master
-node <script ngoài repo> <root repo> S004 S005 S006   # GLTFLoader.parse + AnimationMixer trong Node, cho S004 0.3.0-draft
+node <script ngoài repo> <root repo> S004   # GLTFLoader.parse + AnimationMixer trong Node, cho S004 0.4.0-draft
 ```
 
 Trong quá trình phát triển, script được chạy nhiều lần với các tham số khác vào thư mục tạm ngoài repo để so sánh với video; chỉ lần chạy cuối ở trên được ghi vào repo.
@@ -126,8 +140,10 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
 | glTF 2.0, mesh và skin, clip đúng tên, thời lượng dương, 6 NMM, Khronos 0 lỗi 0 cảnh báo | `artifacts/TASK-0011/Snnn-glb-validation.json` × 3 | PASS |
 | Schema metadata S001–S006 và có đủ tệp sản xuất | `artifacts/TASK-0011/sign-package-validation.json` | PASS |
 | Phát bằng three.js `GLTFLoader` và `AnimationMixer`, clip đúng, 411 track, 6 NMM, không lỗi trang | `artifacts/TASK-0011/threejs-playback.{json,jpg}` | PASS cho bản 0.2.0-draft |
-| S004 0.3.0-draft nạp bằng `GLTFLoader` và lấy mẫu `AnimationMixer` trong Node, clip đúng, 411 track, 6 NMM; không render trong trình duyệt | `artifacts/TASK-0011/S004-v0.3-threejs-node-playback.json` | PASS |
-| S004 0.3.0-draft tiếp xúc hai tay, frame 22–53: khe 2,39–2,50 cm, lệch ngang tối đa 0,23 cm, lòng bàn tay trái ngửa 0,96, ngón cái phải hướng lên 0,97–0,98 | `S004/evidence/contact-metrics.json` | PASS |
+| S004 0.4.0-draft nạp bằng `GLTFLoader` và lấy mẫu `AnimationMixer` trong Node, clip đúng, 2,467 giây, 411 track, 6 NMM; không render trong trình duyệt | `artifacts/TASK-0011/S004-threejs-node-playback.json` | PASS |
+| S004 0.4.0-draft tiếp xúc hai tay, frame 22–53: khe 2,31–2,44 cm, lệch ngang tối đa 0,38 cm, lòng bàn tay trái ngửa 0,96, ngón cái phải hướng lên 0,999 | `S004/evidence/contact-metrics.json` | PASS |
+| S004 0.4.0-draft độ gập cổ tay: đoạn chạm tối đa 13,6° phải, 10,3° trái; toàn hoạt ảnh tối đa 35° | `S004/evidence/contact-metrics.json` | PASS |
+| Dựng lại S005, S006 bằng script mới với lệnh cũ và `--outlier-deg 0`: keyframe trùng bản đã commit | so sánh ngoài repo | PASS |
 | Trang `/technical-sign-preview` của web | trang đang gắn cứng GLB pilot TASK-0009 | SKIPPED |
 | So sánh bằng mắt với video tham chiếu | thực hiện ngoài repo vì ảnh có khung hình QIPEDC; kết luận ở mục Known issues | PASS cho vị trí và quỹ đạo chính; xem hạn chế |
 | Technical review của 3D Lead | | NOT YET TESTED |
@@ -140,10 +156,10 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
 
 | Tệp | SHA-256 |
 |---|---|
-| `assets/exports/signs/S004.glb`, 0.3.0-draft | `405F60EB411DC627B31DA97E8D0F0E94BC450DFFF764D2AED8C8B0CB8A7E0293` |
+| `assets/exports/signs/S004.glb`, 0.4.0-draft | `4732422B65DAA12D3813676EF1219A741A85E5DC0F0F9940218AFFA4427B3C5F` |
 | `assets/exports/signs/S005.glb` | `E9ABBD8A5833E932C705EE664C0883C2787321A003F53FC60AC37EC0A1B78C13` |
 | `assets/exports/signs/S006.glb` | `9B38DDD36FE293C9F2B863CAA6A7D4409ECCB2C86550CFCABE26D8E2571237B9` |
-| `blender/working/signs/S004/S004.blend`, 0.3.0-draft | `A9FBEB6B653AF69F597B3EEE3BBD53B852534C465473E39F5DF08CC75400F8BE` |
+| `blender/working/signs/S004/S004.blend`, 0.4.0-draft | `0821B0A989A9FE526523A5CA1832D7002AC1C88D1DE941A25F024C6E677EC2AC` |
 | `blender/working/signs/S005/S005.blend` | `61D021ED961B4E0875F5164A0274A022BAF56F870811BA885AF3299F6345C6D8` |
 | `blender/working/signs/S006/S006.blend` | `1DDB272A8F089D491F7A74E6123C05C2A4D021B9D24B4DF07840FA25C84D9825` |
 | Điểm mốc S004, ngoài repo | `F831DB5CE90B1E19F1802F6EFA4018861C7C1F9DAEE6815ECDC641AB84566D55` |
@@ -152,14 +168,14 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
 
 | Sign | Frame | Thời lượng | Bone có key |
 |---|---|---|---|
-| S004 | 1–82 | 2,73 giây | 41 |
+| S004 | 1–74 | 2,47 giây | 41 |
 | S005 | 1–84 | 2,80 giây | 39 |
 | S006 | 1–49 | 1,63 giây | 22, chỉ tay phải làm ký hiệu |
 
 ## Known issues and limitations
 
 1. **Hình dạng bàn tay đã sửa bằng mẫu, còn cần tinh chỉnh tay.** Bản 0.1.0-draft dựng theo điểm mốc chỉ gập ngón khoảng một nửa. Bản 0.2.0-draft dùng mẫu `fist` và `bunched`; so bằng ảnh cận thì gần video hơn rõ rệt. Còn lại:
-   - S004: đã xử lý ở 0.3.0-draft, xem mục 10.
+   - S004: đã xử lý ở 0.3.0-draft và 0.4.0-draft, xem mục 10 và 11; từ 0.4.0-draft tay thả lỏng trước và sau ký hiệu.
    - S006: các ngón đã chụm nhưng đầu ngón chạm cằm và môi dưới, thấp hơn video khoảng 1–2 cm; ngón cái vẫn theo điểm mốc nên chưa chạm hẳn các đầu ngón.
    - Mẫu gập ngón áp dụng cho cả đoạn ký hiệu, nên lúc tay đang đưa lên cũng đã nắm hoặc chụm.
 2. **Chưa có biểu cảm.** S005 tham chiếu có nhắm mắt và nét mặt trìu mến; chưa dựng `NMM_` cho ký hiệu nào.
@@ -185,6 +201,19 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
     | `wrist.L` tốc độ tối đa, độ thay đổi tốc độ tối đa | 25,7 °/frame, 17,0 | 18,4 °/frame, 13,8 |
 
     Khe khoảng 2,5 cm tính giữa các khớp xương nằm trong lớp da, nên trên ảnh cận hai tay vừa chạm, không xuyên. Cánh tay trên và cẳng tay không đổi giữa hai bản vì ràng buộc chỉ tác động lên cổ tay và đường IK của tay phải trong đoạn chạm. Còn lại: nắm tay vẫn là mẫu kỹ thuật; hướng lòng bàn tay trái là trung bình của đoạn chạm nên không theo các dao động nhỏ trong video.
+11. **S004 0.4.0-draft so với 0.3.0-draft**, cùng script đo:
+
+    | Số đo | 0.2.0-draft | 0.3.0-draft | 0.4.0-draft |
+    |---|---|---|---|
+    | Độ gập cổ tay phải so với cẳng tay, đoạn chạm, tối đa | 35,6° | 72,8° | 13,6° |
+    | Độ gập cổ tay trái, đoạn chạm, tối đa | 82,7°, do frame lật | 62,1° | 10,3° |
+    | Độ gập cổ tay, toàn hoạt ảnh, tối đa trái / phải | 82,7° / 59,2° | 62,1° / 72,8° | 35,2° / 35,0° |
+    | Khe nắm tay và lòng bàn tay, đoạn chạm | −11,61 đến +6,62 cm | 2,39 đến 2,50 cm | 2,31 đến 2,44 cm |
+    | Ngón cái phải hướng lên | 0,46 đến 0,74 | 0,97 đến 0,98 | 0,999 |
+    | `wrist.R` tốc độ tối đa, độ thay đổi tốc độ tối đa | 58,1 °/frame, 33,8 | 26,9 °/frame, 10,6 | 24,2 °/frame, 15,1 |
+    | `wrist.L` tốc độ tối đa, độ thay đổi tốc độ tối đa | 25,7 °/frame, 17,0 | 18,4 °/frame, 13,8 | 11,2 °/frame, 8,2 |
+
+    Nguyên nhân của 0.3.0-draft: ngón cái theo điểm mốc nằm gần song song trục bàn tay, nên xoay cho ngón cái hướng lên đã dựng đứng cả bàn tay; khuỷu tay vẫn theo video, nên cổ tay phải gập ngửa khoảng 50° và khuỷu trái bị kéo sát thân. Ở 0.4.0-draft, khuỷu ra ngoài áo, cách trục giữa 0,21–0,32 m, cẳng tay gần nằm ngang như video. Còn lại: độ thay đổi tốc độ `wrist.R` lớn nhất 15,1 ở frame 56, lúc hai tay rời nhau; nhìn video chưa thấy giật nhưng cần 3D Lead xem. Ngón cái trái giữ ở tư thế trung vị của điểm mốc nên hơi nhô khỏi lòng bàn tay. Hằng số `TORSO_KEEP_OUT` đo trên Master v1 với áo hiện tại; đổi trang phục thì cần đo lại.
 
 ## Git branch and commit information
 
@@ -194,7 +223,8 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
   - `02f5bc8` feat(sign): add S004-S006 draft animations from reference video
   - `2886cb1` docs: record TASK-0011 sign drafts S004-S006
   - `f1c7b76` docs: record TASK-0011 commit hashes
-  - Commit S004 0.3.0-draft được tạo sau khi viết báo cáo này, nên không tự ghi được hash của chính nó; xem `git log`.
+  - `cf35186` feat(sign): refine S004 to 0.3.0-draft with two-hand contact
+  - Commit S004 0.4.0-draft được tạo sau khi viết báo cáo này, nên không tự ghi được hash của chính nó; xem `git log`.
 - `Snnn_base.blend` không đưa vào commit.
 
 ## Outstanding blockers
@@ -208,7 +238,7 @@ Trong quá trình phát triển, script được chạy nhiều lần với các
 - [ ] Xem `Snnn-front-side.mp4` và `Snnn-key-poses.png` của cả ba ký hiệu.
 - [ ] Mở `Snnn.blend` trong Blender 5.2.4, phát `Snnn_MAIN`, xem cận hai bàn tay.
 - [ ] Xem các ảnh cận `Snnn-hands*.png`; xác nhận nắm tay S004, S005 và bàn tay chụm S006 đạt hay cần tinh chỉnh.
-- [ ] S004 0.3.0-draft: xem `S004-hands.png` và `S004-front-side.mp4`, xác nhận nắm tay dựng đứng trên giữa lòng bàn tay trái, không xuyên, chuyển động vào ra không giật.
+- [ ] S004 0.4.0-draft: xem `S004-hands.png` và `S004-front-side.mp4`, xác nhận nắm tay giơ ngón cái nằm trên giữa lòng bàn tay trái, cẳng tay và cổ tay thẳng hàng, khuỷu không xuyên áo, lúc hai tay rời nhau ở frame 56 không giật.
 - [ ] S006: nâng đầu ngón lên môi khoảng 1–2 cm, cho ngón cái chạm đầu ngón; quyết định có lặp động tác chạm miệng không.
 - [ ] Quyết định có dựng biểu cảm cho S005 không.
 - [ ] Xác nhận không có xuyên mesh hoặc méo da ở cổ tay và vai.

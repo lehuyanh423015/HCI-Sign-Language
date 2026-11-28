@@ -7,7 +7,7 @@
   "blender_version": "5.2.4 LTS",
   "source": {
     "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\blender\\working\\signs\\S004\\S004.blend",
-    "sha256": "A9FBEB6B653AF69F597B3EEE3BBD53B852534C465473E39F5DF08CC75400F8BE"
+    "sha256": "0821B0A989A9FE526523A5CA1832D7002AC1C88D1DE941A25F024C6E677EC2AC"
   },
   "clip": "S004_MAIN",
   "nla_bindings": [
@@ -57,8 +57,8 @@
   },
   "output": {
     "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\assets\\exports\\signs\\S004.glb",
-    "sha256": "405F60EB411DC627B31DA97E8D0F0E94BC450DFFF764D2AED8C8B0CB8A7E0293",
-    "size_bytes": 2355036
+    "sha256": "4732422B65DAA12D3813676EF1219A741A85E5DC0F0F9940218AFFA4427B3C5F",
+    "size_bytes": 2350008
   },
   "settings": {
     "filepath": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\assets\\exports\\signs\\S004.glb",

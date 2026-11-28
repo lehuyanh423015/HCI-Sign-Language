@@ -16,15 +16,15 @@
   },
   "segment_seconds": [
     0.15,
-    2.2
+    1.95
   ],
-  "segment_frames": 62,
+  "segment_frames": 54,
   "return_via_first_pose": true,
   "timeline": {
     "frame_start": 1,
     "motion_start": 9,
-    "motion_end": 70,
-    "frame_end": 82,
+    "motion_end": 62,
+    "frame_end": 74,
     "lead_in": 8,
     "lead_out": 12
   },
@@ -35,269 +35,623 @@
   "hand_contact": {
     "spec": "R:L:0.6:1.62:2.5:0.6",
     "thumb_up": 0.9,
+    "elbow_swivel": true,
+    "hand_yaw_deg": {
+      "L": -45.0,
+      "R": 35.0
+    },
     "frames": [
       {
         "t": 0.467,
         "weight": 0.03,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": -4.3,
+          "R": 1.4
+        },
+        "wrist_bend_deg": {
+          "L": 23.2,
+          "R": 13.1
+        }
       },
       {
         "t": 0.5,
         "weight": 0.26,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": -3.4,
+          "R": -2.4
+        },
+        "wrist_bend_deg": {
+          "L": 14.2,
+          "R": 5.4
+        }
       },
       {
         "t": 0.533,
         "weight": 0.58,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": -2.3,
+          "R": -6.2
+        },
+        "wrist_bend_deg": {
+          "L": 7.9,
+          "R": 1.3
+        }
       },
       {
         "t": 0.567,
         "weight": 0.87,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": -1.1,
+          "R": -9.5
+        },
+        "wrist_bend_deg": {
+          "L": 4.3,
+          "R": 3.5
+        }
       },
       {
         "t": 0.6,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 0.0,
+          "R": -12.3
+        },
+        "wrist_bend_deg": {
+          "L": 3.4,
+          "R": 2.6
+        }
       },
       {
         "t": 0.633,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 0.8,
+          "R": -13.5
+        },
+        "wrist_bend_deg": {
+          "L": 4.8,
+          "R": 1.1
+        }
       },
       {
         "t": 0.667,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 1.3,
+          "R": -13.9
+        },
+        "wrist_bend_deg": {
+          "L": 7.2,
+          "R": 2.8
+        }
       },
       {
         "t": 0.7,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 1.6,
+          "R": -14.5
+        },
+        "wrist_bend_deg": {
+          "L": 8.4,
+          "R": 3.9
+        }
       },
       {
         "t": 0.733,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 2.2,
+          "R": -16.1
+        },
+        "wrist_bend_deg": {
+          "L": 7.5,
+          "R": 3.1
+        }
       },
       {
         "t": 0.767,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 3.4,
+          "R": -18.8
+        },
+        "wrist_bend_deg": {
+          "L": 5.3,
+          "R": 1.1
+        }
       },
       {
         "t": 0.8,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.16,
+        "elbow_swing_deg": {
+          "L": 5.6,
+          "R": -22.2
+        },
+        "wrist_bend_deg": {
+          "L": 2.6,
+          "R": 2.4
+        }
       },
       {
         "t": 0.833,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.42,
+        "lateral_cm": 0.17,
+        "elbow_swing_deg": {
+          "L": 8.8,
+          "R": -25.7
+        },
+        "wrist_bend_deg": {
+          "L": 2.1,
+          "R": 4.8
+        }
       },
       {
         "t": 0.867,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.17,
+        "elbow_swing_deg": {
+          "L": 12.6,
+          "R": -28.7
+        },
+        "wrist_bend_deg": {
+          "L": 3.9,
+          "R": 7.2
+        }
       },
       {
         "t": 0.9,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.17,
+        "elbow_swing_deg": {
+          "L": 16.4,
+          "R": -30.9
+        },
+        "wrist_bend_deg": {
+          "L": 5.7,
+          "R": 9.5
+        }
       },
       {
         "t": 0.933,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 19.9,
+          "R": -32.6
+        },
+        "wrist_bend_deg": {
+          "L": 7.5,
+          "R": 12.0
+        }
       },
       {
         "t": 0.967,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 22.6,
+          "R": -33.9
+        },
+        "wrist_bend_deg": {
+          "L": 8.3,
+          "R": 13.6
+        }
       },
       {
         "t": 1,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 24.4,
+          "R": -35.6
+        },
+        "wrist_bend_deg": {
+          "L": 8.1,
+          "R": 13.3
+        }
       },
       {
         "t": 1.033,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.19,
+        "elbow_swing_deg": {
+          "L": 25.1,
+          "R": -38.1
+        },
+        "wrist_bend_deg": {
+          "L": 6.4,
+          "R": 10.3
+        }
       },
       {
         "t": 1.067,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.19,
+        "elbow_swing_deg": {
+          "L": 25.0,
+          "R": -41.6
+        },
+        "wrist_bend_deg": {
+          "L": 3.9,
+          "R": 5.5
+        }
       },
       {
         "t": 1.1,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.19,
+        "elbow_swing_deg": {
+          "L": 24.2,
+          "R": -45.6
+        },
+        "wrist_bend_deg": {
+          "L": 1.3,
+          "R": 0.2
+        }
       },
       {
         "t": 1.133,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.19,
+        "elbow_swing_deg": {
+          "L": 23.2,
+          "R": -49.4
+        },
+        "wrist_bend_deg": {
+          "L": 0.6,
+          "R": 4.3
+        }
       },
       {
         "t": 1.167,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 22.2,
+          "R": -52.4
+        },
+        "wrist_bend_deg": {
+          "L": 1.0,
+          "R": 6.6
+        }
       },
       {
         "t": 1.2,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 21.5,
+          "R": -54.2
+        },
+        "wrist_bend_deg": {
+          "L": 0.8,
+          "R": 7.1
+        }
       },
       {
         "t": 1.233,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 21.1,
+          "R": -54.9
+        },
+        "wrist_bend_deg": {
+          "L": 0.7,
+          "R": 7.5
+        }
       },
       {
         "t": 1.267,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 20.8,
+          "R": -55.1
+        },
+        "wrist_bend_deg": {
+          "L": 0.6,
+          "R": 7.8
+        }
       },
       {
         "t": 1.3,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 20.6,
+          "R": -54.9
+        },
+        "wrist_bend_deg": {
+          "L": 0.8,
+          "R": 8.1
+        }
       },
       {
         "t": 1.333,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 20.3,
+          "R": -54.6
+        },
+        "wrist_bend_deg": {
+          "L": 1.0,
+          "R": 8.2
+        }
       },
       {
         "t": 1.367,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 19.9,
+          "R": -54.3
+        },
+        "wrist_bend_deg": {
+          "L": 1.0,
+          "R": 8.1
+        }
       },
       {
         "t": 1.4,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 19.4,
+          "R": -53.9
+        },
+        "wrist_bend_deg": {
+          "L": 1.0,
+          "R": 8.1
+        }
       },
       {
         "t": 1.433,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 18.4,
+          "R": -53.2
+        },
+        "wrist_bend_deg": {
+          "L": 1.1,
+          "R": 8.2
+        }
       },
       {
         "t": 1.467,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 16.8,
+          "R": -51.8
+        },
+        "wrist_bend_deg": {
+          "L": 1.3,
+          "R": 8.4
+        }
       },
       {
         "t": 1.5,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 14.2,
+          "R": -48.8
+        },
+        "wrist_bend_deg": {
+          "L": 1.8,
+          "R": 8.6
+        }
       },
       {
         "t": 1.533,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.43,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 10.8,
+          "R": -43.6
+        },
+        "wrist_bend_deg": {
+          "L": 2.4,
+          "R": 8.8
+        }
       },
       {
         "t": 1.567,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 6.7,
+          "R": -35.7
+        },
+        "wrist_bend_deg": {
+          "L": 3.6,
+          "R": 8.9
+        }
       },
       {
         "t": 1.6,
         "weight": 1.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": 2.5,
+          "R": -25.6
+        },
+        "wrist_bend_deg": {
+          "L": 6.3,
+          "R": 8.2
+        }
       },
       {
         "t": 1.633,
         "weight": 0.98,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": -1.1,
+          "R": -14.5
+        },
+        "wrist_bend_deg": {
+          "L": 10.5,
+          "R": 8.0
+        }
       },
       {
         "t": 1.667,
         "weight": 0.77,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": -3.9,
+          "R": -4.1
+        },
+        "wrist_bend_deg": {
+          "L": 16.5,
+          "R": 9.8
+        }
       },
       {
         "t": 1.7,
         "weight": 0.45,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": -5.5,
+          "R": 3.5
+        },
+        "wrist_bend_deg": {
+          "L": 23.7,
+          "R": 12.3
+        }
       },
       {
         "t": 1.733,
         "weight": 0.15,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.44,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": -6.2,
+          "R": 8.6
+        },
+        "wrist_bend_deg": {
+          "L": 31.7,
+          "R": 15.2
+        }
       },
       {
         "t": 1.767,
         "weight": 0.0,
-        "gap_cm": 2.5,
-        "lateral_cm": 0.0
+        "gap_cm": 2.45,
+        "lateral_cm": 0.18,
+        "elbow_swing_deg": {
+          "L": -6.5,
+          "R": 11.6
+        },
+        "wrist_bend_deg": {
+          "L": 40.0,
+          "R": 20.3
+        }
       }
     ]
   },
   "outlier_threshold_deg": 35.0,
+  "forearm_twist_split": [
+    0.3,
+    0.4
+  ],
+  "wrist_limit_deg": 35.0,
+  "wrist_frames_limited": {
+    "wrist.L": 6,
+    "wrist.R": 7
+  },
   "outliers_removed": {
     "finger1-1.L": 5,
-    "finger1-1.R": 3,
-    "finger1-2.L": 7,
-    "finger1-2.R": 6,
-    "finger1-3.L": 9,
-    "finger1-3.R": 3,
-    "lowerarm02.L": 6,
-    "lowerarm02.R": 5,
-    "wrist.L": 8,
-    "wrist.R": 8
+    "finger1-2.L": 5,
+    "finger1-3.L": 10,
+    "finger2-2.R": 1,
+    "finger2-3.R": 2,
+    "finger3-3.R": 2,
+    "finger4-2.R": 1,
+    "finger4-3.R": 2,
+    "finger5-2.R": 1,
+    "finger5-3.R": 2,
+    "lowerarm01.L": 1,
+    "lowerarm01.R": 2,
+    "lowerarm02.L": 4,
+    "lowerarm02.R": 4,
+    "wrist.L": 6,
+    "wrist.R": 6
   },
   "handshape_overrides": [
     {
       "side": "R",
-      "shape": "fist",
+      "shape": "relaxed",
       "seconds": [
-        0.1667,
-        2.2
+        0.15,
+        0.25
+      ],
+      "flex_degrees": [
+        18,
+        24,
+        12
+      ],
+      "spread": 0.4
+    },
+    {
+      "side": "R",
+      "shape": "fist_thumb_up",
+      "seconds": [
+        0.3,
+        1.72
       ],
       "flex_degrees": [
         95,
@@ -307,11 +661,39 @@
       "spread": 0.7
     },
     {
+      "side": "R",
+      "shape": "relaxed",
+      "seconds": [
+        1.8,
+        1.95
+      ],
+      "flex_degrees": [
+        18,
+        24,
+        12
+      ],
+      "spread": 0.4
+    },
+    {
+      "side": "L",
+      "shape": "relaxed",
+      "seconds": [
+        0.15,
+        0.25
+      ],
+      "flex_degrees": [
+        18,
+        24,
+        12
+      ],
+      "spread": 0.4
+    },
+    {
       "side": "L",
       "shape": "flat",
       "seconds": [
-        0.1667,
-        2.2
+        0.3,
+        1.72
       ],
       "flex_degrees": [
         4,
@@ -319,17 +701,31 @@
         2
       ],
       "spread": 0.3
+    },
+    {
+      "side": "L",
+      "shape": "relaxed",
+      "seconds": [
+        1.8,
+        1.95
+      ],
+      "flex_degrees": [
+        18,
+        24,
+        12
+      ],
+      "spread": 0.4
     }
   ],
   "frames_with_mouth_anchor": 15,
   "frames_with_mouth_contact": 0,
   "arm_scale": {
-    "L": 1.3358532153732054,
-    "R": 1.3498643552406902
+    "L": 1.341228335535924,
+    "R": 1.3695709249627577
   },
   "head_weight": 0.7,
   "animated_bones": 41,
-  "keyframes_written": 13448,
+  "keyframes_written": 12136,
   "solved_coverage": {
     "finger1-1.L": 1.0,
     "finger1-1.R": 1.0,
@@ -375,6 +771,6 @@
   "neutral_frame_1": true,
   "output": {
     "path": "D:\\MyFolder\\Documents\\Human_Machine_Interaction\\Projects\\HCI-Sign-Language\\blender\\working\\signs\\S004\\S004.blend",
-    "sha256": "A9FBEB6B653AF69F597B3EEE3BBD53B852534C465473E39F5DF08CC75400F8BE"
+    "sha256": "0821B0A989A9FE526523A5CA1832D7002AC1C88D1DE941A25F024C6E677EC2AC"
   }
 }

@@ -258,15 +258,15 @@
   ],
   "pilot": {
     "path": "assets/exports/signs/S004.glb",
-    "sha256": "405F60EB411DC627B31DA97E8D0F0E94BC450DFFF764D2AED8C8B0CB8A7E0293",
-    "size_bytes": 2355036,
+    "sha256": "4732422B65DAA12D3813676EF1219A741A85E5DC0F0F9940218AFFA4427B3C5F",
+    "size_bytes": 2350008,
     "clip_names": [
       "S004_MAIN"
     ],
     "durations": [
       {
         "name": "S004_MAIN",
-        "seconds": 2.7333333333333334
+        "seconds": 2.466666666666667
       }
     ],
     "checks": [
@@ -296,7 +296,7 @@
         "actual": [
           {
             "name": "S004_MAIN",
-            "seconds": 2.7333333333333334
+            "seconds": 2.466666666666667
           }
         ]
       },
@@ -565,7 +565,7 @@
       "actual": [
         {
           "name": "S004_MAIN",
-          "seconds": 2.7333333333333334
+          "seconds": 2.466666666666667
         }
       ]
     },

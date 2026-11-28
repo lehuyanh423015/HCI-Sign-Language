@@ -10,6 +10,8 @@ For each frame the script evaluates the pose and reports:
 - ``lateral_cm``: distance of the right fist centre from the left palm centre, across the palm.
 - ``left_palm_up``: Z component of the left palm normal (1 = palm facing straight up).
 - ``thumb_up``: Z component of the right thumb direction (1 = pointing straight up).
+- ``wrist_bend_deg``: how far each hand bends away from the line its forearm would continue in the rest
+  pose, ignoring twist. Large values mean the wrist joint, not the arm, carries the hand orientation.
 It also reports per-bone angular speed and its frame-to-frame change, to find pops and jitter.
 Numbers support visual review; they do not replace it.
 """
@@ -36,6 +38,13 @@ def arguments():
     return parser.parse_args(values)
 
 
+def wrist_bend(pb, side):
+    """Degrees the hand axis bends away from the line the forearm would continue in the rest pose; twist ignored."""
+    l2, w = pb[f"lowerarm02.{side}"], pb[f"wrist.{side}"]
+    straight = l2.matrix.to_3x3() @ (l2.bone.matrix_local.to_3x3().inverted() @ w.bone.matrix_local.to_3x3())
+    return math.degrees(straight.col[1].angle(w.matrix.to_3x3().col[1]))
+
+
 def main():
     args = arguments()
     arm = bpy.data.objects["Human.rig"]
@@ -60,6 +69,7 @@ def main():
             "lateral_cm": round(lateral.length * 100, 2),
             "left_palm_up": round(normal.z, 3),
             "thumb_up": round(thumb.z, 3),
+            "wrist_bend_deg": {s: round(wrist_bend(pb, s), 1) for s in ("L", "R")},
         }
         quats[f] = {n: pb[n].rotation_quaternion.copy() for n in BONES}
     frames = sorted(rows)
@@ -82,9 +92,11 @@ def main():
             "lateral_cm_max": max(pick("lateral_cm")),
             "left_palm_up": {"min": min(pick("left_palm_up")), "max": max(pick("left_palm_up"))},
             "thumb_up": {"min": min(pick("thumb_up")), "max": max(pick("thumb_up"))},
+            "wrist_bend_deg_max": {s: max(r["wrist_bend_deg"][s] for r in w) for s in ("L", "R")},
         }
+    bend_all = {s: max(rows[f]["wrist_bend_deg"][s] for f in frames) for s in ("L", "R")}
     report = {"schema_version": 1, "artifact": "sign_hand_contact_metrics", "source": Path(bpy.data.filepath).name,
-              "summary": summary, "motion": motion, "frames": rows}
+              "summary": summary, "wrist_bend_deg_max_all_frames": bend_all, "motion": motion, "frames": rows}
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.output).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(f"PASS measured {len(rows)} frames -> {args.output}")

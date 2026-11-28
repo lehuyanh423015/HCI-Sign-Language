@@ -2,12 +2,12 @@
   "scene": "S004.blend",
   "frames": [
     1,
-    20,
+    18,
     30,
     40,
     50,
     60,
-    82
+    74
   ],
   "views": [
     "front",
@@ -17,7 +17,7 @@
   "contact_sheet": "S004-key-poses.png",
   "video": {
     "file": "S004-front-side.mp4",
-    "frames": 82,
+    "frames": 74,
     "fps": 30,
     "exists": true
   }
