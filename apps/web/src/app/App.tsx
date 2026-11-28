@@ -56,7 +56,7 @@ export function App() {
     [...links, ...tools].find((x) =>
       x.to === "/" ? path === "/" : path.startsWith(x.to),
     )?.label ??
-    (path === '/admin' ? 'Quản trị' : path === '/login' || path === '/register' ? 'Tài khoản' : path.startsWith("/results") ? "Kết quả" : "Kiểm tra nhận biết");
+    (path.startsWith('/admin') ? 'Quản trị' : path === '/login' || path === '/register' ? 'Tài khoản' : path.startsWith("/results") ? "Kết quả" : "Kiểm tra nhận biết");
   return (
     <LearningProvider key={activeProfile} profile={activeProfile} account={!!user && !demo}>
       <div className="workspace">

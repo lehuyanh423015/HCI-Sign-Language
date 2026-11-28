@@ -97,7 +97,7 @@ export function AdminPage() {
       setError(error instanceof Error ? error.message : 'Chưa lưu được học liệu.');
     } finally { setSaving(false); }
   }
-  return <><h1>Quản trị học liệu</h1><p>Quản lý danh mục ký hiệu và bài kiểm tra nhận biết.</p><Link to="/lessons">Xem thư viện người học</Link>
+  return <><h1>Quản trị học liệu</h1><p>Quản lý danh mục ký hiệu và bài kiểm tra nhận biết.</p><Link className="textlink" to="/admin">Về dashboard</Link>
     <div className="actions">{(['sign','quiz'] as const).map(value => <button key={value} disabled={saving} aria-pressed={kind === value} onClick={() => { setKind(value); setEditing(null); setError(''); setMessage(''); }}>{value === 'sign' ? 'Ký hiệu' : 'Câu hỏi'}</button>)}</div>
     {message && <p role="status">{message}</p>}
     <section className="panel">

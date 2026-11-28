@@ -37,6 +37,8 @@ test('sessions, roles, publication and progress isolation', async t => {
   assert.equal(first.body.user.role, 'learner');
   assert.notEqual(first.body.user.id, second.body.user.id);
   assert.equal((await request('admin/catalog')).status, 401);
+  assert.equal((await request('admin/dashboard')).status, 401);
+  assert.equal((await request('admin/dashboard', first)).status, 403);
   assert.equal((await request('admin/catalog', first)).status, 403);
   assert.equal((await request('admin/sign', { method: 'PUT', data: {}, cookie: first.cookie })).status, 403);
   assert.equal((await request('login', { method: 'POST', source: 'https://different.invalid', data: {} })).status, 403);
@@ -83,6 +85,22 @@ test('sessions, roles, publication and progress isolation', async t => {
   const progress = await request('progress', first);
   assert.equal(progress.body.entries.length, 1);
   assert.equal(progress.body.resume, candidate.id);
+  const overview = await request('admin/dashboard', admin);
+  assert.equal(overview.status, 200);
+  assert.equal(overview.body.lessonCount, catalog.body.signs.length);
+  assert.equal(overview.body.publishedLessons, 1);
+  assert.equal(overview.body.publishedQuestions, 1);
+  assert.equal(overview.body.learnerCount, 2);
+  assert.deepEqual(overview.body.learners, [
+    { id: first.body.user.id, email: 'one@example.test', lessonsPracticed: 1, answers: 1, lastPractice: progress.body.entries[0].lastReviewedAt },
+    { id: second.body.user.id, email: 'two@example.test', lessonsPracticed: 0, answers: 0, lastPractice: null },
+  ]);
+  const filtered = await request('admin/dashboard?q=TWO&page=999', admin);
+  assert.equal(filtered.body.learnerCount, 2);
+  assert.equal(filtered.body.matching, 1);
+  assert.equal(filtered.body.page, 1);
+  assert.equal(filtered.body.learners[0].email, 'two@example.test');
+  assert.equal((await request('admin/dashboard?q=%25', admin)).body.matching, 0);
   assert.deepEqual((await request('progress', second)).body, { resume: '', entries: [] });
   assert.equal((await request('logout', { method: 'POST', cookie: first.cookie })).status, 200);
   assert.equal((await request('progress', first)).status, 401);

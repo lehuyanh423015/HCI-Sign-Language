@@ -55,11 +55,39 @@ export function createApi({ db = openStore(), assetRoot = resolve(root, 'apps/we
     try { inspectGlb(resolve(assetRoot, sign.glbPath), sign.animationClip); return true; }
     catch { return false; }
   }
-  function published() {
-    const { signs, quizzes } = catalog();
+  function published({ signs, quizzes } = catalog()) {
     const live = signs.filter(available);
     return { signs: live, quizzes: quizzes.filter(q => q.reviewStatus === 'approved' && live.some(s => s.id === q.signId)) };
   }
+  function dashboard(query) {
+    const data = catalog();
+    const live = published(data);
+    const pageSize = 20;
+    const filter = (query.get('q') ?? '').trim().toLowerCase().slice(0, 254);
+    const learnerCount = db.prepare("SELECT COUNT(*) AS count FROM accounts WHERE role='learner'").get().count;
+    const matching = db.prepare("SELECT COUNT(*) AS count FROM accounts WHERE role='learner' AND instr(email, ?) > 0").get(filter).count;
+    const pageCount = Math.max(1, Math.ceil(matching / pageSize));
+    const page = Math.min(pageCount, Math.max(1, Number.parseInt(query.get('page'), 10) || 1));
+    const learners = db.prepare(`
+      SELECT a.id, a.email,
+        (SELECT COUNT(*) FROM progress p WHERE p.account_id=a.id) AS lessonsPracticed,
+        (SELECT COUNT(*) FROM answers r WHERE r.account_id=a.id) AS answers,
+        (SELECT MAX(json_extract(p.entry, '$.lastReviewedAt')) FROM progress p WHERE p.account_id=a.id) AS lastPractice
+      FROM accounts a
+      WHERE a.role='learner' AND instr(a.email, ?) > 0
+      ORDER BY a.email
+      LIMIT ? OFFSET ?
+    `).all(filter, pageSize, (page - 1) * pageSize);
+    return {
+      lessonCount: data.signs.length,
+      publishedLessons: live.signs.length,
+      awaitingReview: data.signs.filter(sign => sign.reviewStatus === 'in_review').length,
+      questionCount: data.quizzes.length,
+      publishedQuestions: live.quizzes.length,
+      learnerCount, matching, learners, page, pageCount,
+    };
+  }
+
   function saveRecord(kind, { record: input, expected }) {
     if (!input || typeof input !== 'object' || Array.isArray(input) || expected === undefined) fail(400, 'Thiếu dữ liệu học liệu.');
     const { signs, quizzes } = catalog();
@@ -121,6 +149,9 @@ export function createApi({ db = openStore(), assetRoot = resolve(root, 'apps/we
       if (!account) fail(401, 'Hãy đăng nhập để tiếp tục.');
       if (pathname.startsWith('/api/admin/')) {
         if (account.role !== 'admin') fail(403, 'Khu vực này dành cho quản trị viên.');
+        if (method === 'GET' && pathname === '/api/admin/dashboard') {
+          return send(res, 200, dashboard(new URLSearchParams(req.url.split('?')[1])));
+        }
         if (method === 'GET' && pathname === '/api/admin/catalog') return send(res, 200, catalog());
         if (method === 'PUT' && ['/api/admin/sign', '/api/admin/quiz'].includes(pathname)) {
           const input = await body(req);

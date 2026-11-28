@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AccountPage, RequireAccount } from './Account';
+import { AdminDashboard } from '../features/admin/AdminDashboard';
 import { AdminPage } from '../features/admin/AdminPage';
 import { Home, Library, LessonPage } from "../features/lessons/LessonPage";
 import {
@@ -20,7 +21,8 @@ export function AppRoutes() {
     <Routes>
       <Route path="/login" element={<AccountPage key="login" registering={false}/>}/>
       <Route path="/register" element={<AccountPage key="register" registering/>}/>
-      <Route path="/admin" element={<RequireAccount admin><AdminPage/></RequireAccount>}/>
+      <Route path="/admin" element={<RequireAccount admin><AdminDashboard/></RequireAccount>}/>
+      <Route path="/admin/catalog" element={<RequireAccount admin><AdminPage/></RequireAccount>}/>
       <Route path="/" element={<Home />} />
       <Route path="/lessons" element={<Library />} />
       <Route path="/lessons/:id" element={<RequireAccount><LessonPage /></RequireAccount>} />
