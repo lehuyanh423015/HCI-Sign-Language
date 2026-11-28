@@ -6,7 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { loadSigns } from "../services/data";
+import { api, writeApi } from "../services/api";
 import { approved, type Question } from "../features/lessons/catalog";
 import { readEntries, applyAnswer } from "../features/adaptive/history";
 import type { SignMetadata } from "../types/sign";
@@ -15,7 +15,7 @@ import type {
   AnswerResult,
 } from "../features/adaptive/types";
 
-function useLearningState(profile: string) {
+function useLearningState(profile: string, account: boolean) {
   const [signs, setSigns] = useState<SignMetadata[]>([]);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,6 +27,7 @@ function useLearningState(profile: string) {
   const [resume, setResume] = useState("");
   const damagedHistory = useRef<string | null>(null);
   useEffect(() => {
+    if (account) return;
     function restore() {
     let raw: string | null = null;
     try {
@@ -47,21 +48,20 @@ function useLearningState(profile: string) {
     }
     window.addEventListener("storage",sync);
     return () => window.removeEventListener("storage",sync);
-  }, [profile, storageKey]);
+  }, [profile, storageKey, account]);
   useEffect(() => {
     const controller = new AbortController();
     Promise.all([
-      loadSigns(controller.signal),
-      fetch("/data/quizzes.json", { signal: controller.signal }).then((r) => {
-        if (!r.ok) throw new Error();
-        return r.json() as Promise<Question[]>;
-      }),
+      api<{signs: SignMetadata[]; quizzes: Question[]}>("catalog", { signal: controller.signal }),
+      account ? api<{resume: string; entries: ReviewHistoryEntry[]}>("progress", { signal: controller.signal }) : null,
     ])
-      .then(([data, quizzes]) => {
-        const usable = data.filter(approved);
+      .then(([data, progress]) => {
+        if (controller.signal.aborted) return;
+        if (progress) { setEntries(progress.entries); setResume(progress.resume); }
+        const usable = data.signs.filter(approved);
         setSigns(usable);
         setQuestions(
-          quizzes.filter(
+          data.quizzes.filter(
             (q) =>
               q.reviewStatus === "approved" &&
               usable.some((s) => s.id === q.signId),
@@ -76,16 +76,28 @@ function useLearningState(profile: string) {
         if (!controller.signal.aborted) setLoading(false);
       });
     return () => controller.abort();
-  }, [attempt]);
+  }, [attempt, account]);
   function remember(id: string) {
     setResume(id);
+    if (account) {
+      void writeApi("progress/resume", "PUT", {id}).catch(() => setNotice("Chưa lưu được bài học đang xem."));
+      return;
+    }
     try {
       localStorage.setItem(storageKey + ":resume", id);
     } catch {
       setNotice("Thiết bị chỉ lưu tiến độ trong phiên này.");
     }
   }
-  function answer(id: string, result: AnswerResult, review: boolean) {
+  async function answer(question: Question, choice: string, review: boolean, attempt: string) {
+    if (account) {
+      const { correct, entry } = await writeApi<{correct: boolean; entry: ReviewHistoryEntry}>("progress/answer", "POST", {question: question.id, choice, review, attempt});
+      setEntries(previous => [...previous.filter(e => e.signId !== entry.signId), entry]);
+      return correct;
+    }
+    const id = question.signId;
+    const correct = choice === question.correctChoiceId;
+    const result: AnswerResult = correct ? "correct" : "wrong";
     const now = new Date();
     const entry = applyAnswer(
       entries.find((e) => e.signId === id),
@@ -109,6 +121,7 @@ function useLearningState(profile: string) {
     } catch {
       setNotice("Thiết bị chỉ lưu lịch sử trong phiên này.");
     }
+    return correct;
   }
   return {
     profile,
@@ -130,12 +143,14 @@ function useLearningState(profile: string) {
 const Context = createContext<ReturnType<typeof useLearningState> | null>(null);
 export function LearningProvider({
   profile,
+  account = false,
   children,
 }: {
   profile: string;
+  account?: boolean;
   children: ReactNode;
 }) {
-  const state = useLearningState(profile);
+  const state = useLearningState(profile, account);
   return <Context.Provider value={state}>{children}</Context.Provider>;
 }
 export function useLearning() {

@@ -682,6 +682,28 @@ main fieldset {
 .viewer-info p { margin: 0 0 6px; overflow-wrap: anywhere; }
 .viewer-feedback { padding: 8px 0; }
 .touch-help { display: none; }
+.account-card { max-width: 520px; margin-inline: auto; }
+.account-form, .account-form fieldset { display: grid; gap: 14px; min-width: 0; }
+.account-form fieldset { padding: 0; border: 0; margin: 0; }
+.account-form label { display: grid; gap: 6px; font-weight: 600; }
+.account-form input, .account-form select, .account-form textarea {
+  width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid #9eb6ad;
+  border-radius: 8px; background: white; color: var(--ink); font: inherit; font-weight: 400;
+}
+.account-form textarea { min-height: 80px; resize: vertical; }
+.account-actions, .account-menu { display: flex; gap: 12px; align-items: center; }
+.account-menu { position: relative; }
+.account-menu summary { padding: 12px 0; }
+.account-menu details > div {
+  position: absolute; z-index: 4; right: 0; top: 100%; width: min(280px, 85vw);
+  overflow-wrap: anywhere; padding: 12px; background: white; border: 1px solid var(--line); border-radius: 10px;
+}
+.account-menu button, .listrow button { min-height: 44px; }
+.choice-editor { display: grid; grid-template-columns: minmax(52px, 1fr) minmax(0, 4fr); gap: 8px; }
+@media (max-width: 540px) {
+  .account-actions .profile svg { display: none; }
+  .account-menu { font-size: .85rem; }
+}
 @media (pointer: coarse) { .touch-help { display: inline; } .mouse-help { display: none; } }
 @media (max-width: 540px) {
   .playback-row { display: grid; grid-template-columns: 1fr 1fr; }

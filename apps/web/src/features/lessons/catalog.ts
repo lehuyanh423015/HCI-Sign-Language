@@ -4,7 +4,7 @@ export interface Question {
   signId: string;
   prompt: string;
   choices: { id: string; label: string }[];
-  correctChoiceId: string;
+  correctChoiceId?: string;
   reviewStatus: string;
 }
 export const approved = (s: SignMetadata) =>

@@ -22,9 +22,12 @@ describe('application routes', () => {
     expect(html).not.toContain('<h2>S001</h2>');
   });
 
-  it('renders quiz and review routes', () => {
-    expect(renderRoute('/quiz')).toContain('Kiểm tra nhận biết');
-    expect(renderRoute('/review')).toContain('Ôn tập cá nhân');
+  it('renders account entry points and public demo routes', () => {
+    expect(renderRoute('/login')).toContain('Đăng nhập');
+    expect(renderRoute('/register')).toContain('Tạo tài khoản');
+    expect(renderRoute('/quiz?demo=1')).toContain('Kiểm tra minh họa');
+    expect(renderRoute('/review?demo=1')).toContain('Lịch ôn minh họa');
+    expect(renderRoute('/admin')).not.toContain('Quản trị học liệu');
   });
 
   it('renders the isolated technical viewer warning and controls', () => {

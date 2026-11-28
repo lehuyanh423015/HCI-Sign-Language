@@ -79,3 +79,23 @@ TASK-0010 bổ sung pose library, motion spec và generator Blender tự động
 - Ngày 10: tích hợp learning/quiz/review; gửi animation xác minh.
 - Ngày 12–13: user testing chỉ với animation giáo dục đã duyệt.
 - Ngày 15: demo tích hợp, evidence, tests và presentation.
+
+## Tài khoản người học và quản trị
+
+Chạy `npm.cmd run dev` và mở URL Vite hiển thị. Người học đăng ký tại `/register`, đăng nhập tại `/login` và xem lịch ôn tại `/review`. Phần mô phỏng `/demo` vẫn dùng hai hồ sơ cục bộ A/B.
+
+Tạo tài khoản quản trị trong PowerShell bằng email riêng và mật khẩu ít nhất 12 ký tự.
+
+```powershell
+$env:HCI_ADMIN_EMAIL = Read-Host 'Email quản trị'
+$env:HCI_ADMIN_PASSWORD = Read-Host 'Mật khẩu quản trị' -MaskInput
+try {
+    npm.cmd run admin:create
+} finally {
+    Remove-Item Env:HCI_ADMIN_EMAIL, Env:HCI_ADMIN_PASSWORD
+}
+```
+
+Đăng nhập bằng tài khoản vừa tạo và mở `/admin`. Có thể thêm hoặc sửa ký hiệu và câu hỏi. Trạng thái **Đã duyệt** yêu cầu hồ sơ kiểm chứng hợp lệ và GLB đã đặt ở đường dẫn định danh trong `apps/web/public/models/signs/`. Chỉ xuất bản sau khi người có chuyên môn duyệt nội dung. Bản lưu quản trị của từng mục được ưu tiên khi phục vụ API, còn JSON trong Git làm dữ liệu nền.
+
+SQLite mặc định lưu tại `.hci-private/app.sqlite`. Có thể đặt `HCI_DATABASE` là đường dẫn tuyệt đối nằm ngoài thư mục được phục vụ trên web. Dùng cùng đường dẫn cho lệnh tạo quản trị và máy chủ. Sau khi build, `npm.cmd run preview` phục vụ bản thử với API trên máy cục bộ. Khi thiết lập máy chủ qua HTTPS, cấu hình `HCI_ORIGIN` bằng origin HTTPS bên ngoài để bật cờ cookie Secure và kiểm tra đúng nguồn yêu cầu. Quy trình triển khai production và sao lưu thuộc cấu hình môi trường vận hành.

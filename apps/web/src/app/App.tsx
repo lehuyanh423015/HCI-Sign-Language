@@ -12,6 +12,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { AppRoutes } from "./AppRoutes";
+import { AccountMenu, useAccount } from './Account';
 import { LearningProvider } from "./LearningState";
 
 const links = [
@@ -39,7 +40,10 @@ export function App() {
       return "demo-a";
     }
   });
-  const path = useLocation().pathname;
+  const { user } = useAccount();
+  const { pathname: path, search } = useLocation();
+  const demo = path.startsWith('/demo') || new URLSearchParams(search).get('demo') === '1';
+  const activeProfile = user && !demo ? user.id : profile;
   const lastPath = useRef(path);
   useEffect(() => {
     if (path !== lastPath.current) {
@@ -52,9 +56,9 @@ export function App() {
     [...links, ...tools].find((x) =>
       x.to === "/" ? path === "/" : path.startsWith(x.to),
     )?.label ??
-    (path.startsWith("/results") ? "Kết quả" : "Kiểm tra nhận biết");
+    (path === '/admin' ? 'Quản trị' : path === '/login' || path === '/register' ? 'Tài khoản' : path.startsWith("/results") ? "Kết quả" : "Kiểm tra nhận biết");
   return (
-    <LearningProvider key={profile} profile={profile}>
+    <LearningProvider key={activeProfile} profile={activeProfile} account={!!user && !demo}>
       <div className="workspace">
         <a className="skip" href="#content">
           Đến nội dung
@@ -93,7 +97,7 @@ export function App() {
               <Hand size={18} /> Không gian học <ChevronRight size={15} />{" "}
               <strong>{group}</strong>
             </span>
-            <label className="profile">
+            <div className="account-actions"><AccountMenu/>{demo && <label className="profile">
               <UserRound size={18} />
               <select
                 aria-label="Hồ sơ minh họa"
@@ -110,7 +114,7 @@ export function App() {
                 <option value="demo-a">Hồ sơ A</option>
                 <option value="demo-b">Hồ sơ B</option>
               </select>
-            </label>
+            </label>}</div>
           </header>
           <main id="content" tabIndex={-1}>
             <AppRoutes />

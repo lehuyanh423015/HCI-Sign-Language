@@ -123,11 +123,22 @@ function QuizRun({
   const [checked, setChecked] = useState(false);
   const q = queue[results.length];
   const sign = s.signs.find((x) => x.id === q.signId);
-  const correct = choice === q.correctChoiceId;
-  function confirm() {
-    if (!choice || checked) return;
-    s.answer(q.signId, correct ? "correct" : "wrong", review);
-    setChecked(true);
+  const [correct, setCorrect] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [attempt, setAttempt] = useState("");
+  async function confirm() {
+    if (!choice || checked || saving) return;
+    const id = attempt || crypto.randomUUID();
+    setAttempt(id);
+    setError("");
+    setSaving(true);
+    try {
+      setCorrect(await s.answer(q, choice, review, id));
+      setChecked(true);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "Chưa lưu được đáp án.");
+    } finally { setSaving(false); }
   }
   function next() {
     const all = [...results, { question: q.id, sign: q.signId, correct }];
@@ -140,6 +151,7 @@ function QuizRun({
     setResults(all);
     setChoice("");
     setChecked(false);
+    setAttempt("");
   }
   return (
     <div className="panel">
@@ -159,7 +171,7 @@ function QuizRun({
           />
         )
       )}
-      <fieldset disabled={checked}>
+      <fieldset disabled={checked || saving || !!attempt}>
         <legend>Chọn một đáp án</legend>
         {q.choices.map((c) => (
           <label className="answer" key={c.id}>
@@ -173,6 +185,7 @@ function QuizRun({
           </label>
         ))}
       </fieldset>
+      {error && <p role="alert">{error}</p>}
       {checked ? (
         <>
           <p role="status">
@@ -187,8 +200,8 @@ function QuizRun({
           </button>
         </>
       ) : (
-        <button className="primary" disabled={!choice} onClick={confirm}>
-          Xác nhận
+        <button className="primary" disabled={!choice || saving} onClick={confirm}>
+          {saving ? "Đang lưu…" : error ? "Thử lưu lại" : "Xác nhận"}
         </button>
       )}
     </div>

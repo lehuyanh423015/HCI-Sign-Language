@@ -1,4 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { AccountPage, RequireAccount } from './Account';
+import { AdminPage } from '../features/admin/AdminPage';
 import { Home, Library, LessonPage } from "../features/lessons/LessonPage";
 import {
   DemoPage,
@@ -12,14 +14,19 @@ import { TechnicalFacialViewerPage } from "../features/technical/TechnicalFacial
 import { SignAnimationPreviewPage } from "../features/technical/SignAnimationPreviewPage";
 export function AppRoutes() {
   const location = useLocation();
+  const demo = new URLSearchParams(location.search).get('demo') === '1';
+  const guard = (view: React.ReactNode) => demo ? view : <RequireAccount>{view}</RequireAccount>;
   return (
     <Routes>
+      <Route path="/login" element={<AccountPage key="login" registering={false}/>}/>
+      <Route path="/register" element={<AccountPage key="register" registering/>}/>
+      <Route path="/admin" element={<RequireAccount admin><AdminPage/></RequireAccount>}/>
       <Route path="/" element={<Home />} />
       <Route path="/lessons" element={<Library />} />
-      <Route path="/lessons/:id" element={<LessonPage />} />
-      <Route path="/quiz" element={<QuizPage key={location.search} />} />
-      <Route path="/results" element={<ResultsPage />} />
-      <Route path="/review" element={<ReviewPage />} />
+      <Route path="/lessons/:id" element={<RequireAccount><LessonPage /></RequireAccount>} />
+      <Route path="/quiz" element={guard(<QuizPage key={location.search} />)} />
+      <Route path="/results" element={guard(<ResultsPage />)} />
+      <Route path="/review" element={guard(<ReviewPage />)} />
       <Route path="/demo" element={<DemoPage />} />
       <Route path="/demo/:id" element={<DemoReplay />} />
       <Route path="/technical-viewer" element={<TechnicalViewerPage />} />

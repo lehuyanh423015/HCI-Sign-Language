@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "preview": "vite preview",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint src tests --max-warnings 0",
