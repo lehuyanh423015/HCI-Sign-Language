@@ -121,14 +121,38 @@ def retarget(rig, scene, frames, source_rest):
 
     scene.frame_start, scene.frame_end = min(frames), max(frames)
     scene.render.fps, scene.render.fps_base = 30, 1.0
-    for frame, sample in frames.items():
+    def smooth_rotation(frame, delay, group, name):
+        # Centered binomial filter in rotation space. Clamp at the loop seam.
+        def at(time):
+            time = min(max(time, scene.frame_start), scene.frame_end)
+            first = math.floor(time)
+            return frames[first][group][name].slerp(
+                frames[min(first + 1, scene.frame_end)][group][name], time - first)
+
+        if frame in (scene.frame_start, scene.frame_end):
+            return at(frame)
+        time = frame - delay
+        center = at(time)
+        near = at(time - 1).slerp(at(time + 1), 0.5)
+        far = at(time - 2).slerp(at(time + 2), 0.5)
+        return center.slerp(near, 8 / 14).slerp(far, 2 / 16)
+
+    for frame in frames:
         scene.frame_set(frame)
-        rotations = sample["rotations"]
         for side, (arms, wrist, wrist_offset, fingers) in mappings.items():
-            for src, dst, offset in arms:
-                key_absolute(bones[dst], frame, rotations[src] @ offset)
-            key_absolute(bones[wrist], frame, sample["palms"][side] @ wrist_offset)
+            lag = 0.75 if side == "L" else 0.0
+            lift = min(1.0, (frame - scene.frame_start) / 14, (scene.frame_end - frame) / 13)
+            lift = lift * lift * (3 - 2 * lift)
+            inward = math.radians(18 - 12 * lift) * (1 if side == "L" else -1)
+            settle = Quaternion((0, 1, 0), inward)
+            for segment, (src, dst, offset) in enumerate(arms):
+                rotation = smooth_rotation(frame, lag + 0.4 * segment, "rotations", src)
+                pitch = math.radians(12 if segment else -9) * lift
+                key_absolute(bones[dst], frame, Quaternion((1, 0, 0), pitch) @ settle @ rotation @ offset)
+            palm = smooth_rotation(frame, lag + 0.9, "palms", side)
+            key_absolute(bones[wrist], frame, settle @ palm @ wrist_offset)
             for src, parent, dst, neutral, offset, finger in fingers:
+                rotations = frames[frame]["rotations"]
                 delta = neutral.inverted() @ rotations[parent].inverted() @ rotations[src]
                 local = offset.inverted() @ delta @ offset
                 # The source gather pose intersects Snow's index and middle fingertips.
